@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-
+@onready var bagLight = get_node("bagLight")
 var opening=false
 var closing=false
 var fullyOpened=false
@@ -30,3 +30,7 @@ func _process(delta: float) -> void:
 			animation_player.play("open")
 		if(fullyOpened):
 			animation_player.play_backwards("open")
+	if(bagFrame<=3.8):
+		bagLight.light_energy=0
+	else:
+		bagLight.light_energy=0.4
