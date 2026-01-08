@@ -1,0 +1,102 @@
+[gd_scene load_steps=15 format=3 uid="uid://3hwq61ji0uqy"]
+
+[ext_resource type="Shader" uid="uid://bbmvf6n4apws6" path="res://shaders/pixelate.gdshader" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://oqi2phmybv7w" path="res://scenes/mainCamera.gd" id="1_tbgi4"]
+[ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
+[ext_resource type="PackedScene" uid="uid://djm1uogg1uu8l" path="res://scenes/brickWall.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://hk06oa5vd2ip" path="res://scenes/lectern.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://bsck8kibc8abc" path="res://scenes/camera_pivot.gd" id="4_tefeu"]
+[ext_resource type="PackedScene" uid="uid://cden78nyrwigh" path="res://scenes/dartGreen.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
+render_priority = 0
+shader = ExtResource("1_jyhfs")
+
+[sub_resource type="QuadMesh" id="QuadMesh_tefeu"]
+material = SubResource("ShaderMaterial_tbgi4")
+uv2_padding = 1.9
+
+[sub_resource type="Sky" id="Sky_85g3d"]
+
+[sub_resource type="Environment" id="Environment_tefeu"]
+background_mode = 2
+background_color = Color(0.4071524, 0.49325198, 0.5770381, 1)
+sky = SubResource("Sky_85g3d")
+sdfgi_enabled = true
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0wfyh"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_tipki")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9309794, 0.36507177, 0, -0.36507177, 0.9309794, 0, 0.28593594, 0.28498304)
+script = ExtResource("4_tefeu")
+
+[node name="MainCamera" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+fov = 92.3
+far = 47.82
+script = ExtResource("1_tbgi4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CameraPivot/MainCamera"]
+transform = Transform3D(5.378655, -0.0016288023, 0.00021891984, 0.0016296877, 5.3786526, -0.00076916814, -0.0011762688, 0.004137635, 0.9999996, 0.0003145635, 0.008696631, -0.07143743)
+mesh = SubResource("QuadMesh_tefeu")
+
+[node name="world" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="world"]
+environment = SubResource("Environment_tefeu")
+
+[node name="room" type="Node3D" parent="world"]
+
+[node name="brickWall" parent="world/room" instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.475)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="world/room"]
+transform = Transform3D(1, 0, 0, 0, 0.9997763, -0.021151925, 0, 0.021151925, 0.9997763, 0, -0.031280994, 5.1542654)
+spot_range = 8.796
+spot_angle = 29.87
+
+[node name="dartArea" type="Node3D" parent="world"]
+
+[node name="board" parent="world/dartArea" instance=ExtResource("1_o5qli")]
+transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 0, -0.4002908, -1.36)
+physics_material_override = SubResource("PhysicsMaterial_0wfyh")
+gravity_scale = 0.0
+
+[node name="lectern" parent="world/dartArea" instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 0.97778326, 0.20961857, 0, -0.20961857, 0.97778326, 0, -1, -0.061)
+
+[node name="dartGreen" parent="world/dartArea" instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.1576195, 0.86366445, 0.47879016, -0.78051805, -0.18805723, 0.5961761, 0.6049361, -0.46767348, 0.64446414, 0.4603764, -0.013714924, -0.44116223)
+gravity_scale = 0.0
+
+[node name="dartGreen2" parent="world/dartArea" instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.30137116, -0.94950885, 0.0872291, 0.43159318, 0.05426541, -0.9004345, 0.85023725, 0.30901247, 0.42615604, 0.6414176, -0.04943136, -0.46308517)
+gravity_scale = 0.0
+
+[node name="dartGreen3" parent="world/dartArea" instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.25882787, -0.86441475, 0.4310389, 0.9541081, 0.15920898, -0.25363564, 0.15062131, 0.4769058, 0.86595345, 0.7388019, -0.05395066, -0.31438187)
+gravity_scale = 0.0
+
+[node name="shop" type="Node3D" parent="world"]
+
+[node name="shelf" type="Node3D" parent="world"]
+
+[node name="dartBag" type="Node3D" parent="world"]
+
+[node name="Sketchfab_Scene" parent="world/dartBag" instance=ExtResource("9_85g3d")]
+transform = Transform3D(0.41512206, 0, -0.9097657, 0, 1, 0, 0.9097657, 0, 0.41512206, 0.5728094, -0.07014798, -0.35978535)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="gameState" type="Node3D" parent="."]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxijvavgnysio"]
+
+[ext_resource type="Script" uid="uid://copaw5mrhkjud" path="res://scenes/player.gd" id="1_dqkch"]
+[ext_resource type="Script" uid="uid://bsck8kibc8abc" path="res://scenes/camera_pivot.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://oqi2phmybv7w" path="res://scenes/mainCamera.gd" id="2_hqtel"]
+[ext_resource type="Shader" uid="uid://bbmvf6n4apws6" path="res://shaders/pixelate.gdshader" id="3_sweqy"]
+[ext_resource type="PackedScene" uid="uid://c6tfykr8ys2y2" path="res://scenes/dart.tscn" id="5_qlg0r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
+render_priority = 0
+shader = ExtResource("3_sweqy")
+
+[sub_resource type="QuadMesh" id="QuadMesh_2hs0m"]
+material = SubResource("ShaderMaterial_tbgi4")
+uv2_padding = 1.9
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_dqkch")
+DartScene = ExtResource("5_qlg0r")
+
+[node name="cameraPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9309794, 0.36507177, 0, -0.36507177, 0.9309794, 0, 0, 0.285)
+script = ExtResource("1_i3pqv")
+
+[node name="MainCamera" type="Camera3D" parent="cameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+fov = 92.3
+far = 47.82
+script = ExtResource("2_hqtel")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="cameraPivot/MainCamera"]
+transform = Transform3D(5.378655, -0.0016288023, 0.00021891984, 0.0016296877, 5.3786526, -0.00076913834, -0.0011762688, 0.0041377544, 0.9999995, 0.0003145635, 0.10059595, -0.3057924)
+mesh = SubResource("QuadMesh_2hs0m")
+
+[node name="DartRig" type="Node3D" parent="cameraPivot/MainCamera"]

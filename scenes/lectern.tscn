@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://hk06oa5vd2ip"]
+
+[ext_resource type="PackedScene" uid="uid://la0mhabgickd" path="res://models/lectern/lectern.glb" id="1_37m5j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_37m5j"]
+size = Vector3(0.33862305, 0.83584595, 0.28857422)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h3g2r"]
+size = Vector3(0.33874512, 0.06665039, 0.28264618)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k6es8"]
+size = Vector3(0.31280518, 0.020889282, 0.0126953125)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+disable_mode = 1
+collision_priority = 0.0
+gravity_scale = 0.0
+sleeping = true
+freeze = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_37m5j")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9976785, 0.06810242, 0, -0.06810242, 0.9976785, 0, 0.85315084, 0.14677948)
+light_color = Color(0.80766153, 0.70467776, 0.39552158, 1)
+light_energy = 0.62
+spot_range = 2.636
+spot_angle = 83.22
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018310547, 0.41261292, 0.0041503906)
+shape = SubResource("BoxShape3D_37m5j")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9545633, -0.29800805, 0, 0.29800805, 0.9545633, -6.1035156e-05, 0.84005004, 0.0052165687)
+shape = SubResource("BoxShape3D_h3g2r")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.95539695, -0.29532453, 0, 0.29532453, 0.95539695, 0.0009460449, 0.84512466, 0.13716196)
+shape = SubResource("BoxShape3D_k6es8")

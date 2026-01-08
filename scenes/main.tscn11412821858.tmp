@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://3hwq61ji0uqy"]
+
+[ext_resource type="Shader" uid="uid://bbmvf6n4apws6" path="res://shaders/pixelate.gdshader" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://oqi2phmybv7w" path="res://scenes/mainCamera.gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://djm1uogg1uu8l" path="res://scenes/brickWall.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://hk06oa5vd2ip" path="res://scenes/lectern.tscn" id="3_sugp2"]
+
+[sub_resource type="Sky" id="Sky_sugp2"]
+
+[sub_resource type="Environment" id="Environment_jyhfs"]
+background_mode = 2
+sky = SubResource("Sky_sugp2")
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
+render_priority = 0
+shader = ExtResource("1_jyhfs")
+
+[sub_resource type="QuadMesh" id="QuadMesh_tefeu"]
+material = SubResource("ShaderMaterial_tbgi4")
+uv2_padding = 1.9
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0wfyh"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.17364825, 0.9848077, 0, -0.9848077, 0.17364825, 0, 2.3000002, 2.2)
+spot_range = 8.796
+spot_angle = 87.55
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jyhfs")
+
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+fov = 92.3
+far = 10.64
+script = ExtResource("1_tbgi4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MainCamera"]
+transform = Transform3D(5.3786554, 0, 0, 0, 5.3786554, 0, 0, 0, 1, 0, 0.0077415705, -0.06838032)
+mesh = SubResource("QuadMesh_tefeu")
+
+[node name="RigidBody3D" parent="." instance=ExtResource("1_o5qli")]
+transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 0.019815266, -0.4158305, -1.3596709)
+physics_material_override = SubResource("PhysicsMaterial_0wfyh")
+gravity_scale = 0.0
+
+[node name="StaticBody3D" parent="." instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -1.4749236)
+
+[node name="StaticBody3D2" parent="." instance=ExtResource("2_0wfyh")]
+transform = Transform3D(5.58, 0, 0, 0, -2.4390954e-07, 5.58, 0, -5.58, -2.4390954e-07, -0.30078423, 2.1961803, 0.0009433627)
+
+[node name="RigidBody3D2" parent="." instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 0.93358034, 0.35836792, 0, -0.35836792, 0.93358034, 0, -1, -0.061)

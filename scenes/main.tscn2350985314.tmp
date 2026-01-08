@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://3hwq61ji0uqy"]
+
+[ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
+[ext_resource type="PackedScene" uid="uid://djm1uogg1uu8l" path="res://scenes/brickWall.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://hk06oa5vd2ip" path="res://scenes/lectern.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cxijvavgnysio" path="res://scenes/player.tscn" id="7_tipki"]
+[ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
+
+[sub_resource type="Sky" id="Sky_85g3d"]
+
+[sub_resource type="Environment" id="Environment_tefeu"]
+background_mode = 2
+background_color = Color(0.4071524, 0.49325198, 0.5770381, 1)
+sky = SubResource("Sky_85g3d")
+sdfgi_enabled = true
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0wfyh"]
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("cameras")]
+script = ExtResource("1_tipki")
+cameras = [NodePath("Camera3D"), NodePath("world/Player/cameraPivot/MainCamera")]
+
+[node name="world" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="world"]
+environment = SubResource("Environment_tefeu")
+
+[node name="room" type="Node3D" parent="world"]
+
+[node name="brickWall" parent="world/room" instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.475)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="world/room"]
+transform = Transform3D(1, 0, 0, 0, 0.9997763, -0.021151925, 0, 0.021151925, 0.9997763, 0, -0.031280994, 5.1542654)
+light_energy = 0.275
+spot_range = 4099.675
+spot_angle = 29.87
+
+[node name="dartArea" type="Node3D" parent="world"]
+
+[node name="board" parent="world/dartArea" instance=ExtResource("1_o5qli")]
+transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 0, -0.4002908, -1.36)
+physics_material_override = SubResource("PhysicsMaterial_0wfyh")
+
+[node name="lectern" parent="world/dartArea" instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 0.97778326, 0.20961857, 0, -0.20961857, 0.97778326, 0, -1, -0.061)
+
+[node name="shop" type="Node3D" parent="world"]
+
+[node name="shelf" type="Node3D" parent="world"]
+
+[node name="dartBag" type="Node3D" parent="world"]
+
+[node name="Sketchfab_Scene" parent="world/dartBag" instance=ExtResource("9_85g3d")]
+transform = Transform3D(0.41512206, 0, -0.9097657, 0, 1, 0, 0.9097657, 0, 0.41512206, 0.5728094, -0.07014798, -0.35978535)
+
+[node name="Player" parent="world" instance=ExtResource("7_tipki")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="gameState" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983, -0.8627979, 0.0018677711, -0.7994882)
+
+[editable path="world/Player"]

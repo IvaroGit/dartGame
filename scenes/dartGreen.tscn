@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cden78nyrwigh"]
+
+[ext_resource type="PackedScene" uid="uid://dy21mldpq7y8q" path="res://models/dartGreen/game_ready_green_dart_asset.glb" id="1_hm47g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0gx34"]
+radius = 0.0043945313
+height = 0.1347313
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hm47g"]
+radius = 0.0146484375
+height = 0.04801941
+
+[node name="RigidBody3D" type="RigidBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="Sketchfab_Scene" parent="MeshInstance3D" instance=ExtResource("1_hm47g")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06683159, 0)
+shape = SubResource("CapsuleShape3D_0gx34")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13820457, 0)
+shape = SubResource("CapsuleShape3D_hm47g")

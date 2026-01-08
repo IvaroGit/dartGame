@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://jjkmd0a32eip"]
+
+[ext_resource type="Texture2D" uid="uid://b13km8r857e65" path="res://models/brickWall/grungy_brick_wall_0.jpg" id="1_6l2q6"]
+
+[resource]
+resource_name = "brickwalltex"
+cull_mode = 2
+albedo_texture = ExtResource("1_6l2q6")
+roughness = 0.9
