@@ -972,7 +972,6 @@ speed_scale = 21.555
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(2.2222223, 0, 0, 0, -6.622738e-08, -2.2222223, 0, 2.2222223, -6.622738e-08, 0, 0, 0.09561829)
 light_color = Color(1, 1, 0.6460767, 1)
-light_energy = 0.585
+light_energy = 10.43
 light_volumetric_fog_energy = 0.0
-spot_range = 0.205
 spot_angle = 180.0
