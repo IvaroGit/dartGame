@@ -7,6 +7,7 @@ extends Node3D
 @export var pitch_limit := deg_to_rad(35.0)
 
 @onready var camera: Camera3D = $Camera3D
+
 var speed = 1
 var yaw := 0.0
 var pitch := 0.0

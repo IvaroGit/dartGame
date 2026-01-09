@@ -19,3 +19,7 @@ func _input(event):
 	if event.is_action_pressed("1"):
 		current_camera_index=(current_camera_index+1)%cameras.size()
 		update_camera()
+
+
+func _on_button_pressed() -> void:
+	print("aefguohseaf") # Replace with function body.

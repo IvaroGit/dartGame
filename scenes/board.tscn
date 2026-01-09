@@ -19,7 +19,7 @@ transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.01
 shape = SubResource("CylinderShape3D_bw3vb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0.0224334, 0, -1, -9.80595e-10, 0, 0, 0, 1, 0, 1.4180635, 0)
+transform = Transform3D(-4.371139e-08, 0.0224334, 0, -1, -9.80595e-10, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_tx6nw")
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("1_bw3vb")]
