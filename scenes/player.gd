@@ -3,6 +3,7 @@ extends Node3D
 @export var DartScene: PackedScene
 #@onready var dart_rig := $DartRig
 @onready var dart_rig := $cameraPivot/MainCamera
+@onready var bag: Node3D = $"../dartBag/Sketchfab_Scene"
 
 var darts := []
 var selected_index := 0
@@ -17,7 +18,10 @@ const gravity = 1
 func lineup_darts():
 	for i in range(darts.size()):
 		var dart = darts[i]
-		dart.position = Vector3(-0.1 * i, 0, -0.5)
+		dart.position = Vector3(-0.1+i*DART_X_SPACING,-0.15,-0.6)
+		print(bag.position.x)
+		print(bag.position.y)
+		print(bag.position.z)
 		if i == selected_index:
 			dart.position.y += ACTIVE_Y_OFFSET
 			dart.rotation_degrees.x = selected_rotaion

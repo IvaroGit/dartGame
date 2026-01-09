@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://qo17o58iwmrv"]
+
+[ext_resource type="PackedScene" uid="uid://dr5yt86wdrf0p" path="res://models/frog/jobba_the_brawler_frog.glb" id="1_mqod6"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_mqod6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36718535, 0, 0.071442366)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Sketchfab_Scene"]
+root_node = NodePath(".")
