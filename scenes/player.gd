@@ -12,7 +12,7 @@ const DART_Z_SPACING := 0.01
 const ACTIVE_Z_OFFSET := 0.05
 const ACTIVE_Y_OFFSET := 0.09
 const THROW_FORCE := 12.0
-const gravity = 0
+const gravity = 1
 
 func lineup_darts():
 	for i in range(darts.size()):

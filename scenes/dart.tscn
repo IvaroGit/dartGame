@@ -7,7 +7,6 @@
 size = Vector3(0.011962891, 0.20132446, 0.013305664)
 
 [node name="Dart" type="RigidBody3D"]
-gravity_scale = 0.0
 continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 1
