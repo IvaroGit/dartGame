@@ -6,31 +6,34 @@ var opening=false
 var closing=false
 var fullyOpened=false
 var fullyClosed=false
+
+var home_position: Vector3
+var home_rotation: Vector3
+
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
 	 # Replace with function body.
-	pass
+	home_position = global_position
+	home_rotation = global_rotation
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+func move_to(target_pos: Vector3, target_rot: Vector3, duration := 0.6):
+	var tween := create_tween()
+	tween.set_parallel(true)
+	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.set_trans(Tween.TRANS_CUBIC)
+
+	tween.tween_property(self, "global_position", target_pos, duration)
+	tween.tween_property(self, "global_rotation", target_rot, duration)
+
+	return tween
+
+func open():
+	animation_player.play("open")
+
+func close():
+	animation_player.play_backwards("open")
+
 func _process(delta: float) -> void:
-	var bagFrame = $AnimationPlayer.get_current_animation_position()
-	
-	if(bagFrame<=0):
-		fullyClosed=true
-	else:
-		fullyClosed=false
-	if(bagFrame>=8.33333301544):
-		fullyOpened=true
-	else:
-		fullyOpened=false
-		
-	if Input.is_action_just_pressed("d"):
-		if(fullyClosed):
-			animation_player.play("open")
-		if(fullyOpened):
-			animation_player.play_backwards("open")
-	if(bagFrame<=3.8):
-		bagLight.light_energy=0
-	else:
-		bagLight.light_energy=0.4
+	pass
