@@ -2,32 +2,42 @@ extends Node3D
 
 @export var DartScene: PackedScene
 #@onready var dart_rig := $DartRig
-@onready var dart_rig := $cameraPivot/MainCamera
+@onready var dart_rig := $DartRig
 @onready var bag: Node3D = $"../dartBag/Sketchfab_Scene"
 
 var darts := []
 var selected_index := 0
 var selected_rotaion := 80
-const DART_X_SPACING := 0.06
+var DART_X_SPACING := 0
+const DART_X_SPACING_BASE := 0
+const DART_ROTAION_Z_SPACING_BASE := 90
+var DART_ROTAION_Z_SPACING := 0
+const total_angle = 110
 const DART_Z_SPACING := 0.01
 const ACTIVE_Z_OFFSET := 0.05
-const ACTIVE_Y_OFFSET := 0.09
+const ACTIVE_OFFSET := -0.1
+
 const THROW_FORCE := 12.0
+const baseX :=0
+const baseY :=-0.1
+const baseZ :=-0.3
 const gravity = 1
 
 func lineup_darts():
+	var center := (darts.size() - 1) * 0.5
+	
 	for i in range(darts.size()):
 		var dart = darts[i]
-		dart.position = Vector3(-0.1+i*DART_X_SPACING,-0.15,-0.6)
-		print(bag.position.x)
-		print(bag.position.y)
-		print(bag.position.z)
-		if i == selected_index:
-			dart.position.y += ACTIVE_Y_OFFSET
-			dart.rotation_degrees.x = selected_rotaion
-		else:
-			dart.rotation_degrees.x = 0
+		var offset := i - center
 
+		DART_ROTAION_Z_SPACING = DART_ROTAION_Z_SPACING_BASE / max(1, darts.size() - 1)
+		dart.rotation_degrees.z = offset * DART_ROTAION_Z_SPACING
+		
+
+		dart.position = Vector3(baseX, baseY, baseZ)
+		if i == selected_index:
+			dart.position.x += sin(dart.rotation.z) * ACTIVE_OFFSET
+			dart.position.y += -cos(dart.rotation.z)* ACTIVE_OFFSET
 func add_dart():
 	if DartScene == null:
 		return
@@ -53,12 +63,14 @@ func throw_selected_dart():
 	lineup_darts()
 	
 func select_next():
-	selected_index = (selected_index + 1) % darts.size()
-	lineup_darts()
+	if(darts.size()>0):
+		selected_index = (selected_index + 1) % darts.size()
+		lineup_darts()
 
 func select_previous():
-	selected_index = (selected_index - 1 + darts.size()) % darts.size()
-	lineup_darts()
+	if(darts.size()>0):
+		selected_index = (selected_index - 1 + darts.size()) % darts.size()
+		lineup_darts()
 
 func _input(event):
 	if event.is_action_pressed("x"):
