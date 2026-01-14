@@ -7,20 +7,20 @@ extends Node3D
 
 var darts := []
 var selected_index := 0
-var selected_rotaion := 80
-var DART_X_SPACING := 0
-const DART_X_SPACING_BASE := 0
+var selected_rotation := 80
+var DART_X_SPACING := 0.2
+const DART_X_SPACING_BASE := -0.1
 const DART_ROTAION_Z_SPACING_BASE := 90
 var DART_ROTAION_Z_SPACING := 0
 const total_angle = 110
 const DART_Z_SPACING := 0.01
-const ACTIVE_Z_OFFSET := 0.05
+const ACTIVE_Z_OFFSET := -0.05
 const ACTIVE_OFFSET := -0.1
 
 const THROW_FORCE := 12.0
 const baseX :=0
-const baseY :=-0.1
-const baseZ :=-0.3
+const baseY :=-0.3
+const baseZ :=-0.2
 const gravity = 1
 
 func lineup_darts():
@@ -29,15 +29,17 @@ func lineup_darts():
 	for i in range(darts.size()):
 		var dart = darts[i]
 		var offset := i - center
-
 		DART_ROTAION_Z_SPACING = DART_ROTAION_Z_SPACING_BASE / max(1, darts.size() - 1)
 		dart.rotation_degrees.z = offset * DART_ROTAION_Z_SPACING
-		
-
 		dart.position = Vector3(baseX, baseY, baseZ)
+		dart.position.x += sin(dart.rotation.z) * DART_X_SPACING_BASE
+		dart.position.y += -cos(dart.rotation.z)* DART_X_SPACING_BASE
+		dart.rotation_degrees.x = 0
 		if i == selected_index:
 			dart.position.x += sin(dart.rotation.z) * ACTIVE_OFFSET
 			dart.position.y += -cos(dart.rotation.z)* ACTIVE_OFFSET
+			dart.position.z += ACTIVE_Z_OFFSET
+			dart.rotation_degrees.x += selected_rotation
 func add_dart():
 	if DartScene == null:
 		return

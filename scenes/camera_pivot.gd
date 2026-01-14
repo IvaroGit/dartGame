@@ -16,7 +16,7 @@ var panRight = false
 var panUp = false
 var panDown = false
 
-var manualSpeed = 0.01
+var manualSpeed = 1
 
 var buffered_yaw := 0    # 1 = left, -1 = right
 var buffered_pitch := 0 # -1 = up, +1 = down
@@ -26,13 +26,13 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_pressed("t"):
-		pitch+=manualSpeed
+		pitch+=manualSpeed*delta
 	if Input.is_action_pressed("g"):
-		pitch-=manualSpeed
+		pitch-=manualSpeed*delta
 	if Input.is_action_pressed("f"):
-		yaw+=manualSpeed
+		yaw+=manualSpeed*delta
 	if Input.is_action_pressed("h"):
-		yaw-=manualSpeed
+		yaw-=manualSpeed*delta
 	#if(Input.is_action_pressed("up")):
 		#position.z-=speed*delta
 	#if(Input.is_action_pressed("down")):

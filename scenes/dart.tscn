@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://do7p4kxjqyovu" path="res://scenes/dart.gd" id="1_mqum6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mqum6"]
-size = Vector3(0.011962891, 0.20132446, 0.013305664)
+size = Vector3(0.011962891, 0.12654114, 0.013305664)
 
 [node name="Dart" type="RigidBody3D"]
 continuous_cd = true
@@ -17,7 +17,7 @@ script = ExtResource("1_mqum6")
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("1_er84i")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 0.10078435, 6.102398e-05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 0.063392684, 6.102398e-05)
 shape = SubResource("BoxShape3D_mqum6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
