@@ -1,14 +1,21 @@
 shader_type spatial;
-render_mode unshaded;
-uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
-const int pixel_size = 2; //resolution must be divisible by pixel_size
+render_mode unshaded, depth_draw_always, cull_back, blend_mix;
+
+uniform float pixel_count = 800.0; // number of horizontal pixels
+uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;
+uniform float opacity : hint_range(0.0, 1.0) = 1.0;
 
 void fragment() {
-	float x = float(int(FRAGCOORD.x) % pixel_size);
-	float y = float(int(FRAGCOORD.y) % pixel_size);
+    // Calculate pixel size in UVs
+    float aspect = float(VIEWPORT_SIZE.x) / float(VIEWPORT_SIZE.y);
+    vec2 pixel_size = vec2(1.0 / pixel_count, 1.0 / (pixel_count * aspect));
 
-	x = FRAGCOORD.x + floor(float(pixel_size) / 2.0) - x;
-	y = FRAGCOORD.y + floor(float(pixel_size) / 2.0) - y;
+    // Align UVs to pixel grid
+    vec2 coord = floor(SCREEN_UV / pixel_size) * pixel_size + pixel_size * 0.5;
 
-	ALBEDO = texture(SCREEN_TEXTURE, vec2(x, y) / VIEWPORT_SIZE).xyz;
+    // Sample screen texture
+    vec4 color = textureLod(SCREEN_TEXTURE, coord, 0.0);
+
+    ALBEDO = color.rgb;
+    ALPHA = opacity;
 }

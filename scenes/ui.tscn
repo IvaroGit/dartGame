@@ -1,0 +1,169 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpeuhxkwia0g4"]
+
+[ext_resource type="Texture2D" uid="uid://c2rujxenmy3x2" path="res://images/Button (8).png" id="1_nt7q6"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="HUD"]
+modulate = Color(1, 0.19607843, 1, 1)
+self_modulate = Color(0.18039216, 1, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1082.0
+offset_top = 600.0
+focus_mode = 0
+text = "BAG"
+icon = ExtResource("1_nt7q6")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="HUD/Control"]
+position = Vector2(8, 0)
+color = Color(0.28, 0.28, 0.28, 1)
+polygon = PackedVector2Array(204, 0, -180, 0, -148, 64, 172, 64)
+uv = PackedVector2Array(144.16624, 7.870722, -151.91418, 8.436186, -126.948135, 71.40789, 119.47075, 72.208565)
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Control"]
+layout_mode = 0
+offset_left = -116.0
+offset_top = 16.0
+offset_right = -76.0
+offset_bottom = 56.0
+scale = Vector2(2.2135525, 1.0047609)
+color = Color(0.3791798, 0.3791798, 0.37917978, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="HUD/Control"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 16.0
+offset_right = 108.0
+offset_bottom = 56.0
+scale = Vector2(2.2135525, 1.0047609)
+color = Color(0.3791798, 0.3791798, 0.37917978, 1)
+
+[node name="ColorRect" type="ColorRect" parent="HUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41300002
+anchor_top = 0.012
+anchor_right = 0.41300002
+anchor_bottom = 0.012
+offset_left = 4.223999
+offset_top = -7.776
+offset_right = 44.22397
+offset_bottom = 32.224
+grow_horizontal = 2
+scale = Vector2(0.47807032, 0.47807032)
+
+[node name="Label" type="Label" parent="HUD/ColorRect"]
+modulate = Color(0.9, 0, 0, 1)
+z_index = 7
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17500001
+anchor_top = 0.35000002
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.000001
+offset_top = -3.000001
+offset_right = 33.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.72, 0.72)
+text = "SCORE"
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="ColorRect2" type="ColorRect" parent="HUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41300002
+anchor_top = 0.012
+anchor_right = 0.41300002
+anchor_bottom = 0.012
+offset_left = 180.22397
+offset_top = -7.776
+offset_right = 220.22397
+offset_bottom = 32.224
+grow_horizontal = 2
+scale = Vector2(0.47807032, 0.47807032)
+
+[node name="Label" type="Label" parent="HUD/ColorRect2"]
+modulate = Color(0.9, 0, 0, 1)
+z_index = 7
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17500001
+anchor_top = 0.35000002
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.6800003
+offset_top = -1.4500008
+offset_right = 38.32
+offset_bottom = 15.549999
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.665, 0.665)
+text = "POWER"
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="ColorRect3" type="ColorRect" parent="HUD"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 15.935
+offset_right = 20.0
+offset_bottom = 55.935
+grow_horizontal = 2
+
+[node name="Label2" type="Label" parent="HUD/ColorRect3"]
+modulate = Color(0.9, 0, 0, 1)
+z_index = 7
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17500001
+anchor_top = 0.35000002
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0000005
+offset_top = -3.000001
+offset_right = 33.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.72, 0.72)
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1

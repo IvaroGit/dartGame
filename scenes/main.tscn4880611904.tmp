@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=11 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
 [ext_resource type="PackedScene" uid="uid://djm1uogg1uu8l" path="res://scenes/brickWall.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://hk06oa5vd2ip" path="res://scenes/lectern.tscn" id="3_sugp2"]
-[ext_resource type="Material" uid="uid://crcvs8tmwqnqh" path="res://textures/blackOutline.tres" id="7_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cpeuhxkwia0g4" path="res://scenes/ui.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxijvavgnysio" path="res://scenes/player.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
@@ -22,6 +21,8 @@ sdfgi_enabled = true
 [node name="Main" type="Node3D" node_paths=PackedStringArray("cameras")]
 script = ExtResource("1_tipki")
 cameras = [NodePath("Camera3D"), NodePath("world/Player/cameraPivot/MainCamera")]
+bag_distance = null
+bag_height_offset = null
 
 [node name="world" type="Node3D" parent="."]
 
@@ -60,24 +61,14 @@ transform = Transform3D(0.15556349, 0, -0.15556349, 0, 0.22, 0, 0.15556349, 0, 0
 transform = Transform3D(1, 0, 0, 0, 0.990268, -0.1391731, 0, 0.1391731, 0.990268, 1.9449615, -0.004999995, -2.1159925)
 
 [node name="Player" parent="world" instance=ExtResource("7_tipki")]
-dart_material = ExtResource("7_85g3d")
-
-[node name="MainCamera" parent="world/Player/cameraPivot" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.099999994)
 
 [node name="MeshInstance3D" parent="world/Player/cameraPivot/MainCamera" index="0"]
-transform = Transform3D(5.378655, -0.0016288023, 0.00021891984, 0.0016296877, 5.3786526, -0.00076913834, -0.0011762688, 0.004138589, 0.9999995, 1.547, -0.391, -0.088)
+transform = Transform3D(5.378655, -0.0016288023, 0.00021891984, 0.0016296877, 5.3786526, -0.00076913834, -0.0011762688, 0.004138112, 0.9999995, 1.5467973, 0.046408832, -0.43692526)
 
 [node name="DartRig" parent="world/Player" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192)
 
 [node name="UI" parent="." instance=ExtResource("7_o6xl0")]
-
-[node name="Button" parent="UI/HUD" index="0"]
-offset_left = 1081.0
-offset_top = 596.0
-offset_right = -1.0
-offset_bottom = -4.0
 
 [node name="gameState" type="Node3D" parent="."]
 
