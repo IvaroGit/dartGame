@@ -19,7 +19,6 @@ var mouse = Vector2()
 func _ready() -> void:
 	update_camera()
 	
-	
 
 func update_camera():
 	for i in range(cameras.size()):

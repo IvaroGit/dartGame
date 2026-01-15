@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=13 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cpeuhxkwia0g4" path="res://scenes/ui.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxijvavgnysio" path="res://scenes/player.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
+[ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
 
@@ -66,12 +67,15 @@ dart_material = ExtResource("7_85g3d")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.099999994)
 
 [node name="MeshInstance3D" parent="world/Player/cameraPivot/MainCamera" index="0"]
-transform = Transform3D(5.378655, -0.0016288023, 0.00021891984, 0.0016296877, 5.3786526, -0.00076913834, -0.0011762688, 0.004138589, 0.9999995, 1.547, -0.391, -0.088)
+transform = Transform3D(5.378655, -0.0016288023, 0.00021891984, 0.0016296877, 5.3786526, -0.00076913834, -0.0011762688, 0.0041388273, 0.9999995, 1.547, -0.45322007, 0.070669085)
 
 [node name="DartRig" parent="world/Player" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192)
 
 [node name="UI" parent="." instance=ExtResource("7_o6xl0")]
+
+[node name="HUD" parent="UI" index="0"]
+script = ExtResource("9_choun")
 
 [node name="Button" parent="UI/HUD" index="0"]
 offset_left = 1081.0

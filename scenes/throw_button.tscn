@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8bw41na38d8v"]
+
+[ext_resource type="Script" uid="uid://bkcll4ssvukdo" path="res://scenes/throw_button.gd" id="1_31hqt"]
+[ext_resource type="Script" uid="uid://bqo0pvuvaftar" path="res://scenes/button.gd" id="2_47hum"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_31hqt")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+polygon = PackedVector2Array(319.53534, 198.53554, 607.2733, 198.97377, 607.90594, 296.59772, 543.82446, 296.4209, 464.21017, 376.39523, 384.98285, 296.18253, 319.70905, 295.97867)
+uv = PackedVector2Array(313.02435, 204.54904, 627.02435, 204.54904, 612.02435, 304.54904, 537.02435, 304.54904, 496.02435, 380.54904, 451.02435, 302.54904, 362.02435, 304.54904)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 211.0
+offset_right = 601.53503
+offset_bottom = 285.0
+text = "THROW"
+script = ExtResource("2_47hum")

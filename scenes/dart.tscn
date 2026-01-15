@@ -25,7 +25,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 0.13776615, 6.
 shape = SubResource("SphereShape3D_mqum6")
 
 [node name="outline" parent="." instance=ExtResource("3_sxpos")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.012798157, 0)
+transform = Transform3D(1, 0, 0, 0, 0.95, 0, 0, 0, 1, 0, -0.0054096915, 0)
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("1_er84i")]
 

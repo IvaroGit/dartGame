@@ -167,3 +167,8 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 max_lines_visible = 1
+
+[node name="button_container" type="Control" parent="HUD"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
