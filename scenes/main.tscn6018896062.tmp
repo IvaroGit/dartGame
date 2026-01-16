@@ -24,6 +24,8 @@ sdfgi_enabled = true
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_tipki")
+bag_distance = null
+bag_height_offset = null
 
 [node name="world" type="Node3D" parent="."]
 
@@ -85,30 +87,12 @@ offset_top = 596.0
 offset_right = -1.0
 offset_bottom = -4.0
 
-[node name="Control" parent="UI/HUD/button_container" index="0"]
-visible = false
-offset_left = 287.0
-offset_top = 313.0
-offset_right = 287.0
-offset_bottom = 313.0
-scale = Vector2(0.495, 0.495)
-
-[node name="Polygon2D" parent="UI/HUD/button_container/Control" index="0"]
-polygon = PackedVector2Array(55.721077, 0.3051796, 231.98662, -1.289235, 231.63821, 95.84351, 184.44804, 96.15795, 144.2102, 176.39523, 104.28231, 95.94523, 57.087524, 96.20141)
-
-[node name="throw_button" parent="UI/HUD/button_container/Control" index="1"]
-offset_left = 68.085
-offset_top = 12.0
-offset_right = 221.51999
-offset_bottom = 86.0
-
 [node name="gameState" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983, -0.8627979, 0.0018677711, -0.7994882)
 
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 
 [editable path="world/Player"]
 [editable path="UI"]

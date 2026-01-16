@@ -9,7 +9,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qlg0r"]
 render_priority = 0
 shader = ExtResource("3_sweqy")
-shader_parameter/pixelation = 0.01
+shader_parameter/pixel_count = 800.0
 shader_parameter/opacity = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_qlg0r"]
@@ -18,6 +18,9 @@ material = SubResource("ShaderMaterial_qlg0r")
 [node name="Player" type="Node3D"]
 script = ExtResource("1_dqkch")
 DartScene = ExtResource("5_qlg0r")
+
+[node name="DartRig" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9309794, 0.36507177, 0, -0.36507177, 0.9309794, 0, -0.036507178, 0.19190206)
 
 [node name="cameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.9309794, 0.36507177, 0, -0.36507177, 0.9309794, 0, 0, 0.285)
@@ -29,9 +32,7 @@ fov = 92.3
 far = 47.82
 script = ExtResource("2_hqtel")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="cameraPivot/MainCamera"]
-transform = Transform3D(5.378655, -0.0016288023, 0.00021891984, 0.0016296877, 5.3786526, -0.00076913834, -0.0011762688, 0.0041377544, 0.9999995, 0.0003145635, 0.10059595, -0.3057924)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.116261706, 0.116098136)
 mesh = SubResource("QuadMesh_qlg0r")
-
-[node name="DartRig" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9309794, 0.36507177, 0, -0.36507177, 0.9309794, 0, -0.036507178, 0.19190206)
+skeleton = NodePath("../cameraPivot/MainCamera")

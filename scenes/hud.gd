@@ -1,11 +1,12 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var button_container: Control = $button_container
+@onready var throw_button: Control = $button_container/Button
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _ready():
 	pass
+
+
+func _on_button_pressed() -> void:
+	print("fuckass buutton jsut got press inhgteiopghuiopesr")
