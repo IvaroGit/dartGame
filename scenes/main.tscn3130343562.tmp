@@ -24,7 +24,6 @@ sdfgi_enabled = true
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("cameras")]
 script = ExtResource("1_tipki")
-game_state = 0
 cameras = [NodePath("Camera3D")]
 
 [node name="world" type="Node3D" parent="."]

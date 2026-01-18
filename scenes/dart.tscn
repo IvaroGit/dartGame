@@ -10,7 +10,8 @@ size = Vector3(0.011962891, 0.12654114, 0.013305664)
 [sub_resource type="SphereShape3D" id="SphereShape3D_mqum6"]
 radius = 0.018417964
 
-[node name="Dart" type="RigidBody3D"]
+[node name="Dart" type="RigidBody3D" groups=["darts"]]
+transform = Transform3D(0.99999994, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 0, 0)
 continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 1
@@ -28,6 +29,12 @@ shape = SubResource("SphereShape3D_mqum6")
 
 [node name="outline" parent="." instance=ExtResource("3_sxpos")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0127157755, 0)
+
+[node name="top_pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1443442, 0)
+
+[node name="back_pivot" type="Node3D" parent="."]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0.11018482, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 

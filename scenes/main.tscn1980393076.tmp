@@ -22,10 +22,8 @@ sdfgi_enabled = true
 
 [sub_resource type="GDScript" id="GDScript_85g3d"]
 
-[node name="Main" type="Node3D" node_paths=PackedStringArray("cameras")]
+[node name="Main" type="Node3D"]
 script = ExtResource("1_tipki")
-game_state = 0
-cameras = [NodePath("Camera3D")]
 
 [node name="world" type="Node3D" parent="."]
 
@@ -49,9 +47,6 @@ physics_material_override = SubResource("PhysicsMaterial_0wfyh")
 
 [node name="lectern" parent="world/dartArea" instance=ExtResource("3_sugp2")]
 transform = Transform3D(1, 0, 0, 0, 0.97778326, 0.20961857, 0, -0.20961857, 0.97778326, 0, -1.0303969, 0.045403708)
-
-[node name="dart_drop_target" type="Node3D" parent="world/dartArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24008581, 0)
 
 [node name="shop" type="Node3D" parent="world"]
 
@@ -77,9 +72,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.099999994)
 
 [node name="MeshInstance3D" parent="world/Player" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12118384, 0.10116819)
-
-[node name="aimPlane" parent="world/Player" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2438748)
 
 [node name="UI" parent="." instance=ExtResource("7_o6xl0")]
 script = SubResource("GDScript_85g3d")
