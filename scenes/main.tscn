@@ -116,6 +116,12 @@ offset_top = 10.101034
 offset_right = 225.45451
 offset_bottom = 84.101036
 
+[node name="powerLabel" parent="UI/HUD" index="6"]
+offset_left = 920.0
+offset_top = 624.0
+offset_right = 960.0
+offset_bottom = 647.0
+
 [node name="gameState" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]

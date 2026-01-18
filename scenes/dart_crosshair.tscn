@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bco0jtli3xwt0"]
+
+[ext_resource type="Texture2D" uid="uid://cgi2ior22pfi6" path="res://images/2783540c8c81da4.png" id="1_38ybv"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 0, 0)
+texture = ExtResource("1_38ybv")

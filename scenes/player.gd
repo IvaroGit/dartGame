@@ -18,9 +18,11 @@ var DART_ROTAION_Z_SPACING := 0
 const total_angle = 110
 const DART_Z_SPACING := 0.01
 const ACTIVE_Z_OFFSET := -0.05
-const ACTIVE_OFFSET := -0.1
+const ACTIVE_OFFSET := -0.2
 
-const THROW_FORCE := 12.0
+var current_throw_force: float =0
+var THROW_FORCE := 12.0
+var throw_scale := 0.05
 const baseX :=0
 const baseY :=-0.3
 const baseZ :=-0.2
@@ -94,8 +96,16 @@ func add_dart():
 	dart_rig.add_child(dart)
 	darts.append(dart)
 	lineup_darts()
-
-func throw_selected_dart():
+func charge_selected_dart():
+	if Input.is_action_pressed("mouseLeft"):
+		current_throw_force+=throw_scale
+		print(current_throw_force)
+	if Input.is_action_just_released("mouseLeft"):
+		THROW_FORCE=current_throw_force
+		release_selected_dart()
+		current_throw_force=0
+		main_node.game_state=main_node.GameState.DART_SELECT
+func release_selected_dart():
 	if darts.is_empty():
 		return
 	var dart = darts[selected_index]
@@ -125,12 +135,9 @@ func select_previous():
 func _input(event):
 	if event.is_action_pressed("x"):
 		add_dart()
-	if event.is_action_pressed("key_left"):
-		select_previous()
-	elif event.is_action_pressed("key_right"):
-		select_next()
+	
 	elif event.is_action_pressed("mouseLeft")and main_node.game_state==main_node.GameState.DART_THROW:
-		throw_selected_dart()
+		main_node.game_state=main_node.GameState.DART_CHARGE
 	if event is InputEventMouseMotion:
 		mouse = event.position
 		lineup_darts()
@@ -148,3 +155,5 @@ func _process(delta: float) -> void:
 	dart_material.albedo_color = Color.from_hsv(rainbow_hue, 1.0, 1.0)
 	mouse = get_viewport().get_mouse_position()
 	lineup_darts()
+	if main_node.game_state==main_node.GameState.DART_CHARGE:
+		charge_selected_dart()

@@ -181,4 +181,9 @@ offset_top = 36.0
 offset_right = 36.0
 offset_bottom = 36.0
 
+[node name="powerLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [editable path="HUD/button_container/Control"]

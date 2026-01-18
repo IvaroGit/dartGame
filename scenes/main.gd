@@ -1,8 +1,10 @@
 extends Node3D
 class_name main
-enum GameState { DART_SELECT,DART_THROW, BAG, BAG_TRANSITION,DART_DROP_TRANSITION}
+enum GameState { DART_SELECT,DART_THROW, BAG, BAG_TRANSITION,DART_DROP_TRANSITION,DART_CHARGE}
 @export var game_state := GameState.DART_THROW
 @export var cameras: Array[Camera3D]=[]
+
+@onready var power_label: Label = $UI/HUD/powerLabel
 
 var current_camera_index=1
 var spinBag=false
@@ -17,6 +19,7 @@ var selected_dart_index: int = -1
 var dart_home_positions: Array = []
 var dart_home_rotations: Array = []
 @onready var shop: Node3D = $world/shop
+@onready var cursor: Node3D = $world/Player/cameraPivot/MainCamera/cursor
 
 @onready var player: Node3D = $world/Player
 @onready var dart: Node3D = $world/Player/DartRig
@@ -24,6 +27,7 @@ var dart_home_rotations: Array = []
 
 @export var bag_distance := 0.25
 @export var bag_height_offset := 0
+
 
 func _ready() -> void:
 	update_camera()
@@ -64,7 +68,6 @@ func get_selection():
 		return
 
 	player.hovered_index = player.darts.find(hit_node)
-	print(player.hovered_index)
 	if Input.is_action_just_released("mouseLeft") and player.darts.has(hit_node):
 		selected_dart_index = player.darts.find(hit_node)
 
@@ -84,8 +87,12 @@ func _on_button_pressed() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	pass
-
+	if(game_state==GameState.DART_CHARGE):
+		power_label.show()
+		var text = str("Throw power: ",round(player.current_throw_force))
+		power_label.set_text(text)
+	else:
+		power_label.hide()
 func _on_throw_button_pressed() -> void:
 	if(throw_button_visible):
 		throw_button.hide()
