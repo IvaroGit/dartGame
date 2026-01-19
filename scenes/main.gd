@@ -34,12 +34,9 @@ func _ready() -> void:
 func update_camera():
 	for i in range(cameras.size()):
 		cameras[i].current=(i==current_camera_index)
-
-
 func _input(event):
 	if event.is_action_pressed("1"):
 		current_camera_index=(current_camera_index+1)%cameras.size()
-		#print(current_camera_index)
 		update_camera()
 	if event is InputEventMouseMotion:
 		mouse = event.position

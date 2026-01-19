@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cpeuhxkwia0g4" path="res://scenes/ui.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxijvavgnysio" path="res://scenes/player.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
-[ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
+[ext_resource type="Script" path="res://scenes/hud.gd" id="9_choun"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
 
@@ -25,7 +25,7 @@ sdfgi_enabled = true
 [node name="Main" type="Node3D" node_paths=PackedStringArray("cameras")]
 script = ExtResource("1_tipki")
 game_state = 0
-cameras = [NodePath("Camera3D")]
+cameras = [NodePath("Camera3D"), NodePath("world/Player/cameraPivot/MainCamera")]
 
 [node name="world" type="Node3D" parent="."]
 

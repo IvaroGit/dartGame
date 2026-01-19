@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var DartScene: PackedScene
-@export var ballScene: PackedScene
+
 @onready var main_node: main = get_tree().get_root().get_child(0) as main
 @onready var dart_rig := $DartRig
 @onready var bag: Node3D = $"../dartBag/Sketchfab_Scene"
@@ -24,7 +24,7 @@ const ACTIVE_OFFSET := -0.2
 
 var current_throw_force: float =0
 var THROW_FORCE := 12.0
-var throw_scale := 0.05
+var throw_scale := 5
 const baseX :=0
 const baseY :=-0.3
 const baseZ :=-0.2
@@ -100,30 +100,11 @@ func add_dart():
 	dart_rig.add_child(dart)
 	darts.append(dart)
 	lineup_darts()
-func spawn_preview_balls(dart: Node3D):
-	# clear old preview balls first
-	for b in balls:
-		if is_instance_valid(b):
-			b.queue_free()
-	balls.clear()
 
-	var forward: Vector3 = -dart.global_transform.basis.y
 
-	for i in range(10):
-		var ball = ballScene.instantiate()
-		ball.freeze = true
-		ball.gravity_scale = 0.0
-		ball.global_position = dart.global_position + forward * i * 0.25
-		ball_rig.add_child(ball)
-		balls.append(ball)
-func update_preview_balls(delta):
-	for b in balls:
-		if not is_instance_valid(b):
-			continue
-		b.global_position += preview_dir * delta * 12.0
-func charge_selected_dart():
+func charge_selected_dart(delta):
 	if Input.is_action_pressed("mouseLeft"):
-		current_throw_force+=throw_scale
+		current_throw_force+=throw_scale*delta
 	if Input.is_action_just_released("mouseLeft"):
 		THROW_FORCE=current_throw_force
 		release_selected_dart()
@@ -168,7 +149,7 @@ func _input(event):
 		main_node.game_state=main_node.GameState.DART_CHARGE
 		current_throw_force = 0
 		if selected_index != -1:
-			spawn_preview_balls(darts[selected_index])
+			pass#spawn_preview_balls(darts[selected_index])
 	if event is InputEventMouseMotion:
 		mouse = event.position
 		lineup_darts()
@@ -185,5 +166,5 @@ func _process(delta: float) -> void:
 	mouse = get_viewport().get_mouse_position()
 	lineup_darts()
 	if main_node.game_state==main_node.GameState.DART_CHARGE:
-		charge_selected_dart()
-		update_preview_balls(delta)
+		charge_selected_dart(delta)
+		
