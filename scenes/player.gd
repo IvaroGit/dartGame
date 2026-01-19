@@ -1,13 +1,15 @@
 extends Node3D
 
 @export var DartScene: PackedScene
+@export var ballScene: PackedScene
 @onready var main_node: main = get_tree().get_root().get_child(0) as main
 @onready var dart_rig := $DartRig
 @onready var bag: Node3D = $"../dartBag/Sketchfab_Scene"
 @onready var main_camera: Camera3D = $cameraPivot/MainCamera
 @export var dart_material: StandardMaterial3D
-
+@onready var ball_rig: Node3D = $ballRig
 var darts := []
+var balls := []
 var selected_index := 0
 var hovered_index :=-1
 var selected_rotation := 90
@@ -30,6 +32,8 @@ var baseVector = Vector3(baseX,baseY,baseZ)
 const gravity = 1
 var mouse = Vector2()
 var rainbow_hue := 0.0
+var preview_dir: Vector3 = Vector3.ZERO
+
 @onready var aim_plane: Node3D = $aimPlane
 
 @export var rainbow_speed := 0.5 # cycles per second
@@ -86,7 +90,7 @@ func lineup_darts():
 			dart.position.y += -cos(dart.rotation.z)* ACTIVE_OFFSET
 			dart.position.z += ACTIVE_Z_OFFSET
 			aim_dart_at_mouse(dart, main_camera, aim_plane)
-
+			
 func add_dart():
 	if DartScene == null:
 		return
@@ -96,10 +100,30 @@ func add_dart():
 	dart_rig.add_child(dart)
 	darts.append(dart)
 	lineup_darts()
+func spawn_preview_balls(dart: Node3D):
+	# clear old preview balls first
+	for b in balls:
+		if is_instance_valid(b):
+			b.queue_free()
+	balls.clear()
+
+	var forward: Vector3 = -dart.global_transform.basis.y
+
+	for i in range(10):
+		var ball = ballScene.instantiate()
+		ball.freeze = true
+		ball.gravity_scale = 0.0
+		ball.global_position = dart.global_position + forward * i * 0.25
+		ball_rig.add_child(ball)
+		balls.append(ball)
+func update_preview_balls(delta):
+	for b in balls:
+		if not is_instance_valid(b):
+			continue
+		b.global_position += preview_dir * delta * 12.0
 func charge_selected_dart():
 	if Input.is_action_pressed("mouseLeft"):
 		current_throw_force+=throw_scale
-		print(current_throw_force)
 	if Input.is_action_just_released("mouseLeft"):
 		THROW_FORCE=current_throw_force
 		release_selected_dart()
@@ -108,6 +132,10 @@ func charge_selected_dart():
 func release_selected_dart():
 	if darts.is_empty():
 		return
+	for b in balls:
+		if is_instance_valid(b):
+			b.queue_free()
+	balls.clear()
 	var dart = darts[selected_index]
 	dart.get_node_or_null("outline").visible=false
 	dart.freeze = false
@@ -138,11 +166,12 @@ func _input(event):
 	
 	elif event.is_action_pressed("mouseLeft")and main_node.game_state==main_node.GameState.DART_THROW:
 		main_node.game_state=main_node.GameState.DART_CHARGE
+		current_throw_force = 0
+		if selected_index != -1:
+			spawn_preview_balls(darts[selected_index])
 	if event is InputEventMouseMotion:
 		mouse = event.position
 		lineup_darts()
-
-
 func _ready() -> void:
 	selected_index=-1
 	lineup_darts()
@@ -157,3 +186,4 @@ func _process(delta: float) -> void:
 	lineup_darts()
 	if main_node.game_state==main_node.GameState.DART_CHARGE:
 		charge_selected_dart()
+		update_preview_balls(delta)
