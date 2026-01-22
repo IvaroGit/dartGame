@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b0ng0uos4iep4" path="res://models/brickWall/grungy_brick_wall.glb" id="1_ut5rv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ut5rv"]
-size = Vector3(19.100636, 4.7000003, 0.1)
+size = Vector3(19.100636, 9.355371, 0.12080078)
 
 [node name="StaticBody3D" type="StaticBody3D"]
 
@@ -13,5 +13,5 @@ transform = Transform3D(1.9810281, 0, 0, 0, 1.9810281, 0, 0, 0, 1, 0, 0, 0)
 [node name="Sketchfab_Scene" parent="Sketchfab_Scene" instance=ExtResource("1_ut5rv")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0635016, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0635016, -0.11766434, 0.01040039)
 shape = SubResource("BoxShape3D_ut5rv")

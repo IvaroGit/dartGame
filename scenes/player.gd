@@ -177,3 +177,4 @@ func _process(delta: float) -> void:
 	if main_node.game_state==main_node.GameState.DART_CHARGE:
 		charge_selected_dart(delta)
 		
+	

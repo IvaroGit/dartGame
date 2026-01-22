@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cexetfjsmjhhh" path="res://models/dartGreen/game_ready_green_dart_asset_outline.glb" id="3_sxpos"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mqum6"]
-size = Vector3(0.011962891, 0.12654114, 0.013305664)
+size = Vector3(0.011962891, 0.108192444, 0.013305664)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mqum6"]
 radius = 0.018417964
@@ -18,7 +18,7 @@ max_contacts_reported = 1
 script = ExtResource("1_mqum6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 0.063392684, 6.102398e-05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 0.07256703, 6.102398e-05)
 shape = SubResource("BoxShape3D_mqum6")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
