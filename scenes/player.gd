@@ -8,6 +8,10 @@ extends Node3D
 @onready var main_camera: Camera3D = $cameraPivot/MainCamera
 @export var dart_material: StandardMaterial3D
 @onready var ball_rig: Node3D = $ballRig
+@onready var crosshair: Sprite3D = $crosshair
+@onready var gravity_vec: Vector3 = \
+	ProjectSettings.get_setting("physics/3d/default_gravity_vector") * \
+	ProjectSettings.get_setting("physics/3d/default_gravity")
 var darts := []
 var balls := []
 var selected_index := 0
@@ -34,6 +38,7 @@ var mouse = Vector2()
 var rainbow_hue := 0.0
 var preview_dir: Vector3 = Vector3.ZERO
 
+signal mouse_aimed
 @onready var aim_plane: Node3D = $aimPlane
 
 @export var rainbow_speed := 0.5 # cycles per second
@@ -68,9 +73,11 @@ func aim_dart_at_mouse(dart: Node3D, camera: Camera3D, aim_plane: Node3D):
 	basis = basis * Basis(Vector3.RIGHT, deg_to_rad(90))
 
 	dart.global_transform.basis = basis
+	crosshair.position = Vector3(target.x,target.y,target.z)
+	crosshair.show()
+	print(crosshair.position)
 func lineup_darts():
 	var center := (darts.size() - 1) * 0.5
-
 	for i in range(darts.size()):
 		var dart = darts[i]
 		var outline = dart.get_node_or_null("outline")
@@ -111,6 +118,7 @@ func charge_selected_dart(delta):
 		current_throw_force=0
 		main_node.game_state=main_node.GameState.DART_SELECT
 func release_selected_dart():
+	crosshair.hide()
 	if darts.is_empty():
 		return
 	for b in balls:
@@ -152,6 +160,7 @@ func _input(event):
 			pass#spawn_preview_balls(darts[selected_index])
 	if event is InputEventMouseMotion:
 		mouse = event.position
+		
 		lineup_darts()
 func _ready() -> void:
 	selected_index=-1

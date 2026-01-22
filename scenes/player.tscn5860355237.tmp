@@ -35,7 +35,6 @@ script = ExtResource("2_hqtel")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.116261706, 0.116098136)
-visible = false
 mesh = SubResource("QuadMesh_qlg0r")
 skeleton = NodePath("../cameraPivot/MainCamera")
 
@@ -44,7 +43,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.30659306)
 
 [node name="ballRig" type="Node3D" parent="."]
 
-[node name="crosshair" type="Sprite3D" parent="."]
-transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, 0, 0, 0)
-visible = false
+[node name="crosshai" type="Sprite3D" parent="."]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
 texture = ExtResource("6_tuyoq")

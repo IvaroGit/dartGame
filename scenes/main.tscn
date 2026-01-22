@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cpeuhxkwia0g4" path="res://scenes/ui.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxijvavgnysio" path="res://scenes/player.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
-[ext_resource type="Script" path="res://scenes/hud.gd" id="9_choun"]
+[ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
 
@@ -77,7 +77,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.099999994)
 
 [node name="MeshInstance3D" parent="world/Player" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12118384, 0.10116819)
-visible = false
 
 [node name="aimPlane" parent="world/Player" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2438748)
@@ -87,6 +86,7 @@ script = SubResource("GDScript_85g3d")
 
 [node name="HUD" parent="UI" index="0"]
 script = ExtResource("9_choun")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" parent="UI/HUD" index="0"]
 offset_left = 1081.0
@@ -123,11 +123,39 @@ offset_top = 624.0
 offset_right = 960.0
 offset_bottom = 647.0
 
+[node name="Crosshair" parent="UI/HUD" index="7"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CrosshairPin" parent="UI/HUD/Crosshair" index="0"]
+position = Vector2(25, 68)
+
+[node name="CrosshairPin2" parent="UI/HUD/Crosshair" index="1"]
+position = Vector2(25, 1)
+
+[node name="CrosshairPin3" parent="UI/HUD/Crosshair" index="2"]
+position = Vector2(59, 33)
+
+[node name="CrosshairPin4" parent="UI/HUD/Crosshair" index="3"]
+position = Vector2(-11, 33)
+
 [node name="gameState" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983, -0.8627979, 0.0018677711, -0.7994882)
 
+[connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]

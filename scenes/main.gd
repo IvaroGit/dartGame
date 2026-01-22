@@ -20,6 +20,7 @@ var dart_home_positions: Array = []
 var dart_home_rotations: Array = []
 @onready var shop: Node3D = $world/shop
 @onready var cursor: Node3D = $world/Player/cameraPivot/MainCamera/cursor
+@onready var hud: Control = $UI/HUD
 
 @onready var player: Node3D = $world/Player
 @onready var dart: Node3D = $world/Player/DartRig
