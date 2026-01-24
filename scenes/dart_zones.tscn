@@ -1,0 +1,329 @@
+[gd_scene load_steps=3 format=3 uid="uid://4slj7vo6d433"]
+
+[ext_resource type="PackedScene" uid="uid://dfnvthsypl6w8" path="res://models/board/boardBasic2.glb" id="1_y1fkr"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bvx2t"]
+height = 0.020145416
+radius = 0.0126953125
+
+[node name="DartZones" type="Node3D"]
+
+[node name="boardBasic2" parent="." instance=ExtResource("1_y1fkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2791375, -0.5217029, 1.1727557)
+
+[node name="zone_bull" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zone_bull"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.00026636198, -0.0007103245, 0.020625792)
+shape = SubResource("CylinderShape3D_bvx2t")
+
+[node name="zone_outer_bull" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0083446205)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_bull"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0125205815)
+depth = 0.02
+polygon = PackedVector2Array(0.0009836345, -0.015363989, -0.0011907504, -0.03324224, 0.0059363856, -0.03275904, 0.016083503, -0.02949747, 0.023814635, -0.023457522, 0.02961299, -0.015243192, 0.032874554, -0.0058208737, 0.032995358, 0.004567837, 0.029250594, 0.014231755, 0.022727447, 0.022325285, 0.014271522, 0.028486032, 0.004969993, 0.030539615, 0.0023124157, 0.014352555, 0.006902778, 0.013144565, 0.010405952, 0.010849384, 0.013391237, 0.0072365785, 0.015255417, 0.0026796905, 0.015048291, -0.0020843302, 0.013909067, -0.006951915, 0.012148443, -0.009333925, 0.008523646, -0.013165854, 0.003966759, -0.015030035)
+
+[node name="CollisionPolygon3D2" type="CollisionPolygon3D" parent="zone_outer_bull"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01237176)
+depth = 0.02
+polygon = PackedVector2Array(0.00061254017, -0.015372517, -0.001441041, -0.033492357, -0.011104958, -0.030834781, -0.019681683, -0.025519628, -0.026808826, -0.017426098, -0.030311992, -0.008003782, -0.030674392, 0.001418537, -0.028862407, 0.0105992565, -0.023788849, 0.018934384, -0.016420113, 0.025336727, -0.0078433845, 0.029443894, 0.0018205252, 0.030531082, 0.0048405062, 0.030651882, 0.0019413289, 0.013981627, -0.0026490334, 0.014464822, -0.0065146033, 0.012894439, -0.010138573, 0.010116061, -0.013641739, 0.0055257007, -0.014728928, 0.0011769398, -0.014366532, -0.004259011, -0.012192147, -0.009090969, -0.008084992, -0.0133189345, -0.0026490334, -0.015372517)
+
+[node name="zone_inner_slize_1" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.005888786, 0.03694237, 0.013493594, 0.03481301, 0.094713, 0.19147217, 0.08345787, 0.19755602, 0.03478707, 0.21185306)
+
+[node name="zone_inner_slize_4" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_4"]
+transform = Transform3D(0.809017, 0.58778524, 0, -0.58778524, 0.809017, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0062625967, 0.037557133, 0.014617601, 0.03572529, 0.0960987, 0.19290134, 0.08534568, 0.19763133, 0.03478707, 0.21185306)
+
+[node name="zone_inner_slize_18" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_18"]
+transform = Transform3D(0.9998766, 0.015707318, 0, -0.015707318, 0.9998766, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0064514205, 0.037423372, 0.014793699, 0.034706023, 0.09603301, 0.19241889, 0.08749035, 0.19687176, 0.034550197, 0.21045142)
+
+[node name="zone_inner_slize_13" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_13"]
+transform = Transform3D(0.7804304, 0.6252426, 0, -0.6252426, 0.7804304, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.006400709, 0.038195796, 0.014046941, 0.035988703, 0.09054093, 0.19519359, 0.07836078, 0.2001577, 0.029120043, 0.21300587)
+
+[node name="zone_inner_slize_6" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_6"]
+transform = Transform3D(0.5417082, 0.8405665, 0, -0.8405665, 0.5417082, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.006400709, 0.038195796, 0.014046941, 0.035988703, 0.08785803, 0.19649713, 0.06321808, 0.20807715, 0.029120043, 0.21300587)
+
+[node name="zone_inner_slize_10" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_10"]
+transform = Transform3D(0.26387298, 0.9645573, 0, -0.9645573, 0.26387298, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0054385816, 0.039351255, 0.014046941, 0.035988703, 0.09122837, 0.19663353, 0.07592018, 0.20275594, 0.029120043, 0.21300587)
+
+[node name="zone_inner_slize_15" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_15"]
+transform = Transform3D(-0.047106385, 0.9988897, 0, -0.9988897, -0.047106385, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0054870127, 0.039320134, 0.0144129945, 0.037125885, 0.090822384, 0.1975229, 0.07592018, 0.20275594, 0.029085167, 0.214186)
+
+[node name="zone_inner_slize_2" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_2"]
+transform = Transform3D(-0.35347474, 0.9354439, 0, -0.9354439, -0.35347474, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.004883278, 0.039236844, 0.0144129945, 0.037125885, 0.089948505, 0.1968993, 0.06860248, 0.20678052, 0.029280834, 0.21626982)
+
+[node name="zone_inner_slize_17" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_17"]
+transform = Transform3D(-0.62524253, 0.7804303, 0, -0.7804303, -0.62524253, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.004883278, 0.039236844, 0.01304056, 0.037170485, 0.090811476, 0.19677499, 0.06855969, 0.20520635, 0.028183699, 0.21402392)
+
+[node name="zone_inner_slize_3" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_3"]
+transform = Transform3D(-0.8358072, 0.5490226, 0, -0.5490226, -0.8358072, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.004625797, 0.039146308, 0.013157493, 0.03690318, 0.09165675, 0.19885859, 0.07201081, 0.20699476, 0.0296981, 0.2150887)
+
+[node name="zone_inner_slize_19" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_19"]
+transform = Transform3D(-0.96221775, 0.27228016, 0, -0.27228016, -0.96221775, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.004625797, 0.039146308, 0.013130452, 0.03667796, 0.091895685, 0.1974521, 0.070940636, 0.20571262, 0.0307195, 0.21659018)
+
+[node name="zone_inner_slize_7" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_7"]
+transform = Transform3D(-0.99926263, -0.038387716, 0, 0.038387716, -0.99926263, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.004304545, 0.038918547, 0.012903227, 0.036365703, 0.09080103, 0.19645008, 0.076864645, 0.2023353, 0.029356927, 0.21533954)
+
+[node name="zone_inner_slize_16" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_16"]
+transform = Transform3D(-0.9354437, -0.35347477, 0, 0.35347477, -0.9354437, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0037685353, 0.038342915, 0.012790707, 0.036153525, 0.09048556, 0.19847113, 0.07537258, 0.20498464, 0.026887037, 0.21437049)
+
+[node name="zone_inner_slize_8" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_8"]
+transform = Transform3D(-0.78043014, -0.62524235, 0, 0.62524235, -0.78043014, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0038776463, 0.037966333, 0.012660073, 0.0351924, 0.08953261, 0.19786416, 0.07485318, 0.20378338, 0.027610645, 0.21646518)
+
+[node name="zone_inner_slize_11" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_11"]
+transform = Transform3D(-0.54170793, -0.8405663, 0, 0.8405663, -0.54170793, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0036343345, 0.037195615, 0.012660073, 0.0351924, 0.08787618, 0.19809206, 0.07485318, 0.20378338, 0.025493816, 0.21523768)
+
+[node name="zone_inner_slize_14" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_14"]
+transform = Transform3D(-0.2554456, -0.966823, 0, 0.966823, -0.2554456, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0036061765, 0.036838543, 0.012660073, 0.0351924, 0.08787618, 0.19809206, 0.06711604, 0.20636226, 0.025493816, 0.21523768)
+
+[node name="zone_inner_slize_9" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_9"]
+transform = Transform3D(0.055821527, -0.9984403, 0, 0.9984403, 0.055821527, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0036061765, 0.036838543, 0.012538582, 0.034481276, 0.08835108, 0.19671732, 0.07298945, 0.20337637, 0.025589697, 0.21454719)
+
+[node name="zone_inner_slize_12" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_12"]
+transform = Transform3D(0.36974663, -0.92913216, 0, 0.92913216, 0.36974663, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0036061765, 0.036838543, 0.012538582, 0.034481276, 0.086253755, 0.19501671, 0.0735846, 0.20172015, 0.024180211, 0.21336332)
+
+[node name="zone_inner_slize_5" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_5"]
+transform = Transform3D(0.6333806, -0.77383983, 0, 0.77383983, 0.6333806, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.0044332054, 0.036480922, 0.012538582, 0.034481276, 0.08690332, 0.19555543, 0.07179587, 0.2035146, 0.026040003, 0.21199611)
+
+[node name="zone_inner_slize_20" type="Area3D" parent="."]
+transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slize_20"]
+transform = Transform3D(0.8367639, -0.54756296, 0, 0.54756296, 0.8367639, 0, 0, 0, 1, 0, 0, 0.02061601)
+depth = 0.02
+polygon = PackedVector2Array(0.004680194, 0.036711767, 0.012934835, 0.034313574, 0.089605, 0.19478555, 0.071551204, 0.20234221, 0.026830178, 0.211359)
+
+[node name="zone_outer_slize_1" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.038968667, 0.23890734, 0.065575995, 0.2348827, 0.08860585, 0.22683342, 0.107611075, 0.21699542, 0.15903698, 0.31805852, 0.10649313, 0.34220633, 0.057303123, 0.35159713)
+
+[node name="zone_outer_slize_18" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_18"]
+transform = Transform3D(0.94832367, 0.31730464, 0, -0.31730464, 0.94832367, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.036424764, 0.23920357, 0.06316091, 0.23484409, 0.090301216, 0.22468863, 0.10610929, 0.216807, 0.15849686, 0.31975198, 0.10649313, 0.34220633, 0.053342603, 0.35246265)
+
+[node name="zone_outer_slize_4" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_4"]
+transform = Transform3D(0.79863554, 0.601815, 0, -0.601815, 0.79863554, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.035070755, 0.23937097, 0.058046058, 0.23643291, 0.075869046, 0.23298924, 0.10470712, 0.2181803, 0.15583554, 0.32185227, 0.10649313, 0.34220633, 0.05155772, 0.3530481)
+
+[node name="zone_outer_slize_13" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_13"]
+transform = Transform3D(0.56640625, 0.8241262, 0, -0.8241262, 0.56640625, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.033038013, 0.23944497, 0.072625116, 0.23472127, 0.08319943, 0.23047759, 0.10436813, 0.21965036, 0.1541507, 0.3224124, 0.106561445, 0.34116346, 0.048753425, 0.3543411)
+
+[node name="zone_outer_slize_6" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_6"]
+transform = Transform3D(0.29237166, 0.9563048, 0, -0.9563048, 0.29237166, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.035899118, 0.2401608, 0.06750673, 0.23420025, 0.08290872, 0.22963874, 0.10436813, 0.21965036, 0.15508848, 0.3213636, 0.109954774, 0.34143475, 0.05269366, 0.35370794)
+
+[node name="zone_outer_slize_10" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_10"]
+transform = Transform3D(-0.017452352, 0.9998477, 0, -0.9998477, -0.017452352, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.035899118, 0.2401608, 0.06750673, 0.23420025, 0.08290872, 0.22963874, 0.10436813, 0.21965036, 0.1566412, 0.32271025, 0.108557664, 0.3427112, 0.05182476, 0.35393843)
+
+[node name="zone_outer_slize_15" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_15"]
+transform = Transform3D(-0.3255681, 0.9455186, 0, -0.9455186, -0.3255681, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.035845004, 0.24068603, 0.0669871, 0.23729941, 0.08515413, 0.23128985, 0.10669525, 0.22022082, 0.15720014, 0.32198814, 0.11075659, 0.34269047, 0.05300338, 0.3551965)
+
+[node name="zone_outer_slize_2" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_2"]
+transform = Transform3D(-0.6087614, 0.7933533, 0, -0.7933533, -0.6087614, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.03332021, 0.2426684, 0.07228911, 0.23439354, 0.10322255, 0.22116098, 0.15207401, 0.32218271, 0.105623156, 0.341215, 0.049609303, 0.3546269)
+
+[node name="zone_outer_slize_17" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_17"]
+transform = Transform3D(-0.8290376, 0.55919284, 0, -0.55919284, -0.8290376, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.030742124, 0.24239667, 0.066775635, 0.23589647, 0.101868734, 0.22140357, 0.15122257, 0.3232265, 0.09617426, 0.3471478, 0.04516591, 0.35366705)
+
+[node name="zone_outer_slize_3" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_3"]
+transform = Transform3D(-0.9612617, 0.27563736, 0, -0.27563736, -0.9612617, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.031614725, 0.24170114, 0.07019775, 0.23616973, 0.101518594, 0.22257243, 0.150163, 0.32427964, 0.10782881, 0.34120592, 0.046685867, 0.35395125)
+
+[node name="zone_outer_slize_19" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_19"]
+transform = Transform3D(-0.9998477, -0.017452395, 0, 0.017452395, -0.9998477, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.035162296, 0.24171196, 0.07404492, 0.23598729, 0.104266495, 0.22117087, 0.15427807, 0.32226074, 0.10810543, 0.34235263, 0.052113377, 0.35383737)
+
+[node name="zone_outer_slize_7" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_7"]
+transform = Transform3D(-0.94832367, -0.31730464, 0, 0.31730464, -0.94832367, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.035162296, 0.24171196, 0.07392256, 0.23559186, 0.10566226, 0.21983162, 0.15645468, 0.32090968, 0.10920774, 0.33795452, 0.05342514, 0.3534306)
+
+[node name="zone_outer_slize_16" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_16"]
+transform = Transform3D(-0.8038568, -0.5948229, 0, 0.5948229, -0.8038568, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.035162296, 0.24171196, 0.073321514, 0.23474756, 0.10680843, 0.21946387, 0.1584677, 0.32163852, 0.089472055, 0.34784827, 0.052397624, 0.35380024)
+
+[node name="zone_outer_slize_8" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_8"]
+transform = Transform3D(-0.57357645, -0.819152, 0, 0.819152, -0.57357645, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.034478895, 0.24205683, 0.073321514, 0.23474756, 0.104913935, 0.22160594, 0.15480351, 0.32349673, 0.08932776, 0.3495285, 0.050855726, 0.3548343)
+
+[node name="zone_outer_slize_11" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_11"]
+transform = Transform3D(-0.29237175, -0.9563047, 0, 0.9563047, -0.29237175, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.034478895, 0.24205683, 0.072944, 0.23399541, 0.10425231, 0.22086841, 0.1548754, 0.323131, 0.10391505, 0.34497592, 0.050855726, 0.3548343)
+
+[node name="zone_outer_slize_14" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_14"]
+transform = Transform3D(0.017452382, -0.99984765, 0, 0.99984765, 0.017452382, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.034478895, 0.24205683, 0.06835592, 0.23689908, 0.1045836, 0.2210274, 0.1542665, 0.32109055, 0.09938395, 0.34667903, 0.050855726, 0.3548343)
+
+[node name="zone_outer_slize_9" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_9"]
+transform = Transform3D(0.31730467, -0.9483236, 0, 0.9483236, 0.31730467, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.035256848, 0.24141815, 0.06956166, 0.236029, 0.10613951, 0.21822327, 0.15781772, 0.3188411, 0.09988819, 0.34401417, 0.052889787, 0.35205808)
+
+[node name="zone_outer_slize_12" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_12"]
+transform = Transform3D(0.5948227, -0.8038568, 0, 0.8038568, 0.5948227, 0, 0, 0, 1, 0, 0, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.03666281, 0.23927504, 0.07081802, 0.23475103, 0.106470846, 0.21694145, 0.15781772, 0.3188411, 0.10809189, 0.34042305, 0.053700432, 0.3513756)
+
+[node name="zone_outer_slize_5" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_5"]
+transform = Transform3D(0.8141154, -0.5807029, 0, 0.5807029, 0.8141154, 0, 0, 0, 1, 0.00089523196, 0.00029839575, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.03666281, 0.23927504, 0.07097809, 0.23392177, 0.105227515, 0.21718931, 0.15538982, 0.31953552, 0.09509069, 0.34334332, 0.05390896, 0.3516417)
+
+[node name="zone_outer_slize_20" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_slize_20"]
+transform = Transform3D(0.9510564, -0.30901697, 0, 0.30901697, 0.9510564, 0, 0, 0, 1, 0.00089523196, 0.00029839575, 0.02086927)
+depth = 0.02
+polygon = PackedVector2Array(0.0375401, 0.2380742, 0.06578576, 0.23431581, 0.10682949, 0.21597043, 0.15950204, 0.31820214, 0.10040288, 0.3439836, 0.055150907, 0.3509464)
