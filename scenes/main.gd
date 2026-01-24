@@ -99,7 +99,7 @@ func _on_throw_button_pressed() -> void:
 		selected_dart_index = -1
 		player.hovered_index=-1
 		game_state = GameState.DART_THROW
-		print("state: throw")
+		
 		player.lineup_darts()
 		
 
@@ -110,5 +110,5 @@ func _on_throw_cancel_button_pressed() -> void:
 	throw_button_visible=false
 	player.hovered_index=-1
 	game_state = GameState.DART_SELECT
-	print("state: select")
+	
 	player.lineup_darts()

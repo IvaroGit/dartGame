@@ -75,7 +75,7 @@ func aim_dart_at_mouse(dart: Node3D, camera: Camera3D, aim_plane: Node3D):
 	dart.global_transform.basis = basis
 	crosshair.position = Vector3(target.x,target.y,target.z)
 	crosshair.show()
-	print(crosshair.position)
+	
 func lineup_darts():
 	var center := (darts.size() - 1) * 0.5
 	for i in range(darts.size()):

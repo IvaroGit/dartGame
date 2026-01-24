@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6tfykr8ys2y2"]
+[gd_scene load_steps=7 format=3 uid="uid://c6tfykr8ys2y2"]
 
 [ext_resource type="PackedScene" uid="uid://dy21mldpq7y8q" path="res://models/dartGreen/game_ready_green_dart_asset.glb" id="1_er84i"]
 [ext_resource type="Script" uid="uid://do7p4kxjqyovu" path="res://scenes/dart.gd" id="1_mqum6"]
 [ext_resource type="PackedScene" uid="uid://cexetfjsmjhhh" path="res://models/dartGreen/game_ready_green_dart_asset_outline.glb" id="3_sxpos"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mqum6"]
-size = Vector3(0.011962891, 0.108192444, 0.013305664)
+size = Vector3(0.011962891, 0.11171341, 0.013305664)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mqum6"]
 radius = 0.018417964
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxpos"]
+size = Vector3(0.0034332275, 0.013977051, 0.002746582)
 
 [node name="Dart" type="RigidBody3D" groups=["darts"]]
 transform = Transform3D(0.99999994, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 0, 0)
@@ -18,7 +21,7 @@ max_contacts_reported = 1
 script = ExtResource("1_mqum6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 0.07256703, 6.102398e-05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 0.07080655, 6.102398e-05)
 shape = SubResource("BoxShape3D_mqum6")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
@@ -35,6 +38,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1443442, 0)
 
 [node name="back_pivot" type="Node3D" parent="."]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0.11018482, 0)
+
+[node name="tipHitbox" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00014498738, 0.0071106404, -3.0517578e-05)
+shape = SubResource("BoxShape3D_sxpos")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 

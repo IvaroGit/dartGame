@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://csx38lntfghur"]
 
 [ext_resource type="PackedScene" uid="uid://dfnvthsypl6w8" path="res://models/board/boardBasic2.glb" id="1_bw3vb"]
+[ext_resource type="PackedScene" uid="uid://4slj7vo6d433" path="res://scenes/dart_zones.tscn" id="2_tx6nw"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bw3vb"]
 
@@ -11,14 +12,11 @@ radius = 0.49560547
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tx6nw"]
 roughness = 0.6
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bw3vb"]
-points = PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
-
 [node name="board" type="StaticBody3D" groups=["board"]]
 physics_material_override = SubResource("PhysicsMaterial_bw3vb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.087155804, 3.809701e-09, 0)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.083141886, 3.809701e-09, 0)
 shape = SubResource("CylinderShape3D_bw3vb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -35,8 +33,7 @@ spot_angle = 88.14
 [node name="boardBasic2" parent="." instance=ExtResource("1_bw3vb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.2654717, -0.5202687, 0.27747092)
 
-[node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4461071, 0, 0)
+[node name="DartZones" parent="." instance=ExtResource("2_tx6nw")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.096245944, 0.0017758235, -0.0017758012)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("ConvexPolygonShape3D_bw3vb")
+[editable path="DartZones"]
