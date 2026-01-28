@@ -8,7 +8,7 @@ extends Control
 @onready var crosshair_pin_4: Sprite2D = $Crosshair/CrosshairPin4
 @onready var crosshair_pin: Sprite2D = $Crosshair/CrosshairPin
 @onready var power_label: Label = $powerLabel
-@onready var crosshair_red: Sprite2D = $crosshairRed
+
 var anchorPos = Vector2()
 func _ready():
 	pass

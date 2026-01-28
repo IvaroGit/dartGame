@@ -19,6 +19,9 @@ physics_material_override = SubResource("PhysicsMaterial_bw3vb")
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.083141886, 3.809701e-09, 0)
 shape = SubResource("CylinderShape3D_bw3vb")
 
+[node name="DartZones" parent="CollisionShape3D" instance=ExtResource("2_tx6nw")]
+transform = Transform3D(1.9106855e-15, -1, 4.371139e-08, -4.371139e-08, -4.371139e-08, -1, 1, 0, -4.371139e-08, -0.0017758192, -0.0098410025, -0.0017758012)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0.0224334, 0, -1, -9.80595e-10, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_tx6nw")
@@ -33,7 +36,4 @@ spot_angle = 88.14
 [node name="boardBasic2" parent="." instance=ExtResource("1_bw3vb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.2654717, -0.5202687, 0.27747092)
 
-[node name="DartZones" parent="." instance=ExtResource("2_tx6nw")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.096245944, 0.0017758235, -0.0017758012)
-
-[editable path="DartZones"]
+[editable path="CollisionShape3D/DartZones"]

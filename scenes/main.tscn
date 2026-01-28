@@ -155,6 +155,13 @@ position = Vector2(59, 33)
 [node name="CrosshairPin4" parent="UI/HUD/Crosshair" index="3"]
 position = Vector2(-11, 33)
 
+[node name="Label" type="Label" parent="UI/HUD" index="8"]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 91.0
+offset_right = 910.0
+offset_bottom = 114.0
+
 [node name="gameState" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]

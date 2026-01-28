@@ -7,20 +7,20 @@
 height = 0.020145416
 radius = 0.0126953125
 
-[node name="DartZones" type="Node3D" groups=["board", "hitboxes"]]
+[node name="DartZones" type="Node3D" groups=["hitboxes"]]
 script = ExtResource("1_pbj0l")
 
 [node name="boardBasic2" parent="." instance=ExtResource("1_y1fkr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2791375, -0.5217029, 1.1727557)
 visible = false
 
-[node name="zone_bull" type="Area3D" parent="."]
+[node name="zone_bull" type="Area3D" parent="." groups=["hitboxes"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="zone_bull"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.00026636198, -0.0007103245, 0.020625792)
 shape = SubResource("CylinderShape3D_bvx2t")
 
-[node name="zone_outer_bull" type="Area3D" parent="."]
+[node name="zone_outer_bull" type="Area3D" parent="." groups=["hitboxes"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0083446205)
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_outer_bull"]
@@ -33,21 +33,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01237176)
 depth = 0.02
 polygon = PackedVector2Array(0.00061254017, -0.015372517, -0.001441041, -0.033492357, -0.011104958, -0.030834781, -0.019681683, -0.025519628, -0.026808826, -0.017426098, -0.030311992, -0.008003782, -0.030674392, 0.001418537, -0.028862407, 0.0105992565, -0.023788849, 0.018934384, -0.016420113, 0.025336727, -0.0078433845, 0.029443894, 0.0018205252, 0.030531082, 0.0048405062, 0.030651882, 0.0019413289, 0.013981627, -0.0026490334, 0.014464822, -0.0065146033, 0.012894439, -0.010138573, 0.010116061, -0.013641739, 0.0055257007, -0.014728928, 0.0011769398, -0.014366532, -0.004259011, -0.012192147, -0.009090969, -0.008084992, -0.0133189345, -0.0026490334, -0.015372517)
 
-[node name="zone_inner_slice_1" type="Area3D" parent="."]
+[node name="zone_inner_slice_1" type="Area3D" parent="." groups=["hitboxes"]]
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slice_1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02061601)
 depth = 0.02
 polygon = PackedVector2Array(0.005888786, 0.03694237, 0.013493594, 0.03481301, 0.094713, 0.19147217, 0.08345787, 0.19755602, 0.03478707, 0.21185306)
 
-[node name="zone_inner_slice_4" type="Area3D" parent="."]
+[node name="zone_inner_slice_4" type="Area3D" parent="." groups=["hitboxes"]]
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slice_4"]
 transform = Transform3D(0.809017, 0.58778524, 0, -0.58778524, 0.809017, 0, 0, 0, 1, 0, 0, 0.02061601)
 depth = 0.02
 polygon = PackedVector2Array(0.0062625967, 0.037557133, 0.014617601, 0.03572529, 0.0960987, 0.19290134, 0.08534568, 0.19763133, 0.03478707, 0.21185306)
 
-[node name="zone_inner_slice_18" type="Area3D" parent="."]
+[node name="zone_inner_slice_18" type="Area3D" parent="." groups=["hitboxes"]]
 transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slice_18"]
@@ -55,7 +55,7 @@ transform = Transform3D(0.9998766, 0.015707318, 0, -0.015707318, 0.9998766, 0, 0
 depth = 0.02
 polygon = PackedVector2Array(0.0064514205, 0.037423372, 0.014793699, 0.034706023, 0.09603301, 0.19241889, 0.08749035, 0.19687176, 0.034550197, 0.21045142)
 
-[node name="zone_inner_slice_13" type="Area3D" parent="."]
+[node name="zone_inner_slice_13" type="Area3D" parent="." groups=["hitboxes"]]
 transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slice_13"]
@@ -63,7 +63,7 @@ transform = Transform3D(0.7804304, 0.6252426, 0, -0.6252426, 0.7804304, 0, 0, 0,
 depth = 0.02
 polygon = PackedVector2Array(0.006400709, 0.038195796, 0.014046941, 0.035988703, 0.09054093, 0.19519359, 0.07836078, 0.2001577, 0.029120043, 0.21300587)
 
-[node name="zone_inner_slice_6" type="Area3D" parent="."]
+[node name="zone_inner_slice_6" type="Area3D" parent="." groups=["hitboxes"]]
 transform = Transform3D(0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_inner_slice_6"]
