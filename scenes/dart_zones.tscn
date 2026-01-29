@@ -12,7 +12,6 @@ script = ExtResource("1_pbj0l")
 
 [node name="boardBasic2" parent="." instance=ExtResource("1_y1fkr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2791375, -0.5217029, 1.1727557)
-visible = false
 
 [node name="zone_bull" type="Area3D" parent="." groups=["hitboxes"]]
 
@@ -331,142 +330,142 @@ transform = Transform3D(0.9510564, -0.30901697, 0, 0.30901697, 0.9510564, 0, 0, 
 depth = 0.02
 polygon = PackedVector2Array(0.0375401, 0.2380742, 0.06578576, 0.23431581, 0.10682949, 0.21597043, 0.15950204, 0.31820214, 0.10040288, 0.3439836, 0.055150907, 0.3509464)
 
-[node name="zone_tripple_1" type="Area3D" parent="."]
+[node name="zone_tripple_nr1" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_1"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.034798868, 0.21428023, 0.06595417, 0.20584592, 0.09590457, 0.19448543, 0.10588803, 0.21376385, 0.073183574, 0.22873905, 0.03875783, 0.23493567)
 
-[node name="zone_tripple_2" type="Area3D" parent="."]
+[node name="zone_tripple_nr18" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_2"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr18"]
 transform = Transform3D(0.95105654, 0.309017, 0, -0.309017, 0.95105654, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.03428839, 0.21390858, 0.084660955, 0.20137905, 0.09753202, 0.19507353, 0.10730433, 0.21375695, 0.073183574, 0.22873905, 0.038000032, 0.23625568)
 
-[node name="zone_tripple_3" type="Area3D" parent="."]
+[node name="zone_tripple_nr4" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_3"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr4"]
 transform = Transform3D(0.8141155, 0.58070296, 0, -0.58070296, 0.8141155, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.03696414, 0.21466377, 0.0861155, 0.20082405, 0.09946317, 0.19391155, 0.1091297, 0.2132318, 0.07737207, 0.22965845, 0.040960908, 0.23575158)
 
-[node name="zone_tripple_4" type="Area3D" parent="."]
+[node name="zone_tripple_nr13" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_4"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr13"]
 transform = Transform3D(0.58070296, 0.8141155, 0, -0.8141155, 0.58070296, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.03320553, 0.21540567, 0.0861155, 0.20082405, 0.09726249, 0.19542718, 0.10674031, 0.21461338, 0.07737207, 0.22965845, 0.036576122, 0.2368443)
 
-[node name="zone_tripple_5" type="Area3D" parent="."]
+[node name="zone_tripple_nr6" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_5"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr6"]
 transform = Transform3D(0.2756374, 0.9612617, 0, -0.9612617, 0.2756374, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.028386248, 0.21687828, 0.06294868, 0.21154642, 0.09071115, 0.19846825, 0.10043883, 0.21830328, 0.07427576, 0.23038417, 0.03146567, 0.23888905)
 
-[node name="zone_tripple_6" type="Area3D" parent="."]
+[node name="zone_tripple_nr10" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_6"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr10"]
 transform = Transform3D(-0.036643688, 0.9993284, 0, -0.9993284, -0.036643688, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.027149945, 0.21608235, 0.05972617, 0.2100138, 0.090652265, 0.19942784, 0.10043883, 0.21830328, 0.06916699, 0.23165399, 0.02960065, 0.23928201)
 
-[node name="zone_tripple_7" type="Area3D" parent="."]
+[node name="zone_tripple_nr15" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_7"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr15"]
 transform = Transform3D(-0.3518417, 0.93605953, 0, -0.93605953, -0.3518417, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.025674239, 0.21707761, 0.06462841, 0.20950985, 0.089910574, 0.20133568, 0.099016055, 0.22092444, 0.0631349, 0.23599294, 0.028421618, 0.23911132)
 
-[node name="zone_tripple_8" type="Area3D" parent="."]
+[node name="zone_tripple_nr2" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_8"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr2"]
 transform = Transform3D(-0.6306758, 0.7760464, 0, -0.7760464, -0.6306758, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.023356214, 0.21934488, 0.056701392, 0.21318687, 0.08724936, 0.20157453, 0.09634809, 0.22169326, 0.06313293, 0.23374075, 0.025857784, 0.24046445)
 
-[node name="zone_tripple_9" type="Area3D" parent="."]
+[node name="zone_tripple_nr17" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_9"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr17"]
 transform = Transform3D(-0.844328, 0.53582674, 0, -0.53582674, -0.844328, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.021248177, 0.21743508, 0.065692425, 0.2088279, 0.08649305, 0.20246392, 0.09480649, 0.22202739, 0.06366804, 0.23472407, 0.02344764, 0.24065071)
 
-[node name="zone_tripple_10" type="Area3D" parent="."]
+[node name="zone_tripple_nr3" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_10"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr3"]
 transform = Transform3D(-0.96858317, 0.2486899, 0, -0.2486899, -0.96858317, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.021486714, 0.219419, 0.0675488, 0.21235985, 0.08681983, 0.2046308, 0.0944003, 0.22254942, 0.06283933, 0.23502319, 0.024604518, 0.24007264)
 
-[node name="zone_tripple_11" type="Area3D" parent="."]
+[node name="zone_tripple_nr19" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_11"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr19"]
 transform = Transform3D(-0.9967789, -0.080198936, 0, 0.080198936, -0.9967789, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.01762791, 0.22112831, 0.06205564, 0.21195994, 0.08135043, 0.20457576, 0.08884613, 0.2245415, 0.052513182, 0.23800199, 0.01939507, 0.24030215)
 
-[node name="zone_tripple_12" type="Area3D" parent="."]
+[node name="zone_tripple_nr7" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_12"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr7"]
 transform = Transform3D(-0.92652863, -0.37622428, 0, 0.37622428, -0.92652863, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.018540554, 0.2191927, 0.06137921, 0.21059373, 0.08166612, 0.20316383, 0.090930104, 0.22419548, 0.05695618, 0.23639403, 0.020483062, 0.2402781)
 
-[node name="zone_tripple_13" type="Area3D" parent="."]
+[node name="zone_tripple_nr16" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_13"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr16"]
 transform = Transform3D(-0.75927126, -0.6507743, 0, 0.6507743, -0.75927126, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.01586654, 0.2180015, 0.060103305, 0.21318433, 0.08116066, 0.20487772, 0.089613326, 0.22428636, 0.05695618, 0.23639403, 0.017348811, 0.24081203)
 
-[node name="zone_tripple_14" type="Area3D" parent="."]
+[node name="zone_tripple_nr8" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_14"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr8"]
 transform = Transform3D(-0.5135413, -0.8580649, 0, 0.8580649, -0.5135413, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.014804147, 0.22023241, 0.059500705, 0.21156932, 0.07892047, 0.20491952, 0.087443985, 0.22553614, 0.05660417, 0.23577066, 0.016507462, 0.24055031)
 
-[node name="zone_tripple_15" type="Area3D" parent="."]
+[node name="zone_tripple_nr11" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_15"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr11"]
 transform = Transform3D(-0.22325017, -0.9747612, 0, 0.9747612, -0.22325017, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.014429282, 0.21944667, 0.059500705, 0.21156932, 0.07892047, 0.20491952, 0.087443985, 0.22553614, 0.055748094, 0.2353671, 0.01625586, 0.24154292)
 
-[node name="zone_tripple_16" type="Area3D" parent="."]
+[node name="zone_tripple_nr14" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_16"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr14"]
 transform = Transform3D(0.08889425, -0.99604106, 0, 0.99604106, 0.08889425, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.014225764, 0.21861374, 0.059500705, 0.21156932, 0.078924015, 0.2045945, 0.087462544, 0.22522043, 0.05546943, 0.2357162, 0.01590056, 0.2409535)
 
-[node name="zone_tripple_17" type="Area3D" parent="."]
+[node name="zone_tripple_nr9" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_17"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr9"]
 transform = Transform3D(0.39233708, -0.9198215, 0, 0.9198215, 0.39233708, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.014201194, 0.21823569, 0.06776369, 0.20817828, 0.07862848, 0.2027942, 0.08709664, 0.22349155, 0.045352325, 0.2390877, 0.01590056, 0.2409535)
 
-[node name="zone_tripple_18" type="Area3D" parent="."]
+[node name="zone_tripple_nr12" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_18"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr12"]
 transform = Transform3D(0.6639262, -0.7477981, 0, 0.7477981, 0.6639262, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.0133256465, 0.21755914, 0.0632204, 0.20788395, 0.07727087, 0.2016598, 0.08612064, 0.22312857, 0.051263712, 0.23584317, 0.014405742, 0.2394167)
 
-[node name="zone_tripple_19" type="Area3D" parent="."]
+[node name="zone_tripple_5" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_19"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_5"]
 transform = Transform3D(0.8625136, -0.5060337, 0, 0.5060337, 0.8625136, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.014176868, 0.21571067, 0.060802765, 0.21005063, 0.07627327, 0.20228538, 0.08470433, 0.22356388, 0.051489472, 0.23542182, 0.015766531, 0.23873812)
 
-[node name="zone_tripple_20" type="Area3D" parent="."]
+[node name="zone_tripple_nr20" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_20"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zone_tripple_nr20"]
 transform = Transform3D(0.97476107, -0.22325008, 0, 0.22325008, 0.97476107, 0, 0, 0, 1, 0, 0, 0.021)
 depth = 0.02
 polygon = PackedVector2Array(0.014953218, 0.21573165, 0.06095606, 0.20888732, 0.079046205, 0.20221266, 0.087436885, 0.22180837, 0.04380279, 0.23623198, 0.016303252, 0.23820564)

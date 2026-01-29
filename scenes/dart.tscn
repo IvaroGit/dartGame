@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6tfykr8ys2y2"]
+[gd_scene load_steps=8 format=3 uid="uid://c6tfykr8ys2y2"]
 
 [ext_resource type="PackedScene" uid="uid://dy21mldpq7y8q" path="res://models/dartGreen/game_ready_green_dart_asset.glb" id="1_er84i"]
 [ext_resource type="Script" uid="uid://do7p4kxjqyovu" path="res://scenes/dart.gd" id="1_mqum6"]
@@ -12,6 +12,10 @@ radius = 0.018417964
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sxpos"]
 size = Vector3(0.0034332275, 0.013977051, 0.002746582)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sxpos"]
+radius = 0.0024414063
+height = 0.042541504
 
 [node name="Dart" type="RigidBody3D" groups=["darts"]]
 transform = Transform3D(0.99999994, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 0, 0)
@@ -42,6 +46,10 @@ transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0.11018482
 [node name="tipHitbox" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00014498738, 0.0071106404, -3.0517578e-05)
 shape = SubResource("BoxShape3D_sxpos")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.022116806, 0)
+shape = SubResource("CapsuleShape3D_sxpos")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 

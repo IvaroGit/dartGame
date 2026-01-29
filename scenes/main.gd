@@ -19,19 +19,22 @@ var selected_dart_index: int = -1
 var dart_home_positions: Array = []
 var dart_home_rotations: Array = []
 @onready var shop: Node3D = $world/shop
-
+@onready var dart_zones: Node3D = $world/dartArea/board/CollisionShape3D/DartZones
 @onready var hud: Control = $UI/HUD
-
 @onready var player: Node3D = $world/Player
 @onready var dart: Node3D = $world/Player/DartRig
 @onready var throw_button: Control = $UI/HUD/button_container/Control
-
+@onready var zone_label: Label = $UI/HUD/zoneLabel
 @export var bag_distance := 0.25
 @export var bag_height_offset := 0
 
 
+
 func _ready() -> void:
 	update_camera()
+	dart_zones.zone_hit.connect(update_zone_label)
+func update_zone_label(text):
+	zone_label.set_text("Hit : "+ text)
 func update_camera():
 	for i in range(cameras.size()):
 		cameras[i].current=(i==current_camera_index)

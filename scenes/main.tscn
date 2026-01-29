@@ -90,6 +90,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2438748)
 script = SubResource("GDScript_85g3d")
 
 [node name="HUD" parent="UI" index="0"]
+offset_left = 1.0
+offset_right = 1.0
 script = ExtResource("9_choun")
 metadata/_edit_use_anchors_ = true
 
@@ -155,12 +157,12 @@ position = Vector2(59, 33)
 [node name="CrosshairPin4" parent="UI/HUD/Crosshair" index="3"]
 position = Vector2(-11, 33)
 
-[node name="Label" type="Label" parent="UI/HUD" index="8"]
+[node name="zoneLabel" type="Label" parent="UI/HUD" index="8"]
 layout_mode = 0
-offset_left = 870.0
-offset_top = 91.0
-offset_right = 910.0
-offset_bottom = 114.0
+offset_left = 856.0
+offset_top = 576.0
+offset_right = 896.0
+offset_bottom = 599.0
 
 [node name="gameState" type="Node3D" parent="."]
 
@@ -172,6 +174,8 @@ transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
 
+[editable path="world/dartArea/board"]
+[editable path="world/dartArea/board/CollisionShape3D/DartZones"]
 [editable path="world/Player"]
 [editable path="UI"]
 [editable path="UI/HUD/button_container/Control"]
