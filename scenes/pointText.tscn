@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://g110kdti8u6g"]
+
+[ext_resource type="FontFile" uid="uid://bofs88q77wiay" path="res://fonts/Minercraftory.ttf" id="1_eg4t4"]
+[ext_resource type="Material" uid="uid://b13s2hwlqrx6o" path="res://textures/red.tres" id="2_cff5w"]
+[ext_resource type="Script" uid="uid://c5oor0kft7hr" path="res://scenes/point_text.gd" id="3_ir3jt"]
+
+[sub_resource type="TextMesh" id="TextMesh_6r3cp"]
+material = ExtResource("2_cff5w")
+text = "+sum bigass numba"
+font = ExtResource("1_eg4t4")
+font_size = 22
+depth = 0.215
+
+[node name="Node3D" type="MeshInstance3D"]
+transform = Transform3D(6.4255744e-08, 0, -0.252, 0, 0.49, 0, 0.49, 0, 3.3045808e-08, 0.9453909, 0, 0)
+mesh = SubResource("TextMesh_6r3cp")
+script = ExtResource("3_ir3jt")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.4591522, 0, 0, 0)
+light_color = Color(0.8235617, 0.61009526, 1.540184e-06, 1)
+light_energy = 0.38

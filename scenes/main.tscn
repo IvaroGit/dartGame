@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=13 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -17,8 +17,6 @@ background_mode = 2
 background_color = Color(0.4071524, 0.49325198, 0.5770381, 1)
 sky = SubResource("Sky_85g3d")
 sdfgi_enabled = true
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0wfyh"]
 
 [sub_resource type="GDScript" id="GDScript_85g3d"]
 
@@ -45,7 +43,6 @@ spot_range = 9.013
 
 [node name="board" parent="world/dartArea" instance=ExtResource("1_o5qli")]
 transform = Transform3D(-0.0050965473, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.0050965473, 0.020186663, 0.0017428994, -1.36)
-physics_material_override = SubResource("PhysicsMaterial_0wfyh")
 
 [node name="lectern" parent="world/dartArea" instance=ExtResource("3_sugp2")]
 transform = Transform3D(1, 0, 0, 0, 0.97778326, 0.20961857, 0, -0.20961857, 0.97778326, 0, -1.0303969, 0.045403708)
@@ -175,7 +172,7 @@ transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
 
 [editable path="world/dartArea/board"]
-[editable path="world/dartArea/board/CollisionShape3D/DartZones"]
+[editable path="world/dartArea/board/board/CollisionShape3D/DartZones"]
 [editable path="world/Player"]
 [editable path="UI"]
 [editable path="UI/HUD/button_container/Control"]
