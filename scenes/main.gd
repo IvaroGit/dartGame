@@ -20,7 +20,6 @@ var dart_home_positions: Array = []
 var dart_home_rotations: Array = []
 @onready var shop: Node3D = $world/shop
 @onready var dart_zones: Node3D = $world/dartArea/board/board/CollisionShape3D/DartZones
-
 @onready var hud: Control = $UI/HUD
 @onready var player: Node3D = $world/Player
 @onready var dart: Node3D = $world/Player/DartRig

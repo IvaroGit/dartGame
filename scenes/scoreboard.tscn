@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://486piou8upa3"]
+
+[ext_resource type="Script" uid="uid://cxmie3c8gjdmc" path="res://scoreBoard.gd" id="1_ucmtr"]
+[ext_resource type="Material" uid="uid://cor0vgu732r7b" path="res://textures/black.tres" id="2_g67ru"]
+[ext_resource type="FontFile" uid="uid://bofs88q77wiay" path="res://fonts/Minercraftory.ttf" id="3_cxde7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_w5fga"]
+material = ExtResource("2_g67ru")
+
+[sub_resource type="BoxMesh" id="BoxMesh_6lsbm"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_ucmtr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.31, 0, 0, 0, 0.355, 0, 0, 0)
+mesh = SubResource("BoxMesh_w5fga")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0.20156302)
+font = ExtResource("3_cxde7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.92352223, 0, 0, 0, 0.24299058, 0, 0, 0, 0.14321956, 0, 0, 0.1273573)
+mesh = SubResource("BoxMesh_6lsbm")

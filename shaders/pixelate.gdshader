@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode unshaded, depth_draw_always, cull_back, blend_mix;
+render_mode unshaded, depth_draw_always, cull_back, blend_mix,depth_test_disabled;
 
 uniform float pixel_count = 400.0; // number of horizontal pixels
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;

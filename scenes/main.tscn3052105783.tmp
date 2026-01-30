@@ -54,9 +54,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24008581, 0)
 [node name="scoreboard" parent="world/dartArea" instance=ExtResource("8_choun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68869907, -1.2725111)
 
-[node name="Label3D" parent="world/dartArea/scoreboard" index="1"]
-text = "rgrdgf"
-
 [node name="shop" type="Node3D" parent="world"]
 
 [node name="shelf" type="Node3D" parent="world"]
@@ -76,12 +73,8 @@ dart_material = ExtResource("7_85g3d")
 [node name="DartRig" parent="world/Player" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192)
 
-[node name="cameraPivot" parent="world/Player" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.99908215, 0.0428347, 0, -0.0428347, 0.99908215, 0, 0, 0.7386536)
-
 [node name="MainCamera" parent="world/Player/cameraPivot" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1.0000001, 3.7252903e-09, 0, -3.7252903e-09, 1.0000001, 0, 0.011105591, -0.35902828)
-fov = 63.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.099999994)
 
 [node name="MeshInstance3D" parent="world/Player" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12118384, 0.10116819)

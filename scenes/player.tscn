@@ -29,12 +29,13 @@ script = ExtResource("1_i3pqv")
 
 [node name="MainCamera" type="Camera3D" parent="cameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
-fov = 92.3
-far = 47.82
+fov = 37.849285
 script = ExtResource("2_hqtel")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.116261706, 0.116098136)
+sorting_offset = 100.0
+extra_cull_margin = 5310.68
 mesh = SubResource("QuadMesh_qlg0r")
 skeleton = NodePath("../cameraPivot/MainCamera")
 
