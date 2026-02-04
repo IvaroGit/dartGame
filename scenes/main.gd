@@ -1,7 +1,9 @@
 extends Node3D
 class_name main
-enum GameState { DART_SELECT,DART_THROW, BAG, BAG_TRANSITION,DART_DROP_TRANSITION,DART_CHARGE}
+enum Runstate {THROWING,SCORING,SHOP,POST_QUOTA,SHOP_TRANSITION_RUN}
+enum GameState { DART_SELECT,DART_THROW,DART_CHARGE}
 @export var game_state := GameState.DART_THROW
+var run_state := Runstate.THROWING
 @export var cameras: Array[Camera3D]=[]
 
 @onready var power_label: Label = $UI/HUD/powerLabel
@@ -28,7 +30,9 @@ var dart_home_rotations: Array = []
 @export var bag_distance := 0.25
 @export var bag_height_offset := 0
 
-
+var coins
+var quota
+var score
 
 func _ready() -> void:
 	update_camera()

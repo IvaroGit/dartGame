@@ -1,0 +1,156 @@
+[gd_scene load_steps=3 format=3 uid="uid://ug3kso7m3b0b"]
+
+[ext_resource type="Script" uid="uid://44h66noovjqy" path="res://scenes/new_game_menu.gd" id="1_4tstq"]
+[ext_resource type="Texture2D" uid="uid://bbhw2ias7ei84" path="res://models/board/winmau_blade_5_dart_board_0.png" id="1_qfiju"]
+
+[node name="Node2D" type="Node2D"]
+process_priority = 1
+script = ExtResource("1_4tstq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -243.0
+offset_top = 7.0
+offset_right = -203.0
+offset_bottom = 47.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 140.99998
+offset_right = 415.0
+offset_bottom = 180.99998
+scale = Vector2(8.104693, 7.800001)
+color = Color(0.55, 0.55, 0.55, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 140.99998
+offset_right = 415.0
+offset_bottom = 180.99998
+scale = Vector2(8.104693, 1.4000006)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 151.0
+offset_right = 427.0
+offset_bottom = 191.0
+scale = Vector2(7.544696, 0.96814126)
+
+[node name="ColorRect4" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 801.00006
+offset_right = 841.00006
+offset_bottom = 40.0
+scale = Vector2(11.464696, 14.898018)
+color = Color(0.55, 0.55, 0.55, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 840.00006
+offset_top = 9.0
+offset_right = 880.0001
+offset_bottom = 49.0
+scale = Vector2(9.864694, 1.7040222)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 852.00006
+offset_top = 20.000015
+offset_right = 892.00006
+offset_bottom = 60.000015
+scale = Vector2(9.183088, 1.1783811)
+
+[node name="Label" type="Label" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 417.0
+offset_top = 161.0
+offset_right = 643.0
+offset_bottom = 184.0
+text = "new run               continue run"
+
+[node name="Label2" type="Label" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 949.99994
+offset_top = 28.0
+offset_right = 1175.9999
+offset_bottom = 51.0
+scale = Vector2(1.2171581, 1.2171581)
+text = "       BOARDS"
+
+[node name="new_game" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 233.00002
+offset_right = 445.0
+offset_bottom = 264.0
+scale = Vector2(2.1599998, 2.1599998)
+text = "PLAY"
+
+[node name="continue" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 236.00002
+offset_right = 602.0
+offset_bottom = 267.0
+scale = Vector2(2.1599998, 2.1599998)
+text = "PLAY"
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(1032.0001, 239)
+scale = Vector2(0.27999997, 0.27999997)
+texture = ExtResource("1_qfiju")
+
+[node name="Polygon2D" type="Polygon2D" parent="Control"]
+position = Vector2(1219, 185.00002)
+rotation = -1.5707964
+scale = Vector2(0.52324796, 0.52324796)
+polygon = PackedVector2Array(-200, -72, 0, -72, -96, 32)
+uv = PackedVector2Array(-200, -72, 0, -72, -96, 32)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Control"]
+position = Vector2(845.00006, 288)
+rotation = -4.712389
+scale = Vector2(0.52324796, 0.52324796)
+polygon = PackedVector2Array(-200, -72, 0, -72, -62.041992, -4.787842, -96, 32)
+uv = PackedVector2Array(-200, -72, 0, -72, -96, 32)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Control"]
+position = Vector2(1016, 488.78387)
+rotation = -3.1415927
+scale = Vector2(0.24324553, 0.24324553)
+polygon = PackedVector2Array(-200, -72, 0, -72, -62.041992, -4.787842, -96, 32)
+uv = PackedVector2Array(-200, -72, 0, -72, -96, 32)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Control"]
+position = Vector2(1065, 533.7839)
+scale = Vector2(0.24324553, 0.24324553)
+polygon = PackedVector2Array(-200, -72, 0, -72, -62.041992, -4.787842, -96, 32)
+uv = PackedVector2Array(-200, -72, 0, -72, -96, 32)
+
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 869.0
+offset_top = 484.0
+offset_right = 923.0
+offset_bottom = 507.0
+scale = Vector2(1.8399999, 1.8399999)
+text = "Level: "
+
+[node name="Label4" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 983.0
+offset_top = 488.00003
+offset_right = 1037.0
+offset_bottom = 511.00003
+scale = Vector2(1.8399999, 1.8399999)
+text = "1"
+
+[connection signal="pressed" from="Control/new_game" to="." method="_on_new_game_pressed"]

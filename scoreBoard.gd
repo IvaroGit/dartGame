@@ -6,8 +6,7 @@ var score=0
 func _ready() -> void:
 	dart_zones.zone_scored.connect(update_scoring_label)
 	
-func _process(delta: float) -> void:
-	pass
+
 func update_scoring_label(points):
 	
 	score+=points

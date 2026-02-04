@@ -21,7 +21,7 @@ sdfgi_enabled = true
 
 [sub_resource type="GDScript" id="GDScript_85g3d"]
 
-[node name="Main" type="Node3D" node_paths=PackedStringArray("cameras")]
+[node name="run_manager" type="Node3D" node_paths=PackedStringArray("cameras")]
 script = ExtResource("1_tipki")
 game_state = 0
 cameras = [NodePath("Camera3D"), NodePath("world/Player/cameraPivot/MainCamera")]

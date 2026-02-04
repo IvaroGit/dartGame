@@ -5,6 +5,7 @@
 [ext_resource type="VideoStream" uid="uid://b2130udyc2myb" path="res://images/30.01.2026_15.50.04_REC.ogv" id="3_bqqt6"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(8, 3)
 script = ExtResource("1_l6cm7")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
@@ -30,19 +31,28 @@ offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 143.0
-offset_top = 121.0
-offset_right = 383.0
-offset_bottom = 226.0
+offset_left = 420.0
+offset_top = 79.0
+offset_right = 660.0
+offset_bottom = 184.0
 text = "start"
 
 [node name="Button2" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 140.0
-offset_top = 274.0
-offset_right = 402.0
-offset_bottom = 371.0
+offset_left = 425.0
+offset_top = 293.0
+offset_right = 687.0
+offset_bottom = 390.0
 text = "quit"
+
+[node name="Button3" type="Button" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 473.0
+offset_top = 207.0
+offset_right = 618.0
+offset_bottom = 238.0
+text = "mi bombo setting"
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]

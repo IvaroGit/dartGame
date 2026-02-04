@@ -34,6 +34,3 @@ func open():
 
 func close():
 	animation_player.play_backwards("open")
-
-func _process(delta: float) -> void:
-	pass

@@ -7,13 +7,16 @@ extends Node3D
 @onready var bag: Node3D = $"../dartBag/Sketchfab_Scene"
 @onready var main_camera: Camera3D = $cameraPivot/MainCamera
 @export var dart_material: StandardMaterial3D
-@onready var ball_rig: Node3D = $ballRig
+
 @onready var crosshair: Sprite3D = $crosshair
 @onready var gravity_vec: Vector3 = \
 	ProjectSettings.get_setting("physics/3d/default_gravity_vector") * \
 	ProjectSettings.get_setting("physics/3d/default_gravity")
+@onready var aim_plane: Node3D = $aimPlane
+@export var rainbow_speed := 0.5 # cycles per second
+
 var darts := []
-var balls := []
+
 var selected_index := 0
 var hovered_index :=-1
 var selected_rotation := 90
@@ -34,14 +37,11 @@ const baseY :=-0.3
 const baseZ :=-0.2
 var baseVector = Vector3(baseX,baseY,baseZ)
 const gravity = 1
-var mouse = Vector2()
+var mouse
 var rainbow_hue := 0.0
 var preview_dir: Vector3 = Vector3.ZERO
 
 signal mouse_aimed
-@onready var aim_plane: Node3D = $aimPlane
-
-@export var rainbow_speed := 0.5 # cycles per second
 
 func get_mouse_point_on_plane(camera: Camera3D, plane_transform: Transform3D) -> Vector3:
 	var mouse = get_viewport().get_mouse_position()
@@ -121,10 +121,7 @@ func release_selected_dart():
 	crosshair.hide()
 	if darts.is_empty():
 		return
-	for b in balls:
-		if is_instance_valid(b):
-			b.queue_free()
-	balls.clear()
+
 	var dart = darts[selected_index]
 	dart.get_node_or_null("outline").visible=false
 	dart.freeze = false
