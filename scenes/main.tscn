@@ -72,6 +72,7 @@ transform = Transform3D(1, 0, 0, 0, 0.990268, -0.1391731, 0, 0.1391731, 0.990268
 
 [node name="Player" parent="world" instance=ExtResource("7_tipki")]
 dart_material = ExtResource("7_85g3d")
+rainbow_speed = 0.5
 
 [node name="DartRig" parent="world/Player" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192)

@@ -97,7 +97,7 @@ func lineup_darts():
 			dart.position.y += -cos(dart.rotation.z)* ACTIVE_OFFSET
 			dart.position.z += ACTIVE_Z_OFFSET
 			aim_dart_at_mouse(dart, main_camera, aim_plane)
-			
+		
 func add_dart():
 	if DartScene == null:
 		return

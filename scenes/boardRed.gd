@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 	pass
 func process_score(points,name,hit_index):
 	var payload = _build_payload(points,name,hit_index)
+	emit_signal("board_scored", payload)
 	var num_instance = number.instantiate()
 	num_instance.position = Vector3(-0.3, randf_range(-0.5, 0.5), randf_range(-0.5, 0.5))
 	(num_instance.mesh as TextMesh).text = "+"+str(points)
@@ -28,7 +29,7 @@ func _build_payload(base_value: int,zone_id: String, hit_index: int) -> Dictiona
 	# Board decides what effects it produces
 	payload.effects.append({
 		type = Effects.EffectType.ADD_POINTS,
-		amount = 50
+		amount = base_value
 	})
 	payload.effects.append({
 		type = Effects.EffectType.ADD_DART,

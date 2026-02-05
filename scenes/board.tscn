@@ -23,6 +23,7 @@ physics_material_override = SubResource("PhysicsMaterial_bw3vb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="board"]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.083141886, 3.809701e-09, 0)
+visible = false
 shape = SubResource("CylinderShape3D_bw3vb")
 
 [node name="DartZones" parent="board/CollisionShape3D" instance=ExtResource("2_tx6nw")]

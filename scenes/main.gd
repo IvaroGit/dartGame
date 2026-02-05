@@ -29,16 +29,21 @@ var dart_home_rotations: Array = []
 @onready var zone_label: Label = $UI/HUD/zoneLabel
 @export var bag_distance := 0.25
 @export var bag_height_offset := 0
-
-var coins
-var quota
-var score
-
+@onready var board1: Node3D = $world/dartArea/board
+@onready var scoreboard: Node3D = $world/dartArea/scoreboard
+var active_charms: Array = []
+var coins = 0
+var quota = 0
+var score = 0
+var darts_left = 0
 func _ready() -> void:
 	update_camera()
 	dart_zones.zone_hit.connect(update_zone_label)
 	dart_zones.zone_scored.connect(handle_scoring)
-func update_zone_label(text):
+	board1.board_scored.connect(handle_scoring)
+	var green_apple = GreenApple.new() 
+	active_charms.append(green_apple)
+func update_zone_label(text):	
 	zone_label.set_text("Hit : "+ text)
 func update_camera():
 	for i in range(cameras.size()):
@@ -121,5 +126,21 @@ func _on_throw_cancel_button_pressed() -> void:
 	
 	player.lineup_darts()
 	
-func handle_scoring(points):
-	pass
+func handle_scoring(payload:Dictionary)->void:
+	_apply_charms(payload)
+	_execute_effects(payload)
+	print(payload)
+	
+func _execute_effects(payload):
+	for effect in payload.effects:
+		match effect.type:
+			Effects.EffectType.ADD_POINTS:
+				score += effect.amount
+				scoreboard.update_scoring_label(score)
+			Effects.EffectType.ADD_COINS:
+				coins += effect.amount
+			Effects.EffectType.ADD_DART:
+				pass
+func _apply_charms(payload):
+	for charm in active_charms:
+		charm.modify_payload(payload)
