@@ -1,7 +1,8 @@
 extends Node3D
 signal zone_hit(name)
-signal zone_scored(score)
+signal zone_scored(score,name)
 var darts_hit := {}
+var times_hit = 1
 func _ready():
 	for child in get_children():
 		if child is Area3D:
@@ -31,5 +32,6 @@ func _on_area_body_entered(body, area):
 	else:
 		points=0
 	if body is RigidBody3D:
+		times_hit+=1
 		emit_signal("zone_hit",area.name)
-		emit_signal("zone_scored",points)
+		emit_signal("zone_scored",points,name_str,times_hit)

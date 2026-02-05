@@ -8,7 +8,6 @@ func _ready() -> void:
 	
 
 func update_scoring_label(points):
-	
 	score+=points
 	var text = str(score)
 	label_3d.set_text(text)

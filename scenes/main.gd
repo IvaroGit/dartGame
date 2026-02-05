@@ -1,6 +1,6 @@
 extends Node3D
 class_name main
-enum Runstate {THROWING,SCORING,SHOP,POST_QUOTA,SHOP_TRANSITION_RUN}
+enum Runstate {THROWING,SCORING,POST_QUOTA,SHOP,ENTER_SHOP,EXIT_SHOP}
 enum GameState { DART_SELECT,DART_THROW,DART_CHARGE}
 @export var game_state := GameState.DART_THROW
 var run_state := Runstate.THROWING
@@ -37,6 +37,7 @@ var score
 func _ready() -> void:
 	update_camera()
 	dart_zones.zone_hit.connect(update_zone_label)
+	dart_zones.zone_scored.connect(handle_scoring)
 func update_zone_label(text):
 	zone_label.set_text("Hit : "+ text)
 func update_camera():
@@ -119,3 +120,6 @@ func _on_throw_cancel_button_pressed() -> void:
 	game_state = GameState.DART_SELECT
 	
 	player.lineup_darts()
+	
+func handle_scoring(points):
+	pass
