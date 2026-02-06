@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=16 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://486piou8upa3" path="res://scenes/scoreboard.tscn" id="8_choun"]
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
 [ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
+[ext_resource type="PackedScene" uid="uid://qo17o58iwmrv" path="res://charms/frog/frog.tscn" id="11_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://n0wubon2mvmq" path="res://charms/green_apple/green_apple.tscn" id="12_eb6dy"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
 
@@ -47,6 +49,7 @@ transform = Transform3D(-0.0050965473, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00
 
 [node name="lectern" parent="world/dartArea" instance=ExtResource("3_sugp2")]
 transform = Transform3D(1, 0, 0, 0, 0.97778326, 0.20961857, 0, -0.20961857, 0.97778326, 0, -1.0303969, 0.045403708)
+visible = false
 
 [node name="dart_drop_target" type="Node3D" parent="world/dartArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24008581, 0)
@@ -72,7 +75,6 @@ transform = Transform3D(1, 0, 0, 0, 0.990268, -0.1391731, 0, 0.1391731, 0.990268
 
 [node name="Player" parent="world" instance=ExtResource("7_tipki")]
 dart_material = ExtResource("7_85g3d")
-rainbow_speed = 0.5
 
 [node name="DartRig" parent="world/Player" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192)
@@ -177,6 +179,12 @@ offset_bottom = 599.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983, -0.8627979, 0.0018677711, -0.7994882)
+
+[node name="Node3D" parent="." instance=ExtResource("11_ya4ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4369107, -1.2925072, -1.4749928)
+
+[node name="Node3D2" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9093196, -0.15131176, -1.3306483)
 
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]

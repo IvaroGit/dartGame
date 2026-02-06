@@ -7,7 +7,7 @@ var run_state := Runstate.THROWING
 @export var cameras: Array[Camera3D]=[]
 
 @onready var power_label: Label = $UI/HUD/powerLabel
-
+var charm_queue: Array = []
 var current_camera_index=1
 var spinBag=false
 var throw_button_visible=false
@@ -32,17 +32,21 @@ var dart_home_rotations: Array = []
 @onready var board1: Node3D = $world/dartArea/board
 @onready var scoreboard: Node3D = $world/dartArea/scoreboard
 var active_charms: Array = []
+
 var coins = 0
 var quota = 0
-var score = 0
+var run_score := 0
+var throw_score := 0
+var final_score :=0
 var darts_left = 0
 func _ready() -> void:
 	update_camera()
 	dart_zones.zone_hit.connect(update_zone_label)
 	dart_zones.zone_scored.connect(handle_scoring)
 	board1.board_scored.connect(handle_scoring)
-	var green_apple = GreenApple.new() 
-	active_charms.append(green_apple)
+	
+	active_charms.append(GreenApple.new())
+	active_charms.append(Frog.new())
 func update_zone_label(text):	
 	zone_label.set_text("Hit : "+ text)
 func update_camera():
@@ -126,21 +130,76 @@ func _on_throw_cancel_button_pressed() -> void:
 	
 	player.lineup_darts()
 	
-func handle_scoring(payload:Dictionary)->void:
+func handle_scoring(payload: Dictionary) -> void:
+	final_score = 0  
+
 	_apply_charms(payload)
 	_execute_effects(payload)
-	print(payload)
-	
+
+	run_score += final_score
+
+	print("=== PAYLOAD DEBUG ===")
+	print("META:")
+	for key in payload.meta.keys():
+		print(" ", key, ": ", payload.meta[key])
+	print("EFFECTS:")
+	for effect in payload.effects:
+		print(" ", _debug_effect(effect))
+
+	print("Final dart score: ", final_score)
+	print("Run score: ", run_score)
+
+	scoreboard.update_scoring_label(final_score)
 func _execute_effects(payload):
 	for effect in payload.effects:
 		match effect.type:
 			Effects.EffectType.ADD_POINTS:
-				score += effect.amount
-				scoreboard.update_scoring_label(score)
+				final_score += effect.amount
 			Effects.EffectType.ADD_COINS:
 				coins += effect.amount
+			Effects.EffectType.MULTIPLY_POINTS:
+				final_score *= effect.amount
 			Effects.EffectType.ADD_DART:
 				pass
-func _apply_charms(payload):
+func _debug_effect(effect: Dictionary) -> String:
+	var source = effect.get("source", "Board")
+	var amount = effect.get("amount", 0)
+
+	match effect.type:
+		Effects.EffectType.ADD_POINTS:
+			return "%s: +%d points" % [source, amount]
+
+		Effects.EffectType.ADD_COINS:
+			return "%s: +%d coins" % [source, amount]
+
+		Effects.EffectType.ADD_DART:
+			return "%s: +%d darts" % [source, amount]
+		Effects.EffectType.MULTIPLY_POINTS:
+			return "%s: *%d points" % [source, amount]
+		
+		_:
+			return "%s: unknown effect" % source
+func _apply_charms(payload: Dictionary) -> void:
+	build_charm_queue(payload)  # rebuild & sort queue for this dart
+
+	for charm in charm_queue:
+#		print("Activating charm: %s, priority: %d" % [charm.name, charm.priority])
+		charm.modify_payload(payload)  # executes the charm in sorted order
+# Compare function for sorting charms by priority
+func _compare_charms(a, b) -> int:
+	if a.priority < b.priority:
+		return -1
+	elif a.priority > b.priority:
+		return 1
+	else:
+		return 0
+
+# Build the queue of charms to activate for this dart/payload
+func build_charm_queue(payload: Dictionary) -> void:
+	charm_queue.clear()
 	for charm in active_charms:
-		charm.modify_payload(payload)
+		charm_queue.append(charm)
+	charm_queue.sort_custom(Callable(self, "_sort_charm_by_priority"))
+
+func _sort_charm_by_priority(charm) -> int:
+	return charm.priority

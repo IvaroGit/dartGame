@@ -31,7 +31,7 @@ const ACTIVE_OFFSET := -0.2
 
 var current_throw_force: float =0
 var THROW_FORCE := 12.0
-var throw_scale := 5
+var throw_scale := 20
 const baseX :=0
 const baseY :=-0.3
 const baseZ :=-0.2

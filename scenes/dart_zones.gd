@@ -19,11 +19,11 @@ func _on_area_body_entered(body, area):
 	var points
 	var name_str = str(area.name) 
 
-	if name_str.begins_with("zone_tripple_nr"):
+	if name_str.begins_with("zone_tripple_"):
 		points = int(name_str.split("_")[-1]) * 3
-	elif name_str.begins_with("zone_dubble_nr"):
+	elif name_str.begins_with("zone_dubble_"):
 		points = int(name_str.split("_")[-1]) * 2
-	elif name_str.begins_with("zone_inner_slice_") or name_str.begins_with("zone_outer_slice_"):
+	elif name_str.begins_with("zone_outer_slice_") or name_str.begins_with("zone_inner_slice_"):
 		points = int(name_str.split("_")[-1])
 	elif name_str == "zone_bull":
 		points = 50

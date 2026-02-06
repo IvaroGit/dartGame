@@ -19,7 +19,6 @@ material = SubResource("ShaderMaterial_qlg0r")
 [node name="Player" type="Node3D"]
 script = ExtResource("1_dqkch")
 DartScene = ExtResource("5_qlg0r")
-rainbow_speed = null
 
 [node name="DartRig" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.9309794, 0.36507177, 0, -0.36507177, 0.9309794, 0, -0.036507178, 0.19190206)
