@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://13ib0erktel4"]
+
+[ext_resource type="Script" uid="uid://bgyftk47pr1ex" path="res://charms/frog.gd" id="1_dlfon"]
+[ext_resource type="PackedScene" uid="uid://g110kdti8u6g" path="res://scenes/pointText.tscn" id="2_2k13b"]
+[ext_resource type="PackedScene" uid="uid://dr5yt86wdrf0p" path="res://models/frog/jobba_the_brawler_frog.glb" id="2_bqsyv"]
+[ext_resource type="Material" uid="uid://crcvs8tmwqnqh" path="res://textures/blackOutline.tres" id="3_2k13b"]
+
+[sub_resource type="Curve" id="Curve_4yp61"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ws11s"]
+curve = SubResource("Curve_4yp61")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wlmuc"]
+spread = 180.0
+initial_velocity_min = 1.0
+initial_velocity_max = 4.0
+radial_velocity_curve = SubResource("CurveTexture_ws11s")
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 1.1999999
+
+[sub_resource type="BoxMesh" id="BoxMesh_r46h2"]
+material = ExtResource("3_2k13b")
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_dlfon")
+charm_name = "Frog"
+num_instance = ExtResource("2_2k13b")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_bqsyv")]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1480124, 0)
+emitting = false
+amount = 30
+lifetime = 0.09
+one_shot = true
+speed_scale = 0.2
+process_material = SubResource("ParticleProcessMaterial_wlmuc")
+draw_pass_1 = SubResource("BoxMesh_r46h2")

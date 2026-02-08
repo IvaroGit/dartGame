@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b463s4f5yjx6n"
-path="res://.godot/imported/meshTest.glb-3b352b96ffba6dbdeaf90b25737b301a.scn"
+uid="uid://lpdo74xl6s1b"
+path="res://.godot/imported/green_apple_fbx.glb-b11ebaa89e74907e9755d180ab1dfe16.scn"
 
 [deps]
 
-source_file="res://models/meshTest.glb"
-dest_files=["res://.godot/imported/meshTest.glb-3b352b96ffba6dbdeaf90b25737b301a.scn"]
+source_file="res://models/green_apple_fbx.glb"
+dest_files=["res://.godot/imported/green_apple_fbx.glb-b11ebaa89e74907e9755d180ab1dfe16.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.001
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true

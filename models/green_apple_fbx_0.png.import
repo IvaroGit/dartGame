@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt70bbkrh1yf1"
-path.s3tc="res://.godot/imported/green_apple_low_poly_1.png-68b1386d456c3be164b271277a43512d.s3tc.ctex"
+uid="uid://djxr168u2g32h"
+path.s3tc="res://.godot/imported/green_apple_fbx_0.png-0adc7be12cde36614d27a8761f74b191.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0865acc39f87da2c53c8a4121d291d0f"
+"md5": "1a537406608fbd134e1eba5261e2c940"
 }
 
 [deps]
 
-source_file="res://charms/green_apple/green_apple_low_poly_1.png"
-dest_files=["res://.godot/imported/green_apple_low_poly_1.png-68b1386d456c3be164b271277a43512d.s3tc.ctex"]
+source_file="res://models/green_apple_fbx_0.png"
+dest_files=["res://.godot/imported/green_apple_fbx_0.png-0adc7be12cde36614d27a8761f74b191.s3tc.ctex"]
 
 [params]
 

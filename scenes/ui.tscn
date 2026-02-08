@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpeuhxkwia0g4"]
+[gd_scene load_steps=5 format=3 uid="uid://cpeuhxkwia0g4"]
 
 [ext_resource type="Texture2D" uid="uid://c2rujxenmy3x2" path="res://images/Button (8).png" id="1_nt7q6"]
 [ext_resource type="PackedScene" uid="uid://c8bw41na38d8v" path="res://scenes/throw_button.tscn" id="2_x4jx1"]
 [ext_resource type="Texture2D" uid="uid://heh3mn4nx8l8" path="res://images/crosshair_pin.png" id="3_yev5y"]
+[ext_resource type="Script" uid="uid://bqlu6mlg1wey6" path="res://scenes/charm_button.gd" id="4_gdt2y"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -210,5 +211,17 @@ texture = ExtResource("3_yev5y")
 position = Vector2(144, 608)
 rotation = 1.5707964
 texture = ExtResource("3_yev5y")
+
+[node name="Button2" type="Button" parent="HUD"]
+layout_mode = 0
+offset_left = 991.99994
+offset_top = 214.00003
+offset_right = 1085.0
+offset_bottom = 245.00003
+scale = Vector2(1.72, 1.72)
+text = "Add charm"
+script = ExtResource("4_gdt2y")
+
+[connection signal="pressed" from="HUD/Button2" to="HUD/Button2" method="_on_pressed"]
 
 [editable path="HUD/button_container/Control"]

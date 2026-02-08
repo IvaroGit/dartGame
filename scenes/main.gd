@@ -5,9 +5,11 @@ enum GameState { DART_SELECT,DART_THROW,DART_CHARGE}
 @export var game_state := GameState.DART_THROW
 var run_state := Runstate.THROWING
 @export var cameras: Array[Camera3D]=[]
-
 @onready var power_label: Label = $UI/HUD/powerLabel
-var charm_queue: Array = []
+var charm_queue: Array[CharmBase] = []
+@export var available_charm_scenes: Array[PackedScene] = []
+var active_charms: Array[CharmBase] = []
+var charm_spacing  = 0.3
 var current_camera_index=1
 var spinBag=false
 var throw_button_visible=false
@@ -23,6 +25,7 @@ var dart_home_rotations: Array = []
 @onready var shop: Node3D = $world/shop
 @onready var dart_zones: Node3D = $world/dartArea/board/board/CollisionShape3D/DartZones
 @onready var hud: Control = $UI/HUD
+@onready var charm_button: Button = $UI/HUD/Button2
 @onready var player: Node3D = $world/Player
 @onready var dart: Node3D = $world/Player/DartRig
 @onready var throw_button: Control = $UI/HUD/button_container/Control
@@ -31,22 +34,26 @@ var dart_home_rotations: Array = []
 @export var bag_height_offset := 0
 @onready var board1: Node3D = $world/dartArea/board
 @onready var scoreboard: Node3D = $world/dartArea/scoreboard
-var active_charms: Array = []
 
-var coins = 0
-var quota = 0
-var run_score := 0
-var throw_score := 0
-var final_score :=0
-var darts_left = 0
+class ThrowContext:
+	var zone_id: String
+	var base_score: int
+	var score: float
+	var coins: int = 0
+	var board
+
+	func _init(_zone_id, _base_score, _board):
+		zone_id = _zone_id
+		base_score = _base_score
+		score = _base_score
+		board = _board
+
+
 func _ready() -> void:
 	update_camera()
 	dart_zones.zone_hit.connect(update_zone_label)
-	dart_zones.zone_scored.connect(handle_scoring)
-	board1.board_scored.connect(handle_scoring)
-	
-	active_charms.append(GreenApple.new())
-	active_charms.append(Frog.new())
+	dart_zones.zone_scored.connect(_on_zone_scored)
+	charm_button.charm_button.connect(add_random_charm)
 func update_zone_label(text):	
 	zone_label.set_text("Hit : "+ text)
 func update_camera():
@@ -129,77 +136,49 @@ func _on_throw_cancel_button_pressed() -> void:
 	game_state = GameState.DART_SELECT
 	
 	player.lineup_darts()
-	
-func handle_scoring(payload: Dictionary) -> void:
-	final_score = 0  
 
-	_apply_charms(payload)
-	_execute_effects(payload)
-
-	run_score += final_score
-
-	print("=== PAYLOAD DEBUG ===")
-	print("META:")
-	for key in payload.meta.keys():
-		print(" ", key, ": ", payload.meta[key])
-	print("EFFECTS:")
-	for effect in payload.effects:
-		print(" ", _debug_effect(effect))
-
-	print("Final dart score: ", final_score)
-	print("Run score: ", run_score)
-
-	scoreboard.update_scoring_label(final_score)
-func _execute_effects(payload):
-	for effect in payload.effects:
-		match effect.type:
-			Effects.EffectType.ADD_POINTS:
-				final_score += effect.amount
-			Effects.EffectType.ADD_COINS:
-				coins += effect.amount
-			Effects.EffectType.MULTIPLY_POINTS:
-				final_score *= effect.amount
-			Effects.EffectType.ADD_DART:
-				pass
-func _debug_effect(effect: Dictionary) -> String:
-	var source = effect.get("source", "Board")
-	var amount = effect.get("amount", 0)
-
-	match effect.type:
-		Effects.EffectType.ADD_POINTS:
-			return "%s: +%d points" % [source, amount]
-
-		Effects.EffectType.ADD_COINS:
-			return "%s: +%d coins" % [source, amount]
-
-		Effects.EffectType.ADD_DART:
-			return "%s: +%d darts" % [source, amount]
-		Effects.EffectType.MULTIPLY_POINTS:
-			return "%s: *%d points" % [source, amount]
-		
-		_:
-			return "%s: unknown effect" % source
-func _apply_charms(payload: Dictionary) -> void:
-	build_charm_queue(payload)  # rebuild & sort queue for this dart
-
-	for charm in charm_queue:
-#		print("Activating charm: %s, priority: %d" % [charm.name, charm.priority])
-		charm.modify_payload(payload)  # executes the charm in sorted order
-# Compare function for sorting charms by priority
-func _compare_charms(a, b) -> int:
-	if a.priority < b.priority:
-		return -1
-	elif a.priority > b.priority:
-		return 1
-	else:
-		return 0
-
-# Build the queue of charms to activate for this dart/payload
-func build_charm_queue(payload: Dictionary) -> void:
-	charm_queue.clear()
+func _on_zone_scored(points: int, zone_name: String, times_hit: int) -> void:
+	# Create context
+	var ctx = ThrowContext.new(zone_name, points, board1)
+	# Board effect as a charm
+	# For now, treat board as a static charm
+	ctx.score *= 1  # placeholde
+	# Apply all charms in queue
 	for charm in active_charms:
-		charm_queue.append(charm)
-	charm_queue.sort_custom(Callable(self, "_sort_charm_by_priority"))
+		charm.apply(ctx)
+	# Show final score on board
+	board1.call("process_score", int(points), zone_name,times_hit)
+	scoreboard.update_scoring_label(int(ctx.score))
+	# Debug
+	print("Hit zone: ", zone_name, " Base: ", points, " Final score: ", ctx.score)
+	
+func add_charm(scene: PackedScene):
+	var charm := scene.instantiate() as CharmBase
+	if charm == null:
+		push_error("Instantiated charm is not CharmBase")
+		return
 
-func _sort_charm_by_priority(charm) -> int:
-	return charm.priority
+	active_charms.append(charm)
+	add_child(charm) 
+	for i in active_charms.size():
+		charm.global_position = Vector3(-0.6+i*-charm_spacing,0,-1)
+	print("Charm added:", charm.charm_name)
+
+func add_random_charm():
+	if available_charm_scenes.is_empty():
+		print("No charms available")
+		return
+	var candidates: Array[PackedScene] = []
+	for scene in available_charm_scenes:
+		var already_active := false
+		for charm in active_charms:
+			if charm.scene_file_path == scene.resource_path:
+				already_active = true
+				break
+		if not already_active:
+			candidates.append(scene)
+	if candidates.is_empty():
+		print("All charms already active")
+		return
+	var chosen_scene = candidates.pick_random()
+	add_charm(chosen_scene)

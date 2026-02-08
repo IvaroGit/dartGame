@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c73lgipil7cvo"]
+
+[ext_resource type="Script" uid="uid://en6f0cokn6dd" path="res://charms/charm_base.gd" id="1_wf8bu"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_wf8bu")

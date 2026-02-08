@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2prx5vog2rnf"]
+[gd_scene load_steps=4 format=3 uid="uid://c2prx5vog2rnf"]
 
-[ext_resource type="Script" uid="uid://fvb3ut6gqgkh" path="res://run_manager.gd" id="1_0fupr"]
+[ext_resource type="PackedScene" uid="uid://13ib0erktel4" path="res://charms/frog.tscn" id="2_4fv2d"]
 [ext_resource type="PackedScene" uid="uid://3hwq61ji0uqy" path="res://scenes/main.tscn" id="2_js6kl"]
+[ext_resource type="PackedScene" uid="uid://dve1ei15wdhvl" path="res://charms/green_apple.tscn" id="3_4fv2d"]
 
 [node name="run_manager" type="Node3D"]
-script = ExtResource("1_0fupr")
 
 [node name="Main" parent="." instance=ExtResource("2_js6kl")]
+available_charm_scenes = Array[PackedScene]([ExtResource("2_4fv2d"), ExtResource("3_4fv2d")])
