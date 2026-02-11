@@ -35,6 +35,8 @@ var dart_home_rotations: Array = []
 @onready var board1: Node3D = $world/dartArea/board
 @onready var scoreboard: Node3D = $world/dartArea/scoreboard
 
+var charmDelay = 0.5
+
 class ThrowContext:
 	var zone_id: String
 	var base_score: int
@@ -143,11 +145,12 @@ func _on_zone_scored(points: int, zone_name: String, times_hit: int) -> void:
 	# Board effect as a charm
 	# For now, treat board as a static charm
 	ctx.score *= 1  # placeholde
+	board1.call("process_score", int(points), zone_name,times_hit)
 	# Apply all charms in queue
 	for charm in active_charms:
+		await get_tree().create_timer(charmDelay).timeout
 		charm.apply(ctx)
 	# Show final score on board
-	board1.call("process_score", int(points), zone_name,times_hit)
 	scoreboard.update_scoring_label(int(ctx.score))
 	# Debug
 	print("Hit zone: ", zone_name, " Base: ", points, " Final score: ", ctx.score)

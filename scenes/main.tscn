@@ -50,7 +50,6 @@ transform = Transform3D(-0.0050965473, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00
 
 [node name="lectern" parent="world/dartArea" instance=ExtResource("3_sugp2")]
 transform = Transform3D(1, 0, 0, 0, 0.97778326, 0.20961857, 0, -0.20961857, 0.97778326, 0, -1.0303969, 0.045403708)
-visible = false
 
 [node name="dart_drop_target" type="Node3D" parent="world/dartArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24008581, 0)
