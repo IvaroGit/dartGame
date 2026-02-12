@@ -1,86 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm2vwexfskbnp"]
+[gd_scene load_steps=2 format=3 uid="uid://cm2vwexfskbnp"]
 
-[ext_resource type="Script" uid="uid://bkg48y6t3hh84" path="res://scenes/monitor_ui.gd" id="1_3oekk"]
-[ext_resource type="FontFile" uid="uid://ujk5gkr6fpwb" path="res://fonts/3D-Thirteen-Pixel-Fonts.ttf" id="1_6w3gg"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_r76x4"]
-font = ExtResource("1_6w3gg")
-font_size = 100
-font_color = Color(0.21568628, 1, 0.24705882, 1)
-shadow_size = 0
+[ext_resource type="Script" uid="uid://bkg48y6t3hh84" path="res://scenes/monitor_ui.gd" id="1_6w3gg"]
 
 [node name="monitor_ui" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_3oekk")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -132.0
-offset_top = 116.0
-offset_right = 172.0
-offset_bottom = 195.0
+anchor_right = 0.44400004
+anchor_bottom = 0.79
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 2.511963
+offset_bottom = -0.9200134
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2.4799976, 2.4799976)
-text = "menu"
-label_settings = SubResource("LabelSettings_r76x4")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Label2" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -132.0
-offset_top = -132.0
-offset_right = 172.0
-offset_bottom = -53.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.4799976, 2.4799976)
-text = "___"
-label_settings = SubResource("LabelSettings_r76x4")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Label3" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -132.0
-offset_top = 284.0
-offset_right = 172.0
-offset_bottom = 363.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.4799976, 2.4799976)
-text = "___"
-label_settings = SubResource("LabelSettings_r76x4")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+script = ExtResource("1_6w3gg")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 152.0
-offset_top = 88.0
-offset_right = 191.0
-offset_bottom = 119.0
-scale = Vector2(5.2212105, 3.199747)
-text = "uhh"
+offset_left = 68.0
+offset_top = 129.0
+offset_right = 129.0
+offset_bottom = 160.0
+scale = Vector2(4.2800007, 4.440002)
+text = "button"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

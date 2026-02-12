@@ -44,8 +44,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.475)
 transform = Transform3D(1, 0, 0, 0, 0.9997763, -0.021151925, 0, 0.021151925, 0.9997763, 0, -0.031280994, 5.1542654)
 spot_range = 9.013
 
-[node name="Node3D" parent="world/room" instance=ExtResource("5_trceg")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.4364601, -0.275558, 0.71606004)
+[node name="monitor" parent="world/room" instance=ExtResource("5_trceg")]
+transform = Transform3D(-0.0028623044, 0, -0.999996, 0, 1, 0, 0.999996, 0, -0.0028623044, 1.5650731, -0.275558, 0.5966064)
 
 [node name="dartArea" type="Node3D" parent="world"]
 

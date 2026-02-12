@@ -1,28 +1,33 @@
-[gd_scene load_steps=7 format=3 uid="uid://bco1odv4qqxkl"]
+[gd_scene load_steps=9 format=3 uid="uid://bco1odv4qqxkl"]
 
 [ext_resource type="PackedScene" uid="uid://bnsrscu23a8id" path="res://models/monitor/psx_old_tv.glb" id="1_gnqr3"]
+[ext_resource type="Script" uid="uid://cxw1x2lbsajvv" path="res://scenes/monitor.gd" id="1_r76x4"]
 [ext_resource type="PackedScene" uid="uid://dsf6sv0m6ynvg" path="res://models/chain/tv_titans_chain.glb" id="2_3jcr0"]
-[ext_resource type="PackedScene" uid="uid://cm2vwexfskbnp" path="res://scenes/monitor_ui.tscn" id="3_712wi"]
+[ext_resource type="PackedScene" uid="uid://cm2vwexfskbnp" path="res://scenes/monitor_ui.tscn" id="4_r76x4"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_712wi"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_r76x4"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r76x4"]
 resource_local_to_scene = true
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_712wi")
+albedo_texture = SubResource("ViewportTexture_r76x4")
 
-[sub_resource type="QuadMesh" id="QuadMesh_spe5c"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_712wi"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_r76x4")
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_712wi"]
+size = Vector3(0.5449219, 0.49343872, 0.053710938)
+
+[node name="monitor" type="Node3D"]
 transform = Transform3D(1.18, 0, 0, 0, 1.18, 0, 0, 0, 1.18, 0, 0, 0)
+script = ExtResource("1_r76x4")
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("1_gnqr3")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sketchfab_Scene"]
-transform = Transform3D(0.532515, 0, 0, 0, 0.48604712, 0, 0, 0, 1, 0.0017653331, 0.29029906, 0.22774659)
-material_override = SubResource("StandardMaterial3D_r76x4")
-mesh = SubResource("QuadMesh_spe5c")
+[node name="ScreenQuad" type="MeshInstance3D" parent="Sketchfab_Scene"]
+transform = Transform3D(0.2707227, -4.2491585e-08, 2.1651587e-08, 2.366733e-08, -1.4069503e-08, -0.24766529, 2.366733e-08, 0.4860471, -6.9572277e-09, 0.0017653501, 0.29029906, 0.23931666)
+mesh = SubResource("PlaneMesh_712wi")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29387492, 0.9986313)
@@ -32,7 +37,7 @@ omni_range = 1.296
 omni_shadow_mode = 0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(0.8474577, 0, 0, 0, 0.8474577, 0, 0, 0, 0.8474577, 0, 2.36642, 0.18706685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.36642, 0.18706685)
 light_color = Color(0.76862746, 0, 0, 1)
 light_energy = 1.286
 omni_range = 1.991
@@ -41,8 +46,14 @@ omni_shadow_mode = 0
 [node name="Sketchfab_Scene2" parent="." instance=ExtResource("2_3jcr0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006091833, 1.6789874, 0.024188071)
 
-[node name="SubViewport" type="SubViewport" parent="."]
-disable_3d = true
-transparent_bg = true
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2628104e-08, 0.29228222, 0.22802746)
+shape = SubResource("BoxShape3D_712wi")
 
-[node name="monitor_ui" parent="SubViewport" instance=ExtResource("3_712wi")]
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="monitor_ui" parent="SubViewport" instance=ExtResource("4_r76x4")]
+offset_right = 286.672
+offset_bottom = 106.51999
+
+[connection signal="button_pressed" from="SubViewport/monitor_ui" to="." method="_on_monitor_ui_button_pressed"]
