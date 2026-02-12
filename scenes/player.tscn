@@ -32,6 +32,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 fov = 37.849285
 script = ExtResource("2_hqtel")
 
+[node name="RayCast3D" type="RayCast3D" parent="cameraPivot/MainCamera"]
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.116261706, 0.116098136)
 sorting_offset = 100.0

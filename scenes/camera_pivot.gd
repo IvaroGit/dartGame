@@ -1,13 +1,13 @@
 extends Node3D
 
-@export var yaw_speed := deg_to_rad(180.0)     # degrees per second
-@export var pitch_speed := deg_to_rad(180.0)
+@export var yaw_speed := deg_to_rad(460.0)     # degrees per second
+@export var pitch_speed := deg_to_rad(460.0)
 
-@export var yaw_limit := deg_to_rad(35.0)
-@export var pitch_limit := deg_to_rad(35.0)
+@export var yaw_limit := deg_to_rad(90.0)
+@export var pitch_limit := deg_to_rad(90.0)
 
 
-var speed = 1
+var speed = 3
 var yaw := 0.0
 var pitch := 0.0
 var panLeft = false

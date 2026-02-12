@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=17 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dve1ei15wdhvl" path="res://charms/green_apple.tscn" id="2_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://hk06oa5vd2ip" path="res://scenes/lectern.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://13ib0erktel4" path="res://charms/frog.tscn" id="3_trceg"]
+[ext_resource type="PackedScene" uid="uid://bco1odv4qqxkl" path="res://scenes/monitor.tscn" id="5_trceg"]
 [ext_resource type="Material" uid="uid://crcvs8tmwqnqh" path="res://textures/blackOutline.tres" id="7_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cpeuhxkwia0g4" path="res://scenes/ui.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxijvavgnysio" path="res://scenes/player.tscn" id="7_tipki"]
@@ -42,6 +43,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.475)
 [node name="SpotLight3D" type="SpotLight3D" parent="world/room"]
 transform = Transform3D(1, 0, 0, 0, 0.9997763, -0.021151925, 0, 0.021151925, 0.9997763, 0, -0.031280994, 5.1542654)
 spot_range = 9.013
+
+[node name="Node3D" parent="world/room" instance=ExtResource("5_trceg")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.4364601, -0.275558, 0.71606004)
 
 [node name="dartArea" type="Node3D" parent="world"]
 
@@ -140,33 +144,6 @@ offset_left = 920.0
 offset_top = 624.0
 offset_right = 960.0
 offset_bottom = 647.0
-
-[node name="Crosshair" parent="UI/HUD" index="7"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CrosshairPin" parent="UI/HUD/Crosshair" index="0"]
-position = Vector2(25, 68)
-
-[node name="CrosshairPin2" parent="UI/HUD/Crosshair" index="1"]
-position = Vector2(25, 1)
-
-[node name="CrosshairPin3" parent="UI/HUD/Crosshair" index="2"]
-position = Vector2(59, 33)
-
-[node name="CrosshairPin4" parent="UI/HUD/Crosshair" index="3"]
-position = Vector2(-11, 33)
 
 [node name="zoneLabel" type="Label" parent="UI/HUD" index="8"]
 layout_mode = 0

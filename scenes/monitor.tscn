@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bco1odv4qqxkl"]
+
+[ext_resource type="PackedScene" uid="uid://bnsrscu23a8id" path="res://models/monitor/psx_old_tv.glb" id="1_gnqr3"]
+[ext_resource type="PackedScene" uid="uid://dsf6sv0m6ynvg" path="res://models/chain/tv_titans_chain.glb" id="2_3jcr0"]
+[ext_resource type="PackedScene" uid="uid://cm2vwexfskbnp" path="res://scenes/monitor_ui.tscn" id="3_712wi"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_712wi"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r76x4"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_712wi")
+
+[sub_resource type="QuadMesh" id="QuadMesh_spe5c"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1.18, 0, 0, 0, 1.18, 0, 0, 0, 1.18, 0, 0, 0)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_gnqr3")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sketchfab_Scene"]
+transform = Transform3D(0.532515, 0, 0, 0, 0.48604712, 0, 0, 0, 1, 0.0017653331, 0.29029906, 0.22774659)
+material_override = SubResource("StandardMaterial3D_r76x4")
+mesh = SubResource("QuadMesh_spe5c")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29387492, 0.9986313)
+light_color = Color(1, 1, 0.54509807, 1)
+light_energy = 0.091
+omni_range = 1.296
+omni_shadow_mode = 0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(0.8474577, 0, 0, 0, 0.8474577, 0, 0, 0, 0.8474577, 0, 2.36642, 0.18706685)
+light_color = Color(0.76862746, 0, 0, 1)
+light_energy = 1.286
+omni_range = 1.991
+omni_shadow_mode = 0
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("2_3jcr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006091833, 1.6789874, 0.024188071)
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+
+[node name="monitor_ui" parent="SubViewport" instance=ExtResource("3_712wi")]

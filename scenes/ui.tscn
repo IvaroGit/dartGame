@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpeuhxkwia0g4"]
+[gd_scene load_steps=4 format=3 uid="uid://cpeuhxkwia0g4"]
 
 [ext_resource type="Texture2D" uid="uid://c2rujxenmy3x2" path="res://images/Button (8).png" id="1_nt7q6"]
 [ext_resource type="PackedScene" uid="uid://c8bw41na38d8v" path="res://scenes/throw_button.tscn" id="2_x4jx1"]
-[ext_resource type="Texture2D" uid="uid://heh3mn4nx8l8" path="res://images/crosshair_pin.png" id="3_yev5y"]
 [ext_resource type="Script" uid="uid://bqlu6mlg1wey6" path="res://scenes/charm_button.gd" id="4_gdt2y"]
 
 [node name="UI" type="CanvasLayer"]
@@ -33,6 +32,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Control" type="Control" parent="HUD"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -67,6 +67,7 @@ scale = Vector2(2.2135525, 1.0047609)
 color = Color(0.3791798, 0.3791798, 0.37917978, 1)
 
 [node name="ColorRect" type="ColorRect" parent="HUD"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.41300002
@@ -103,6 +104,7 @@ vertical_alignment = 1
 max_lines_visible = 1
 
 [node name="ColorRect2" type="ColorRect" parent="HUD"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.41300002
@@ -117,6 +119,7 @@ grow_horizontal = 2
 scale = Vector2(0.47807032, 0.47807032)
 
 [node name="Label" type="Label" parent="HUD/ColorRect2"]
+visible = false
 modulate = Color(0.9, 0, 0, 1)
 z_index = 7
 z_as_relative = false
@@ -139,6 +142,7 @@ vertical_alignment = 1
 max_lines_visible = 1
 
 [node name="ColorRect3" type="ColorRect" parent="HUD"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -178,39 +182,27 @@ offset_bottom = 40.0
 
 [node name="Control" parent="HUD/button_container" instance=ExtResource("2_x4jx1")]
 layout_mode = 1
-offset_left = 36.0
-offset_top = 36.0
-offset_right = 36.0
-offset_bottom = 36.0
+offset_left = -680.0
+offset_top = -96.0
+offset_right = -680.0
+offset_bottom = -96.0
+
+[node name="throw_button" parent="HUD/button_container/Control" index="1"]
+offset_left = 348.0
+offset_top = 212.0
+offset_right = 416.0
+offset_bottom = 286.0
+
+[node name="throw_cancel_button" parent="HUD/button_container/Control" index="2"]
+offset_left = 463.0
+offset_top = 212.0
+offset_right = 594.0
+offset_bottom = 286.0
 
 [node name="powerLabel" type="Label" parent="HUD"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-
-[node name="Crosshair" type="Control" parent="HUD"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="CrosshairPin" type="Sprite2D" parent="HUD/Crosshair"]
-position = Vector2(168, 632)
-texture = ExtResource("3_yev5y")
-
-[node name="CrosshairPin2" type="Sprite2D" parent="HUD/Crosshair"]
-position = Vector2(168, 584)
-rotation = 3.1415927
-texture = ExtResource("3_yev5y")
-
-[node name="CrosshairPin3" type="Sprite2D" parent="HUD/Crosshair"]
-position = Vector2(192, 608)
-rotation = -1.5707964
-texture = ExtResource("3_yev5y")
-
-[node name="CrosshairPin4" type="Sprite2D" parent="HUD/Crosshair"]
-position = Vector2(144, 608)
-rotation = 1.5707964
-texture = ExtResource("3_yev5y")
 
 [node name="Button2" type="Button" parent="HUD"]
 layout_mode = 0
