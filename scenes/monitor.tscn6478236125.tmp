@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bco1odv4qqxkl"]
+[gd_scene load_steps=9 format=3 uid="uid://bco1odv4qqxkl"]
 
 [ext_resource type="PackedScene" uid="uid://bnsrscu23a8id" path="res://models/monitor/psx_old_tv.glb" id="1_gnqr3"]
+[ext_resource type="Script" uid="uid://cxw1x2lbsajvv" path="res://scenes/monitor.gd" id="1_r76x4"]
 [ext_resource type="PackedScene" uid="uid://dsf6sv0m6ynvg" path="res://models/chain/tv_titans_chain.glb" id="2_3jcr0"]
 [ext_resource type="PackedScene" uid="uid://dfagajor2qheb" path="res://scenes/monitor_screen.tscn" id="4_r76x4"]
 
@@ -19,6 +20,7 @@ size = Vector3(0.54437256, 0.4855957, 0.09587288)
 
 [node name="monitor" type="Node3D"]
 transform = Transform3D(1.18, 0, 0, 0, 1.18, 0, 0, 0, 1.18, 0, 0, 0)
+script = ExtResource("1_r76x4")
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("1_gnqr3")]
 

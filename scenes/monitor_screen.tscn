@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfagajor2qheb"]
+
+[ext_resource type="Script" uid="uid://dto8d8rsnkrdp" path="res://scenes/monitor_screen.gd" id="1_qb77y"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qb77y")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.151
+anchor_bottom = 0.647
+offset_left = 192.0
+offset_top = 133.0
+offset_right = -581.254
+offset_bottom = 71.685
+grow_horizontal = 2
+grow_vertical = 2
+text = "button"
+
+[connection signal="toggled" from="Button" to="." method="_on_button_toggled"]

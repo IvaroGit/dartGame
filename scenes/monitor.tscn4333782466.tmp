@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bco1odv4qqxkl"]
+[gd_scene load_steps=9 format=3 uid="uid://bco1odv4qqxkl"]
 
 [ext_resource type="PackedScene" uid="uid://bnsrscu23a8id" path="res://models/monitor/psx_old_tv.glb" id="1_gnqr3"]
+[ext_resource type="Script" uid="uid://cxw1x2lbsajvv" path="res://scenes/monitor.gd" id="1_r76x4"]
 [ext_resource type="PackedScene" uid="uid://dsf6sv0m6ynvg" path="res://models/chain/tv_titans_chain.glb" id="2_3jcr0"]
 [ext_resource type="PackedScene" uid="uid://dfagajor2qheb" path="res://scenes/monitor_screen.tscn" id="4_r76x4"]
 
@@ -15,17 +16,25 @@ albedo_texture = SubResource("ViewportTexture_712wi")
 [sub_resource type="QuadMesh" id="QuadMesh_spe5c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r76x4"]
-size = Vector3(0.54437256, 0.4855957, 0.09587288)
+size = Vector3(0.54437256, 0.4855957, 0.039611816)
 
 [node name="monitor" type="Node3D"]
 transform = Transform3D(1.18, 0, 0, 0, 1.18, 0, 0, 0, 1.18, 0, 0, 0)
+script = ExtResource("1_r76x4")
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("1_gnqr3")]
 
 [node name="ScreenQuad" type="MeshInstance3D" parent="Sketchfab_Scene"]
-transform = Transform3D(0.54043424, 1.691303e-15, -4.3303174e-08, -1.0976007e-14, 0.48604712, -1.8206796e-08, 9.4492535e-08, 3.6146957e-08, 0.2476653, -0.0008988875, 0.2930689, 0.2368678)
+transform = Transform3D(0.54043424, 1.691303e-15, -4.3303174e-08, -1.0976007e-14, 0.48604712, -1.8206796e-08, 9.4492535e-08, 3.6146957e-08, 0.2476653, -0.00089888676, 0.2930689, 0.23248099)
 material_override = SubResource("StandardMaterial3D_r76x4")
 mesh = SubResource("QuadMesh_spe5c")
+
+[node name="Area3D" type="Area3D" parent="Sketchfab_Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.012442871)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0013733063, 0.29180953, 0.21327782)
+shape = SubResource("BoxShape3D_r76x4")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29387492, 0.9986313)
@@ -50,9 +59,3 @@ size = Vector2i(1000, 1000)
 render_target_update_mode = 4
 
 [node name="Control" parent="SubViewport" instance=ExtResource("4_r76x4")]
-
-[node name="Area3D" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0013733063, 0.29180953, 0.19403373)
-shape = SubResource("BoxShape3D_r76x4")
