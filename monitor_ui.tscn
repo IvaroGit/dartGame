@@ -1,0 +1,135 @@
+[gd_scene load_steps=7 format=3 uid="uid://duxfl1eldembv"]
+
+[ext_resource type="Texture2D" uid="uid://h31bbl6we8bx" path="res://icon.svg" id="1_1tf4g"]
+[ext_resource type="FontFile" uid="uid://bofs88q77wiay" path="res://fonts/Minercraftory.ttf" id="2_pvloh"]
+[ext_resource type="FontFile" uid="uid://prvyljm4mamt" path="res://fonts/LOTSOFDOTZ.TTF" id="3_ko0i5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pvloh"]
+font = ExtResource("2_pvloh")
+font_size = 58
+font_color = Color(0.08627451, 0.7372549, 0.3529412, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ko0i5"]
+font = ExtResource("2_pvloh")
+font_size = 41
+font_color = Color(0.08627451, 0.7372549, 0.3529412, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d2i27"]
+font = ExtResource("3_ko0i5")
+font_size = 111
+font_color = Color(1, 0.84313726, 0.10980392, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 0.44400004
+anchor_bottom = 0.78900003
+offset_right = 0.5119629
+offset_bottom = -0.2720337
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(447, 439)
+texture = ExtResource("1_1tf4g")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 3.0
+offset_right = 239.0
+offset_bottom = 94.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "Quota:"
+label_settings = SubResource("LabelSettings_pvloh")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 2.0
+offset_right = 495.0
+offset_bottom = 93.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "numba"
+label_settings = SubResource("LabelSettings_pvloh")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 72.0
+offset_right = 390.0
+offset_bottom = 138.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "------------------"
+label_settings = SubResource("LabelSettings_ko0i5")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 123.0
+offset_right = 196.0
+offset_bottom = 189.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "Score:"
+label_settings = SubResource("LabelSettings_ko0i5")
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 123.0
+offset_right = 373.0
+offset_bottom = 189.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "numba"
+label_settings = SubResource("LabelSettings_ko0i5")
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 166.0
+offset_right = 390.0
+offset_bottom = 232.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "------------------"
+label_settings = SubResource("LabelSettings_ko0i5")
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 223.0
+offset_right = 308.0
+offset_bottom = 289.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "Score left:"
+label_settings = SubResource("LabelSettings_ko0i5")
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 223.0
+offset_right = 493.0
+offset_bottom = 289.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "numba"
+label_settings = SubResource("LabelSettings_ko0i5")
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 266.0
+offset_right = 390.0
+offset_bottom = 332.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "------------------"
+label_settings = SubResource("LabelSettings_ko0i5")
+
+[node name="Label10" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 51.0
+offset_top = 326.0
+offset_right = 411.0
+offset_bottom = 438.0
+scale = Vector2(0.98929876, 0.99266034)
+text = "WIN"
+label_settings = SubResource("LabelSettings_d2i27")

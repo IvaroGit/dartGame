@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var DartScene: PackedScene
-@onready var viewport: SubViewport = $"../room/monitor/SubViewport"
+@onready var viewport: SubViewport = $"../room/monitor/Sprite3D/SubViewport"
 @onready var main_node: main = get_tree().get_root().get_child(0) as main
 @onready var dart_rig := $DartRig
 @onready var bag: Node3D = $"../dartBag/Sketchfab_Scene"

@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://486piou8upa3"]
+[gd_scene load_steps=8 format=3 uid="uid://486piou8upa3"]
 
 [ext_resource type="Script" uid="uid://cxmie3c8gjdmc" path="res://scoreBoard.gd" id="1_ucmtr"]
 [ext_resource type="Material" uid="uid://cor0vgu732r7b" path="res://textures/black.tres" id="2_g67ru"]
 [ext_resource type="FontFile" uid="uid://bofs88q77wiay" path="res://fonts/Minercraftory.ttf" id="3_cxde7"]
+[ext_resource type="PackedScene" uid="uid://bnsrscu23a8id" path="res://models/monitor/psx_old_tv.glb" id="4_cxde7"]
+[ext_resource type="PackedScene" uid="uid://dsf6sv0m6ynvg" path="res://models/chain/tv_titans_chain.glb" id="5_6lsbm"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_w5fga"]
 material = ExtResource("2_g67ru")
@@ -14,12 +16,21 @@ script = ExtResource("1_ucmtr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.31, 0, 0, 0, 0.355, 0, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_w5fga")
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0.20156302)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0.012291253, 0.20156302)
+text = "numba"
 font = ExtResource("3_cxde7")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.92352223, 0, 0, 0, 0.24299058, 0, 0, 0, 0.14321956, 0, 0, 0.1273573)
+visible = false
 mesh = SubResource("BoxMesh_6lsbm")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("4_cxde7")]
+transform = Transform3D(1.51538, 0, 0, 0, 0.50111157, 0, 0, 0, 1, -0.0007610917, -0.1404012, -0.025801957)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("5_6lsbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006091833, 1.5270265, 0.10078767)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=19 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -21,6 +21,12 @@ background_mode = 2
 background_color = Color(0.4071524, 0.49325198, 0.5770381, 1)
 sky = SubResource("Sky_85g3d")
 sdfgi_enabled = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_trceg"]
+viewport_path = NodePath("Sketchfab_Scene/Sprite3D/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_a8y0u"]
+viewport_path = NodePath("boss_monitor/Sprite3D/SubViewport")
 
 [sub_resource type="GDScript" id="GDScript_85g3d"]
 
@@ -45,6 +51,12 @@ spot_range = 9.013
 
 [node name="monitor" parent="world/room" instance=ExtResource("5_trceg")]
 transform = Transform3D(1.0800841, 0, 0.47520337, 0, 1.1799998, 0, -0.47520337, 0, 1.0800841, -1.0935102, -0.21810341, -1.3662008)
+
+[node name="Sprite3D" parent="world/room/monitor/Sketchfab_Scene" index="1"]
+texture = SubResource("ViewportTexture_trceg")
+
+[node name="Sprite3D" parent="world/room/monitor/boss_monitor" index="2"]
+texture = SubResource("ViewportTexture_a8y0u")
 
 [node name="dartArea" type="Node3D" parent="world"]
 process_priority = 1
@@ -159,6 +171,7 @@ transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
 
+[editable path="world/room/monitor"]
 [editable path="world/dartArea/board"]
 [editable path="world/dartArea/board/board/CollisionShape3D/DartZones"]
 [editable path="world/Player"]

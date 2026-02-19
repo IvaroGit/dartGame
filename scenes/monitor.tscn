@@ -1,31 +1,31 @@
 [gd_scene load_steps=8 format=3 uid="uid://bco1odv4qqxkl"]
 
+[ext_resource type="Script" uid="uid://cxw1x2lbsajvv" path="res://scenes/monitor.gd" id="1_712wi"]
 [ext_resource type="PackedScene" uid="uid://bnsrscu23a8id" path="res://models/monitor/psx_old_tv.glb" id="1_gnqr3"]
 [ext_resource type="PackedScene" uid="uid://dsf6sv0m6ynvg" path="res://models/chain/tv_titans_chain.glb" id="2_3jcr0"]
-[ext_resource type="PackedScene" uid="uid://dfagajor2qheb" path="res://scenes/monitor_screen.tscn" id="4_r76x4"]
+[ext_resource type="PackedScene" uid="uid://duxfl1eldembv" path="res://monitor_ui.tscn" id="4_r76x4"]
+[ext_resource type="PackedScene" uid="uid://ck8ack3dy55dr" path="res://boss_monitor_ui.tscn" id="5_spe5c"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_712wi"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_r76x4"]
+viewport_path = NodePath("Sketchfab_Scene/Sprite3D/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r76x4"]
-resource_local_to_scene = true
-shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_712wi")
-
-[sub_resource type="QuadMesh" id="QuadMesh_spe5c"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_r76x4"]
-size = Vector3(0.54437256, 0.4855957, 0.09587288)
+[sub_resource type="ViewportTexture" id="ViewportTexture_spe5c"]
+viewport_path = NodePath("boss_monitor/Sprite3D/SubViewport")
 
 [node name="monitor" type="Node3D"]
 transform = Transform3D(1.18, 0, 0, 0, 1.18, 0, 0, 0, 1.18, 0, 0, 0)
+script = ExtResource("1_712wi")
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("1_gnqr3")]
 
-[node name="ScreenQuad" type="MeshInstance3D" parent="Sketchfab_Scene"]
-transform = Transform3D(0.54043424, 1.691303e-15, -4.3303174e-08, -1.0976007e-14, 0.48604712, -1.8206796e-08, 9.4492535e-08, 3.6146957e-08, 0.2476653, -0.0008988875, 0.2930689, 0.2368678)
-material_override = SubResource("StandardMaterial3D_r76x4")
-mesh = SubResource("QuadMesh_spe5c")
+[node name="Sprite3D" type="Sprite3D" parent="Sketchfab_Scene"]
+transform = Transform3D(0.10554547, 0, 0, 0, 0.0976122, 0, 0, 0, 1, 0, 0.29472953, 0.2267126)
+texture = SubResource("ViewportTexture_r76x4")
+
+[node name="SubViewport" type="SubViewport" parent="Sketchfab_Scene/Sprite3D"]
+transparent_bg = true
+
+[node name="Control" parent="Sketchfab_Scene/Sprite3D/SubViewport" instance=ExtResource("4_r76x4")]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29387492, 0.9986313)
@@ -34,25 +34,23 @@ light_energy = 0.091
 omni_range = 1.296
 omni_shadow_mode = 0
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.36642, 0.18706685)
-light_color = Color(0.76862746, 0, 0, 1)
-light_energy = 1.286
-omni_range = 1.991
-omni_shadow_mode = 0
-
 [node name="Sketchfab_Scene2" parent="." instance=ExtResource("2_3jcr0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006091833, 1.6789874, 0.024188071)
 
-[node name="SubViewport" type="SubViewport" parent="."]
-disable_3d = true
-size = Vector2i(1000, 1000)
-render_target_update_mode = 4
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("2_3jcr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006091833, 4.1787767, 0.024188071)
 
-[node name="Control" parent="SubViewport" instance=ExtResource("4_r76x4")]
+[node name="boss_monitor" parent="." instance=ExtResource("1_gnqr3")]
+transform = Transform3D(0.55194056, 0.15295506, 0.050906107, -0.15068685, 0.5540425, -0.030908821, -0.05727272, 0.016328609, 0.5719075, -0.027920365, 0.20784266, -0.06196621)
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Sketchfab_Scene4" parent="boss_monitor" instance=ExtResource("1_gnqr3")]
+transform = Transform3D(-0.23075488, 0.24454984, 0.1261315, 0.60992146, 0.10211095, -0.06411313, -0.12813075, 0.045645032, -0.5323424, 0.16447042, -0.0749314, -0.12080258)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0013733063, 0.29180953, 0.19403373)
-shape = SubResource("BoxShape3D_r76x4")
+[node name="Sprite3D" type="Sprite3D" parent="boss_monitor"]
+transform = Transform3D(0.104120255, 0, 0, 0, 0.09217206, 0, 0, 0, 1, 1.5515127e-09, 0.2901687, 0.2284188)
+texture = SubResource("ViewportTexture_spe5c")
+
+[node name="SubViewport" type="SubViewport" parent="boss_monitor/Sprite3D"]
+transparent_bg = true
+
+[node name="Control" parent="boss_monitor/Sprite3D/SubViewport" instance=ExtResource("5_spe5c")]

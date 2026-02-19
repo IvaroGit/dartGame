@@ -34,7 +34,8 @@ var dart_home_rotations: Array = []
 @export var bag_height_offset := 0
 @onready var board1: Node3D = $world/dartArea/board
 @onready var scoreboard: Node3D = $world/dartArea/scoreboard
-
+@onready var monitor: Node3D = $world/room/monitor
+@onready var boss_monitor: Node3D = $world/room/monitor/boss_monitor
 var charmDelay = 0.5
 
 class ThrowContext:
@@ -108,7 +109,7 @@ func get_selection():
 	player.lineup_darts()
 
 func _on_button_pressed() -> void:
-	pass
+	start_boss()
 
 func _process(delta: float) -> void:
 	if(game_state==GameState.DART_CHARGE):
@@ -140,6 +141,7 @@ func _on_throw_cancel_button_pressed() -> void:
 	player.lineup_darts()
 
 func _on_zone_scored(points: int, zone_name: String, times_hit: int) -> void:
+	scoreboard.update_scoring_label(int(points))
 	# Create context
 	var ctx = ThrowContext.new(zone_name, points, board1)
 	# Board effect as a charm
@@ -150,8 +152,8 @@ func _on_zone_scored(points: int, zone_name: String, times_hit: int) -> void:
 	for charm in active_charms:
 		await get_tree().create_timer(charmDelay).timeout
 		charm.apply(ctx)
+		scoreboard.update_scoring_label(int(charm.bonus_score))
 	# Show final score on board
-	scoreboard.update_scoring_label(int(ctx.score))
 	# Debug
 	print("Hit zone: ", zone_name, " Base: ", points, " Final score: ", ctx.score)
 	
@@ -164,7 +166,7 @@ func add_charm(scene: PackedScene):
 	active_charms.append(charm)
 	add_child(charm) 
 	for i in active_charms.size():
-		charm.global_position = Vector3(-0.6+i*-charm_spacing,0,-1)
+		charm.global_position = Vector3(0.6+i*charm_spacing,0,-1)
 	print("Charm added:", charm.charm_name)
 
 func add_random_charm():
@@ -185,3 +187,21 @@ func add_random_charm():
 		return
 	var chosen_scene = candidates.pick_random()
 	add_charm(chosen_scene)
+func start_boss():
+	var tween = create_tween()
+	# If a tween already exists, kill it first
+	if tween:
+		tween.kill()
+	
+	# Create a new tween
+	tween = create_tween()
+	
+	# Move $Monitor to a new position in 1 second
+	tween.tween_property(boss_monitor, "position", Vector3(-0.3, 0.7, 0), 1)
+	
+	# Rotate $Monitor to a new rotation in degrees in 1 second
+	tween.tween_property(boss_monitor, "rotation_degrees", Vector3(7, 0, 4), 0.5)
+	#tween.tween_property(boss_monitor, "rotation_degrees", Vector3(7, 0, 0), 0.5)
+	
+	# Optional: smooth easing
+	#tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)

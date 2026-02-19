@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck8ack3dy55dr"]
+
+[ext_resource type="FontFile" uid="uid://bofs88q77wiay" path="res://fonts/Minercraftory.ttf" id="1_rvvo5"]
+[ext_resource type="Texture2D" uid="uid://ctm0ybneisht" path="res://images/angry.png" id="2_0mh6p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0mh6p"]
+font = ExtResource("1_rvvo5")
+font_size = 43
+font_color = Color(0.8392157, 0, 0.050980393, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rvvo5"]
+font = ExtResource("1_rvvo5")
+font_size = 180
+font_color = Color(1, 0.1882353, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 24.0
+offset_right = 277.0
+offset_bottom = 81.0
+text = "Boss: name"
+label_settings = SubResource("LabelSettings_0mh6p")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 107.0
+offset_right = 418.0
+offset_bottom = 164.0
+text = "Effect: sum stuff"
+label_settings = SubResource("LabelSettings_0mh6p")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 126.0
+offset_right = 466.0
+offset_bottom = 408.0
+label_settings = SubResource("LabelSettings_rvvo5")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 66.0
+offset_right = 279.0
+offset_bottom = 123.0
+scale = Vector2(1, 0.95999986)
+text = "---------------"
+label_settings = SubResource("LabelSettings_0mh6p")
+
+[node name="Angry" type="Sprite2D" parent="."]
+position = Vector2(238, 338)
+scale = Vector2(0.5994686, 0.5994686)
+texture = ExtResource("2_0mh6p")
