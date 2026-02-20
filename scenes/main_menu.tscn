@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfomwk136382j"]
 
-[ext_resource type="Script" uid="uid://cbnosgsi05xyy" path="res://main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://cbnosgsi05xyy" path="res://scenes/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://hqifhrxcx1fk" path="res://images/Skärmbild 2026-01-30 154449.png" id="2_ekxnf"]
 [ext_resource type="VideoStream" uid="uid://b2130udyc2myb" path="res://images/30.01.2026_15.50.04_REC.ogv" id="3_bqqt6"]
 

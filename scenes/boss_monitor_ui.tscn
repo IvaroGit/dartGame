@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://ck8ack3dy55dr"]
 
-[ext_resource type="FontFile" uid="uid://bofs88q77wiay" path="res://fonts/Minercraftory.ttf" id="1_rvvo5"]
-[ext_resource type="Texture2D" uid="uid://ctm0ybneisht" path="res://images/angry.png" id="2_0mh6p"]
+[ext_resource type="FontFile" uid="uid://bofs88q77wiay" path="res://fonts/Minercraftory.ttf" id="1_5m4nu"]
+[ext_resource type="Texture2D" uid="uid://ctm0ybneisht" path="res://images/angry.png" id="2_smbm4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0mh6p"]
-font = ExtResource("1_rvvo5")
+font = ExtResource("1_5m4nu")
 font_size = 43
 font_color = Color(0.8392157, 0, 0.050980393, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rvvo5"]
-font = ExtResource("1_rvvo5")
+font = ExtResource("1_5m4nu")
 font_size = 180
 font_color = Color(1, 0.1882353, 0, 1)
 
@@ -64,4 +64,4 @@ label_settings = SubResource("LabelSettings_0mh6p")
 [node name="Angry" type="Sprite2D" parent="."]
 position = Vector2(238, 338)
 scale = Vector2(0.5994686, 0.5994686)
-texture = ExtResource("2_0mh6p")
+texture = ExtResource("2_smbm4")

@@ -7,14 +7,16 @@ var bonus_score = 100
 
 func apply(ctx) -> void:
 	if ctx.zone_id not in trigger_zones:
+		triggered=false
 		return
+	triggered=true
 	ctx.score += bonus_score
 	particle.emitting = true
 	var popup := num_instance.instantiate()
 	popup.position = Vector3(0, 0.4, 0)
 	popup.rotation_degrees.y=0
 	var mesh_instance := popup as MeshInstance3D
-	mesh_instance.mesh = mesh_instance.mesh.duplicate()  # ⭐ FIX ⭐
+	mesh_instance.mesh = mesh_instance.mesh.duplicate()
 	var text_mesh := mesh_instance.mesh as TextMesh
 	text_mesh.text = "+" + str(bonus_score)
 	add_child(popup)

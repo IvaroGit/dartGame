@@ -37,7 +37,8 @@ var dart_home_rotations: Array = []
 @onready var monitor: Node3D = $world/room/monitor
 @onready var boss_monitor: Node3D = $world/room/monitor/boss_monitor
 var charmDelay = 0.5
-
+var throws_left = 5
+var quota = randi() % 3000+1000
 class ThrowContext:
 	var zone_id: String
 	var base_score: int
@@ -152,7 +153,9 @@ func _on_zone_scored(points: int, zone_name: String, times_hit: int) -> void:
 	for charm in active_charms:
 		await get_tree().create_timer(charmDelay).timeout
 		charm.apply(ctx)
-		scoreboard.update_scoring_label(int(charm.bonus_score))
+		if charm.triggered:
+			scoreboard.update_scoring_label(int(charm.bonus_score))
+	scoreboard.finnished_scoring()
 	# Show final score on board
 	# Debug
 	print("Hit zone: ", zone_name, " Base: ", points, " Final score: ", ctx.score)

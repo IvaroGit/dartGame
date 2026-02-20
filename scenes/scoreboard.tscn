@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://486piou8upa3"]
 
-[ext_resource type="Script" uid="uid://cxmie3c8gjdmc" path="res://scoreBoard.gd" id="1_ucmtr"]
+[ext_resource type="Script" uid="uid://cxmie3c8gjdmc" path="res://scenes/scoreBoard.gd" id="1_ucmtr"]
 [ext_resource type="Material" uid="uid://cor0vgu732r7b" path="res://textures/black.tres" id="2_g67ru"]
 [ext_resource type="FontFile" uid="uid://bofs88q77wiay" path="res://fonts/Minercraftory.ttf" id="3_cxde7"]
 [ext_resource type="PackedScene" uid="uid://bnsrscu23a8id" path="res://models/monitor/psx_old_tv.glb" id="4_cxde7"]

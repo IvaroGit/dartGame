@@ -4,6 +4,7 @@ var trigger_zones = ["zone_outer_slice_1","zone_inner_slice_1","zone_bull"]
 var bonus_score = 50
 func apply(ctx) -> void:
 	if(ctx.zone_id in trigger_zones):
+		triggered=true
 		ctx.score += bonus_score
 		print(charm_name, "applied: +",bonus_score, " now ", ctx.score)
 		particle.emitting=true
@@ -15,3 +16,5 @@ func apply(ctx) -> void:
 		var text_mesh := mesh_instance.mesh as TextMesh
 		text_mesh.text = "+" + str(bonus_score)
 		add_child(popup)
+	else:
+		triggered=false

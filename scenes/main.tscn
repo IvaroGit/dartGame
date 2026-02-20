@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=18 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://486piou8upa3" path="res://scenes/scoreboard.tscn" id="8_choun"]
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
 [ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
+[ext_resource type="PackedScene" uid="uid://cwb5lgkbp4lw3" path="res://scenes/fire.tscn" id="15_jkv2x"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
 
@@ -153,6 +154,21 @@ offset_bottom = 599.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983, -0.8627979, 0.0018677711, -0.7994882)
+
+[node name="Node3D" parent="." instance=ExtResource("15_jkv2x")]
+transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, -0.30422175, 0.8589165, -1.3141992)
+
+[node name="Node3D2" parent="." instance=ExtResource("15_jkv2x")]
+transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, -0.11699634, 0.8415603, -1.3141992)
+
+[node name="Node3D3" parent="." instance=ExtResource("15_jkv2x")]
+transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0.026756383, 0.8697239, -1.3141992)
+
+[node name="Node3D4" parent="." instance=ExtResource("15_jkv2x")]
+transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0.19694534, 0.87677467, -1.3141992)
+
+[node name="Node3D5" parent="." instance=ExtResource("15_jkv2x")]
+transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0.36640158, 0.8651973, -1.3141992)
 
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]

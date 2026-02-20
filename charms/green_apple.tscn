@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dve1ei15wdhvl"]
 
-[ext_resource type="Script" uid="uid://c554s0kdnmwd4" path="res://charms/green_apple.gd" id="1_sgyqt"]
+[ext_resource type="Script" uid="uid://c554s0kdnmwd4" path="res://models/green_apple.gd" id="1_sgyqt"]
 [ext_resource type="PackedScene" uid="uid://g110kdti8u6g" path="res://scenes/pointText.tscn" id="2_c4mod"]
 [ext_resource type="PackedScene" uid="uid://lpdo74xl6s1b" path="res://models/green_apple_fbx.glb" id="3_sgyqt"]
 [ext_resource type="Material" uid="uid://crcvs8tmwqnqh" path="res://textures/blackOutline.tres" id="3_vslvt"]

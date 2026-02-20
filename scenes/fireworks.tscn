@@ -1,0 +1,1578 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwdq8fog3r3co"]
+
+[ext_resource type="PackedScene" uid="uid://db68hxb1r8xfn" path="res://models/fireworks/playful_pyrotechnics.glb" id="1_qw808"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_qw808")]
+
+[node name="Cube_001_8" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="0"]
+transform = Transform3D(-1.6781875e-07, 2.920506e-07, -0.00232923, -2.6223346e-05, -0.0007737008, -8.61107e-07, 0.0007737009, -2.6223284e-05, -5.34405e-07, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_001_9" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="1"]
+transform = Transform3D(0.027085839, -1.0218242e-05, -5.8687274e-06, 1.001358e-05, 0.027070295, -0.0009175042, 6.2114914e-06, 0.00091750186, 0.027070297, -972.563, 237.05954, -4.8952255)
+
+[node name="Cube_002_10" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="2"]
+transform = Transform3D(-0.00061085034, -5.537092e-05, 0.0014211388, -0.00047468452, 2.4212351e-05, -0.0018385305, -2.8933166e-05, 0.00077178265, 0.00015963678, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_003_11" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="3"]
+transform = Transform3D(-0.016525948, 0.001937323, -0.021372473, 0.021379657, -0.00084713975, -0.016608292, -0.0018563609, -0.027003184, -0.0010123191, -978.4955, 239.96643, -5.14859)
+
+[node name="Cube_003_12" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="4"]
+transform = Transform3D(-0.00019487078, 0.0006854523, 0.0009100302, -0.00037173618, -0.00035979948, 0.0017327454, -0.00065049075, 2.7034974e-07, -0.0012628349, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_005_13" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="5"]
+transform = Transform3D(-0.01058244, -0.02398265, -0.006818156, -0.020149516, 0.012588693, -0.013006331, 0.014685088, -9.458611e-06, -0.022759413, -977.6871, 234.31725, -2.8984609)
+
+[node name="Cube_007_14" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="6"]
+transform = Transform3D(-0.0003331865, 0.00069849304, 5.9790476e-05, 0.00069829175, 0.0003336403, -5.8146834e-05, 2.6001582e-05, -9.607234e-06, 0.0023277367, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_014_15" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="7"]
+transform = Transform3D(-0.0006952805, -0.024438921, -0.011657556, 0.00067616894, -0.011673433, 0.024431875, -0.027068473, 0.0003361362, 0.0009097428, -976.34204, 237.15015, -8.578188)
+
+[node name="Cube_008_16" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="8"]
+transform = Transform3D(0.00044988032, -0.00037565548, 0.0015217138, 0.00017807091, 0.0006719495, 0.0010250851, 0.000604317, 8.16547e-05, -0.0014348874, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_016_17" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="9"]
+transform = Transform3D(-0.017695501, 0.013143459, 0.015740441, -0.011920371, -0.023510216, 0.006230357, 0.016685825, -0.0028569393, 0.021143887, -978.6546, 235.43665, -2.6263013)
+
+[node name="Cube_009_18" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="10"]
+transform = Transform3D(0.00063440914, 0.00030178766, -0.0009784308, -0.00041030886, 0.0001832962, -0.0018966035, 0.00016873768, -0.0006889321, -0.0009332105, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_018_19" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="11"]
+transform = Transform3D(0.01137784, -0.010558971, 0.02219675, 0.02205497, -0.0064131822, -0.014355911, 0.010851996, 0.024104398, 0.005903809, -974.69977, 240.0583, -3.4198763)
+
+[node name="Cube_010_20" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="12"]
+transform = Transform3D(0.0005239916, 0.00037834918, 0.0012821256, -5.1646453e-05, -0.0005449815, 0.0016469546, -0.00056750875, 0.0003989333, 0.0010339288, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_021_21" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="13"]
+transform = Transform3D(-0.014909416, -0.013237707, 0.018333446, -0.019151883, 0.019067848, -0.0018070138, -0.012023206, -0.013957903, -0.01985604, -978.27563, 234.45294, -6.531585)
+
+[node name="Cube_011_22" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="14"]
+transform = Transform3D(0.00055997027, 0.00052730826, 0.00026367558, 9.8393655e-05, 2.3068988e-05, -0.0023092972, 0.00052540714, -0.0005663166, 0.00015144388, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_023_23" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="15"]
+transform = Transform3D(-0.003066177, -0.018449504, 0.01959227, 0.026854046, -0.0008071228, 0.0034425948, -0.0017610972, 0.019814314, 0.018382987, -976.66455, 240.71112, -5.135631)
+
+[node name="Cube_012_24" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="16"]
+transform = Transform3D(-0.00013175698, -0.00019303603, -0.0022205468, -9.648284e-05, -0.0007387189, 0.0006331757, 0.00075672445, -0.00012779757, -0.00030589988, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_025_25" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="17"]
+transform = Transform3D(0.025821995, 0.006753959, -0.004609928, -0.0073629916, 0.025846343, -0.0033757489, 0.003557213, 0.0044713924, 0.026476324, -972.7349, 236.0566, -4.412184)
+
+[node name="Cube_013_26" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="18"]
+transform = Transform3D(-0.00063059403, -0.00025752478, -0.0011068572, 0.00044643585, -0.00042793973, -0.001401145, 4.8444588e-05, 0.0005914805, -0.0014956514, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_028_27" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="19"]
+transform = Transform3D(0.012871276, 0.00901029, -0.022063266, 0.016293446, 0.014972788, 0.015619926, 0.017392432, -0.020694759, 0.0016949899, -974.49664, 239.27457, -2.5301816)
+
+[node name="Cube_014_28" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="20"]
+transform = Transform3D(-0.00043808142, -0.00063712115, -0.00011504319, -0.00063755695, 0.00043899548, -3.0804327e-05, -3.0108456e-05, -2.5695945e-05, 0.0023261837, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_030_29" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="21"]
+transform = Transform3D(0.0013377982, 0.022291636, -0.015327625, 0.00035821236, -0.015359605, -0.022306882, -0.027050411, 0.00089905143, -0.0010534357, -976.0655, 237.1069, -8.575732)
+
+[node name="Cube_015_30" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="22"]
+transform = Transform3D(0.0002956387, 0.00019593482, 0.0020703974, -0.00070253597, 0.00022043395, 0.0007192974, 0.00013543123, 0.0007157647, -0.00078827655, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_032_31" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="23"]
+transform = Transform3D(-0.02407596, -0.0068553835, 0.010343823, -0.008364465, -0.0077125593, -0.024580376, 0.009166608, -0.02504322, 0.0047384785, -979.5225, 235.92036, -3.6491392)
+
+[node name="Cube_016_32" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="24"]
+transform = Transform3D(-7.302317e-05, -0.00035959194, -0.0020509665, 0.00039955613, -0.0006031737, 0.00082857325, 0.000659032, 0.0003258464, -0.0007295998, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_036_33" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="25"]
+transform = Transform3D(0.023850005, 0.0125814285, -0.002554942, -0.0096352035, 0.02110388, 0.013979697, 0.008484276, -0.011400732, 0.023058256, -973.0032, 235.74751, -3.7419567)
+
+[node name="Cube_017_34" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="26"]
+transform = Transform3D(-0.00075754995, -9.788125e-05, 0.0003786518, -0.00015941715, 0.00045656154, -0.0018188511, -2.2125744e-06, 0.0006174718, 0.0014048906, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_038_35" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="27"]
+transform = Transform3D(-0.004403212, 0.0034246733, -0.026505208, 0.021150813, -0.015974205, -0.005577694, -0.016337004, -0.021604147, -7.741322e-05, -976.8465, 239.93532, -7.118389)
+
+[node name="Cube_018_36" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="28"]
+transform = Transform3D(-0.00029448463, 0.0004351383, 0.0017106007, -0.0005661805, -0.00051780493, 0.00031004153, -0.00043819987, 0.0003766078, -0.0015501719, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_040_37" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="29"]
+transform = Transform3D(-0.019892003, -0.015224649, -0.010303451, -0.0036053672, 0.018116992, -0.01980956, 0.018026434, -0.013176777, -0.015331762, -978.95337, 236.56773, -2.4439387)
+
+[node name="Cube_019_38" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="30"]
+transform = Transform3D(3.1262898e-05, 0.00077175366, -0.00015690835, 0.0006642158, -3.663163e-08, 0.001196412, -0.0003964097, 6.0803046e-05, 0.001992308, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_043_39" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="31"]
+transform = Transform3D(0.00182463, -0.027002167, 0.0010938274, -0.01391268, 1.2830868e-06, 0.023239624, -0.023167884, -0.0021273766, -0.013869614, -975.99927, 235.16563, -8.047591)
+
+[node name="Cube_020_40" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="32"]
+transform = Transform3D(0.0004320186, -2.280726e-05, 0.0019315799, 0.00030293447, 0.00068946346, -0.00053966703, 0.0005664727, -0.00035131277, -0.0011845136, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_045_41" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="33"]
+transform = Transform3D(-0.022461696, 0.0007979839, 0.015115497, 0.0062756054, -0.024122996, 0.010599089, 0.013774317, 0.012291751, 0.019819785, -979.3029, 237.91185, -3.0223536)
+
+[node name="Cube_021_42" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="34"]
+transform = Transform3D(0.00035337787, 0.00040539447, -0.0016754325, -0.00044673547, -0.00034147047, -0.0016009579, 0.0005242635, -0.0005642285, -0.0002348893, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_047_43" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="35"]
+transform = Transform3D(0.01948305, -0.01418397, 0.012364002, 0.018617002, 0.011947399, -0.01563041, 0.0027314476, 0.019741263, 0.018342968, -973.5972, 239.59064, -4.5245123)
+
+[node name="Cube_022_44" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="36"]
+transform = Transform3D(0.00048161027, 4.6920886e-05, 0.0018181349, -0.0005335882, -0.00033324293, 0.0013574002, -0.00028746453, 0.0006971716, 0.00052646373, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_050_45" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="37"]
+transform = Transform3D(-0.021142485, -0.0016416743, 0.01685061, -0.015784753, 0.011659524, -0.018669222, -0.0061220652, -0.024392687, -0.010057827, -979.12354, 234.91098, -5.7288537)
+
+[node name="Cube_023_46" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="38"]
+transform = Transform3D(0.00049785135, 0.00051938544, -0.0008599181, 0.00016030596, -0.00047725826, -0.001769374, 0.0005707422, -0.00031900458, 0.0012470647, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_052_47" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="39"]
+transform = Transform3D(0.009999697, -0.018172296, 0.017418854, 0.02057546, 0.01669834, 0.005608797, -0.014501698, 0.011161354, 0.019969167, -974.8872, 239.85706, -6.8687334)
+
+[node name="Cube_024_48" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="40"]
+transform = Transform3D(-0.00022040616, -0.00050547393, -0.0016347878, 0.00038374242, -0.00056276616, 0.0011068728, 0.0006351877, 0.00016459338, -0.0012359674, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_054_49" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="41"]
+transform = Transform3D(0.019010402, 0.017685553, -0.007711585, -0.012871453, 0.019690102, 0.0134264035, 0.014372649, -0.0057588033, 0.022223992, -973.66156, 235.30728, -2.9409623)
+
+[node name="Cube_025_50" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="42"]
+transform = Transform3D(-0.0003501337, -0.00047322558, -0.0015126838, 0.00059061596, 8.668007e-05, -0.0014830555, -0.00035760284, 0.00060650206, -0.0009683221, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_057_51" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="43"]
+transform = Transform3D(0.017590493, 0.016557256, -0.012250497, 0.017245958, -0.0030327714, 0.020664511, 0.011260298, -0.02122033, -0.012511839, -973.8547, 239.40414, -3.3643346)
+
+[node name="Cube_026_52" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="44"]
+transform = Transform3D(-0.00068154035, -0.00035355243, -0.00029791667, -0.00034554297, 0.0005470831, 0.0012786447, 0.00012411083, -0.0004183317, 0.0019239614, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_059_53" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="45"]
+transform = Transform3D(0.0034643805, 0.012370114, -0.023845779, -0.014868926, -0.019141382, -0.012089884, -0.022373106, 0.014636617, 0.004342389, -975.77625, 235.03555, -7.939478)
+
+[node name="Cube_027_54" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="46"]
+transform = Transform3D(-7.895071e-05, 0.00021953552, 0.0022209415, -0.00056655466, 0.0004860352, -0.0006172488, 0.000521616, 0.00056113687, -0.00033426943, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_061_55" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="47"]
+transform = Transform3D(-0.025826586, -0.0076811225, -0.0027623326, 0.00717778, -0.017005432, -0.01982265, 0.0038871067, -0.019633094, 0.018250337, -979.7607, 238.03456, -4.3673086)
+
+[node name="Cube_028_56" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="48"]
+transform = Transform3D(0.0006278618, -0.0003457414, 0.0008800511, -0.00043508242, -0.0005992636, 0.00067872513, -0.0001256721, 0.00034734237, 0.002046987, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_065_57" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="49"]
+transform = Transform3D(-0.0102338195, 0.012096824, 0.02196767, -0.007892665, 0.020967074, -0.015222694, -0.02380373, -0.012152836, -0.0043970244, -977.6396, 235.98454, -8.134086)
+
+[node name="Cube_029_58" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="50"]
+transform = Transform3D(8.349581e-06, 0.00066827395, -0.0011755079, -0.0001826295, -0.00037798562, -0.0019570333, 0.0007522482, -9.9184166e-05, -0.00046207756, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_067_59" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="51"]
+transform = Transform3D(0.013669588, -0.023381613, 0.0002921325, 0.022757687, 0.013224987, -0.006389853, 0.0053733466, 0.0034702602, 0.026319712, -974.388, 240.1539, -4.165136)
+
+[node name="Cube_030_60" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="52"]
+transform = Transform3D(-0.00061902136, -0.0004096597, -0.00066119287, 0.00011054916, -0.00048516953, 0.0017843092, 0.0004515441, -0.00044282063, -0.0013432716, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_069_61" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="53"]
+transform = Transform3D(0.007688786, 0.014333201, -0.021658365, -0.020749137, 0.016975142, 0.003867902, 0.015620457, 0.01549344, 0.015798653, -975.2016, 234.23567, -2.7712233)
+
+[node name="Cube_031_62" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="54"]
+transform = Transform3D(0.00043987323, -0.00013237428, 0.0018748553, 0.00063667464, 6.59265e-05, -0.0013101134, -2.1390179e-05, -0.0007598891, -0.00044026662, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_072_63" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="55"]
+transform = Transform3D(-0.021802064, 0.004631527, 0.015390311, 0.015234867, -0.0023066455, 0.022276018, 0.005119722, 0.026587047, -0.0007484004, -979.2132, 239.13057, -4.1996365)
+
+[node name="Cube_032_64" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="56"]
+transform = Transform3D(0.00040336637, 0.00049085135, -0.0013308909, -0.00031366883, 0.0005983744, 0.001137225, -0.00058155664, 1.7713746e-05, -0.0015364774, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_074_65" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="57"]
+transform = Transform3D(0.015476481, -0.017173942, 0.014113005, -0.013224414, -0.020935958, -0.010974667, 0.01786718, -0.0006197713, -0.020347541, -974.1423, 235.25925, -2.4656017)
+
+[node name="Cube_033_66" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="58"]
+transform = Transform3D(-0.00027241767, -0.00060616713, -0.0011946426, -0.0006005408, 0.00042623706, -0.0007181687, -0.00040551214, -0.00022401812, 0.0018661128, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_076_67" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="59"]
+transform = Transform3D(0.013892108, 0.021208616, -0.009531358, 0.008351346, -0.014913205, -0.02101176, -0.021700395, 0.007837969, -0.0141880885, -974.3577, 238.19421, -7.8479705)
+
+[node name="Cube_034_68" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="60"]
+transform = Transform3D(-0.00068833, -4.1922605e-05, 0.0010584096, 0.00011021167, -0.00075590075, 0.0003778157, -0.0003366836, -0.00016173195, -0.0020401808, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_079_69" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="61"]
+transform = Transform3D(-0.012307892, 0.0014667899, -0.024083337, -0.004393493, 0.026447505, 0.003856093, 0.02372458, 0.005658689, -0.011779909, -977.92175, 236.46054, -1.6688209)
+
+[node name="Cube_035_70" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="62"]
+transform = Transform3D(0.00026321967, -0.0006573137, -0.00094167906, -0.00036665896, 0.00016782412, -0.001988292, -0.0006289494, -0.00037292688, 0.0007650165, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_081_71" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="63"]
+transform = Transform3D(0.0109504685, 0.022998132, 0.009209558, 0.023121184, -0.0058718342, -0.012828689, -0.00889612, 0.013048, -0.022005716, -974.7579, 240.20335, -6.1062074)
+
+[node name="Cube_036_72" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="64"]
+transform = Transform3D(0.0006341889, -0.00034184277, 0.0008523324, -0.00044331048, -0.0004607728, 0.0013130992, 2.4103165e-05, 0.00051974284, 0.0017247068, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_083_73" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="65"]
+transform = Transform3D(-0.009911499, 0.011960414, 0.022189038, -0.015269589, 0.016121548, -0.015510581, -0.020056037, -0.018184802, 0.0008433155, -977.5958, 234.98105, -7.6242886)
+
+[node name="Cube_037_74" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="66"]
+transform = Transform3D(0.00046541175, 0.00040652815, -0.0014029664, 0.0005117524, -0.0005808537, 1.3177294e-05, 0.000347566, 0.00031087705, 0.0018592541, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_086_75" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="67"]
+transform = Transform3D(0.016314624, -0.014223633, 0.016283859, -0.00015323798, 0.020322947, 0.017905226, -0.021620646, -0.010876987, 0.012160657, -974.0282, 237.03732, -7.837122)
+
+[node name="Cube_038_76" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="68"]
+transform = Transform3D(-0.00012615894, 0.00040355293, 0.0019511397, -0.00036146317, 0.0005474636, -0.0012366355, 0.00067285134, 0.00036976923, -0.0002984975, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_088_77" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="69"]
+transform = Transform3D(-0.022689153, -0.014119535, -0.0044140588, 0.014380419, -0.019154692, -0.012646901, 0.0034711289, -0.012937515, 0.023541765, -979.3339, 239.01434, -4.4238935)
+
+[node name="Cube_039_78" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="70"]
+transform = Transform3D(-0.00029416973, 0.00060915365, -0.0011325825, -0.0007155445, -0.0002657357, 0.00038860133, 2.7584085e-05, -0.00039701012, -0.0019978888, -976.2475, 237.05817, -4.8960705)
+
+[node name="Circle_090_79" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="71"]
+transform = Transform3D(0.01317042, -0.021313112, -0.010292422, -0.0045189126, 0.009297569, -0.025035523, 0.023232782, 0.013890613, 0.00096510956, -974.45593, 236.44347, -1.7357199)
+
+[node name="Cube_004_133" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="73"]
+transform = Transform3D(-0.06875071, -0.028161978, -0.22462562, 0.00017580445, 0.00022947807, -66.842545, -0.028162315, 0.06875133, 0.13109556, -976.85297, -782.5335, -3.217468)
+
+[node name="Circle_009_134" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="74"]
+transform = Transform3D(0.025173808, 0.9093825, -2.2200477, 7.465185, -0.007435406, 0.0056967856, -0.014690562, -2.2200685, -0.90939313, -973.42865, 232.9538, -5.2158027)
+
+[node name="Cube_112_137" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="75"]
+transform = Transform3D(0.0005380833, -1.8443237e-05, 0.001673667, -2.6223344e-05, -0.0007737008, -8.6111567e-07, -0.00055594905, 1.864384e-05, 0.0016199234, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_273_138" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="76"]
+transform = Transform3D(-0.019462515, 0.0006452931, 0.018826494, 1.0013651e-05, 0.027070295, -0.0009175041, -0.018837545, -0.00065231184, -0.019451585, -298.44373, 237.05954, 799.7229)
+
+[node name="Cube_113_139" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="77"]
+transform = Transform3D(0.000418906, 0.0005764245, -0.0009103884, -0.00047468452, 2.4212128e-05, -0.0018385305, 0.0004455256, -0.0005161872, -0.0011028654, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_275_140" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="78"]
+transform = Transform3D(0.010586599, -0.020167982, 0.014656712, 0.021379659, -0.0008471373, -0.01660829, 0.012824854, 0.018060388, 0.015588082, -294.35617, 239.96643, 804.02997)
+
+[node name="Cube_114_141" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="79"]
+transform = Transform3D(-0.00031223797, -0.0004924527, -0.0015321103, -0.00037173615, -0.00035979965, 0.0017327451, 0.0006030094, -0.00047679685, 0.00027485646, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_277_142" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="80"]
+transform = Transform3D(0.0178164, 0.017229969, -0.010924601, -0.020149514, 0.012588692, -0.013006334, -0.0031962192, 0.0166822, 0.021098133, -293.3727, 234.31725, 801.8506)
+
+[node name="Cube_115_143" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="81"]
+transform = Transform3D(0.00025754326, -0.0005086932, 0.0015755291, 0.00069829175, 0.0003336403, -5.8146707e-05, 0.00021298074, -0.00047876514, -0.001714538, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_280_144" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="82"]
+transform = Transform3D(-0.018321298, 0.017798195, 0.009010938, 0.0006761684, -0.011673424, 0.024431879, 0.019937793, 0.016751066, 0.0074517787, -298.2885, 237.15015, 804.99756)
+
+[node name="Cube_116_145" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="83"]
+transform = Transform3D(9.68552e-05, 0.00032676238, -0.0020913624, 0.00017807091, 0.0006719495, 0.001025085, -0.00074713485, 0.0002025114, -2.6797694e-05, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_282_146" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="84"]
+transform = Transform3D(0.024319753, -0.011432783, 0.003388779, -0.011920371, -0.023510216, 0.006230356, 0.00031162443, -0.007085482, -0.026140803, -292.48807, 235.43665, 802.3278)
+
+[node name="Cube_117_147" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="85"]
+transform = Transform3D(-0.00033862996, -0.0006959198, 5.433533e-05, -0.0004103089, 0.00018329601, -0.0018966036, -0.00056238513, 0.000285305, 0.0013510204, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_284_148" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="86"]
+transform = Transform3D(-0.00063185464, 0.024348883, -0.011848017, 0.022054972, -0.006413171, -0.014355913, -0.015710562, -0.009982281, -0.019676765, -295.8822, 240.0583, 800.14825)
+
+[node name="Cube_118_149" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="87"]
+transform = Transform3D(-0.0007711925, 5.4597767e-06, -0.00020257325, -5.1646504e-05, -0.0005449814, 0.0016469547, 4.3536547e-05, -0.0005497873, -0.0016345697, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_287_150" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="88"]
+transform = Transform3D(0.0023556578, -0.00019102813, -0.026982533, -0.019151881, 0.019067848, -0.0018070126, 0.019007867, 0.019235991, 0.00152326, -295.47583, 234.45294, 804.871)
+
+[node name="Cube_119_151" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="89"]
+transform = Transform3D(-3.7133894e-05, -0.0007727474, -8.420503e-05, 9.839301e-05, 2.3068937e-05, -0.0023092974, -0.00076696835, 4.0373154e-05, -0.00029217877, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_289_152" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="90"]
+transform = Transform3D(0.0009791885, 0.027036937, -0.0012992477, 0.026854046, -0.0008071324, 0.0034425964, 0.003397664, -0.0014125835, -0.02683474, -295.66306, 240.71112, 802.74756)
+
+[node name="Cube_120_153" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="91"]
+transform = Transform3D(0.00062085385, 4.987764e-05, 0.0013832308, -9.648287e-05, -0.0007387189, 0.00063317583, -0.00045225237, 0.00022606943, 0.001763824, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_291_154" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="92"]
+transform = Transform3D(-0.01608513, -0.0017451209, 0.021722475, -0.0073629892, 0.025846343, -0.0033757496, -0.020510918, -0.00790973, -0.015823437, -297.9843, 236.0566, 799.4953)
+
+[node name="Cube_121_155" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="93"]
+transform = Transform3D(0.00048689765, 0.0005963483, -0.00024443434, 0.0004464359, -0.00042793967, -0.001401145, 0.00040364132, -0.00024604265, 0.0018445484, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_294_156" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="94"]
+transform = Transform3D(0.0028424398, -0.020865077, 0.017035607, 0.016293447, 0.014972778, 0.015619932, -0.021449637, 0.008608558, 0.014122626, -295.4096, 239.27457, 799.3676)
+
+[node name="Cube_122_157" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="95"]
+transform = Transform3D(0.0002939183, 0.00044003798, 0.0017001039, -0.00063755695, 0.00043899548, -3.0804324e-05, 0.0003262421, 0.0004614653, -0.001591858, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_296_158" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="96"]
+transform = Transform3D(-0.019769939, -0.015396077, 0.010283631, 0.000358216, -0.015359605, -0.022306882, 0.018511185, -0.016145779, 0.011414583, -298.48557, 237.1069, 804.80347)
+
+[node name="Cube_123_159" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="97"]
+transform = Transform3D(-0.00011831131, 0.0003568588, -0.0020361107, -0.00070253597, 0.00022043414, 0.0007192972, -0.00030289657, -0.0006506622, -0.0008730281, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_298_160" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="98"]
+transform = Transform3D(0.02367725, -0.0124858, -0.004139487, -0.008364473, -0.0077125677, -0.024580372, 0.010152153, 0.02276541, -0.010597771, -292.57544, 235.92036, 803.6664)
+
+[node name="Cube_124_161" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="99"]
+transform = Transform3D(0.0005107148, 0.00048500646, 0.0009667491, 0.00039955604, -0.0006031737, 0.0008285732, -0.00042287834, 1.5839629e-05, 0.0019504298, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_302_162" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="100"]
+transform = Transform3D(-0.011242003, -0.01696944, 0.017868917, -0.009635204, 0.02110388, 0.013979695, -0.022680894, -0.00055419677, -0.014795698, -297.3255, 235.74751, 799.2001)
+
+[node name="Cube_125_163" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="101"]
+transform = Transform3D(0.0005429196, 0.0004996831, 0.00070469547, -0.00015941699, 0.0004565615, -0.0018188513, 0.00052832306, -0.0003757248, -0.0012729877, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_304_164" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="102"]
+transform = Transform3D(-0.008194675, -0.017482942, 0.018995704, 0.021150809, -0.015974212, -0.0055776928, 0.014803153, 0.013145876, 0.018485002, -296.91098, 239.93532, 804.299)
+
+[node name="Cube_126_165" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="103"]
+transform = Transform3D(-9.303644e-05, -5.0878196e-05, -0.0023072758, -0.0005661805, -0.00051780493, 0.00031004145, 0.0005196966, -0.0005732279, -7.527717e-05, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_306_166" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="104"]
+transform = Transform3D(0.026830537, 0.0017801293, -0.003255164, -0.0036053676, 0.018116988, -0.019809565, 0.0008753718, 0.020056138, 0.018183175, -292.1465, 236.56773, 802.4045)
+
+[node name="Cube_127_167" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="105"]
+transform = Transform3D(-0.000298097, -0.0005123892, 0.0014980454, 0.00066421577, -3.6552446e-08, 0.0011964123, 0.00026316586, -0.00058030855, -0.0013227892, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_309_168" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="106"]
+transform = Transform3D(-0.017420271, 0.017927503, -0.010429841, -0.013912678, 1.2814281e-06, 0.023239626, 0.015382273, 0.020303877, 0.009207662, -298.16592, 235.16563, 804.37787)
+
+[node name="Cube_128_169" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="107"]
+transform = Transform3D(8.3379135e-05, -0.0002278797, -0.0022118492, 0.00030293432, 0.0006894635, -0.0005396667, -0.00070751633, 0.00026834966, -0.0004917281, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_311_170" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="108"]
+transform = Transform3D(0.025720857, 0.0079730665, 0.0029172755, 0.0062756, -0.024122998, 0.010599086, 0.005718141, -0.009389035, -0.02475463, -292.29745, 237.91185, 803.06323)
+
+[node name="Cube_129_171" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="109"]
+transform = Transform3D(0.00011055065, -0.000683675, 0.0010408273, -0.00044673542, -0.00034147067, -0.0016009577, -0.0006225004, 0.00012364065, 0.0013337642, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_313_172" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="110"]
+transform = Transform3D(-0.012103432, 0.023920465, 0.003867951, 0.018617002, 0.011947397, -0.01563041, -0.015509897, -0.004325948, -0.021780085, -297.44266, 239.59064, 800.1756)
+
+[node name="Cube_130_173" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="111"]
+transform = Transform3D(-0.000546015, 0.0004510285, -0.0009406537, -0.0005335881, -0.0003332431, 0.0013574002, -0.00012826543, -0.0005336881, -0.0016425434, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_316_174" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="112"]
+transform = Transform3D(0.01093855, -0.015780618, -0.019104002, -0.015784752, 0.011659528, -0.018669222, 0.019100588, 0.018672716, -0.0044877618, -294.30832, 234.91098, 804.8836)
+
+[node name="Cube_131_175" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="113"]
+transform = Transform3D(3.9033588e-05, -0.0005950944, 0.0014851287, 0.00016030589, -0.00047725823, -0.0017693742, -0.00075635914, -0.00013186327, -0.0002983652, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_318_176" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="114"]
+transform = Transform3D(-0.017270068, 0.020821199, 0.001365698, 0.020575454, 0.016698347, 0.0056087975, 0.0034695982, 0.004613635, -0.02646354, -298.1455, 239.85706, 802.7573)
+
+[node name="Cube_132_177" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="115"]
+transform = Transform3D(0.0006000611, 0.0004777321, 0.00031555467, 0.00038374242, -0.00056276633, 0.0011068723, -0.00030326413, 0.00023316684, 0.002024987, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_320_178" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="116"]
+transform = Transform3D(-0.003669472, -0.016714921, 0.02099498, -0.012871452, 0.019690104, 0.013426405, -0.023547899, -0.0081580635, -0.0106106205, -296.29544, 235.30728, 799.08215)
+
+[node name="Cube_133_179" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="117"]
+transform = Transform3D(2.999122e-06, 0.00076181913, 0.00041389375, 0.000590616, 8.667985e-05, -0.0014830555, 0.0005004642, -0.0001068594, 0.0017477276, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_323_180" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="118"]
+transform = Transform3D(-0.0048130383, -0.026654577, 0.00010492743, 0.01724595, -0.0030327681, 0.020664517, -0.020323744, 0.0037388054, 0.017510267, -296.451, 239.40414, 799.52075)
+
+[node name="Cube_134_181" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="119"]
+transform = Transform3D(0.0005761246, -3.6769412e-05, 0.0015518676, -0.00034554303, 0.0005470832, 0.0012786442, 0.0003846831, 0.0005464876, -0.0011756234, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_325_182" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="120"]
+transform = Transform3D(-0.018046152, 0.0012864899, 0.020157484, -0.014868926, -0.019141382, -0.012089886, 0.01367093, -0.019120542, 0.013459319, -298.25107, 235.03555, 804.145)
+
+[node name="Cube_135_183" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="121"]
+transform = Transform3D(0.00041942796, 0.00023238266, -0.0018286317, -0.0005665547, 0.0004860352, -0.0006172486, -0.00031999478, -0.0005559395, -0.0013040032, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_327_184" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="122"]
+transform = Transform3D(0.021264546, -0.0081306165, 0.014674976, 0.00717778, -0.017005432, -0.01982265, 0.015163816, 0.019451248, -0.011195999, -292.90363, 238.03456, 804.34814)
+
+[node name="Cube_136_185" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="123"]
+transform = Transform3D(-0.0005386311, 0.0004899984, 0.00079079217, -0.00043508247, -0.00059926364, 0.00067872496, -0.00034623756, -9.240226e-06, -0.0020830974, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_331_186" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="124"]
+transform = Transform3D(-0.009195848, -0.0171441, -0.01884566, -0.007892665, 0.02096707, -0.015222698, 0.024223644, 0.00032330008, -0.012114177, -297.04715, 235.98454, 805.58057)
+
+[node name="Cube_137_187" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="125"]
+transform = Transform3D(0.00051704573, -0.00054925814, 0.00052356045, -0.00018262943, -0.0003779857, -0.0019570333, -0.00054645294, -0.0003933738, 0.001149443, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_333_188" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="126"]
+transform = Transform3D(-0.0060883067, 0.019217482, 0.01809043, 0.022757687, 0.013224987, -0.0063898526, -0.013366489, 0.013763389, -0.019119333, -296.62445, 240.1539, 800.4671)
+
+[node name="Cube_138_189" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="127"]
+transform = Transform3D(0.0007588598, -1.3471979e-05, -0.00045878626, 0.00011054914, -0.00048516938, 0.0017843095, 0.00010588358, 0.00060310017, 0.0014251556, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_335_190" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="128"]
+transform = Transform3D(0.0053350725, 0.00047136153, 0.026551038, -0.020749137, 0.016975142, 0.0038678986, -0.01657266, -0.021101307, 0.0037046643, -295.07053, 234.23567, 800.031)
+
+[node name="Cube_139_191" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="129"]
+transform = Transform3D(-0.00033101373, -0.00043322073, -0.0016535972, 0.0006366746, 6.592658e-05, -0.0013101137, -0.00029047555, 0.00063818035, -0.000987184, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_338_192" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="130"]
+transform = Transform3D(0.019229135, 0.015157552, -0.011581524, 0.01523487, -0.0023066478, 0.022276016, 0.01147963, -0.022328697, -0.010163177, -293.1805, 239.13057, 803.8469)
+
+[node name="Cube_140_193" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="131"]
+transform = Transform3D(-0.0006942658, -0.00034046272, -0.00011180626, -0.00031366883, 0.0005983744, 0.001137225, 0.00013750496, -0.0003540253, 0.0020296632, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_340_194" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="132"]
+transform = Transform3D(0.0013001646, 0.011912132, -0.024291018, -0.013224415, -0.020935958, -0.010974666, -0.023602271, 0.0123866685, 0.0048110294, -295.6194, 235.25925, 799.07477)
+
+[node name="Cube_141_195" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="133"]
+transform = Transform3D(-8.616824e-05, 0.00027989523, 0.0021561293, -0.0006005409, 0.00042623686, -0.0007181685, 0.00048086004, 0.0005824787, -0.00051054294, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_342_196" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="134"]
+transform = Transform3D(-0.025072904, -0.009792998, -0.0030148628, 0.008351346, -0.014913198, -0.021011766, 0.0059369374, -0.020379806, 0.016824357, -299.2069, 238.19421, 803.09296)
+
+[node name="Cube_142_197" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="135"]
+transform = Transform3D(0.00026060914, -8.2323815e-05, -0.0021792487, 0.00011021173, -0.00075590075, 0.0003778156, 0.000720581, 0.0001453875, 0.00073037244, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_345_198" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="136"]
+transform = Transform3D(0.025341757, 0.0028803523, 0.00911821, -0.0043934924, 0.026447503, 0.0038560946, -0.008493257, -0.0050868266, 0.025211733, -292.349, 236.46054, 801.13007)
+
+[node name="Cube_143_199" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="137"]
+transform = Transform3D(-0.0006264939, 0.00021311681, 0.0012087175, -0.00036665896, 0.00016782412, -0.001988292, 0.00026901177, 0.00072506344, 0.00010493608, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_347_200" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="138"]
+transform = Transform3D(-0.014055772, -0.0074565406, -0.02191981, 0.02312118, -0.0058718426, -0.012828688, -0.0012202698, -0.025368568, 0.009412198, -297.70828, 240.20335, 802.1194)
+
+[node name="Cube_144_201" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="139"]
+transform = Transform3D(-0.00043903803, 0.00060706836, 0.00058662903, -0.00044331048, -0.0004607729, 0.0013130988, -0.00045828163, -0.00013585671, -0.0018321987, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_349_202" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="140"]
+transform = Transform3D(-0.0068217055, -0.021240152, -0.015361088, -0.015269591, 0.016121546, -0.015510582, 0.021306025, 0.0047533656, -0.016034387, -296.7242, 234.98105, 805.1836)
+
+[node name="Cube_145_203" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="141"]
+transform = Transform3D(-9.2829534e-05, -7.601941e-05, 0.002301084, 0.0005117523, -0.0005808538, 1.3177607e-05, -0.00057340466, -0.00050609355, -0.000360766, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_352_204" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="142"]
+transform = Transform3D(-0.02675854, 0.0026597637, -0.0032479144, -0.00015323728, 0.020322945, 0.017905228, 0.0041952124, 0.01770724, -0.02006232, -299.43622, 237.03732, 802.856)
+
+[node name="Cube_146_205" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="143"]
+transform = Transform3D(0.0005585124, -3.293258e-05, -0.0016098504, -0.00036146326, 0.00054746354, -0.0012366356, -0.00039586468, -0.00054635137, -0.0011421154, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_354_206" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="144"]
+transform = Transform3D(0.018720409, 0.0011522376, 0.019541275, 0.014380419, -0.019154692, -0.0126469005, 0.013281289, 0.019115778, -0.013850532, -293.24973, 239.01434, 804.09204)
+
+[node name="Cube_147_207" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="145"]
+transform = Transform3D(0.00023060184, -0.00071384973, -0.0005751571, -0.00071554456, -0.0002657356, 0.00038860127, 0.00018471452, -0.00013821664, 0.0022233976, -295.79626, 237.05817, 802.2854)
+
+[node name="Circle_356_208" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="146"]
+transform = Transform3D(0.0066882963, 0.024976227, 0.00806831, -0.004518908, 0.009297568, -0.025035523, -0.025855154, 0.0048359237, 0.0064627924, -294.88644, 236.44347, 798.7683)
+
+[node name="Sphere_004_261" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="147"]
+transform = Transform3D(-61.136253, 0, 59.14594, 0, 85.063995, 0, -59.14594, 0, -61.136253, -295.8307, 238.84825, 803.71735)
+
+[node name="Cube_148_262" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="148"]
+transform = Transform3D(0.02752882, 0.06279502, 0.0024259156, 0.00016225009, 0.00021177057, -0.641966, 0.06279491, -0.027529413, 0.00059521466, -294.19394, -782.5335, 801.49994)
+
+[node name="Circle_361_263" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="149"]
+transform = Transform3D(-0.028308827, -2.1972194, 0.96325713, 7.465185, -0.007435978, 0.0056968215, -0.0069447747, 0.9632794, 2.1972127, -298.0445, 232.9538, 800.5552)
+
+[node name="Cube_223_266" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="150"]
+transform = Transform3D(-1.6781875e-07, 2.920506e-07, -0.00232923, -2.6223346e-05, -0.0007737008, -8.61107e-07, 0.0007737009, -2.6223284e-05, -5.34405e-07, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_546_267" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="151"]
+transform = Transform3D(0.027085839, -1.0218242e-05, -5.8687274e-06, 1.001358e-05, 0.027070295, -0.0009175042, 6.2114914e-06, 0.00091750186, 0.027070297, -202.45244, 0.46799138, 516.6632)
+
+[node name="Cube_224_268" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="152"]
+transform = Transform3D(-0.00061085034, -5.537092e-05, 0.0014211388, -0.00047468452, 2.4212351e-05, -0.0018385305, -2.8933166e-05, 0.00077178265, 0.00015963678, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_548_269" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="153"]
+transform = Transform3D(-0.016525948, 0.001937323, -0.021372473, 0.021379657, -0.00084713975, -0.016608292, -0.0018563609, -0.027003184, -0.0010123191, -208.38495, 3.3748991, 516.4098)
+
+[node name="Cube_225_270" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="154"]
+transform = Transform3D(-0.00019487078, 0.0006854523, 0.0009100302, -0.00037173618, -0.00035979948, 0.0017327454, -0.00065049075, 2.7034974e-07, -0.0012628349, -206.13693, 0.4666295, 516.66235)
+
+[node name="Circle_550_271" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="155"]
+transform = Transform3D(-0.01058244, -0.02398265, -0.006818156, -0.020149516, 0.012588693, -0.013006331, 0.014685088, -9.458611e-06, -0.022759413, -207.57645, -2.2743044, 518.6599)
+
+[node name="Cube_226_272" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="156"]
+transform = Transform3D(-0.0003331865, 0.00069849304, 5.9790476e-05, 0.00069829175, 0.0003336403, -5.8146834e-05, 2.6001582e-05, -9.607234e-06, 0.0023277367, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_553_273" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="157"]
+transform = Transform3D(-0.0006952805, -0.024438921, -0.011657556, 0.00067616894, -0.011673433, 0.024431875, -0.027068473, 0.0003361362, 0.0009097428, -206.2315, 0.55860823, 512.9802)
+
+[node name="Cube_227_274" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="158"]
+transform = Transform3D(0.00044988032, -0.00037565548, 0.0015217138, 0.00017807091, 0.0006719495, 0.0010250851, 0.000604317, 8.16547e-05, -0.0014348874, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_555_275" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="159"]
+transform = Transform3D(-0.017695501, 0.013143459, 0.015740441, -0.011920371, -0.023510216, 0.006230357, 0.016685825, -0.0028569393, 0.021143887, -208.54404, -1.154896, 518.93207)
+
+[node name="Cube_228_276" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="160"]
+transform = Transform3D(0.00063440914, 0.00030178766, -0.0009784308, -0.00041030886, 0.0001832962, -0.0018966035, 0.00016873768, -0.0006889321, -0.0009332105, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_557_277" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="161"]
+transform = Transform3D(0.01137784, -0.010558971, 0.02219675, 0.02205497, -0.0064131822, -0.014355911, 0.010851996, 0.024104398, 0.005903809, -204.58919, 3.4667618, 518.1385)
+
+[node name="Cube_229_278" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="162"]
+transform = Transform3D(0.0005239916, 0.00037834918, 0.0012821256, -5.1646453e-05, -0.0005449815, 0.0016469546, -0.00056750875, 0.0003989333, 0.0010339288, -206.13693, 0.46662897, 516.66235)
+
+[node name="Circle_560_279" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="163"]
+transform = Transform3D(-0.014909416, -0.013237707, 0.018333446, -0.019151883, 0.019067848, -0.0018070138, -0.012023206, -0.013957903, -0.01985604, -208.16505, -2.138597, 515.0268)
+
+[node name="Cube_230_280" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="164"]
+transform = Transform3D(0.00055997027, 0.00052730826, 0.00026367558, 9.8393655e-05, 2.3068988e-05, -0.0023092972, 0.00052540714, -0.0005663166, 0.00015144388, -206.13693, 0.4666295, 516.66235)
+
+[node name="Circle_562_281" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="165"]
+transform = Transform3D(-0.003066177, -0.018449504, 0.01959227, 0.026854046, -0.0008071228, 0.0034425948, -0.0017610972, 0.019814314, 0.018382987, -206.55402, 4.1195793, 516.4227)
+
+[node name="Cube_231_282" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="166"]
+transform = Transform3D(-0.00013175698, -0.00019303603, -0.0022205468, -9.648284e-05, -0.0007387189, 0.0006331757, 0.00075672445, -0.00012779757, -0.00030589988, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_564_283" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="167"]
+transform = Transform3D(0.025821995, 0.006753959, -0.004609928, -0.0073629916, 0.025846343, -0.0033757489, 0.003557213, 0.0044713924, 0.026476324, -202.62436, -0.5349564, 517.14624)
+
+[node name="Cube_232_284" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="168"]
+transform = Transform3D(-0.00063059403, -0.00025752478, -0.0011068572, 0.00044643585, -0.00042793973, -0.001401145, 4.8444588e-05, 0.0005914805, -0.0014956514, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_567_285" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="169"]
+transform = Transform3D(0.012871276, 0.00901029, -0.022063266, 0.016293446, 0.014972788, 0.015619926, 0.017392432, -0.020694759, 0.0016949899, -204.38605, 2.6830232, 519.0282)
+
+[node name="Cube_233_286" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="170"]
+transform = Transform3D(-0.00043808142, -0.00063712115, -0.00011504319, -0.00063755695, 0.00043899548, -3.0804327e-05, -3.0108456e-05, -2.5695945e-05, 0.0023261837, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_569_287" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="171"]
+transform = Transform3D(0.0013377982, 0.022291636, -0.015327625, 0.00035821236, -0.015359605, -0.022306882, -0.027050411, 0.00089905143, -0.0010534357, -205.95494, 0.51535714, 512.98267)
+
+[node name="Cube_234_288" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="172"]
+transform = Transform3D(0.0002956387, 0.00019593482, 0.0020703974, -0.00070253597, 0.00022043395, 0.0007192974, 0.00013543123, 0.0007157647, -0.00078827655, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_571_289" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="173"]
+transform = Transform3D(-0.02407596, -0.0068553835, 0.010343823, -0.008364465, -0.0077125593, -0.024580376, 0.009166608, -0.02504322, 0.0047384785, -209.41197, -0.6711875, 517.90924)
+
+[node name="Cube_235_290" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="174"]
+transform = Transform3D(-7.302317e-05, -0.00035959194, -0.0020509665, 0.00039955613, -0.0006031737, 0.00082857325, 0.000659032, 0.0003258464, -0.0007295998, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_575_291" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="175"]
+transform = Transform3D(0.023850005, 0.0125814285, -0.002554942, -0.0096352035, 0.02110388, 0.013979697, 0.008484276, -0.011400732, 0.023058256, -202.89261, -0.84404504, 517.8164)
+
+[node name="Cube_236_292" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="176"]
+transform = Transform3D(-0.00075754995, -9.788125e-05, 0.0003786518, -0.00015941715, 0.00045656154, -0.0018188511, -2.2125744e-06, 0.0006174718, 0.0014048906, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_577_293" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="177"]
+transform = Transform3D(-0.004403212, 0.0034246733, -0.026505208, 0.021150813, -0.015974205, -0.005577694, -0.016337004, -0.021604147, -7.741322e-05, -206.73589, 3.3437693, 514.44)
+
+[node name="Cube_237_294" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="178"]
+transform = Transform3D(-0.00029448463, 0.0004351383, 0.0017106007, -0.0005661805, -0.00051780493, 0.00031004153, -0.00043819987, 0.0003766078, -0.0015501719, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_579_295" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="179"]
+transform = Transform3D(-0.019892003, -0.015224649, -0.010303451, -0.0036053672, 0.018116992, -0.01980956, 0.018026434, -0.013176777, -0.015331762, -208.84283, -0.023808094, 519.11444)
+
+[node name="Cube_238_296" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="180"]
+transform = Transform3D(3.1262898e-05, 0.00077175366, -0.00015690835, 0.0006642158, -3.663163e-08, 0.001196412, -0.0003964097, 6.0803046e-05, 0.001992308, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_582_297" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="181"]
+transform = Transform3D(0.00182463, -0.027002167, 0.0010938274, -0.01391268, 1.2830868e-06, 0.023239624, -0.023167884, -0.0021273766, -0.013869614, -205.88872, -1.4259092, 513.5108)
+
+[node name="Cube_239_298" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="182"]
+transform = Transform3D(0.0004320186, -2.280726e-05, 0.0019315799, 0.00030293447, 0.00068946346, -0.00053966703, 0.0005664727, -0.00035131277, -0.0011845136, -206.13693, 0.46662918, 516.66235)
+
+[node name="Circle_584_299" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="183"]
+transform = Transform3D(-0.022461696, 0.0007979839, 0.015115497, 0.0062756054, -0.024122996, 0.010599089, 0.013774317, 0.012291751, 0.019819785, -209.19238, 1.3202982, 518.536)
+
+[node name="Cube_240_300" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="184"]
+transform = Transform3D(0.00035337787, 0.00040539447, -0.0016754325, -0.00044673547, -0.00034147047, -0.0016009579, 0.0005242635, -0.0005642285, -0.0002348893, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_586_301" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="185"]
+transform = Transform3D(0.01948305, -0.01418397, 0.012364002, 0.018617002, 0.011947399, -0.01563041, 0.0027314476, 0.019741263, 0.018342968, -203.48665, 2.9990954, 517.0339)
+
+[node name="Cube_241_302" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="186"]
+transform = Transform3D(0.00048161027, 4.6920886e-05, 0.0018181349, -0.0005335882, -0.00033324293, 0.0013574002, -0.00028746453, 0.0006971716, 0.00052646373, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_589_303" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="187"]
+transform = Transform3D(-0.021142485, -0.0016416743, 0.01685061, -0.015784753, 0.011659524, -0.018669222, -0.0061220652, -0.024392687, -0.010057827, -209.01292, -1.6805669, 515.8295)
+
+[node name="Cube_242_304" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="188"]
+transform = Transform3D(0.00049785135, 0.00051938544, -0.0008599181, 0.00016030596, -0.00047725826, -0.001769374, 0.0005707422, -0.00031900458, 0.0012470647, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_591_305" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="189"]
+transform = Transform3D(0.009999697, -0.018172296, 0.017418854, 0.02057546, 0.01669834, 0.005608797, -0.014501698, 0.011161354, 0.019969167, -204.77667, 3.2655044, 514.68964)
+
+[node name="Cube_243_306" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="190"]
+transform = Transform3D(-0.00022040616, -0.00050547393, -0.0016347878, 0.00038374242, -0.00056276616, 0.0011068728, 0.0006351877, 0.00016459338, -0.0012359674, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_593_307" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="191"]
+transform = Transform3D(0.019010402, 0.017685553, -0.007711585, -0.012871453, 0.019690102, 0.0134264035, 0.014372649, -0.0057588033, 0.022223992, -203.55093, -1.2842718, 518.61743)
+
+[node name="Cube_244_308" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="192"]
+transform = Transform3D(-0.0003501337, -0.00047322558, -0.0015126838, 0.00059061596, 8.668007e-05, -0.0014830555, -0.00035760284, 0.00060650206, -0.0009683221, -206.13693, 0.4666295, 516.66235)
+
+[node name="Circle_596_309" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="193"]
+transform = Transform3D(0.017590493, 0.016557256, -0.012250497, 0.017245958, -0.0030327714, 0.020664511, 0.011260298, -0.02122033, -0.012511839, -203.7441, 2.8125927, 518.1941)
+
+[node name="Cube_245_310" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="194"]
+transform = Transform3D(-0.00068154035, -0.00035355243, -0.00029791667, -0.00034554297, 0.0005470831, 0.0012786447, 0.00012411083, -0.0004183317, 0.0019239614, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_598_311" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="195"]
+transform = Transform3D(0.0034643805, 0.012370114, -0.023845779, -0.014868926, -0.019141382, -0.012089884, -0.022373106, 0.014636617, 0.004342389, -205.66566, -1.5559874, 513.61896)
+
+[node name="Cube_246_312" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="196"]
+transform = Transform3D(-7.895071e-05, 0.00021953552, 0.0022209415, -0.00056655466, 0.0004860352, -0.0006172488, 0.000521616, 0.00056113687, -0.00033426943, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_600_313" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="197"]
+transform = Transform3D(-0.025826586, -0.0076811225, -0.0027623326, 0.00717778, -0.017005432, -0.01982265, 0.0038871067, -0.019633094, 0.018250337, -209.6501, 1.4430207, 517.1911)
+
+[node name="Cube_247_314" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="198"]
+transform = Transform3D(0.0006278618, -0.0003457414, 0.0008800511, -0.00043508242, -0.0005992636, 0.00067872513, -0.0001256721, 0.00034734237, 0.002046987, -206.13693, 0.46662918, 516.66235)
+
+[node name="Circle_604_315" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="199"]
+transform = Transform3D(-0.0102338195, 0.012096824, 0.02196767, -0.007892665, 0.020967074, -0.015222694, -0.02380373, -0.012152836, -0.0043970244, -207.52902, -0.6070083, 513.4243)
+
+[node name="Cube_248_316" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="200"]
+transform = Transform3D(8.349581e-06, 0.00066827395, -0.0011755079, -0.0001826295, -0.00037798562, -0.0019570333, 0.0007522482, -9.9184166e-05, -0.00046207756, -206.13693, 0.4666295, 516.66235)
+
+[node name="Circle_606_317" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="201"]
+transform = Transform3D(0.013669588, -0.023381613, 0.0002921325, 0.022757687, 0.013224987, -0.006389853, 0.0053733466, 0.0034702602, 0.026319712, -204.27745, 3.5623522, 517.39325)
+
+[node name="Cube_249_318" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="202"]
+transform = Transform3D(-0.00061902136, -0.0004096597, -0.00066119287, 0.00011054916, -0.00048516953, 0.0017843092, 0.0004515441, -0.00044282063, -0.0013432716, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_608_319" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="203"]
+transform = Transform3D(0.007688786, 0.014333201, -0.021658365, -0.020749137, 0.016975142, 0.003867902, 0.015620457, 0.01549344, 0.015798653, -205.09102, -2.355871, 518.7872)
+
+[node name="Cube_250_320" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="204"]
+transform = Transform3D(0.00043987323, -0.00013237428, 0.0018748553, 0.00063667464, 6.59265e-05, -0.0013101134, -2.1390179e-05, -0.0007598891, -0.00044026662, -206.13693, 0.46662897, 516.66235)
+
+[node name="Circle_611_321" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="205"]
+transform = Transform3D(-0.021802064, 0.004631527, 0.015390311, 0.015234867, -0.0023066455, 0.022276018, 0.005119722, 0.026587047, -0.0007484004, -209.10266, 2.5390246, 517.35876)
+
+[node name="Cube_251_322" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="206"]
+transform = Transform3D(0.00040336637, 0.00049085135, -0.0013308909, -0.00031366883, 0.0005983744, 0.001137225, -0.00058155664, 1.7713746e-05, -0.0015364774, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_613_323" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="207"]
+transform = Transform3D(0.015476481, -0.017173942, 0.014113005, -0.013224414, -0.020935958, -0.010974667, 0.01786718, -0.0006197713, -0.020347541, -204.03166, -1.3322843, 519.0928)
+
+[node name="Cube_252_324" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="208"]
+transform = Transform3D(-0.00027241767, -0.00060616713, -0.0011946426, -0.0006005408, 0.00042623706, -0.0007181687, -0.00040551214, -0.00022401812, 0.0018661128, -206.13693, 0.4666291, 516.66235)
+
+[node name="Circle_615_325" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="209"]
+transform = Transform3D(0.013892108, 0.021208616, -0.009531358, 0.008351346, -0.014913205, -0.02101176, -0.021700395, 0.007837969, -0.0141880885, -204.2472, 1.6026607, 513.71045)
+
+[node name="Cube_253_326" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="210"]
+transform = Transform3D(-0.00068833, -4.1922605e-05, 0.0010584096, 0.00011021167, -0.00075590075, 0.0003778157, -0.0003366836, -0.00016173195, -0.0020401808, -206.13693, 0.4666292, 516.66235)
+
+[node name="Circle_618_327" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="211"]
+transform = Transform3D(-0.012307892, 0.0014667899, -0.024083337, -0.004393493, 0.026447505, 0.003856093, 0.02372458, 0.005658689, -0.011779909, -207.81117, -0.13101652, 519.8896)
+
+[node name="Cube_254_328" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="212"]
+transform = Transform3D(0.00026321967, -0.0006573137, -0.00094167906, -0.00036665896, 0.00016782412, -0.001988292, -0.0006289494, -0.00037292688, 0.0007650165, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_620_329" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="213"]
+transform = Transform3D(0.0109504685, 0.022998132, 0.009209558, 0.023121184, -0.0058718342, -0.012828689, -0.00889612, 0.013048, -0.022005716, -204.64734, 3.611798, 515.4522)
+
+[node name="Cube_255_330" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="214"]
+transform = Transform3D(0.0006341889, -0.00034184277, 0.0008523324, -0.00044331048, -0.0004607728, 0.0013130992, 2.4103165e-05, 0.00051974284, 0.0017247068, -206.13693, 0.4666291, 516.66235)
+
+[node name="Circle_622_331" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="215"]
+transform = Transform3D(-0.009911499, 0.011960414, 0.022189038, -0.015269589, 0.016121548, -0.015510581, -0.020056037, -0.018184802, 0.0008433155, -207.48518, -1.6104895, 513.9341)
+
+[node name="Cube_256_332" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="216"]
+transform = Transform3D(0.00046541175, 0.00040652815, -0.0014029664, 0.0005117524, -0.0005808537, 1.3177294e-05, 0.000347566, 0.00031087705, 0.0018592541, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_625_333" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="217"]
+transform = Transform3D(0.016314624, -0.014223633, 0.016283859, -0.00015323798, 0.020322947, 0.017905226, -0.021620646, -0.010876987, 0.012160657, -203.91765, 0.44578457, 513.72125)
+
+[node name="Cube_257_334" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="218"]
+transform = Transform3D(-0.00012615894, 0.00040355293, 0.0019511397, -0.00036146317, 0.0005474636, -0.0012366355, 0.00067285134, 0.00036976923, -0.0002984975, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_627_335" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="219"]
+transform = Transform3D(-0.022689153, -0.014119535, -0.0044140588, 0.014380419, -0.019154692, -0.012646901, 0.0034711289, -0.012937515, 0.023541765, -209.22333, 2.4227943, 517.13446)
+
+[node name="Cube_258_336" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="220"]
+transform = Transform3D(-0.00029416973, 0.00060915365, -0.0011325825, -0.0007155445, -0.0002657357, 0.00038860133, 2.7584085e-05, -0.00039701012, -0.0019978888, -206.13693, 0.46662924, 516.66235)
+
+[node name="Circle_629_337" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="221"]
+transform = Transform3D(0.01317042, -0.021313112, -0.010292422, -0.0045189126, 0.009297569, -0.025035523, 0.023232782, 0.013890613, 0.00096510956, -204.34535, -0.14807713, 519.8227)
+
+[node name="Cube_259_390" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="222"]
+transform = Transform3D(-0.10249982, -0.041985985, -0.3213167, 0.00026210689, 0.0003421249, -95.6151, -0.04198646, 0.10250081, 0.18752538, -206.74242, -1019.125, 518.34094)
+
+[node name="Circle_634_391" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="223"]
+transform = Transform3D(0.025173808, 0.9093825, -2.2200477, 7.465185, -0.007435406, 0.0056967856, -0.014690562, -2.2200685, -0.90939313, -203.3181, -3.6377392, 516.3426)
+
+[node name="Circle_181_394" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="224"]
+transform = Transform3D(-0.007827251, 0.019792505, 0.010431788, 0.014387164, -0.0040109935, 0.018405236, -0.017134028, -0.012409671, 0.010689075, -1.0647391, 249.88805, -2.3307395)
+
+[node name="Cube_075_395" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="225"]
+transform = Transform3D(0.00029812986, -0.0005656494, 0.00067311124, 0.0005260026, 0.00011463011, -0.0012372377, 0.00030548288, 0.00035465567, 0.0014734565, 0, 247.93095, 0)
+
+[node name="Circle_183_396" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="226"]
+transform = Transform3D(0.023342937, 0.0027388046, 0.003072045, -0.002761828, -0.0026933588, 0.023386948, -0.003051363, 0.023389654, 0.002333327, 3.1753364, 247.55527, -0.41507727)
+
+[node name="Cube_076_397" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="227"]
+transform = Transform3D(8.779573e-05, -7.827229e-05, -0.0020073974, 0.00066837494, 7.6973236e-05, 0.0002375055, 6.668391e-05, -0.0006684523, 0.0002624049, -2.69413e-07, 247.93095, 3.3676624e-08)
+
+[node name="Circle_185_398" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="228"]
+transform = Transform3D(-0.008693163, -0.011686793, -0.018699706, 0.006242841, -0.02058234, 0.009961199, 0.021149162, 0.0012717794, -0.010626698, -1.1825297, 248.78017, 2.8769176)
+
+[node name="Cube_077_399" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="229"]
+transform = Transform3D(-0.00053441833, 0.0003339966, 0.0007475769, 0.0002846809, 0.00058822206, -0.00053685904, -0.00030370025, -3.63461e-05, -0.0018187417, 0, 247.93095, 0)
+
+[node name="Circle_188_400" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="230"]
+transform = Transform3D(-0.02130518, -0.010387736, 0.0001242025, -0.008061696, 0.016710857, 0.014750849, 0.006552065, -0.013216407, 0.01855339, -2.8960533, 246.83807, 0.88739187)
+
+[node name="Cube_078_401" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="231"]
+transform = Transform3D(3.5497787e-06, 0.00029687097, 0.0018321588, 0.00042156392, -0.00047757928, 0.00069327315, 0.00053023704, 0.00037771105, -0.0005634513, 0.0020871426, 247.93472, -0.003884868)
+
+[node name="Circle_190_402" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="232"]
+transform = Transform3D(-0.002959008, 0.021694757, -0.009078163, 0.021841792, 0.0059271604, 0.007045289, -0.008718463, 0.0074858214, 0.020731186, -0.40042716, 250.90585, -1.1898563)
+
+[node name="Cube_079_403" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="233"]
+transform = Transform3D(-0.00025944467, -0.0006200138, 0.000254463, 0.00020134705, -0.0001693923, -0.0018783051, 0.000592476, -0.00021393712, 0.00074975233, 0.0020870415, 247.93472, -0.0038848007)
+
+[node name="Circle_192_404" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="234"]
+transform = Transform3D(0.016307272, 0.011521147, -0.012773695, -0.004163148, -0.014434708, -0.018334083, 0.016690485, -0.014857107, 0.007907296, 2.2203624, 247.36841, 2.2665198)
+
+[node name="Cube_080_405" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="235"]
+transform = Transform3D(-0.00036505912, -0.0003292627, -0.0014023584, -0.0005239693, 0.00041252907, 0.00035801384, 0.0002259822, 0.0004246007, -0.0014353143, 0.002086873, 247.93472, -0.003884666)
+
+[node name="Circle_195_406" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="236"]
+transform = Transform3D(0.01713555, -0.012076157, 0.011062126, 0.00987576, 0.020391598, 0.006962998, 0.013064208, 0.00042475213, -0.019773146, 2.3269837, 249.27731, 1.7785348)
+
+[node name="Cube_081_407" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="237"]
+transform = Transform3D(0.00031614408, 0.00034512425, -0.0014735875, 0.00019899542, -0.0005827709, -0.0008492752, -0.0005650962, -1.213908e-05, -0.0011234687, -0.0039627957, 247.93393, 0.0014122629)
+
+[node name="Circle_197_408" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="238"]
+transform = Transform3D(-0.01302111, -0.0047079595, 0.019238427, 0.017537795, -0.013439487, 0.00858121, -0.009203677, -0.018948523, -0.0108663235, -1.7752224, 250.31958, -1.2505629)
+
+[node name="Cube_082_409" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="239"]
+transform = Transform3D(0.00054981443, 0.00013454875, 0.0011197621, 0.00024524206, 0.00038408677, -0.001508179, -0.00031054844, 0.0005415293, 0.00079147884, -0.0039630653, 247.93393, 0.0014121282)
+
+[node name="Circle_199_410" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="240"]
+transform = Transform3D(0.008568204, -0.012961134, 0.01790045, -0.017172454, -0.015989488, -0.0033577266, -0.013911286, 0.011754849, 0.015170062, 1.1615688, 245.59795, -1.8909383)
+
+[node name="Cube_083_411" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="241"]
+transform = Transform3D(0.0005115764, 0.00037041598, -0.00073683076, -9.596038e-05, 0.0004569631, 0.0014767612, 0.0004335449, -0.0003359415, 0.0011963139, -0.0039630653, 247.93393, 0.0014122629)
+
+[node name="Circle_202_412" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="242"]
+transform = Transform3D(0.002072905, 0.022593541, -0.00686048, -0.015619685, -0.0038526177, -0.017407296, 0.017707616, -0.0060432153, -0.014551668, 0.28346398, 245.81488, 2.4086754)
+
+[node name="Cube_084_413" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="243"]
+transform = Transform3D(-0.00019606545, -0.0006457002, -0.00017826133, -0.00049748266, 0.000110103865, 0.0013432293, -0.00041587173, 0.00017270887, -0.001522783, 0.0014869071, 247.93964, -8.91757e-05)
+
+[node name="Circle_204_414" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="244"]
+transform = Transform3D(0.017965462, -0.013555248, -0.007438322, -0.0037321623, 0.007263981, -0.022251667, -0.01500481, -0.01803666, -0.0033713228, 2.4453256, 247.43195, -2.0411909)
+
+[node name="Cube_085_415" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="245"]
+transform = Transform3D(-0.00021257975, 0.000387395, -0.0015449566, -0.00063592975, -0.00020759722, 0.00032095108, -9.6348966e-05, 0.0005154692, 0.0012903525, 0.0014868904, 247.93964, -8.863687e-05)
+
+[node name="Circle_206_416" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="246"]
+transform = Transform3D(-0.022291249, -0.0015037201, -0.007916456, 0.0010824526, 0.022516744, -0.007325007, -0.00798497, 0.007250259, 0.021106994, -3.0307884, 248.08688, -1.0862834)
+
+[node name="Cube_086_417" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="247"]
+transform = Transform3D(-0.00022624417, 4.2974672e-05, 0.0019169565, -0.00020934106, -0.0006435055, -9.3086666e-05, 0.00060321623, -0.00020720487, 0.0006866747, 0.0014868904, 247.93964, -8.883893e-05)
+
+[node name="Circle_209_418" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="248"]
+transform = Transform3D(-0.0024534732, -0.006860584, 0.022555355, 0.018059492, 0.01403027, 0.0062319716, 0.01515475, -0.017830173, -0.0037748748, -0.33698407, 250.38954, 2.0597491)
+
+[node name="Cube_087_419" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="249"]
+transform = Transform3D(0.00064460887, 0.00019606855, 0.00021098876, 0.00017810342, -0.00040097075, -0.0015530426, -0.000107882064, 0.000509568, -0.0013032468, -0.0032379401, 247.9329, -0.0017492985)
+
+[node name="Circle_211_420" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="250"]
+transform = Transform3D(0.00092950487, 0.013957411, 0.019135254, 0.009065575, -0.01790133, 0.012617011, -0.021881102, -0.006823804, 0.006040225, 0.1232031, 249.1661, -2.9782321)
+
+[node name="Cube_088_421" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="251"]
+transform = Transform3D(0.0005468659, -0.00039888846, -7.9934165e-05, 0.00036058118, 0.0005116016, -0.00077960273, 0.00017262361, 0.00019501732, 0.0018816855, -0.0032379401, 247.9329, -0.0017492985)
+
+[node name="Circle_213_422" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="252"]
+transform = Transform3D(0.016552547, -0.01655888, -0.003694301, -0.015273742, -0.01679099, 0.006826907, 0.007386282, 0.002386911, 0.022395909, 2.2484024, 245.85522, 1.0030055)
+
+[node name="Cube_089_423" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="253"]
+transform = Transform3D(-0.00010557923, 0.00047323585, -0.0014234516, 0.00019510604, 0.00047986917, 0.0013134799, 0.000640052, -6.821554e-05, -0.0006351902, -0.0032379401, 247.9329, -0.0017492985)
+
+[node name="Circle_216_424" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="254"]
+transform = Transform3D(-0.0060519013, 0.0012582543, 0.022882799, -0.017064119, 0.015550901, -0.0053681084, 0.015297764, 0.017844256, 0.0030646578, -0.8258543, 245.61743, 2.0793238)
+
+[node name="Cube_090_425" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="255"]
+transform = Transform3D(0.00065396697, -3.5959794e-05, 0.0005204383, -0.00015341502, -0.00044442865, 0.001467445, 8.758448e-05, -0.00050997065, -0.0013155453, -0.0026154614, 247.93866, -0.0016287363)
+
+[node name="Circle_218_426" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="256"]
+transform = Transform3D(0.009496368, 0.013788185, 0.016779039, 0.017781755, 0.005577269, -0.014646995, 0.012468335, -0.018455656, 0.00810929, 1.2891742, 250.35751, 1.6944367)
+
+[node name="Cube_091_427" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="257"]
+transform = Transform3D(0.00047952766, -0.00039405216, -0.0008166496, -0.0004185962, -0.00015939245, -0.0015291584, 0.00023175516, 0.0005274438, -0.0010722259, -0.0026154614, 247.93866, -0.0016287363)
+
+[node name="Circle_220_428" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="258"]
+transform = Transform3D(0.011367393, -0.017770201, -0.010808959, -0.00889986, 0.0069776685, -0.020831127, -0.018799096, -0.014048606, 0.003325929, 1.5436901, 246.72803, -2.5588665)
+
+[node name="Cube_092_429" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="259"]
+transform = Transform3D(-0.00030890878, 0.00050785404, -0.0009775503, -0.0005953323, -0.0001994144, 0.0007653517, 9.505159e-05, 0.00040149494, 0.0016166455, -0.0026154614, 247.93866, -0.001628871)
+
+[node name="Circle_223_430" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="260"]
+transform = Transform3D(0.019344354, 0.012511786, -0.005575165, 0.0020403753, 0.0069078137, 0.022582076, -0.013544892, 0.018909484, -0.0045605428, 2.6304111, 248.20964, -1.8396912)
+
+[node name="Cube_093_431" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="261"]
+transform = Transform3D(-0.00015933244, -0.0003575741, -0.0016635354, 0.0006453726, -0.00019741815, -0.00017546379, -0.00013033558, -0.00054041354, 0.001164806, -0.0009976364, 247.9321, 0.0028192722)
+
+[node name="Circle_225_432" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="262"]
+transform = Transform3D(0.0039317007, -0.023159496, 0.003163955, 0.012097776, 0.004761422, 0.01981928, 0.02000042, 0.0016726456, -0.012610183, 0.533831, 249.57774, 2.7234733)
+
+[node name="Cube_094_433" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="263"]
+transform = Transform3D(9.042278e-05, 0.00066187466, -0.00033811017, 0.0005664147, -0.0001360767, -0.0010403591, -0.00036038598, -4.780236e-05, -0.0017199547, -0.0009977036, 247.9321, 0.0028191376)
+
+[node name="Circle_227_434" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="264"]
+transform = Transform3D(-0.019759152, -0.006626602, 0.011291382, 0.0036667099, -0.02242543, -0.0067443755, -0.012568309, 0.003875501, -0.019719264, -2.688832, 248.43088, -1.7068458)
+
+[node name="Cube_095_435" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="265"]
+transform = Transform3D(0.00032269597, 0.00018938142, 0.0016992067, -0.00019274726, 0.00064089574, -0.00031532205, -0.0005635563, -0.000110757836, 0.001080823, -0.0009976364, 247.9321, 0.0028191376)
+
+[node name="Circle_230_436" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="266"]
+transform = Transform3D(0.00071998726, -0.0019808179, -0.02360909, -0.021245545, 0.010399346, -0.0015204198, -0.010485212, -0.021207573, 0.0014595698, 0.101248644, 245.04839, -1.4259924)
+
+[node name="Cube_096_437" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="267"]
+transform = Transform3D(-0.0006747236, 5.6609675e-05, -6.191611e-05, -4.345204e-05, -0.00029720258, 0.0018270302, 4.171293e-05, 0.00060609065, 0.0009016855, 0.0033085179, 247.9384, 0.00030942084)
+
+[node name="Circle_232_438" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="268"]
+transform = Transform3D(-0.008745525, -0.009420061, -0.019915057, 0.015459269, 0.012641581, -0.012768424, -0.015695797, 0.017699834, -0.0014795603, -1.1863438, 250.04132, -2.1347873)
+
+[node name="Cube_097_439" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="269"]
+transform = Transform3D(-0.00056915183, 0.00026921564, 0.00075207965, -0.00036490848, -0.00036128348, -0.0013294339, -4.2284242e-05, -0.000505843, 0.0013497748, 0.003308661, 247.9384, 0.00030928612)
+
+[node name="Circle_234_440" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="270"]
+transform = Transform3D(-0.009159072, 0.020760478, 0.0068516503, -0.0014499995, 0.006835424, -0.022649629, 0.021813758, 0.009171189, 0.0013712818, -1.2425991, 247.74117, 2.9676313)
+
+[node name="Cube_098_441" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="271"]
+transform = Transform3D(0.000195813, -0.00059331313, 0.00078764354, -0.0006473032, -0.00019534917, 0.00012469484, 3.9189566e-05, -0.00026210342, -0.0018758941, 0.0033083917, 247.9384, 0.00030928612)
+
+[node name="Circle_237_442" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="272"]
+transform = Transform3D(-0.006106539, -0.009320312, -0.02092064, -0.022070635, 0.008178363, 0.0027986858, -0.006117879, -0.020200925, 0.010785426, -0.82721, 244.93553, -0.83373684)
+
+[node name="Cube_099_443" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="273"]
+transform = Transform3D(-0.00059789023, 0.0002663653, 0.0005251375, 7.998357e-05, -0.00023372904, 0.001897985, 0.00030823666, 0.00057732157, 0.0005261119, 0.0034618897, 247.9378, -0.0015223181)
+
+[node name="Circle_239_444" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="274"]
+transform = Transform3D(-0.012586969, 0.00021904593, -0.02008361, 0.014919762, 0.015969483, -0.009176465, -0.013446193, 0.01751453, 0.008618138, -1.7087419, 249.96735, -1.8306061)
+
+[node name="Cube_100_445" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="275"]
+transform = Transform3D(-0.00057396886, -6.2601684e-06, 0.0010824284, -0.00026225398, -0.00045639143, -0.0012830386, 0.00024629766, -0.0005005473, 0.0011563177, 0.003461957, 247.9378, -0.0015221834)
+
+[node name="Circle_241_446" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="276"]
+transform = Transform3D(0.00052686495, 0.023330184, 0.004154057, 0.002591042, 0.004073456, -0.023206133, 0.023555044, -0.0009699137, 0.0024597468, 0.075129665, 248.29025, 3.202667)
+
+[node name="Cube_101_447" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="277"]
+transform = Transform3D(0.00011871871, -0.00066675263, -4.530709e-05, -0.0006632075, -0.00011641525, -0.00022281877, 7.0297e-05, 2.7718737e-05, -0.002025638, 0.0034619486, 247.9378, -0.0015224528)
+
+[node name="Circle_244_448" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="278"]
+transform = Transform3D(0.019669145, -0.0063135633, -0.011623032, -0.0059331, -0.022826832, 0.0023590783, 0.011821772, -0.00095176045, 0.020522453, 2.6748405, 247.12794, 1.603729)
+
+[node name="Cube_102_449" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="279"]
+transform = Transform3D(-0.00033217444, 0.00018043509, -0.0016914661, 6.742004e-05, 0.0006523674, 0.0005102223, 0.0005865105, 2.7200347e-05, -0.0010166246, -0.0007503152, 247.93503, -0.0043846965)
+
+[node name="Circle_246_450" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="280"]
+transform = Transform3D(-0.015010432, -0.018343812, 0.00015049656, -0.018290887, 0.014980963, 0.0016868387, 0.0014005679, -0.0009520939, 0.023642402, -2.0426168, 245.44693, 0.18613431)
+
+[node name="Cube_103_451" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="281"]
+transform = Transform3D(4.301051e-06, 0.00052424736, 0.0012908359, 4.8208094e-05, -0.00042814048, 0.0015729418, 0.0006756756, 2.7209846e-05, -0.00012044313, -0.00074991107, 247.93503, -0.0043846965)
+
+[node name="Circle_248_452" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="282"]
+transform = Transform3D(-0.0071732188, 0.0039995587, 0.02223465, 0.021881953, 0.0070308223, 0.0057947324, 0.0056175007, -0.022280088, 0.0058200182, -0.976522, 250.91162, 0.7597633)
+
+[node name="Cube_104_453" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="283"]
+transform = Transform3D(0.0006354435, -0.000114303344, 0.00061686756, 0.00016560743, -0.00020093378, -0.0018817587, 0.00016633028, 0.000636742, -0.0004830824, -0.0007501131, 247.93503, -0.0043846965)
+
+[node name="Circle_251_454" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="284"]
+transform = Transform3D(-0.01855766, -0.008181077, -0.012268433, 0.012972489, -0.018434102, -0.00733005, 0.0070113484, 0.012453316, -0.018909974, -2.5207396, 249.69907, 0.9561143)
+
+[node name="Cube_105_455" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="285"]
+transform = Transform3D(-0.00035061908, 0.00023380674, 0.0015958835, -0.0002094854, 0.0005268277, -0.0011155809, -0.0005404277, -0.00035590297, -0.000602947, 0.0036564732, 247.93442, 0.0023617416)
+
+[node name="Circle_253_456" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="286"]
+transform = Transform3D(-0.0053148465, 0.013504442, -0.018740695, -0.022782234, -0.0062404242, 0.001964209, 0.0038148935, -0.01845314, -0.014379133, -0.71932137, 244.83536, 0.52130085)
+
+[node name="Cube_106_457" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="287"]
+transform = Transform3D(-0.00053558976, -0.00038594313, 0.00045705575, 5.613515e-05, 0.00017834507, 0.0019591793, -0.0004109409, 0.00052737165, -0.00032806548, 0.0036563384, 247.93442, 0.0023616743)
+
+[node name="Circle_255_458" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="288"]
+transform = Transform3D(0.007981608, 0.020512763, -0.008794979, 0.0070908885, 0.006525867, 0.021655567, -0.021162335, 0.009923245, 0.0039390326, 1.089394, 248.899, -2.8763468)
+
+[node name="Cube_107_459" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="289"]
+transform = Transform3D(-0.00025135156, -0.0005862336, -0.0006863864, 0.0006188938, -0.0001865026, -0.00060978776, 0.000112573485, -0.0002835964, 0.0018198744, 0.0036562711, 247.93442, 0.0023616743)
+
+[node name="Circle_258_460" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="290"]
+transform = Transform3D(0.01069365, -0.011250272, 0.017913917, 0.01931292, 0.013382047, -0.0031246056, 0.008630656, -0.01600573, -0.015203934, 1.4504529, 250.56122, 1.1747534)
+
+[node name="Cube_108_461" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="291"]
+transform = Transform3D(0.0005119613, 0.00032152134, -0.0009196102, -8.929798e-05, -0.00038244514, -0.0016608326, -0.00043451288, 0.0004574273, -0.00074220094, -0.004202304, 247.9341, 0.00072701095)
+
+[node name="Circle_260_462" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="292"]
+transform = Transform3D(-0.008366919, 0.0030390064, 0.021967938, 0.005430815, -0.022483718, 0.0051787905, -0.02150191, -0.0068613454, -0.007240236, -1.1423526, 248.67285, -2.924174)
+
+[node name="Cube_109_463" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="293"]
+transform = Transform3D(0.00062782114, -8.685172e-05, 0.00071952055, 0.00014800452, 0.0006425616, -0.0004670279, -0.00020691838, 0.00019609017, 0.0018490768, -0.004202304, 247.9341, 0.0007274151)
+
+[node name="Circle_262_464" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="294"]
+transform = Transform3D(0.013289855, -0.016547633, 0.010553995, -0.019367881, -0.008993588, 0.010287455, 0.0031774377, 0.014391749, 0.018563746, 1.8036138, 245.29948, 0.43295348)
+
+[node name="Cube_110_465" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="295"]
+transform = Transform3D(0.0003016223, 0.0004729145, -0.001142873, 0.00029400492, 0.00025702734, 0.0016655592, 0.0005305328, -0.00041130136, -0.00027324722, -0.004202304, 247.9341, 0.0007269773)
+
+[node name="Circle_011_519" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="297"]
+transform = Transform3D(0.025173808, 0.9093825, -2.2200477, 7.465185, -0.007435406, 0.0056967856, -0.014690562, -2.2200685, -0.90939313, 0.4861428, 246.16116, -0.31973246)
+
+[node name="Cube_005_520" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="298"]
+transform = Transform3D(-0.082732536, -0.033888884, -0.28620437, 0.00021155908, 0.00027614526, -85.166626, -0.03388929, 0.08273328, 0.1670333, -2.938172, -769.3261, 1.6786025)
+
+[node name="Circle_096_521" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="299"]
+transform = Transform3D(0.010894471, -0.017121479, -0.012247315, 0.014387162, -0.004010997, 0.018405236, 0.015367216, 0.015893336, -0.008548791, -592.7614, -8.937326, 360.93753)
+
+[node name="Cube_006_522" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="300"]
+transform = Transform3D(-0.0003500157, 0.0004893142, -0.00093687995, 0.0005260026, 0.00011463011, -0.0012372377, -0.00024431577, -0.00045421522, -0.0013215175, -594.24335, -10.89441, 358.84714)
+
+[node name="Circle_098_523" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="301"]
+transform = Transform3D(-0.02235997, -0.00706617, -0.0034543183, -0.0027618231, -0.002693352, 0.02338695, 0.007364469, -0.022464335, -0.0017174109, -597.285, -11.270102, 359.84894)
+
+[node name="Cube_040_524" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="302"]
+transform = Transform3D(-9.872091e-05, 0.00020194393, 0.0019228661, 0.00066837494, 7.6973316e-05, 0.00023750564, -4.9081897e-05, 0.00064200757, -0.0006333145, -594.24335, -10.89441, 358.84714)
+
+[node name="Circle_100_525" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="303"]
+transform = Transform3D(0.0045831213, 0.01124254, 0.02035759, 0.006242841, -0.020582339, 0.009961201, -0.022402078, -0.0034356788, 0.0069407616, -593.61993, -10.045198, 355.79977)
+
+[node name="Cube_041_526" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="304"]
+transform = Transform3D(0.0005817991, -0.0003213002, -0.00039412975, 0.00028468083, 0.00058822206, -0.0005368589, 0.00019835983, 9.8188175e-05, 0.0019264875, -594.24335, -10.89441, 358.84714)
+
+[node name="Circle_103_527" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="305"]
+transform = Transform3D(0.01970328, 0.012676852, -0.0035929605, -0.008061698, 0.01671086, 0.014750845, -0.010422138, 0.011039738, -0.018202594, -591.56445, -11.987279, 357.43365)
+
+[node name="Cube_042_528" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="306"]
+transform = Transform3D(-0.00010268321, -0.00036229144, -0.0016944018, 0.00042156404, -0.0004775792, 0.0006932731, -0.0005202114, -0.00031550435, 0.00089626183, -594.2447, -10.890647, 358.85135)
+
+[node name="Circle_105_529" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="307"]
+transform = Transform3D(0.0045378134, -0.022712171, 0.0050395224, 0.02184179, 0.0059271683, 0.007045289, 0.008010972, -0.0032950283, -0.022063507, -593.6274, -7.9195113, 359.94107)
+
+[node name="Cube_043_530" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="308"]
+transform = Transform3D(0.00014402429, 0.0006490905, -0.00039023318, 0.0002013471, -0.00016939225, -0.0018783051, -0.0006305524, 9.4168485e-05, -0.00068891083, -594.2447, -10.890647, 358.85135)
+
+[node name="Circle_107_531" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="309"]
+transform = Transform3D(-0.0191418, -0.008538292, 0.011068887, -0.0041631474, -0.014434708, -0.018334083, -0.013345069, 0.016750162, -0.010157379, -596.8486, -11.45696, 357.03604)
+
+[node name="Cube_044_532" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="310"]
+transform = Transform3D(0.00031633748, 0.00024401573, 0.0016461166, -0.0005239693, 0.00041252907, 0.0003580138, -0.0002902873, -0.00047870245, 0.001147622, -594.2447, -10.890647, 358.85135)
+
+[node name="Circle_110_533" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="311"]
+transform = Transform3D(-0.019277059, 0.011783488, -0.0071676797, 0.00987576, 0.020391598, 0.006962998, -0.009627854, -0.0026764504, 0.02149354, -596.86194, -9.548044, 357.53534)
+
+[node name="Cube_045_534" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="312"]
+transform = Transform3D(-0.00020484488, -0.00033675996, 0.0016577486, 0.00019899513, -0.0005827709, -0.0008492754, 0.00061426335, 7.649003e-05, 0.0008279559, -594.2397, -10.891442, 358.845)
+
+[node name="Circle_112_535" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="313"]
+transform = Transform3D(0.01451303, 0.008169714, -0.016865911, 0.0175378, -0.013439484, 0.008581206, 0.0066052084, 0.017733227, 0.014273581, -592.2655, -8.505778, 359.7435)
+
+[node name="Cube_046_536" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="314"]
+transform = Transform3D(-0.00048201045, -0.000233482, -0.0012480614, 0.000245242, 0.0003840867, -0.0015081791, 0.00040792432, -0.00050679734, -0.0005680215, -594.2397, -10.891442, 358.845)
+
+[node name="Circle_114_537" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="315"]
+transform = Transform3D(-0.005814425, 0.010533222, -0.020422412, -0.017172454, -0.015989488, -0.003357727, 0.015268614, -0.01397207, -0.01155344, -595.03064, -13.227408, 360.922)
+
+[node name="Cube_047_538" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="316"]
+transform = Transform3D(-0.0005836516, -0.0003010285, 0.0005000167, -9.5960335e-05, 0.00045696317, 0.0014767611, -0.0003301853, 0.00039930744, -0.0013130384, -594.2397, -10.891442, 358.845)
+
+[node name="Circle_117_539" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="317"]
+transform = Transform3D(-0.005349033, -0.02106409, 0.00946167, -0.015619685, -0.0038526177, -0.017407296, -0.017007189, 0.010163302, 0.013011305, -594.9725, -13.010479, 356.534)
+
+[node name="Cube_048_540" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="318"]
+transform = Transform3D(0.00027040482, 0.0006019901, 0.0004599949, -0.0004974826, 0.00011010386, 0.0013432296, 0.00037184975, -0.00029045666, 0.0014625489, -594.2448, -10.8857355, 358.84747)
+
+[node name="Circle_119_541" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="319"]
+transform = Transform3D(-0.014841192, 0.016690211, 0.007937701, -0.0037321607, 0.007263982, -0.022251667, 0.018100863, 0.0151823135, 0.0019202483, -596.2636, -11.393421, 361.30975)
+
+[node name="Cube_049_542" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="320"]
+transform = Transform3D(0.00022685128, -0.00047698905, 0.0012762824, -0.0006359299, -0.00020759698, 0.00032095078, 5.4878616e-05, -0.00043389504, -0.0015566002, -594.2448, -10.8857355, 358.84747)
+
+[node name="Circle_121_543" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="321"]
+transform = Transform3D(0.023391513, 0.000120795936, 0.0038280182, 0.001082458, 0.022516744, -0.007325008, 0.003673772, -0.0074035707, -0.02221535, -591.0629, -10.738489, 359.34723)
+
+[node name="Cube_050_544" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="322"]
+transform = Transform3D(0.000109400724, -3.4523196e-06, -0.0020115748, -0.00020934122, -0.00064350537, -9.308664e-05, -0.0006348918, 0.00021158646, -0.0003159292, -594.2448, -10.8857355, 358.84747)
+
+[node name="Circle_124_545" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="323"]
+transform = Transform3D(-0.00042497253, 0.010075113, -0.021450937, 0.01805949, 0.01403027, 0.006231978, -0.015346186, 0.016231908, 0.007927859, -594.29767, -8.435845, 356.7607)
+
+[node name="Cube_051_546" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="324"]
+transform = Transform3D(-0.0006130458, -0.0002879363, 3.6546207e-05, 0.00017810342, -0.00040097075, -0.0015530427, 0.00022657009, -0.0004638913, 0.0013197096, -594.23987, -10.892475, 358.84824)
+
+[node name="Circle_126_547" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="325"]
+transform = Transform3D(0.0031803914, -0.012434404, -0.019927418, 0.009065576, -0.017901327, 0.012617011, 0.02166868, 0.009314464, -0.0023537886, -593.8072, -9.6592865, 361.79584)
+
+[node name="Cube_052_548" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="326"]
+transform = Transform3D(-0.00056950515, 0.00035536237, -0.000273501, 0.00036058112, 0.0005116016, -0.00077960244, -6.7268695e-05, -0.0002661978, -0.0018634183, -594.23987, -10.892475, 358.84824)
+
+[node name="Circle_128_549" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="327"]
+transform = Transform3D(-0.01764213, 0.01581999, -0.0005607282, -0.015273743, -0.01679099, 0.006826907, -0.004159242, -0.00544259, -0.022691632, -596.6397, -12.9701605, 358.28244)
+
+[node name="Cube_053_550" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="328"]
+transform = Transform3D(-1.6024984e-05, -0.00045211907, 0.0015171511, 0.00019510608, 0.0004798692, 0.0013134797, -0.0006485035, 0.00015554365, 0.0003576782, -594.23987, -10.892475, 358.84824)
+
+[node name="Circle_131_551" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="329"]
+transform = Transform3D(0.0030831606, -0.0045743287, -0.023052132, -0.017064122, 0.0155508965, -0.0053681075, -0.01615986, -0.017293826, 0.0012703461, -593.8211, -13.207943, 356.65)
+
+[node name="Cube_054_552" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="330"]
+transform = Transform3D(-0.0006588063, 0.00013072955, -0.00026513918, -0.00015341495, -0.0004444287, 0.0014674449, 3.6305148e-05, 0.00049423974, 0.0013896822, -594.24054, -10.886713, 358.84824)
+
+[node name="Circle_133_553" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="331"]
+transform = Transform3D(-0.01166127, -0.010092091, -0.01799988, 0.017781755, 0.0055772667, -0.014646995, -0.010471635, 0.020709297, -0.004827118, -595.82684, -8.467864, 357.42377)
+
+[node name="Cube_055_554" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="332"]
+transform = Transform3D(-0.000514418, 0.00028842167, 0.0010028221, -0.0004185962, -0.00015939245, -0.0015291584, -0.00013795414, -0.00059185043, 0.00090051786, -594.24054, -10.886713, 358.84824)
+
+[node name="Circle_135_555" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="333"]
+transform = Transform3D(-0.0076497896, 0.020084659, 0.009995922, -0.008899854, 0.0069776806, -0.020831125, 0.0205938, 0.01047615, -0.0052893246, -595.2811, -12.09736, 361.64963)
+
+[node name="Cube_056_556" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="334"]
+transform = Transform3D(0.00028567307, -0.00057399884, 0.00065785134, -0.0005953322, -0.00019941462, 0.0007653521, -0.00015116372, -0.00029939789, -0.001770982, -594.24054, -10.886713, 358.84824)
+
+[node name="Circle_138_557" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="335"]
+transform = Transform3D(-0.01646886, -0.015828459, 0.0063299094, 0.0020403757, 0.006907802, 0.02258208, 0.01692468, -0.016234944, 0.0034370206, -596.4832, -10.61571, 361.14645)
+
+[node name="Cube_057_558" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="336"]
+transform = Transform3D(0.00018090237, 0.00045236098, 0.001416255, 0.0006453726, -0.00019741808, -0.00017546366, 9.822674e-05, 0.00046397795, -0.0014554533, -594.243, -10.893262, 358.84418)
+
+[node name="Circle_140_559" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="337"]
+transform = Transform3D(-0.0076039475, 0.022437695, -0.00074899953, 0.012097773, 0.004761427, 0.01981928, -0.01891177, -0.0059757694, 0.012979457, -595.2773, -9.247603, 356.2716)
+
+[node name="Cube_058_560" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="338"]
+transform = Transform3D(-2.140577e-05, -0.00064124627, 0.0006539085, 0.0005664146, -0.00013607682, -0.0010403593, 0.0003709396, 0.00017078128, 0.0016263352, -594.243, -10.893262, 358.84418)
+
+[node name="Circle_142_561" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="339"]
+transform = Transform3D(0.021761568, 0.005784584, -0.0074029695, 0.0036667099, -0.022425428, -0.0067443764, 0.008649891, -0.0050467774, 0.021483496, -591.2827, -10.394481, 360.02084)
+
+[node name="Cube_059_562" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="340"]
+transform = Transform3D(-0.0002115693, -0.00016531748, -0.0018714061, -0.00019274735, 0.0006408957, -0.00031532216, 0.00061397627, 0.0001442317, -0.0007438555, -594.243, -10.893262, 358.84418)
+
+[node name="Circle_145_563" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="341"]
+transform = Transform3D(0.0012542862, 0.005913337, 0.022919215, -0.021245545, 0.010399346, -0.0015204205, 0.0104347905, 0.020462584, -0.005850565, -594.07605, -13.77699, 360.2669)
+
+[node name="Cube_060_564" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="342"]
+transform = Transform3D(0.0006550076, -0.00016899705, -0.000107863605, -4.3451953e-05, -0.00029720244, 0.0018270306, -0.00016720312, -0.0005847997, -0.0008973488, -594.2467, -10.886961, 358.84747)
+
+[node name="Circle_147_565" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="343"]
+transform = Transform3D(0.011527471, 0.005942487, 0.019840248, 0.015459269, 0.012641581, -0.012768424, 0.013782584, -0.019149635, -0.0022722448, -592.6786, -8.784039, 360.72232)
+
+[node name="Cube_061_566" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="344"]
+transform = Transform3D(0.00056701386, -0.00016983018, -0.0009913159, -0.00036490854, -0.0003612833, -0.001329434, -6.493846e-05, 0.0005472769, -0.0011852458, -594.2467, -10.886961, 358.84747)
+
+[node name="Circle_149_567" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="345"]
+transform = Transform3D(0.004916479, -0.022109687, -0.006987221, -0.0014500077, 0.0068354225, -0.022649629, -0.023142103, -0.005125429, -6.526591e-05, -593.5779, -11.084205, 355.69946)
+
+[node name="Cube_062_568" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="346"]
+transform = Transform3D(-0.00019968749, 0.0006318721, -0.00042279685, -0.0006473031, -0.00019534923, 0.00012469469, -1.8651941e-06, 0.0001464794, 0.0019901267, -594.2467, -10.88696, 358.84747)
+
+[node name="Circle_152_569" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="347"]
+transform = Transform3D(0.007143257, 0.012934931, 0.018533554, -0.022070635, 0.008178365, 0.0027986872, 0.004867462, 0.018100638, -0.014508823, -593.2748, -13.889834, 359.51138)
+
+[node name="Cube_063_570" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="348"]
+transform = Transform3D(0.00052966987, -0.00036966708, -0.0006142912, 7.998361e-05, -0.00023372934, 0.0018979846, -0.0004146473, -0.00051729754, -0.00041858197, -594.24646, -10.887569, 358.84927)
+
+[node name="Circle_154_571" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="349"]
+transform = Transform3D(0.014880244, -0.0034917821, 0.018116761, 0.014919763, 0.015969485, -0.009176461, 0.010854042, -0.01716433, -0.012223206, -592.22235, -8.858037, 360.32574)
+
+[node name="Cube_064_572" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="350"]
+transform = Transform3D(0.0005177583, 9.9791614e-05, -0.0012796407, -0.00026225386, -0.0004563915, -0.0012830386, -0.0003493268, 0.00049053883, -0.0009334032, -594.24646, -10.887569, 358.84927)
+
+[node name="Circle_156_573" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="351"]
+transform = Transform3D(-0.0049242014, -0.022736838, -0.004540882, 0.002591042, 0.004073456, -0.023206133, -0.023040613, 0.0053173606, -0.0016391858, -594.9163, -10.53511, 355.71506)
+
+[node name="Cube_065_574" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="352"]
+transform = Transform3D(-0.00012977386, 0.00064979546, 0.00042346158, -0.0006632075, -0.00011641532, -0.00022281878, -4.6846108e-05, -0.0001519648, 0.001981399, -594.24646, -10.887569, 358.84927)
+
+[node name="Circle_159_575" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="353"]
+transform = Transform3D(-0.021533486, 0.006380152, 0.0075785085, -0.0059331004, -0.022826832, 0.0023590794, -0.007933375, -0.00024617804, -0.02233455, -597.1711, -11.697417, 357.7721)
+
+[node name="Cube_066_576" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="354"]
+transform = Transform3D(0.00021658589, -0.00018233818, 0.0018517923, 6.742007e-05, 0.0006523674, 0.00051022245, -0.0006382986, 7.0355604e-06, 0.0006822377, -594.2418, -10.890339, 358.8513)
+
+[node name="Circle_161_577" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="355"]
+transform = Transform3D(0.014483401, 0.018198071, -0.004570835, -0.018290889, 0.014980959, 0.0016868397, -0.004183977, -0.002496457, -0.023196839, -592.27167, -13.378446, 358.28214)
+
+[node name="Cube_067_578" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="356"]
+transform = Transform3D(-0.0001306299, -0.000520082, -0.0012455138, 4.8208207e-05, -0.00042814054, 0.0015729417, -0.0006629418, 7.1346214e-05, 0.00035980542, -594.2418, -10.890339, 358.8513)
+
+[node name="Circle_163_579" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="357"]
+transform = Transform3D(0.0059956606, 0.00023918957, -0.022930898, 0.021881951, 0.0070308265, 0.005794733, -0.006860286, 0.022634963, -0.0015576315, -593.4263, -7.9137406, 357.9181)
+
+[node name="Cube_068_580" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="358"]
+transform = Transform3D(-0.00065534154, -6.835777e-06, -0.0005156018, 0.00016560734, -0.00020093366, -0.0018817588, -4.4515455e-05, -0.000646884, 0.00058995624, -594.2418, -10.890339, 358.8513)
+
+[node name="Circle_166_581" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="359"]
+transform = Transform3D(0.016918348, 0.005706885, 0.015589488, 0.012972486, -0.018434104, -0.0073300516, -0.010359309, -0.013763957, 0.016280953, -591.946, -9.126298, 357.43634)
+
+[node name="Cube_069_582" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="360"]
+transform = Transform3D(0.00044553156, -0.00016309695, -0.0014549091, -0.0002094854, 0.0005268277, -0.0011155811, 0.0004652929, 0.00039335986, 0.0008908581, -594.2474, -10.890944, 358.84552)
+
+[node name="Circle_168_583" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="361"]
+transform = Transform3D(0.004507327, -0.009813826, 0.02109986, -0.022782234, -0.0062404242, 0.0019642096, -0.0047418373, 0.020653743, 0.010619277, -593.6342, -13.990007, 358.20047)
+
+[node name="Cube_070_584" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="362"]
+transform = Transform3D(0.0006030123, 0.00028046913, -0.00038761136, 5.6135126e-05, 0.00017834452, 0.0019591798, 0.00030348805, -0.0005902628, 0.00040777752, -594.2474, -10.890944, 358.84552)
+
+[node name="Circle_170_585" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="363"]
+transform = Transform3D(-0.0038816705, -0.022007039, 0.0079027945, 0.0070908885, 0.006525867, 0.021655567, 0.022281904, -0.005910548, -0.005514842, -594.7754, -9.926371, 361.87653)
+
+[node name="Cube_071_586" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="364"]
+transform = Transform3D(0.00022585395, 0.00062893843, 0.00033380784, 0.00061889377, -0.00018650274, -0.000609788, -0.00015760864, 0.00016891751, -0.0019161527, -594.2474, -10.890944, 358.84552)
+
+[node name="Circle_173_587" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="365"]
+transform = Transform3D(-0.012119464, 0.014045984, -0.014753309, 0.019312924, 0.013382044, -0.0031246084, -0.0064777173, 0.013618461, 0.018286824, -595.88794, -8.264134, 357.96448)
+
+[node name="Cube_072_588" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="366"]
+transform = Transform3D(-0.0004216344, -0.00040141982, 0.0010422246, -8.929815e-05, -0.00038244505, -0.0016608327, 0.00052261865, -0.00038920162, 0.00055705727, -594.2394, -10.891269, 358.8456)
+
+[node name="Circle_175_589" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="367"]
+transform = Transform3D(0.012241751, -0.0017017397, -0.0202256, 0.005430815, -0.02248372, 0.0051787896, 0.019557018, 0.0073087406, 0.011222145, -592.5741, -10.152516, 361.50595)
+
+[node name="Cube_073_590" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="368"]
+transform = Transform3D(-0.0005780268, 4.863399e-05, -0.0010527407, 0.00014800447, 0.0006425616, -0.00046702786, 0.0003207173, -0.00020887628, -0.0016818242, -594.2394, -10.891269, 358.8456)
+
+[node name="Circle_177_591" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="369"]
+transform = Transform3D(-0.013649649, 0.01356309, -0.013840553, -0.019367885, -0.008993584, 0.010287453, -0.00063508743, -0.017233377, -0.016261568, -596.0961, -13.525879, 358.75925)
+
+[node name="Cube_074_592" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="370"]
+transform = Transform3D(-0.00039554894, -0.00038761902, 0.0011738141, 0.00029400495, 0.00025702725, 0.0016655594, -0.00046473875, 0.00049251236, 5.4615048e-05, -594.2394, -10.891268, 358.8456)
+
+[node name="Sphere_003_645" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="371"]
+transform = Transform3D(-83.56218, 0, -15.913683, 0, 85.063995, 0, 15.913683, 0, -83.56218, -603.029, -8.927614, 317.80084)
+
+[node name="Circle_271_646" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="372"]
+transform = Transform3D(-0.02024874, -0.47799903, 2.3509808, 6.8770037, -0.007435692, 0.0056965714, 0.017633522, 2.3509994, 0.47801337, -594.66113, -12.664221, 359.25217)
+
+[node name="Cube_111_647" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="373"]
+transform = Transform3D(0.12439128, 0.02529085, 0.27195165, 0.00030155684, 0.00039360314, -92.31721, 0.025291609, -0.124392286, -0.236819, -591.9067, -948.1413, 356.85364)
+
+[node name="Circle_365_648" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="374"]
+transform = Transform3D(0.99117696, 2.1635828, -0.3032893, -1.4561764, 0.4059668, -1.8628603, -1.6286885, 0.9537332, 1.4809707, -801.1232, 136.41666, 405.44247)
+
+[node name="Cube_149_649" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="375"]
+transform = Transform3D(-0.008999546, -0.064200275, -7.570623, -0.055276882, -0.0120463185, 11.122296, 0.043945055, -0.028300254, 12.439936, -935.9528, 334.5, 626.9925)
+
+[node name="Circle_367_650" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="376"]
+transform = Transform3D(1.5810728, -1.8042371, -0.021071568, 0.2795341, 0.2726038, -2.367077, 1.7825757, 1.5575377, 0.3898822, -720.87994, 372.52502, 869.4758)
+
+[node name="Cube_150_651" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="377"]
+transform = Transform3D(-0.0006081225, 0.05207163, -9.032272, -0.068315625, -0.007867536, -1.5969098, 0.0112522915, -0.044951707, -10.183403, -935.9528, 334.50003, 626.9925)
+
+[node name="Circle_369_652" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="378"]
+transform = Transform3D(-2.2656188, -0.7701325, -0.17138809, -0.63186014, 2.0832126, -1.0082089, 0.47247267, -0.90698874, -2.1701722, -1244.1443, 248.5482, 691.2629)
+
+[node name="Cube_151_653" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="379"]
+transform = Transform3D(-0.0053075785, 0.023849582, 20.286129, -0.031222362, -0.064513244, 5.657615, -0.06720623, 0.02808776, -4.2304764, -935.95276, 334.5, 626.9925)
+
+[node name="Circle_372_654" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="380"]
+transform = Transform3D(-1.7586823, 0.51754695, -1.5474783, 0.81595343, -1.691366, -1.4929861, -1.4130695, -1.6207813, 1.0638653, -1174.742, 445.11307, 434.72723)
+
+[node name="Cube_152_655" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="381"]
+transform = Transform3D(-0.047922537, -0.016027471, 15.747073, -0.046235025, 0.052378483, -7.3059645, 0.03294596, 0.050192602, 12.652483, -935.5088, 334.11914, 626.9467)
+
+[node name="Circle_374_656" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="382"]
+transform = Transform3D(0.5624806, 0.6046103, -2.2524579, -2.210686, -0.5999106, -0.7130787, -0.7429599, 2.2427797, 0.4164814, -858.9947, 33.400074, 525.88214)
+
+[node name="Cube_153_657" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="383"]
+transform = Transform3D(-0.06683748, -0.017940717, -4.296235, -0.021159291, 0.017801201, 16.885244, 0.012358347, -0.06655029, 5.674733, -935.5088, 334.11914, 626.9467)
+
+[node name="Circle_376_658" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="384"]
+transform = Transform3D(-0.47252026, 1.8989996, -1.3878154, 0.42136696, 1.4609882, 1.8556588, 2.3140182, 0.12173786, -0.62129337, -999.78564, 391.43762, 941.72205)
+
+[node name="Cube_154_659" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="385"]
+transform = Transform3D(-0.043258335, -0.059191983, 4.29944, 0.05784105, -0.045539144, -3.8339994, -0.019365778, -0.0037945753, -21.055141, -935.5088, 334.11914, 626.94666)
+
+[node name="Circle_379_660" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="386"]
+transform = Transform3D(-0.12165572, -0.7212709, 2.2848363, -0.9995613, -2.0639071, -0.7047501, 2.1775184, -0.9877062, -0.1958549, -952.845, 198.22948, 922.9478)
+
+[node name="Cube_155_661" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="387"]
+transform = Transform3D(0.067798235, 0.021402365, 0.9292058, -0.020912137, 0.061242584, 7.6346617, -0.0058116345, 0.029308338, -16.63191, -936.2962, 334.19955, 626.7406)
+
+[node name="Circle_381_662" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="388"]
+transform = Transform3D(0.031811386, 1.3203204, 2.0028105, -1.775063, 1.3602593, -0.86853474, -1.6135815, -1.4703596, 0.9949396, -931.9689, 92.738174, 407.2455)
+
+[node name="Cube_156_663" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="389"]
+transform = Transform3D(0.057802707, -0.038105506, -0.18173179, -0.025066609, -0.03925817, 10.140488, 0.02871476, 0.04243574, 9.217984, -936.2962, 334.19955, 626.7406)
+
+[node name="Circle_383_664" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="390"]
+transform = Transform3D(1.6520851, -1.7208332, -0.2546679, 1.7380857, 1.6183537, 0.33984756, -0.07197733, -0.4185348, 2.3611765, -711.5635, 570.6309, 616.9495)
+
+[node name="Cube_157_665" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="391"]
+transform = Transform3D(-0.007886584, 0.053291034, -14.792604, 0.010524446, -0.050117414, -15.562653, 0.07312127, 0.012961239, 0.6444797, -936.2962, 334.19955, 626.7406)
+
+[node name="Circle_386_666" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="392"]
+transform = Transform3D(-1.3659675, 1.7891995, 0.8297025, 1.580925, 0.38993803, 1.7618546, 1.1791168, 1.5499104, -1.4010601, -1121.6731, 548.6746, 787.5071)
+
+[node name="Cube_158_667" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="393"]
+transform = Transform3D(0.025694368, -0.055408202, 12.230733, 0.054561384, -0.012075623, -14.155449, -0.04338822, -0.04799785, -10.557704, -935.86096, 333.62186, 627.112)
+
+[node name="Circle_388_668" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="394"]
+transform = Transform3D(2.2772825, 0.74157095, -0.1398739, 0.37774566, -0.7352143, 2.2521708, 0.65329957, -2.1598704, -0.8146575, -626.0828, 385.0065, 715.98016)
+
+[node name="Cube_159_669" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="395"]
+transform = Transform3D(-0.004150503, -0.022004727, -17.393911, 0.06682897, 0.0218161, -2.8852267, -0.024173437, 0.06409012, -4.989909, -935.86096, 333.62186, 627.112)
+
+[node name="Circle_390_670" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="396"]
+transform = Transform3D(-0.5966574, -0.6928574, -2.2179847, -0.10955893, -2.2790005, 0.7413901, -2.3210998, 0.2856764, 0.5351563, -1017.0241, 318.71857, 311.37338)
+
+[node name="Cube_160_671" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="397"]
+transform = Transform3D(-0.06913478, 0.02159642, 5.428957, 0.02310919, 0.07103666, 0.9968731, 0.016680866, -0.008904562, 21.119574, -935.86096, 333.62186, 627.112)
+
+[node name="Circle_393_672" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="398"]
+transform = Transform3D(-1.409077, 1.1043919, 1.5969741, -1.8278662, -1.4200536, -0.6307606, 0.6549147, -1.5872215, 1.6755062, -1127.6665, 85.65987, 715.7097)
+
+[node name="Cube_161_673" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="399"]
+transform = Transform3D(0.047387224, -0.03277076, 10.762551, -0.018716648, 0.042137455, 13.961263, 0.04971752, 0.047097836, -5.0022483, -935.9901, 334.304, 626.6218)
+
+[node name="Circle_395_674" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="400"]
+transform = Transform3D(1.8861263, 1.3642448, 0.58040446, -0.91755944, 1.8118576, -1.2770133, -1.1645247, 0.7819938, 1.9462461, -679.4208, 209.48862, 468.21185)
+
+[node name="Cube_162_675" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="401"]
+transform = Transform3D(0.016750913, -0.03937314, -10.774963, -0.03685556, -0.052291572, 5.2417874, 0.056170132, -0.022568919, 6.652637, -935.9901, 334.304, 626.6218)
+
+[node name="Circle_397_676" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="402"]
+transform = Transform3D(0.32097772, -1.1402024, -2.086245, 1.5459104, 1.6994765, -0.6909756, 1.8062781, -1.2518885, 0.9621024, -892.32764, 544.5938, 872.32935)
+
+[node name="Cube_163_677" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="403"]
+transform = Transform3D(-0.06460715, 0.035309967, -2.873999, -0.021398243, -0.052629635, -13.841932, 0.02979453, 0.038768683, -16.173235, -935.9901, 334.304, 626.6218)
+
+[node name="Circle_400_678" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="404"]
+transform = Transform3D(-1.6253774, -1.4236714, 1.0425038, 1.7271211, -1.5739621, 0.5433255, 0.3615346, 1.1186197, 2.0912886, -1157.0646, 568.66064, 675.86035)
+
+[node name="Cube_164_679" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="405"]
+transform = Transform3D(0.03228442, 0.04408847, 14.553471, 0.016825778, 0.048742697, -15.464474, 0.06476336, -0.034641575, -3.2371478, -935.96484, 333.7208, 626.68085)
+
+[node name="Circle_402_680" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="406"]
+transform = Transform3D(-0.50548065, 2.3292327, 0.2732587, -1.7997553, -0.56449515, 1.4824748, 1.503621, 0.107360035, 1.8663073, -1004.7252, 88.90051, 831.218)
+
+[node name="Cube_165_681" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="407"]
+transform = Transform3D(0.008108446, -0.06911563, 3.860867, 0.04398968, 0.016750345, 13.7465515, 0.05537919, -0.0031857046, -11.484675, -935.96484, 333.7208, 626.68085)
+
+[node name="Circle_404_682" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="408"]
+transform = Transform3D(2.2205563, 0.16810116, -0.8923996, 0.9007867, -0.7062349, 2.1083932, -0.11497002, -2.286587, -0.7168037, -633.9031, 456.2546, 611.0415)
+
+[node name="Cube_166_683" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="409"]
+transform = Transform3D(-0.027816199, -0.0052397284, -20.204735, 0.06571879, 0.022013428, -8.196221, -0.022342859, 0.071273126, 1.0461113, -935.96484, 333.7208, 626.68085)
+
+[node name="Circle_407_684" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="410"]
+transform = Transform3D(2.2332542, -0.8739488, 0.065556526, -0.2065134, -0.69916415, -2.2856135, 0.85172564, 2.1220014, -0.7260721, -632.4567, 306.29172, 742.929)
+
+[node name="Cube_167_685" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="411"]
+transform = Transform3D(0.0019452784, 0.025932789, -17.057621, -0.0678213, 0.020746406, 1.57735, -0.021544846, -0.06296642, -6.5054884, -936.24567, 334.3837, 627.069)
+
+[node name="Circle_409_686" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="412"]
+transform = Transform3D(-1.4525311, -1.4551382, 1.2362168, -1.224459, -0.48192117, -2.0059805, 1.4650458, -1.8454894, -0.45090574, -1133.8333, 167.82085, 826.35876)
+
+[node name="Cube_168_687" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="413"]
+transform = Transform3D(0.035678152, 0.04199638, 8.297945, -0.057894107, 0.013908606, 6.9950266, -0.013013477, 0.053262215, -8.369436, -936.24567, 334.3837, 627.069)
+
+[node name="Circle_411_688" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="414"]
+transform = Transform3D(-0.068862304, -0.7009736, 2.2933383, -0.3711209, 2.2697585, 0.6826224, -2.3691845, -0.33517194, -0.17358716, -945.61304, 283.90018, 304.78943)
+
+[node name="Cube_169_689" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="415"]
+transform = Transform3D(0.07102045, 0.02170786, 0.6165865, 0.021139558, -0.070290215, 3.3229804, -0.0053756754, 0.010379654, 21.213446, -936.24567, 334.3837, 627.069)
+
+[node name="Circle_414_690" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="416"]
+transform = Transform3D(0.91940427, 1.6644465, -1.4628125, 2.1503377, -1.0525551, 0.15388723, -0.5350228, -1.3701285, -1.8952587, -810.7247, 626.256, 554.5082)
+
+[node name="Cube_170_691" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="417"]
+transform = Transform3D(-0.045300614, -0.05154483, -8.23225, 0.004765599, 0.032595664, -19.25392, -0.05869264, 0.042430364, 4.790541, -935.7909, 333.7461, 627.28723)
+
+[node name="Circle_416_692" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="418"]
+transform = Transform3D(0.8185329, -2.017883, -1.0068059, -1.5646877, -1.2795002, 1.292338, -1.6239651, 0.21571575, -1.7526296, -824.4461, 120.90192, 406.3797)
+
+[node name="Cube_171_693" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="419"]
+transform = Transform3D(-0.029875072, 0.059876926, -6.2519608, 0.03834773, 0.037966758, 11.951106, -0.052006014, -0.006400958, 12.403865, -935.7909, 333.74603, 627.28723)
+
+[node name="Circle_418_694" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="420"]
+transform = Transform3D(-2.347757, 0.41035175, 0.27414048, 0.14676018, -0.69183636, 2.2924507, 0.4711718, 2.2601948, 0.6519379, -1255.1558, 353.70984, 691.38055)
+
+[node name="Cube_172_695" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="421"]
+transform = Transform3D(0.0085449945, -0.01279067, 21.36213, 0.07145589, 0.02156464, -1.335367, 0.020321004, -0.07045048, -4.2871633, -935.7909, 333.74603, 627.28723)
+
+[node name="Circle_421_696" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="422"]
+transform = Transform3D(0.1658694, 1.1633662, -2.091548, 2.2338483, -0.82776153, -0.2832652, -0.8590202, -1.9279255, -1.14048, -913.0656, 637.67737, 510.34372)
+
+[node name="Cube_173_697" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="423"]
+transform = Transform3D(-0.06206279, -0.034520704, -1.2669126, -0.008405366, 0.024562292, -17.062159, -0.033841595, 0.05720759, 6.56121, -935.6288, 333.8076, 627.19604)
+
+[node name="Circle_423_698" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="424"]
+transform = Transform3D(0.41192827, -1.4550505, -1.8624312, -1.510082, -1.6163293, 0.92878324, -1.818096, 1.0128254, -1.1934061, -879.59424, 128.3914, 379.88098)
+
+[node name="Cube_174_699" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="425"]
+transform = Transform3D(-0.05375117, 0.041993912, -2.353242, 0.02680537, 0.046648555, 8.626721, -0.0344426, -0.029230963, 10.386323, -935.6288, 333.80756, 627.19604)
+
+[node name="Circle_425_700" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="426"]
+transform = Transform3D(-1.9436892, 1.4059492, 0.02977204, -0.2622486, -0.4122892, 2.348776, 1.3815951, 1.8996924, 0.48771948, -1200.0283, 298.13394, 815.1341)
+
+[node name="Cube_175_701" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="427"]
+transform = Transform3D(0.00092199503, -0.04353964, 17.403606, 0.072737254, 0.012767847, 2.3481472, 0.01510378, -0.058829963, -12.370667, -935.62866, 333.80756, 627.19604)
+
+[node name="Circle_428_702" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="428"]
+transform = Transform3D(0.12630086, -0.27873814, -2.3794663, 0.60051054, 2.3103862, -0.238771, 2.3192546, -0.5830348, 0.19140336, -918.4472, 415.77518, 942.1683)
+
+[node name="Cube_176_703" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="429"]
+transform = Transform3D(-0.07368767, 0.008632007, -1.1308882, -0.0073942966, -0.07154837, -5.376912, 0.005927418, 0.018055506, -20.766378, -935.628, 334.0879, 626.6806)
+
+[node name="Circle_430_704" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="430"]
+transform = Transform3D(-0.96963924, -0.96178555, -1.9723778, 1.8512863, -1.5162772, -0.17073114, -1.1781533, -1.5910307, 1.355021, -1067.5277, 585.9179, 466.41675)
+
+[node name="Cube_177_705" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="431"]
+transform = Transform3D(-0.05852663, 0.02853918, 7.4061203, -0.005066135, 0.044992708, -14.140144, 0.040207725, 0.047210854, 8.998752, -935.628, 334.08786, 626.68066)
+
+[node name="Circle_432_706" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="432"]
+transform = Transform3D(-0.87796724, 2.093873, 0.77483857, -2.2147508, -0.7116149, -0.58650595, -0.28206098, -0.9299491, 2.1934319, -1055.0576, 32.81583, 588.31195)
+
+[node name="Cube_178_707" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="433"]
+transform = Transform3D(0.024151787, -0.06526622, 7.9885817, -0.018281428, 0.022181109, 20.151913, 0.06836947, 0.028986597, 2.5664554, -935.628, 334.08786, 626.68066)
+
+[node name="Circle_435_708" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="434"]
+transform = Transform3D(-1.6411601, -1.5079445, 0.88780826, -1.312992, 1.8657821, 0.74190056, -1.1567851, 0.021630298, -2.1016393, -1159.1897, 155.54314, 470.07565)
+
+[node name="Cube_179_709" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="435"]
+transform = Transform3D(0.026344065, 0.044745427, 12.535201, 0.022014515, -0.055363595, 10.028647, -0.062362205, -0.0006418376, 8.835543, -935.94305, 334.14908, 627.4329)
+
+[node name="Circle_437_710" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="436"]
+transform = Transform3D(-0.62141395, 2.3129113, 0.14068913, 2.305872, 0.63161546, -0.1988047, -0.22870553, 0.08372896, -2.3866692, -1020.47394, 647.8162, 596.3222)
+
+[node name="Cube_180_711" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="437"]
+transform = Transform3D(0.004060415, -0.06675236, 3.5499804, -0.0057376586, -0.018228894, -13.172867, -0.068881184, -0.002416494, 1.3065368, -935.9431, 334.14905, 627.4329)
+
+[node name="Circle_439_712" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="438"]
+transform = Transform3D(2.2263205, 0.33327276, -0.82941663, -0.71769434, -0.6605063, -2.1918375, -0.532839, 2.2821412, -0.5132464, -633.09735, 236.52122, 554.9509)
+
+[node name="Cube_181_713" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="439"]
+transform = Transform3D(-0.025685525, -0.010320842, -19.934256, -0.06787715, 0.020454664, 6.4261723, -0.015894292, -0.07067368, 4.7709913, -935.9432, 334.14908, 627.4329)
+
+[node name="Circle_442_714" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="440"]
+transform = Transform3D(-0.115952514, 0.70228183, 2.2910392, -1.9547302, -1.3544451, 0.31625226, 1.3860347, -1.8514278, 0.63767487, -952.02527, 68.2806, 815.2236)
+
+[node name="Cube_182_715" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="441"]
+transform = Transform3D(0.07094926, -0.021748373, 1.0382215, 0.009793762, 0.04194465, 17.502466, 0.019747604, 0.05733531, -12.410418, -936.2524, 334.18204, 626.68164)
+
+[node name="Circle_444_716" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="442"]
+transform = Transform3D(1.3265059, 0.747445, 1.8539729, -0.5496721, 2.2756577, -0.52416414, -1.9219128, -0.134957, 1.4295261, -755.80804, 259.41028, 365.24432)
+
+[node name="Cube_183_717" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="443"]
+transform = Transform3D(0.055013172, -0.022179041, -10.131869, -0.015553592, -0.06752589, 4.198404, 0.042418517, 0.004004596, 14.67959, -936.2524, 334.18204, 626.68164)
+
+[node name="Circle_446_718" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="444"]
+transform = Transform3D(0.4883679, -2.145412, -0.95614415, 1.9602932, 0.9102731, -1.04123, 1.2939295, -0.5693137, 1.9383329, -869.8198, 600.8403, 802.6945)
+
+[node name="Cube_184_719" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="445"]
+transform = Transform3D(-0.029803108, 0.06687268, -4.4436336, -0.032455243, -0.028373288, -17.836613, 0.060418006, 0.017745562, -11.773407, -936.2524, 334.18204, 626.6816)
+
+[node name="Sphere_005_772" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="446"]
+transform = Transform3D(-47.720055, 0, 70.4179, 0, 85.063995, 0, -70.4179, 0, -47.720055, -901.7469, 334.83786, 602.66266)
+
+[node name="Circle_453_773" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="447"]
+transform = Transform3D(-3.5208812e-13, -9.7868616e-11, 2.0533148e-11, 9.999924e-11, -3.0993524e-13, 2.3745074e-13, -1.687503e-13, 2.0533826e-11, 9.786896e-11, -936.49023, 331.10123, 626.76935)
+
+[node name="Cube_185_774" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="448"]
+transform = Transform3D(2.0530072e-11, 9.7869275e-11, 1.5865021e-08, 2.3569457e-13, 3.076487e-13, -4.539516e-06, 9.7869615e-11, -2.0530749e-11, 7.604293e-09, -936.49023, 331.1012, 626.76935)
+
+[node name="Circle_456_775" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="449"]
+transform = Transform3D(-0.009792926, -0.021376405, 0.0029965278, 0.014387165, -0.004010994, 0.018405234, 0.016091594, -0.009422977, -0.014632137, -937.285, 334.82816, 629.18146)
+
+[node name="Cube_186_776" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="450"]
+transform = Transform3D(8.563761e-05, 0.00061091565, 0.0008421517, 0.00052600267, 0.00011463018, -0.0012372376, -0.00041817146, 0.00026929894, -0.0013838112, -935.9528, 332.87106, 626.9925)
+
+[node name="Circle_458_777" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="451"]
+transform = Transform3D(-0.015621149, 0.017826037, 0.00020818977, -0.0027618238, -0.0026933516, 0.02338695, -0.017612021, -0.015388617, -0.0038520738, -938.0778, 332.4954, 624.59674)
+
+[node name="Cube_187_778" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="452"]
+transform = Transform3D(5.94992e-06, -0.0005094498, 0.0013433552, 0.00066837494, 7.6973316e-05, 0.00023750564, -0.00011008837, 0.00043979083, 0.0015145619, -935.9528, 332.87106, 626.9925)
+
+[node name="Circle_460_779" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="453"]
+transform = Transform3D(0.022384532, 0.0076089823, 0.0016933307, 0.0062428387, -0.020582339, 0.0099612, -0.0046680756, 0.0089611355, 0.02144151, -932.9079, 333.7203, 626.3575)
+
+[node name="Cube_188_780" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="454"]
+transform = Transform3D(4.8393682e-05, -0.00021745695, -0.0019249785, 0.00028468086, 0.00058822206, -0.0005368589, 0.0006127763, -0.00025610003, 0.00040143565, -935.9528, 332.87106, 626.9925)
+
+[node name="Circle_463_781" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="455"]
+transform = Transform3D(0.017375942, -0.00511342, 0.015289238, -0.008061693, 0.01671086, 0.014750845, 0.013961267, 0.016013471, -0.01051109, -933.5935, 331.7782, 628.8921)
+
+[node name="Cube_189_782" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="456"]
+transform = Transform3D(0.00043695062, 0.00014613614, -0.0014942606, 0.00042156404, -0.0004775792, 0.0006932731, -0.00030039618, -0.0004576487, -0.0012006115, -935.9572, 332.87482, 626.993)
+
+[node name="Circle_465_783" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="457"]
+transform = Transform3D(-0.0055573643, -0.0059736148, 0.0222545, 0.02184179, 0.0059271683, 0.0070452895, 0.0073405127, -0.022158878, -0.0041148844, -936.71313, 335.84598, 627.9915)
+
+[node name="Cube_190_784" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="458"]
+transform = Transform3D(0.0006360108, 0.00017071974, 0.0004779105, 0.00020134708, -0.0001693924, -0.001878305, -0.00011759912, 0.00063327793, -0.00063125417, -935.9572, 332.87482, 626.993)
+
+[node name="Circle_467_785" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="459"]
+transform = Transform3D(0.004668545, -0.018762304, 0.013711745, -0.0041631465, -0.0144347, -0.018334089, -0.022862725, -0.0012027825, 0.006138438, -935.32214, 332.30853, 623.883)
+
+[node name="Cube_191_786" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="460"]
+transform = Transform3D(0.00039186774, 0.00053620717, -0.0004014759, -0.0005239693, 0.00041252907, 0.00035801379, 0.0001754303, 3.4374196e-05, 0.0019661011, -935.9572, 332.87482, 626.993)
+
+[node name="Circle_470_787" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="461"]
+transform = Transform3D(0.0012019655, 0.0071262284, -0.022574395, 0.0098757595, 0.020391596, 0.0069629997, -0.021514086, 0.00975863, 0.0019350701, -935.78595, 334.21744, 624.0684)
+
+[node name="Cube_192_788" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="462"]
+transform = Transform3D(-0.00064515305, -0.00020366021, -0.0001033642, 0.00019899526, -0.0005827709, -0.0008492754, 5.5302284e-05, -0.0002788917, 0.0018501235, -935.94946, 332.87402, 626.99493)
+
+[node name="Circle_472_789" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="463"]
+transform = Transform3D(-0.00031429742, -0.013044891, -0.019787958, 0.017537795, -0.0134394895, 0.008581209, 0.015942343, 0.014527289, -0.009830098, -935.99225, 335.2597, 629.1636)
+
+[node name="Cube_193_790" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="464"]
+transform = Transform3D(-0.0005655195, 0.00037280953, 2.7028682e-05, 0.000245242, 0.0003840869, -0.0015081788, -0.0002809341, -0.000415175, -0.0013709763, -935.94946, 332.87402, 626.99493)
+
+[node name="Circle_474_791" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="465"]
+transform = Transform3D(-0.016322754, 0.017001998, 0.002516143, -0.017172454, -0.015989488, -0.003357727, 0.00071114395, 0.0041351635, -0.02332865, -938.16986, 330.53806, 627.09174)
+
+[node name="Cube_194_792" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="466"]
+transform = Transform3D(7.190866e-05, -0.00048589974, 0.0014036902, -9.596042e-05, 0.00045696303, 0.0014767613, -0.00066670886, -0.00011817866, -6.1155886e-05, -935.94946, 332.87402, 626.99493)
+
+[node name="Circle_477_793" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="467"]
+transform = Transform3D(0.013495889, -0.01767746, -0.0081975395, -0.015619689, -0.0038526244, -0.017407293, -0.011649787, -0.015313261, 0.013842608, -934.1179, 330.75497, 625.40656)
+
+[node name="Cube_195_794" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="468"]
+transform = Transform3D(-0.00023427713, 0.0005052038, -0.0011605909, -0.00049748266, 0.000110103865, 0.0013432294, 0.0003956074, 0.00043763706, 0.0010018351, -935.95374, 332.87973, 626.9913)
+
+[node name="Circle_479_795" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="469"]
+transform = Transform3D(-0.022499766, -0.0073267915, 0.0013819668, -0.0037321607, 0.007263982, -0.022251667, -0.0064546634, 0.021339726, 0.008048889, -939.0144, 332.37204, 626.1132)
+
+[node name="Cube_196_796" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="470"]
+transform = Transform3D(3.9495295e-05, 0.00020939208, 0.0019348883, -0.00063592975, -0.00020759722, 0.00032095087, 0.00023002908, -0.00060986745, 0.0005550743, -935.95374, 332.87973, 626.9913)
+
+[node name="Circle_481_797" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="471"]
+transform = Transform3D(0.0058950316, 0.006845495, 0.0219139, 0.0010824581, 0.022516744, -0.0073250034, 0.022932686, -0.0028225146, -0.0052873925, -935.15186, 333.02698, 630.1108)
+
+[node name="Cube_197_798" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="472"]
+transform = Transform3D(0.0006262767, -0.00019563721, -0.00050694874, -0.00020934106, -0.0006435055, -9.308669e-05, -0.0001511083, 8.0664475e-05, -0.0019721175, -935.95374, 332.87973, 626.9913)
+
+[node name="Circle_484_799" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="473"]
+transform = Transform3D(0.013921818, -0.0109114945, -0.015778258, 0.01805949, 0.01403027, 0.0062319757, -0.006470624, 0.0156819, -0.01655416, -934.0587, 335.32965, 626.1159)
+
+[node name="Cube_198_800" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="474"]
+transform = Transform3D(-0.00045092648, 0.0003118393, -0.0011972196, 0.00017810342, -0.00040097075, -0.0015530427, -0.00047310087, -0.00044817256, 0.0005564476, -935.9525, 332.87302, 626.99615)
+
+[node name="Circle_486_801" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="475"]
+transform = Transform3D(-0.018635113, -0.013478868, -0.0057344497, 0.009065576, -0.017901327, 0.012617011, 0.011505613, -0.007726174, -0.019229101, -938.4874, 334.10617, 628.5613)
+
+[node name="Cube_199_802" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="476"]
+transform = Transform3D(-0.00016388476, 0.0003852123, 0.0016025435, 0.0003605813, 0.0005116015, -0.0007796027, -0.0005495479, 0.00022080609, -0.0009894363, -935.9525, 332.87302, 626.99615)
+
+[node name="Circle_488_803" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="477"]
+transform = Transform3D(-0.0031712842, 0.01126531, 0.020612301, -0.015273745, -0.016790988, 0.0068269083, -0.017846202, 0.012368782, -0.009505661, -936.3839, 330.79532, 624.56854)
+
+[node name="Cube_200_804" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="478"]
+transform = Transform3D(0.0005890784, -0.00032195103, 0.0002727175, 0.00019510608, 0.0004798692, 0.0013134797, -0.000271662, -0.000353487, 0.0015347006, -935.9525, 332.87302, 626.99615)
+
+[node name="Circle_491_805" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="479"]
+transform = Transform3D(0.016058885, 0.014066012, -0.010300037, -0.017064122, 0.0155508965, -0.0053681075, -0.003571997, -0.011052068, -0.020662135, -933.7683, 330.55753, 626.5097)
+
+[node name="Cube_201_806" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="480"]
+transform = Transform3D(-0.00029436452, -0.00040199212, -0.0013809986, -0.00015341493, -0.00044442865, 0.001467445, -0.00059050263, 0.0003158567, 0.00030717737, -935.95276, 332.87875, 626.99554)
+
+[node name="Circle_493_807" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="481"]
+transform = Transform3D(0.0049942015, -0.023013042, -0.0026998238, 0.017781753, 0.005577271, -0.014646997, -0.014855922, -0.0010607296, -0.018439297, -935.27344, 335.2976, 624.9747)
+
+[node name="Cube_202_808" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="482"]
+transform = Transform3D(-7.7158315e-05, 0.0006576891, -0.00042948057, -0.00041859606, -0.00015939264, -0.0015291586, -0.0005269762, 3.031436e-05, 0.0012775487, -935.95276, 332.87875, 626.99554)
+
+[node name="Circle_495_809" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="483"]
+transform = Transform3D(-0.021939311, -0.001660855, 0.008816992, -0.008899858, 0.006977666, -0.020831129, 0.0011359144, 0.0225917, 0.0070820875, -938.93713, 331.6681, 627.1501)
+
+[node name="Cube_203_810" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="484"]
+transform = Transform3D(0.00025198073, 4.7465564e-05, 0.0018866913, -0.0005953321, -0.00019941473, 0.00076535204, 0.000202399, -0.0006456475, -9.768427e-05, -935.95276, 332.87875, 626.99554)
+
+[node name="Circle_498_811" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="485"]
+transform = Transform3D(-0.02206476, 0.008634699, -0.0006477065, 0.0020403704, 0.006907809, 0.022582078, -0.00841513, -0.020965576, 0.0071736616, -938.9514, 333.14978, 625.84705)
+
+[node name="Cube_204_812" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="486"]
+transform = Transform3D(-1.8511031e-05, -0.0002467706, 0.0018974798, 0.0006453725, -0.00019741853, -0.00017546312, 0.00020501626, 0.0005991746, 0.0007236665, -935.94995, 332.87222, 626.9917)
+
+[node name="Circle_500_813" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="487"]
+transform = Transform3D(0.014351147, 0.014376909, -0.012213935, 0.0120977685, 0.004761426, 0.019819284, -0.014474795, 0.018233608, 0.0044549922, -933.99774, 334.51785, 625.0227)
+
+[node name="Cube_205_814" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="488"]
+transform = Transform3D(-0.0003490618, -0.00041087723, -0.0012341405, 0.00056641473, -0.00013607656, -0.0010403591, 0.00012731919, -0.0005210979, 0.001244773, -935.94995, 332.87222, 626.9917)
+
+[node name="Circle_502_815" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="489"]
+transform = Transform3D(0.00068036554, 0.006925688, -0.022658402, 0.00366671, -0.022425428, -0.006744378, 0.023407767, 0.0033115312, 0.0017150579, -935.85736, 333.371, 630.17584)
+
+[node name="Cube_206_816" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="490"]
+transform = Transform3D(-0.0006475539, -0.00019792901, -5.850825e-05, -0.00019274736, 0.0006408957, -0.00031532205, 4.9014445e-05, -9.464016e-05, -0.0020129727, -935.94995, 332.87222, 626.9917)
+
+[node name="Circle_505_817" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="491"]
+transform = Transform3D(-0.009083802, -0.016444886, 0.014452731, -0.021245545, 0.010399346, -0.0015204226, 0.0052860775, 0.0135370055, 0.018725332, -937.19006, 329.98843, 627.70856)
+
+[node name="Cube_207_818" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="492"]
+transform = Transform3D(0.00041304412, 0.00046997805, 0.0007811699, -4.345204e-05, -0.00029720258, 0.0018270302, 0.0005351509, -0.0003868736, -0.00045458102, -935.9544, 332.87848, 626.9895)
+
+[node name="Circle_507_819" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="493"]
+transform = Transform3D(-0.0080871815, 0.01993688, 0.009947335, 0.015459269, 0.012641581, -0.012768424, 0.01604493, -0.0021312924, 0.01731615, -937.0545, 334.9814, 629.1721)
+
+[node name="Cube_208_820" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="494"]
+transform = Transform3D(0.0002842846, -0.00056977564, 0.0006954645, -0.00036490857, -0.0003612834, -0.0013294339, 0.0004948777, 6.0910086e-05, -0.0013797987, -935.9544, 332.87848, 626.9895)
+
+[node name="Circle_509_821" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="495"]
+transform = Transform3D(0.02319607, -0.004054315, -0.0027085345, -0.0014500049, 0.0068354094, -0.022649633, -0.004655224, -0.022330942, -0.006441209, -932.7991, 332.68124, 626.3562)
+
+[node name="Cube_209_822" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="496"]
+transform = Transform3D(-7.7407225e-05, 0.00011586786, -0.0019947675, -0.0006473031, -0.00019534932, 0.00012469481, -0.0001840835, 0.0006381954, 0.00040032962, -935.9544, 332.87848, 626.9895)
+
+[node name="Circle_512_823" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="497"]
+transform = Transform3D(-0.0016388096, -0.011494175, 0.020664692, -0.022070633, 0.008178367, 0.002798688, 0.008487205, 0.019048084, 0.011268055, -936.179, 329.87564, 628.14496)
+
+[node name="Cube_210_824" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="498"]
+transform = Transform3D(0.00059057574, 0.0003284916, 0.00014093053, 7.998362e-05, -0.00023372918, 0.0018979848, 0.00032202931, -0.0005443748, -0.0007298647, -935.95605, 332.8779, 626.9905)
+
+[node name="Circle_514_825" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="499"]
+transform = Transform3D(-0.0040698876, 0.014376037, 0.018401, 0.014919762, 0.015969483, -0.009176466, 0.017962959, -0.010006815, 0.011790968, -936.5097, 334.90744, 629.434)
+
+[node name="Cube_211_826" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="500"]
+transform = Transform3D(0.00052588165, -0.00041085228, 0.00034999396, -0.00026225386, -0.0004563915, -0.0012830388, 0.00033697375, 0.0002859845, -0.0015447414, -935.95605, 332.8779, 626.9905)
+
+[node name="Circle_516_827" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="501"]
+transform = Transform3D(0.019203834, -0.013890914, -0.0002941499, 0.002591042, 0.004073456, -0.023206133, -0.013650293, -0.018769143, -0.004818715, -933.3438, 333.23038, 625.1336)
+
+[node name="Cube_212_828" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="502"]
+transform = Transform3D(-8.406684e-06, 0.00039698777, -0.0016514519, -0.0006632075, -0.00011641532, -0.0002228185, -0.00013771393, 0.0005364029, 0.001173869, -935.95605, 332.8779, 626.9905)
+
+[node name="Circle_519_829" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="503"]
+transform = Transform3D(-0.0012478646, 0.0027539593, 0.023509353, -0.0059331, -0.022826832, 0.0023590808, -0.022914458, 0.0057604373, -0.0018910834, -936.1258, 332.06802, 623.87854)
+
+[node name="Cube_213_830" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="504"]
+transform = Transform3D(0.0006718732, -7.870531e-05, 0.00010731124, 6.7420086e-05, 0.0006523674, 0.0005102223, -5.4045202e-05, -0.00016462736, 0.00197055, -935.95605, 332.87512, 626.99554)
+
+[node name="Circle_521_831" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="505"]
+transform = Transform3D(0.009580127, 0.009502532, 0.019487284, -0.018290885, 0.014980963, 0.0016868401, 0.011640268, 0.015719537, -0.013387737, -934.6529, 330.387, 628.579)
+
+[node name="Cube_214_832" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="506"]
+transform = Transform3D(0.00055692677, -0.00027157247, -0.0008238514, 4.8208094e-05, -0.00042814048, 0.0015729418, -0.0003826076, -0.00044924827, -0.001001016, -935.95605, 332.87512, 626.99554)
+
+[node name="Circle_523_833" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="507"]
+transform = Transform3D(0.008674401, -0.020687668, -0.0076554785, 0.021881951, 0.0070308237, 0.0057947338, 0.0027867896, 0.009187985, -0.021671316, -934.77606, 335.8517, 627.37463)
+
+[node name="Cube_215_834" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="508"]
+transform = Transform3D(-0.00021878553, 0.0005912325, -0.00074596255, 0.0001656072, -0.00020093367, -0.0018817589, -0.00061934406, -0.0002625829, -0.00023965198, -935.95605, 332.87512, 626.99554)
+
+[node name="Circle_526_835" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="509"]
+transform = Transform3D(0.016214818, 0.014898635, -0.008771635, 0.012972486, -0.018434104, -0.007330049, 0.011429152, -0.00021370659, 0.020764394, -933.7472, 334.6392, 628.54285)
+
+[node name="Cube_216_836" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="510"]
+transform = Transform3D(-0.0002506843, -0.0004257876, -0.0013944084, -0.00020948528, 0.00052682776, -0.0011155808, 0.000593425, 6.1075852e-06, -0.0009828606, -935.95294, 332.8745, 626.9881)
+
+[node name="Circle_528_837" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="511"]
+transform = Transform3D(0.006139629, -0.022851786, -0.0013900222, -0.022782234, -0.0062404214, 0.0019642098, 0.0022596326, -0.00082725007, 0.023580521, -935.11774, 329.77548, 627.29553)
+
+[node name="Cube_217_838" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="512"]
+transform = Transform3D(-3.9725197e-05, 0.00065308047, -0.0005279839, 5.6135126e-05, 0.00017834507, 0.0019591793, 0.00067390705, 2.3641725e-05, -0.00019431913, -935.95294, 332.8745, 626.9881)
+
+[node name="Circle_530_839" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="513"]
+transform = Transform3D(-0.021996262, -0.0032927664, 0.008194716, 0.0070908894, 0.0065258653, 0.021655567, 0.0052645006, -0.022547772, 0.005070924, -938.94507, 333.8391, 627.7042)
+
+[node name="Cube_218_840" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="514"]
+transform = Transform3D(0.00023419678, 9.4103925e-05, 0.0018915887, 0.00061889377, -0.00018650274, -0.0006097881, 0.00014492194, 0.00064439204, -0.00045272606, -935.95294, 332.8745, 626.9881)
+
+[node name="Circle_533_841" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="515"]
+transform = Transform3D(0.0011456178, -0.006938612, -0.02263569, 0.01931292, 0.013382047, -0.0031246056, -0.013694155, 0.018292286, -0.0063002864, -935.794, 335.5013, 625.1327)
+
+[node name="Cube_219_842" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="516"]
+transform = Transform3D(-0.00064690475, 0.0001982984, -9.85182e-05, -8.929806e-05, -0.00038244505, -0.0016608327, -0.0001800557, -0.0005227748, 0.0011776413, -935.9499, 332.87418, 626.9955)
+
+[node name="Circle_535_843" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="517"]
+transform = Transform3D(-0.013106006, -0.0073848288, -0.018317427, 0.0054308143, -0.022483718, 0.0051787915, 0.018988684, 0.001333388, -0.014123852, -937.73267, 333.61295, 629.57855)
+
+[node name="Cube_220_844" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="518"]
+transform = Transform3D(-0.0005234932, 0.00021105082, 0.0011270634, 0.00014800452, 0.0006425616, -0.00046702797, -0.00040364527, -3.810686e-05, -0.0016329492, -935.9499, 332.87418, 626.9955)
+
+[node name="Circle_537_845" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="519"]
+transform = Transform3D(-0.004825121, 0.021196874, 0.009446797, -0.019367885, -0.008993584, 0.010287454, -0.012784149, 0.0056248736, -0.019150916, -936.60626, 330.23956, 625.25653)
+
+[node name="Cube_221_846" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="520"]
+transform = Transform3D(0.00026997988, -0.0006057848, 0.00041494047, 0.0002940049, 0.00025702742, 0.001665559, -0.00054731336, -0.00016075322, 0.001099385, -935.9499, 332.87418, 626.9955)
+
+[node name="Sphere_006_899" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="521"]
+transform = Transform3D(-47.720055, 0, 70.4179, 0, 85.063995, 0, -70.4179, 0, -47.720055, -901.7469, 334.83786, 602.66266)
+
+[node name="Circle_544_900" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="522"]
+transform = Transform3D(-0.026285123, -2.3479774, 0.49260905, 7.465185, -0.007435979, 0.005696697, -0.012597544, 0.4926294, 2.3479662, -936.49023, 331.10123, 626.76935)
+
+[node name="Cube_222_901" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" index="523"]
+transform = Transform3D(0.01407774, 0.067103535, 0.002252513, 0.00016224364, 0.00021177552, -0.641966, 0.067103304, -0.014078301, 0.0010795983, -932.915, -684.38605, 628.48303)
+
+[node name="AnimationPlayer" parent="Sketchfab_Scene" index="1"]
+autoplay = "Animation"
+
+[editable path="Sketchfab_Scene"]

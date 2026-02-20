@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwb5lgkbp4lw3"]
+
+[ext_resource type="Shader" uid="uid://dgd0ifykr0qy7" path="res://shaders/fire.gdshader" id="1_xqmqg"]
+[ext_resource type="Texture2D" uid="uid://dr0djmx425b1l" path="res://images/noise.jpg" id="2_g5mbl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rach5"]
+render_priority = 0
+shader = ExtResource("1_xqmqg")
+shader_parameter/noise_tex = ExtResource("2_g5mbl")
+shader_parameter/root_color = Color(1, 0.75, 0.3, 1)
+shader_parameter/tip_color = Color(1, 0.03, 0.001, 1)
+shader_parameter/fire_alpha = 1.0
+shader_parameter/fire_speed = Vector2(0, 1)
+shader_parameter/fire_aperture = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_txieb"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_rach5")
+mesh = SubResource("PlaneMesh_txieb")

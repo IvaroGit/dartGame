@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cxw1x2lbsajvv" path="res://scenes/monitor.gd" id="1_712wi"]
 [ext_resource type="PackedScene" uid="uid://bnsrscu23a8id" path="res://models/monitor/psx_old_tv.glb" id="1_gnqr3"]
 [ext_resource type="PackedScene" uid="uid://dsf6sv0m6ynvg" path="res://models/chain/tv_titans_chain.glb" id="2_3jcr0"]
-[ext_resource type="PackedScene" uid="uid://duxfl1eldembv" path="res://monitor_ui.tscn" id="4_r76x4"]
-[ext_resource type="PackedScene" uid="uid://ck8ack3dy55dr" path="res://boss_monitor_ui.tscn" id="5_spe5c"]
+[ext_resource type="PackedScene" uid="uid://duxfl1eldembv" path="res://scenes/monitor_ui (2).tscn" id="4_r76x4"]
+[ext_resource type="PackedScene" uid="uid://ck8ack3dy55dr" path="res://scenes/boss_monitor_ui.tscn" id="5_spe5c"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_r76x4"]
 viewport_path = NodePath("Sketchfab_Scene/Sprite3D/SubViewport")

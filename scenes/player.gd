@@ -134,6 +134,7 @@ func release_selected_dart():
 	darts.erase(dart)  # remove by reference
 	selected_index=-1
 	hovered_index=-1
+	main_node.throws_left-=1
 	lineup_darts()
 	
 func select_next():
