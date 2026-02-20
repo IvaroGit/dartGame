@@ -6,6 +6,7 @@ signal send_score(score,points)
 var scoreboard_delay = 1
 var countdown_speed = 200
 var counting_down= false
+var final_score
 func _ready() -> void:
 	pass
 func update_scoring_label(points):
@@ -17,10 +18,11 @@ func finnished_scoring():
 	await get_tree().create_timer(scoreboard_delay).timeout
 	send_score.emit(score)
 	counting_down=true
+	final_score=score
 func _process(delta: float) -> void:
 	if(counting_down):
-		score-=int(countdown_speed*delta)
-		var text = str(score)
+		score-=(final_score*0.1)
+		var text = str(int(score))
 		label_3d.set_text(text)
 	if score<=0:
 		score=0

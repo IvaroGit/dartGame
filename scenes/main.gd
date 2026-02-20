@@ -38,7 +38,7 @@ var dart_home_rotations: Array = []
 @onready var boss_monitor: Node3D = $world/room/monitor/boss_monitor
 var charmDelay = 0.5
 var throws_left = 5
-var quota = randi() % 3000+1000
+var quota = randi() % 200+100
 class ThrowContext:
 	var zone_id: String
 	var base_score: int

@@ -15,15 +15,15 @@ font = ExtResource("2_pvloh")
 font_size = 41
 font_color = Color(0.08627451, 0.7372549, 0.3529412, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_d2i27"]
-font = ExtResource("3_ko0i5")
-font_size = 111
-font_color = Color(1, 0.84313726, 0.10980392, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_6fbjr"]
 font = ExtResource("2_pvloh")
 font_size = 38
 font_color = Color(0.08627451, 0.7372549, 0.3529412, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rga1l"]
+font = ExtResource("3_ko0i5")
+font_size = 131
+font_color = Color(0.99769336, 0.81684226, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -36,12 +36,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d2i27")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(447, 439)
-texture = ExtResource("1_1tf4g")
+[node name="stat_screen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Label13" type="Label" parent="."]
+[node name="Label13" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 105.000015
@@ -51,7 +51,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "Set:"
 label_settings = SubResource("LabelSettings_pvloh")
 
-[node name="Label16" type="Label" parent="."]
+[node name="Label16" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 26.000002
@@ -61,7 +61,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "Leg:"
 label_settings = SubResource("LabelSettings_pvloh")
 
-[node name="Label14" type="Label" parent="."]
+[node name="Label14" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 151.99998
 offset_top = 105.0
@@ -71,7 +71,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "numba"
 label_settings = SubResource("LabelSettings_pvloh")
 
-[node name="Label17" type="Label" parent="."]
+[node name="Label17" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 152.00002
 offset_top = 36.000008
@@ -81,7 +81,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "numba"
 label_settings = SubResource("LabelSettings_pvloh")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 216.0
@@ -91,7 +91,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "Quota:"
 label_settings = SubResource("LabelSettings_pvloh")
 
-[node name="quota" type="Label" parent="."]
+[node name="quota" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 246.0
 offset_top = 215.0
@@ -101,7 +101,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "numba"
 label_settings = SubResource("LabelSettings_pvloh")
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 285.0
@@ -111,7 +111,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "------------------"
 label_settings = SubResource("LabelSettings_ko0i5")
 
-[node name="Label15" type="Label" parent="."]
+[node name="Label15" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 168.0
@@ -121,7 +121,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "------------------"
 label_settings = SubResource("LabelSettings_ko0i5")
 
-[node name="Label4" type="Label" parent="."]
+[node name="Label4" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 31.0
 offset_top = 336.0
@@ -131,7 +131,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "Score:"
 label_settings = SubResource("LabelSettings_ko0i5")
 
-[node name="Label7" type="Label" parent="."]
+[node name="Label7" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 31.0
 offset_top = 418.0
@@ -141,7 +141,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "Throws:"
 label_settings = SubResource("LabelSettings_ko0i5")
 
-[node name="score" type="Label" parent="."]
+[node name="score" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 336.0
@@ -151,7 +151,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "numba"
 label_settings = SubResource("LabelSettings_ko0i5")
 
-[node name="Label6" type="Label" parent="."]
+[node name="Label6" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 379.0
@@ -161,18 +161,7 @@ scale = Vector2(0.98929876, 0.99266034)
 text = "------------------"
 label_settings = SubResource("LabelSettings_ko0i5")
 
-[node name="Label10" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 51.0
-offset_top = 326.0
-offset_right = 411.0
-offset_bottom = 438.0
-scale = Vector2(0.98929876, 0.99266034)
-text = "WIN"
-label_settings = SubResource("LabelSettings_d2i27")
-
-[node name="throws" type="Label" parent="."]
+[node name="throws" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 240.0
 offset_top = 420.0
@@ -180,3 +169,23 @@ offset_right = 403.0
 offset_bottom = 481.0
 text = "numba"
 label_settings = SubResource("LabelSettings_6fbjr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(447, 439)
+texture = ExtResource("1_1tf4g")
+
+[node name="win_screen" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="win_screen"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 162.0
+offset_right = 446.0
+offset_bottom = 294.0
+text = "WIN"
+label_settings = SubResource("LabelSettings_rga1l")
