@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btl1aue2d83e7"
-path.s3tc="res://.godot/imported/green_apple_fbx_1.png-fcff2cd8758f46db006073177a88461e.s3tc.ctex"
+uid="uid://whxclxsxcpmk"
+path.s3tc="res://.godot/imported/stylised_old_cabinet_-_game_readyfree_download_0.png-2f363dd131bf06f8566a0522ccc9ba17.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "1f342e3d18a710badbce6b9aaceecf80"
+"md5": "182c5d5803151940b8bcf2af9d708e65"
 }
 
 [deps]
 
-source_file="res://models/green_apple_fbx_1.png"
-dest_files=["res://.godot/imported/green_apple_fbx_1.png-fcff2cd8758f46db006073177a88461e.s3tc.ctex"]
+source_file="res://models/shop/stylised_old_cabinet_-_game_readyfree_download_0.png"
+dest_files=["res://.godot/imported/stylised_old_cabinet_-_game_readyfree_download_0.png-2f363dd131bf06f8566a0522ccc9ba17.s3tc.ctex"]
 
 [params]
 

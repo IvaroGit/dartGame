@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://486piou8upa3" path="res://scenes/scoreboard.tscn" id="8_choun"]
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
 [ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
-[ext_resource type="PackedScene" uid="uid://cwb5lgkbp4lw3" path="res://scenes/fire.tscn" id="15_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://c2rujxenmy3x2" path="res://images/Button (8).png" id="14_a8y0u"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
 
@@ -44,9 +44,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.475)
 transform = Transform3D(1, 0, 0, 0, 0.9997763, -0.021151925, 0, 0.021151925, 0.9997763, 0, -0.031280994, 5.1542654)
 spot_range = 9.013
 
-[node name="monitor" parent="world/room" instance=ExtResource("5_trceg")]
-transform = Transform3D(1.0800841, 0, 0.47520337, 0, 1.1799998, 0, -0.47520337, 0, 1.0800841, -1.0935102, -0.21810341, -1.3662008)
-
 [node name="dartArea" type="Node3D" parent="world"]
 process_priority = 1
 
@@ -61,6 +58,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24008581, 0)
 
 [node name="scoreboard" parent="world/dartArea" instance=ExtResource("8_choun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68869907, -1.4760345)
+
+[node name="monitor" parent="world/dartArea" instance=ExtResource("5_trceg")]
+transform = Transform3D(1.0800841, 0, 0.47520337, 0, 1.1799998, 0, -0.47520337, 0, 1.0800841, -1.0935102, -0.21810341, -1.3662008)
 
 [node name="shop" type="Node3D" parent="world"]
 
@@ -114,6 +114,23 @@ offset_top = 596.0
 offset_right = -1.0
 offset_bottom = -4.0
 
+[node name="Button3" type="Button" parent="UI/HUD" index="1"]
+modulate = Color(1, 0.19607843, 1, 1)
+self_modulate = Color(0.18039216, 1, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1061.0
+offset_top = 544.0
+offset_right = -3.0
+offset_bottom = -56.0
+focus_mode = 0
+text = "Exit round"
+icon = ExtResource("14_a8y0u")
+icon_alignment = 1
+expand_icon = true
+
 [node name="Control" parent="UI/HUD/button_container" index="0"]
 visible = false
 offset_left = 287.0
@@ -137,13 +154,13 @@ offset_top = 10.101034
 offset_right = 225.45451
 offset_bottom = 84.101036
 
-[node name="powerLabel" parent="UI/HUD" index="6"]
+[node name="powerLabel" parent="UI/HUD" index="7"]
 offset_left = 920.0
 offset_top = 624.0
 offset_right = 960.0
 offset_bottom = 647.0
 
-[node name="zoneLabel" type="Label" parent="UI/HUD" index="8"]
+[node name="zoneLabel" type="Label" parent="UI/HUD" index="9"]
 layout_mode = 0
 offset_left = 856.0
 offset_top = 576.0
@@ -155,28 +172,16 @@ offset_bottom = 599.0
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983, -0.8627979, 0.0018677711, -0.7994882)
 
-[node name="Node3D" parent="." instance=ExtResource("15_jkv2x")]
-transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, -0.30422175, 0.8589165, -1.3141992)
-
-[node name="Node3D2" parent="." instance=ExtResource("15_jkv2x")]
-transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, -0.11699634, 0.8415603, -1.3141992)
-
-[node name="Node3D3" parent="." instance=ExtResource("15_jkv2x")]
-transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0.026756383, 0.8697239, -1.3141992)
-
-[node name="Node3D4" parent="." instance=ExtResource("15_jkv2x")]
-transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0.19694534, 0.87677467, -1.3141992)
-
-[node name="Node3D5" parent="." instance=ExtResource("15_jkv2x")]
-transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0.36640158, 0.8651973, -1.3141992)
-
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
 
 [editable path="world/dartArea/board"]
 [editable path="world/dartArea/board/board/CollisionShape3D/DartZones"]
+[editable path="world/dartArea/lectern"]
 [editable path="world/Player"]
 [editable path="UI"]
 [editable path="UI/HUD/button_container/Control"]

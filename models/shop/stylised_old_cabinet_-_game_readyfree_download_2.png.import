@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1wpgec6pkeb1"
-path.s3tc="res://.godot/imported/green_apple_fbx_2.png-657fa93e4ea08af9fcab6e4076dc63df.s3tc.ctex"
+uid="uid://r6tcysbeukgr"
+path.s3tc="res://.godot/imported/stylised_old_cabinet_-_game_readyfree_download_2.png-bf8a0962bead0316eb13d0801455f586.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "2cd88293d35a16dbb30b69e1eb7e85f9"
+"md5": "afcf279158d1be639e118274e2b4a685"
 }
 
 [deps]
 
-source_file="res://models/green_apple_fbx_2.png"
-dest_files=["res://.godot/imported/green_apple_fbx_2.png-657fa93e4ea08af9fcab6e4076dc63df.s3tc.ctex"]
+source_file="res://models/shop/stylised_old_cabinet_-_game_readyfree_download_2.png"
+dest_files=["res://.godot/imported/stylised_old_cabinet_-_game_readyfree_download_2.png-bf8a0962bead0316eb13d0801455f586.s3tc.ctex"]
 
 [params]
 
@@ -30,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://models/green_apple_fbx_2.png"
+roughness/src_normal="res://models/stylised_old_cabinet_-_game_readyfree_download_2.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

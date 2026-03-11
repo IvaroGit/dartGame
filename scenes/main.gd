@@ -36,6 +36,11 @@ var dart_home_rotations: Array = []
 @onready var scoreboard: Node3D = $world/dartArea/scoreboard
 @onready var monitor: Node3D = $world/room/monitor
 @onready var boss_monitor: Node3D = $world/room/monitor/boss_monitor
+@onready var dart_area: Node3D = $world/dartArea
+@onready var board_light: SpotLight3D = $world/dartArea/board/board/SpotLight3D
+@onready var lectern_light: SpotLight3D = $world/dartArea/lectern/SpotLight3D
+@onready var monitor_sprite: Sprite3D = $world/dartArea/monitor/Sketchfab_Scene/Sprite3D
+
 var charmDelay = 0.5
 var throws_left = 5
 var quota = randi() % 200+100
@@ -55,6 +60,7 @@ class ThrowContext:
 
 func _ready() -> void:
 	update_camera()
+	
 	dart_zones.zone_hit.connect(update_zone_label)
 	dart_zones.zone_scored.connect(_on_zone_scored)
 	charm_button.charm_button.connect(add_random_charm)
@@ -113,6 +119,7 @@ func _on_button_pressed() -> void:
 	start_boss()
 
 func _process(delta: float) -> void:
+	
 	if(game_state==GameState.DART_CHARGE):
 		power_label.show()
 		var text = str("Throw power: ",round(player.current_throw_force))
@@ -143,21 +150,19 @@ func _on_throw_cancel_button_pressed() -> void:
 
 func _on_zone_scored(points: int, zone_name: String, times_hit: int) -> void:
 	scoreboard.update_scoring_label(int(points))
-	# Create context
+
 	var ctx = ThrowContext.new(zone_name, points, board1)
-	# Board effect as a charm
-	# For now, treat board as a static charm
-	ctx.score *= 1  # placeholde
+
+
 	board1.call("process_score", int(points), zone_name,times_hit)
-	# Apply all charms in queue
+
 	for charm in active_charms:
 		await get_tree().create_timer(charmDelay).timeout
 		charm.apply(ctx)
 		if charm.triggered:
 			scoreboard.update_scoring_label(int(charm.bonus_score))
 	scoreboard.finnished_scoring()
-	# Show final score on board
-	# Debug
+
 	print("Hit zone: ", zone_name, " Base: ", points, " Final score: ", ctx.score)
 	
 func add_charm(scene: PackedScene):
@@ -207,4 +212,24 @@ func start_boss():
 	#tween.tween_property(boss_monitor, "rotation_degrees", Vector3(7, 0, 0), 0.5)
 	
 	# Optional: smooth easing
-	#tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+func move_dart_area():
+	var tween = create_tween()
+	# If a tween already exists, kill it first
+	if tween:
+		tween.kill()
+	
+	# Create a new tween
+	tween = create_tween()
+	
+	# Move $Monitor to a new position in 1 second
+	board_light.hide()
+	lectern_light.hide()
+	monitor_sprite.hide()
+	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(dart_area, "position", Vector3(-8,0, 0), 1)
+	
+
+
+func _on_button_3_pressed() -> void:
+	move_dart_area()

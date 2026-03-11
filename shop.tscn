@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://328r55wmh212"]
+
+[ext_resource type="PackedScene" uid="uid://463anmws52ha" path="res://models/shop/stylised_old_cabinet_-_game_readyfree_download.glb" id="1_viryw"]
+
+[node name="shop" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_viryw")]
+
+[node name="Skeleton3D" parent="Sketchfab_Scene/Sketchfab_model/e60dcffc09f8411d88e8d68a15ba9680_fbx/Object_2/RootNode/Armature/Object_6" index="0"]
+bones/3/rotation = Quaternion(-0.021815678, -0.021815712, 0.7067702, 0.7067702)
+bones/4/rotation = Quaternion(-0.009034068, -0.7070491, 0.009033879, 0.7070491)
+bones/6/rotation = Quaternion(0.4843359, 0.5151881, -0.515188, 0.48433602)
+bones/10/rotation = Quaternion(9.002143e-08, 2.938342e-07, -0.9982916, 0.05842817)
+
+[editable path="Sketchfab_Scene"]

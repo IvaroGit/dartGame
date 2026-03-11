@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://lpdo74xl6s1b"
-path="res://.godot/imported/green_apple_fbx.glb-b11ebaa89e74907e9755d180ab1dfe16.scn"
+path="res://.godot/imported/green_apple_fbx.glb-7bbe3bfa6b7832e7aff5c5126141670d.scn"
 
 [deps]
 
-source_file="res://models/green_apple_fbx.glb"
-dest_files=["res://.godot/imported/green_apple_fbx.glb-b11ebaa89e74907e9755d180ab1dfe16.scn"]
+source_file="res://models/green apple/green_apple_fbx.glb"
+dest_files=["res://.godot/imported/green_apple_fbx.glb-7bbe3bfa6b7832e7aff5c5126141670d.scn"]
 
 [params]
 
