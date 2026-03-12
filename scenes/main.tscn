@@ -29,7 +29,7 @@ sdfgi_enabled = true
 [node name="run_manager" type="Node3D"]
 script = ExtResource("1_tipki")
 game_state = 0
-available_charm_scenes = Array[PackedScene]([ExtResource("2_eb6dy"), ExtResource("3_trceg")])
+available_charm_scenes = Array[PackedScene]([ExtResource("3_trceg"), ExtResource("2_eb6dy")])
 
 [node name="world" type="Node3D" parent="."]
 
@@ -122,12 +122,29 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1061.0
-offset_top = 544.0
-offset_right = -3.0
-offset_bottom = -56.0
+offset_left = 943.0
+offset_top = 599.0
+offset_right = -121.0
+offset_bottom = -1.0
 focus_mode = 0
 text = "next "
+icon = ExtResource("14_a8y0u")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button4" type="Button" parent="UI/HUD" index="2"]
+modulate = Color(1, 0.19607843, 1, 1)
+self_modulate = Color(0.18039216, 1, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1055.0
+offset_top = 544.0
+offset_right = -9.0
+offset_bottom = -56.0
+focus_mode = 0
+text = "reroll"
 icon = ExtResource("14_a8y0u")
 icon_alignment = 1
 expand_icon = true
@@ -155,13 +172,13 @@ offset_top = 10.101034
 offset_right = 225.45451
 offset_bottom = 84.101036
 
-[node name="powerLabel" parent="UI/HUD" index="7"]
+[node name="powerLabel" parent="UI/HUD" index="8"]
 offset_left = 920.0
 offset_top = 624.0
 offset_right = 960.0
 offset_bottom = 647.0
 
-[node name="zoneLabel" type="Label" parent="UI/HUD" index="9"]
+[node name="zoneLabel" type="Label" parent="UI/HUD" index="10"]
 layout_mode = 0
 offset_left = 856.0
 offset_top = 576.0
@@ -178,8 +195,11 @@ transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e
 
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/Button4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/Button4" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/Button4" to="shop" method="_on_button_4_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
 

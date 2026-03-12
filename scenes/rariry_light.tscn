@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm8ixvfwchdhh"]
+
+[ext_resource type="PackedScene" uid="uid://bctot5olgnosk" path="res://models/rarity_light/silver_coin.glb" id="1_v73ok"]
+[ext_resource type="Script" uid="uid://c3gg802a755pc" path="res://scenes/rariry_light.gd" id="1_w50vb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_esh26"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+emission_enabled = true
+emission = Color(0.74509805, 0.74509805, 0.74509805, 1)
+emission_energy_multiplier = 3.76
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_w50vb"]
+material = SubResource("StandardMaterial3D_esh26")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lynap"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(1, 0.64705884, 0, 1)
+emission_enabled = true
+emission = Color(1, 0.64705884, 0, 1)
+emission_energy_multiplier = 3.76
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_w50vb")
+rarity = 3
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_v73ok")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.0009367168, 0, -0.0022903811)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.012060036, -0.9999273, 0, 0.9999273, -0.012060036, 0.0016255379, 0.009026229, -0.0048764423)
+light_color = Color(1, 0.64705884, 0, 1)
+light_energy = 14.41
+spot_range = 0.20434827
+spot_angle = 89.99
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.30457255, 0, 0, 0, 0.0027500866, 0, 0, 0, 0.29647857, 0, 0.0066513196, 0)
+mesh = SubResource("CylinderMesh_w50vb")
+surface_material_override/0 = SubResource("StandardMaterial3D_lynap")

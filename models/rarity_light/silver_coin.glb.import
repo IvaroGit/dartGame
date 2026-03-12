@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://coxbstnwkxtl4"
-path="res://.godot/imported/face_decorative_screaming_statue_3dscan.glb-e0d6216afc7e262ec3dc884ccc07c11c.scn"
+uid="uid://bctot5olgnosk"
+path="res://.godot/imported/silver_coin.glb-d59c4f736f58f706cc6ad574ca80d4cd.scn"
 
 [deps]
 
-source_file="res://models/screaming_george/face_decorative_screaming_statue_3dscan.glb"
-dest_files=["res://.godot/imported/face_decorative_screaming_statue_3dscan.glb-e0d6216afc7e262ec3dc884ccc07c11c.scn"]
+source_file="res://models/rarity_light/silver_coin.glb"
+dest_files=["res://.godot/imported/silver_coin.glb-d59c4f736f58f706cc6ad574ca80d4cd.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=0.215
+nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
