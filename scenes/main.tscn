@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=19 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
 [ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
 [ext_resource type="Texture2D" uid="uid://c2rujxenmy3x2" path="res://images/Button (8).png" id="14_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://328r55wmh212" path="res://scenes/shop.tscn" id="15_jkv2x"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
 
@@ -126,7 +127,7 @@ offset_top = 544.0
 offset_right = -3.0
 offset_bottom = -56.0
 focus_mode = 0
-text = "Exit round"
+text = "next "
 icon = ExtResource("14_a8y0u")
 icon_alignment = 1
 expand_icon = true
@@ -172,10 +173,13 @@ offset_bottom = 599.0
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983, -0.8627979, 0.0018677711, -0.7994882)
 
+[node name="shop" parent="." instance=ExtResource("15_jkv2x")]
+transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e-08, 8, -0.36601704, -1.162977)
+
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
 

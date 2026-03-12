@@ -22,7 +22,7 @@ var selected_dart_index: int = -1
 @onready var dart_drop_target: Node3D = $world/dartArea/dart_drop_target
 var dart_home_positions: Array = []
 var dart_home_rotations: Array = []
-@onready var shop: Node3D = $world/shop
+
 @onready var dart_zones: Node3D = $world/dartArea/board/board/CollisionShape3D/DartZones
 @onready var hud: Control = $UI/HUD
 @onready var charm_button: Button = $UI/HUD/Button2
@@ -40,7 +40,7 @@ var dart_home_rotations: Array = []
 @onready var board_light: SpotLight3D = $world/dartArea/board/board/SpotLight3D
 @onready var lectern_light: SpotLight3D = $world/dartArea/lectern/SpotLight3D
 @onready var monitor_sprite: Sprite3D = $world/dartArea/monitor/Sketchfab_Scene/Sprite3D
-
+@onready var shop: Node3D = $shop
 var charmDelay = 0.5
 var throws_left = 5
 var quota = randi() % 200+100
@@ -223,13 +223,25 @@ func move_dart_area():
 	tween = create_tween()
 	
 	# Move $Monitor to a new position in 1 second
-	board_light.hide()
-	lectern_light.hide()
-	monitor_sprite.hide()
+
+
 	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(dart_area, "position", Vector3(-8,0, 0), 1)
+	move_shop()
+func move_shop():
+	var tween = create_tween()
+	# If a tween already exists, kill it first
+	if tween:
+		tween.kill()
 	
+	# Create a new tween
+	tween = create_tween()
+	
+	# Move $Monitor to a new position in 1 second
 
+
+	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(shop, "global_position", Vector3(0,-0.366, -1.163), 1)
 
 func _on_button_3_pressed() -> void:
 	move_dart_area()
