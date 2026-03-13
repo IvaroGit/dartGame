@@ -115,7 +115,7 @@ offset_top = 596.0
 offset_right = -1.0
 offset_bottom = -4.0
 
-[node name="Button3" type="Button" parent="UI/HUD" index="1"]
+[node name="next" type="Button" parent="UI/HUD" index="1"]
 modulate = Color(1, 0.19607843, 1, 1)
 self_modulate = Color(0.18039216, 1, 1, 1)
 layout_mode = 1
@@ -132,7 +132,7 @@ icon = ExtResource("14_a8y0u")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button4" type="Button" parent="UI/HUD" index="2"]
+[node name="reroll" type="Button" parent="UI/HUD" index="2"]
 modulate = Color(1, 0.19607843, 1, 1)
 self_modulate = Color(0.18039216, 1, 1, 1)
 layout_mode = 1
@@ -195,11 +195,13 @@ transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e
 
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="UI/HUD/Button4" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/Button4" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="UI/HUD/Button4" to="shop" method="_on_button_4_pressed"]
+[connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="shop" method="_on_button_4_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="shop" method="_on_reroll_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
 

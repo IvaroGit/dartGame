@@ -209,39 +209,44 @@ func start_boss():
 	
 	# Rotate $Monitor to a new rotation in degrees in 1 second
 	tween.tween_property(boss_monitor, "rotation_degrees", Vector3(7, 0, 4), 0.5)
-	#tween.tween_property(boss_monitor, "rotation_degrees", Vector3(7, 0, 0), 0.5)
-	
-	# Optional: smooth easing
-	
-func move_dart_area():
+
+func enter_shop():
+	move_dart_area(-5,1,1)
+	move_shop(0,1,0)
+	run_state=Runstate.SHOP
+func exit_shop():
+	move_shop(-5,1,1)
+	move_dart_area(0,1,0)
+	run_state=Runstate.THROWING
+func move_shop(target,time,option):
 	var tween = create_tween()
 	# If a tween already exists, kill it first
 	if tween:
 		tween.kill()
-	
 	# Create a new tween
 	tween = create_tween()
-	
 	# Move $Monitor to a new position in 1 second
-
-
 	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(dart_area, "position", Vector3(-8,0, 0), 1)
-	move_shop()
-func move_shop():
+	tween.tween_property(shop, "global_position", Vector3(target,-0.366, -1.163), time)
+	if option==1:
+		tween.tween_property(shop, "global_position", Vector3(5,-0.366, -1.163), 0)
+func move_dart_area(target,time,option):
 	var tween = create_tween()
 	# If a tween already exists, kill it first
 	if tween:
 		tween.kill()
-	
 	# Create a new tween
 	tween = create_tween()
-	
 	# Move $Monitor to a new position in 1 second
-
-
 	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(shop, "global_position", Vector3(0,-0.366, -1.163), 1)
+	tween.tween_property(dart_area, "global_position", Vector3(target,0,0), time)
+	if option==1:
+		tween.tween_property(dart_area, "global_position", Vector3(5,0,0), 0)
 
-func _on_button_3_pressed() -> void:
-	move_dart_area()
+
+
+func _on_next_pressed() -> void:
+	if(run_state==Runstate.THROWING):
+		enter_shop()
+	elif(run_state==Runstate.SHOP):
+		exit_shop()

@@ -53,5 +53,7 @@ func clear_shop():
 	shop_charms.clear()
 
 
-func _on_button_4_pressed() -> void:
+
+
+func _on_reroll_pressed() -> void:
 	roll_shop()
