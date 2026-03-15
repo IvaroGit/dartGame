@@ -41,9 +41,15 @@ var dart_home_rotations: Array = []
 @onready var lectern_light: SpotLight3D = $world/dartArea/lectern/SpotLight3D
 @onready var monitor_sprite: Sprite3D = $world/dartArea/monitor/Sketchfab_Scene/Sprite3D
 @onready var shop: Node3D = $shop
+@onready var reroll_button: Node3D = $shop/reroll_button
+@onready var reroll_anim: AnimationPlayer = $shop/reroll_button/AnimationPlayer
+@onready var reroll_label: Label = $UI/HUD/button_container/Control2/Label
+@onready var charm_label: Label = $UI/HUD/button_container/Control2/charm_label
+@onready var runstate_label: Label = $UI/HUD/runstate_label
 var charmDelay = 0.5
 var throws_left = 5
 var quota = randi() % 200+100
+var currentScore
 class ThrowContext:
 	var zone_id: String
 	var base_score: int
@@ -87,45 +93,74 @@ func get_selection():
 	var ray_end := ray_origin + ray_dir * 1000.0
 	var query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end)
 	var result := space.intersect_ray(query)
+	
 	if not result:
+		player.hovered_index = -1
 		return
 
 	var hit_node: Node = result.collider
 
-	while hit_node and not player.darts.has(hit_node):
-		hit_node = hit_node.get_parent()
 
+	var check_node := hit_node
+	var charm_found := false
+
+	while check_node:
+		if check_node == reroll_button:
+			var pos = Vector3(hit_node.get_child(0).global_position)
+			var screen_pos = camera.unproject_position(pos)
+			var offset = Vector2(-30,-80)
+			reroll_label.position = screen_pos+offset
+			reroll_label.show()
+			if Input.is_action_just_pressed("mouseLeft"):
+				if not reroll_anim.is_playing():
+					reroll_anim.play("Animation")
+					reroll_anim.seek(0.8, true)
+					await get_tree().create_timer(0.25).timeout
+					shop.roll_shop()
+			return
+
+		if check_node is CharmBase:
+			charm_found = true
+			charm_label.text = check_node.charm_name
+			var pos = Vector3(hit_node.get_child(0).global_position)
+			var screen_pos = camera.unproject_position(pos)
+			var offset = Vector2(-30,-80)
+			charm_label.position = screen_pos+offset
+			charm_label.show()
+
+		check_node = check_node.get_parent()
+
+	if not charm_found:
+		charm_label.hide()
+		reroll_label.hide()		
 	if hit_node == null:
 		player.hovered_index = -1
 		return
 
 	player.hovered_index = player.darts.find(hit_node)
+
 	if Input.is_action_just_released("mouseLeft") and player.darts.has(hit_node):
 		selected_dart_index = player.darts.find(hit_node)
 
-		# Offset from dart tip toward top (local space)
 		var pos = Vector3(hit_node.get_child(4).global_position)
-		
 		var screen_pos = camera.unproject_position(pos)
 
 		var offset = Vector2(-72,-90)
 		throw_button.position = screen_pos + offset
 		throw_button.show()
 		throw_button_visible = true
-
 	player.lineup_darts()
-
 func _on_button_pressed() -> void:
 	start_boss()
 
 func _process(delta: float) -> void:
-	
 	if(game_state==GameState.DART_CHARGE):
 		power_label.show()
 		var text = str("Throw power: ",round(player.current_throw_force))
 		power_label.set_text(text)
 	else:
 		power_label.hide()
+	runstate_label.text = str(run_state)
 func _on_throw_button_pressed() -> void:
 	if(throw_button_visible):
 		throw_button.hide()
@@ -250,3 +285,8 @@ func _on_next_pressed() -> void:
 		enter_shop()
 	elif(run_state==Runstate.SHOP):
 		exit_shop()
+
+
+func _on_control_round_won() -> void:
+	print("won round")
+	enter_shop()

@@ -55,4 +55,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.169, -0.137, 0.1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.169, -0.137, -0.2)
 
 [node name="reroll_button" parent="." instance=ExtResource("7_ajxib")]
-transform = Transform3D(0.86730534, 0, -0.49777648, 0, 1, 0, 0.49777648, 0, 0.86730534, 0.3522786, 0, -0.7354317)
+transform = Transform3D(0.8242843, 0, -0.56617606, 0, 1, 0, 0.56617606, 0, 0.8242843, 0.3522786, 0, -0.7354317)

@@ -214,6 +214,13 @@ scale = Vector2(1.72, 1.72)
 text = "Add charm"
 script = ExtResource("4_gdt2y")
 
+[node name="runstate_label" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 16.0
+offset_right = 541.0
+offset_bottom = 39.0
+
 [connection signal="pressed" from="HUD/Button2" to="HUD/Button2" method="_on_pressed"]
 
 [editable path="HUD/button_container/Control"]

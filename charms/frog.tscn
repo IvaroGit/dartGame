@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://13ib0erktel4"]
+[gd_scene load_steps=10 format=3 uid="uid://13ib0erktel4"]
 
 [ext_resource type="Script" uid="uid://bgyftk47pr1ex" path="res://charms/frog.gd" id="1_dlfon"]
 [ext_resource type="PackedScene" uid="uid://g110kdti8u6g" path="res://scenes/pointText.tscn" id="2_2k13b"]
@@ -25,7 +25,10 @@ scale_max = 1.1999999
 material = ExtResource("3_2k13b")
 size = Vector3(0.1, 0.1, 0.1)
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqsyv"]
+size = Vector3(0.30162048, 0.25585938, 0.12817383)
+
+[node name="Frog" type="Node3D"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 script = ExtResource("1_dlfon")
 charm_name = "Frog"
@@ -43,3 +46,9 @@ one_shot = true
 speed_scale = 0.2
 process_material = SubResource("ParticleProcessMaterial_wlmuc")
 draw_pass_1 = SubResource("BoxMesh_r46h2")
+
+[node name="frog" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="frog"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008384704, 0.12792969, 0.01550293)
+shape = SubResource("BoxShape3D_bqsyv")

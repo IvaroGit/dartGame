@@ -172,6 +172,24 @@ offset_top = 10.101034
 offset_right = 225.45451
 offset_bottom = 84.101036
 
+[node name="Control2" type="Control" parent="UI/HUD/button_container" index="1"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI/HUD/button_container/Control2"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Reroll shop"
+
+[node name="charm_label" type="Label" parent="UI/HUD/button_container/Control2"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="powerLabel" parent="UI/HUD" index="8"]
 offset_left = 920.0
 offset_top = 624.0
@@ -195,13 +213,13 @@ transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e
 
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="UI/HUD/next" to="." method="_on_next_pressed"]
-[connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/reroll" to="shop" method="_on_button_4_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="UI/HUD/reroll" to="shop" method="_on_reroll_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="shop" method="_on_button_4_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
 
