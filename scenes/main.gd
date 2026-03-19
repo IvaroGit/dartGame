@@ -46,9 +46,14 @@ var dart_home_rotations: Array = []
 @onready var reroll_label: Label = $UI/HUD/button_container/Control2/Label
 @onready var charm_label: Label = $UI/HUD/button_container/Control2/charm_label
 @onready var runstate_label: Label = $UI/HUD/runstate_label
+@onready var exit_shop_button: Button = $UI/HUD/exit_shop
+@onready var monitor_ui: Control = $world/dartArea/monitor/Sketchfab_Scene/Sprite3D/SubViewport/Control
+@onready var glitch_transition: Control = $UI/glitch_transition
+
+@onready var post_quota: Control = $UI/post_quota
 var charmDelay = 0.5
 var throws_left = 5
-var quota = randi() % 200+100
+var quota = randi() % 10
 var currentScore
 class ThrowContext:
 	var zone_id: String
@@ -70,6 +75,7 @@ func _ready() -> void:
 	dart_zones.zone_hit.connect(update_zone_label)
 	dart_zones.zone_scored.connect(_on_zone_scored)
 	charm_button.charm_button.connect(add_random_charm)
+	monitor_ui.round_won.connect(on_round_won)
 func update_zone_label(text):	
 	zone_label.set_text("Hit : "+ text)
 func update_camera():
@@ -161,6 +167,10 @@ func _process(delta: float) -> void:
 	else:
 		power_label.hide()
 	runstate_label.text = str(run_state)
+	if run_state==Runstate.SHOP:
+		exit_shop_button.show()
+	else:
+		exit_shop_button.hide()
 func _on_throw_button_pressed() -> void:
 	if(throw_button_visible):
 		throw_button.hide()
@@ -246,13 +256,15 @@ func start_boss():
 	tween.tween_property(boss_monitor, "rotation_degrees", Vector3(7, 0, 4), 0.5)
 
 func enter_shop():
+	
 	move_dart_area(-5,1,1)
 	move_shop(0,1,0)
 	run_state=Runstate.SHOP
 func exit_shop():
-	move_shop(-5,1,1)
-	move_dart_area(0,1,0)
-	run_state=Runstate.THROWING
+	if run_state==Runstate.ENTER_SHOP:
+		move_shop(-5,1,1)
+		move_dart_area(0,1,0)
+		run_state=Runstate.THROWING
 func move_shop(target,time,option):
 	var tween = create_tween()
 	# If a tween already exists, kill it first
@@ -286,7 +298,13 @@ func _on_next_pressed() -> void:
 	elif(run_state==Runstate.SHOP):
 		exit_shop()
 
+func on_round_won():
+	glitch_transition.show()
+	await get_tree().create_timer(0.1).timeout
+	hud.hide()
+	post_quota.show()
+	await get_tree().create_timer(0.1).timeout
+	glitch_transition.hide()
 
-func _on_control_round_won() -> void:
-	print("won round")
-	enter_shop()
+func _on_exit_shop_pressed() -> void:
+	exit_shop()

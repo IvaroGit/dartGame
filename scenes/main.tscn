@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=26 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -14,7 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
 [ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
 [ext_resource type="Texture2D" uid="uid://c2rujxenmy3x2" path="res://images/Button (8).png" id="14_a8y0u"]
+[ext_resource type="FontFile" uid="uid://prvyljm4mamt" path="res://fonts/LOTSOFDOTZ.TTF" id="15_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://328r55wmh212" path="res://scenes/shop.tscn" id="15_jkv2x"]
+[ext_resource type="FontFile" uid="uid://dd4ccaox2ul2t" path="res://fonts/Digital7Italic-BW658.ttf" id="16_dp3eg"]
+[ext_resource type="Shader" uid="uid://ctk6rr8ycsntq" path="res://scenes/glitch.gdshader" id="16_muem4"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
 
@@ -25,6 +28,28 @@ sky = SubResource("Sky_85g3d")
 sdfgi_enabled = true
 
 [sub_resource type="GDScript" id="GDScript_85g3d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ld40"]
+font = ExtResource("16_dp3eg")
+font_size = 33
+
+[sub_resource type="LabelSettings" id="LabelSettings_dp3eg"]
+font = ExtResource("16_dp3eg")
+font_size = 25
+font_color = Color(0.4410137, 0.99999994, 0.41299108, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gqmmt"]
+font = ExtResource("16_dp3eg")
+font_size = 27
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dp3eg"]
+shader = ExtResource("16_muem4")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 1.0
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
 
 [node name="run_manager" type="Node3D"]
 script = ExtResource("1_tipki")
@@ -203,6 +228,168 @@ offset_top = 576.0
 offset_right = 896.0
 offset_bottom = 599.0
 
+[node name="exit_shop" type="Button" parent="UI/HUD" index="12"]
+layout_mode = 0
+offset_left = 1051.258
+offset_top = 288.0
+offset_right = 1146.0
+offset_bottom = 321.0
+text = "EXIT SHOP"
+
+[node name="post_quota" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="round_won" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+offset_right = -1.0
+offset_bottom = 74.2
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 52
+text = "ROUND WON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="final_score_label" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = 2.0
+offset_top = -0.8400116
+offset_right = -649.0
+offset_bottom = -1.1600037
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "Final score_"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="final_score_value" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = 137.0
+offset_top = 1.1599884
+offset_right = -514.0
+offset_bottom = 0.83999634
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "numba"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="remaining_throws_label" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = -33.0
+offset_top = 54.15999
+offset_right = -684.0
+offset_bottom = 53.839996
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "Remaining throws_"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="remaining_throws_value" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = 140.0
+offset_top = 56.15999
+offset_right = -511.0
+offset_bottom = 55.839996
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "numba"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="reward_label" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = 29.0
+offset_top = 111.15999
+offset_right = -622.0
+offset_bottom = 110.84
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "reward_"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="reward_label_description" type="Label" parent="UI/post_quota"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 337.0
+offset_right = 330.0
+offset_bottom = 363.0
+text = "( prize + remaining throws ) "
+label_settings = SubResource("LabelSettings_dp3eg")
+
+[node name="Label" type="Label" parent="UI/post_quota"]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 298.0
+offset_right = 417.0
+offset_bottom = 326.0
+text = "$$$$$"
+label_settings = SubResource("LabelSettings_gqmmt")
+
+[node name="glitch_transition" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="UI/glitch_transition"]
+material = SubResource("ShaderMaterial_dp3eg")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
+
 [node name="gameState" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -213,15 +400,17 @@ transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e
 
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="UI/HUD/next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="UI/HUD/reroll" to="shop" method="_on_reroll_pressed"]
 [connection signal="pressed" from="UI/HUD/reroll" to="shop" method="_on_button_4_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
+[connection signal="pressed" from="UI/HUD/exit_shop" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/exit_shop" to="." method="_on_exit_shop_pressed"]
 
 [editable path="world/dartArea/board"]
 [editable path="world/dartArea/board/board/CollisionShape3D/DartZones"]

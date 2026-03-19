@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		show_stat()
 		print("signal time")
 		emit_signal("round_won")
-		main_node.run_state=main_node.Runstate.POST_QUOTA
+
 func show_stat():
 	stat_screen.show()
 	win_screen.hide()
