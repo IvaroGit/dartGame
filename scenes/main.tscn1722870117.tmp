@@ -1,0 +1,462 @@
+[gd_scene load_steps=29 format=3 uid="uid://3hwq61ji0uqy"]
+
+[ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
+[ext_resource type="PackedScene" uid="uid://djm1uogg1uu8l" path="res://scenes/brickWall.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://dve1ei15wdhvl" path="res://charms/green_apple.tscn" id="2_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://hk06oa5vd2ip" path="res://scenes/lectern.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://13ib0erktel4" path="res://charms/frog.tscn" id="3_trceg"]
+[ext_resource type="PackedScene" uid="uid://bco1odv4qqxkl" path="res://scenes/monitor.tscn" id="5_trceg"]
+[ext_resource type="Material" uid="uid://crcvs8tmwqnqh" path="res://textures/blackOutline.tres" id="7_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cpeuhxkwia0g4" path="res://scenes/ui.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://cxijvavgnysio" path="res://scenes/player.tscn" id="7_tipki"]
+[ext_resource type="PackedScene" uid="uid://486piou8upa3" path="res://scenes/scoreboard.tscn" id="8_choun"]
+[ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
+[ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
+[ext_resource type="Texture2D" uid="uid://c2rujxenmy3x2" path="res://images/Button (8).png" id="14_a8y0u"]
+[ext_resource type="FontFile" uid="uid://prvyljm4mamt" path="res://fonts/LOTSOFDOTZ.TTF" id="15_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://328r55wmh212" path="res://scenes/shop.tscn" id="15_jkv2x"]
+[ext_resource type="FontFile" uid="uid://dd4ccaox2ul2t" path="res://fonts/Digital7Italic-BW658.ttf" id="16_dp3eg"]
+[ext_resource type="Shader" uid="uid://ctk6rr8ycsntq" path="res://scenes/glitch.gdshader" id="16_muem4"]
+
+[sub_resource type="Sky" id="Sky_85g3d"]
+
+[sub_resource type="Environment" id="Environment_tefeu"]
+background_mode = 2
+background_color = Color(0.4071524, 0.49325198, 0.5770381, 1)
+sky = SubResource("Sky_85g3d")
+sdfgi_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ld40"]
+font = ExtResource("16_dp3eg")
+font_size = 33
+
+[sub_resource type="LabelSettings" id="LabelSettings_dp3eg"]
+font = ExtResource("16_dp3eg")
+font_size = 25
+font_color = Color(0.4410137, 0.99999994, 0.41299108, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gqmmt"]
+font = ExtResource("16_dp3eg")
+font_size = 27
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ld40"]
+bg_color = Color(0.3217281, 0.32172796, 0.32172787, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dp3eg"]
+bg_color = Color(0.22430411, 0.22430411, 0.22430399, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqmmt"]
+bg_color = Color(0.36659443, 0.36659467, 0.36659458, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_0ld40"]
+Button/styles/hover = SubResource("StyleBoxFlat_0ld40")
+Button/styles/normal = SubResource("StyleBoxFlat_dp3eg")
+Button/styles/pressed = SubResource("StyleBoxFlat_gqmmt")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dp3eg"]
+shader = ExtResource("16_muem4")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 1.0
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
+
+[node name="run_manager" type="Node3D"]
+script = ExtResource("1_tipki")
+game_state = 0
+available_charm_scenes = Array[PackedScene]([ExtResource("3_trceg"), ExtResource("2_eb6dy")])
+
+[node name="world" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="world"]
+environment = SubResource("Environment_tefeu")
+
+[node name="room" type="Node3D" parent="world"]
+
+[node name="brickWall" parent="world/room" instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.475)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="world/room"]
+transform = Transform3D(1, 0, 0, 0, 0.9997763, -0.021151925, 0, 0.021151925, 0.9997763, 0, -0.031280994, 5.1542654)
+spot_range = 9.013
+
+[node name="dartArea" type="Node3D" parent="world"]
+process_priority = 1
+
+[node name="board" parent="world/dartArea" instance=ExtResource("1_o5qli")]
+transform = Transform3D(-0.0050965473, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.0050965473, 0.020186663, 0.0017428994, -1.36)
+
+[node name="lectern" parent="world/dartArea" instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 0.97778326, 0.20961857, 0, -0.20961857, 0.97778326, 0, -1.0303969, 0.045403708)
+
+[node name="dart_drop_target" type="Node3D" parent="world/dartArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24008581, 0)
+
+[node name="scoreboard" parent="world/dartArea" instance=ExtResource("8_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68869907, -1.4760345)
+
+[node name="monitor" parent="world/dartArea" instance=ExtResource("5_trceg")]
+transform = Transform3D(1.0800841, 0, 0.47520337, 0, 1.1799998, 0, -0.47520337, 0, 1.0800841, -1.0935102, -0.21810341, -1.3662008)
+
+[node name="shop" type="Node3D" parent="world"]
+
+[node name="shelf" type="Node3D" parent="world"]
+
+[node name="dartBag" type="Node3D" parent="world"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.945, -0.141, 2.029)
+
+[node name="Sketchfab_Scene" parent="world/dartBag" instance=ExtResource("9_85g3d")]
+transform = Transform3D(0.15556349, 0, -0.15556349, 0, 0.22, 0, 0.15556349, 0, 0.15556349, 2.131, -0.142, -2.017)
+
+[node name="BagViewTarget" type="Node3D" parent="world/dartBag"]
+transform = Transform3D(1, 0, 0, 0, 0.990268, -0.1391731, 0, 0.1391731, 0.990268, 1.9449615, -0.004999995, -2.1159925)
+
+[node name="Player" parent="world" instance=ExtResource("7_tipki")]
+dart_material = ExtResource("7_85g3d")
+
+[node name="DartRig" parent="world/Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192)
+
+[node name="cameraPivot" parent="world/Player" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.99908215, 0.0428347, 0, -0.0428347, 0.99908215, 0, 0, 0.7386536)
+
+[node name="MainCamera" parent="world/Player/cameraPivot" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 3.7252903e-09, 0, -3.7252903e-09, 1.0000001, 0, 0.011105591, -0.35902828)
+fov = 76.1
+
+[node name="MeshInstance3D" parent="world/Player" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12118384, 0.10116819)
+visible = false
+
+[node name="crosshair" parent="world/Player" index="3"]
+transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, 0, -0.04112044, -1.2364545)
+visible = false
+
+[node name="aimPlane" parent="world/Player" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2438748)
+
+[node name="UI" parent="." instance=ExtResource("7_o6xl0")]
+
+[node name="HUD" parent="UI" index="0"]
+offset_left = 1.0
+offset_right = 1.0
+script = ExtResource("9_choun")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" parent="UI/HUD" index="0"]
+offset_left = 1081.0
+offset_top = 596.0
+offset_right = -1.0
+offset_bottom = -4.0
+
+[node name="next" type="Button" parent="UI/HUD" index="1"]
+modulate = Color(1, 0.19607843, 1, 1)
+self_modulate = Color(0.18039216, 1, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 943.0
+offset_top = 599.0
+offset_right = -121.0
+offset_bottom = -1.0
+focus_mode = 0
+text = "next "
+icon = ExtResource("14_a8y0u")
+icon_alignment = 1
+expand_icon = true
+
+[node name="reroll" type="Button" parent="UI/HUD" index="2"]
+modulate = Color(1, 0.19607843, 1, 1)
+self_modulate = Color(0.18039216, 1, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1055.0
+offset_top = 544.0
+offset_right = -9.0
+offset_bottom = -56.0
+focus_mode = 0
+text = "reroll"
+icon = ExtResource("14_a8y0u")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Control" parent="UI/HUD/button_container" index="0"]
+visible = false
+offset_left = 287.0
+offset_top = 313.0
+offset_right = 287.0
+offset_bottom = 313.0
+scale = Vector2(0.495, 0.495)
+
+[node name="Polygon2D" parent="UI/HUD/button_container/Control" index="0"]
+polygon = PackedVector2Array(55.721077, 0.3051796, 231.98662, -1.289235, 231.63821, 95.84351, 184.44804, 96.15795, 144.2102, 176.39523, 104.28231, 95.94523, 57.087524, 96.20141)
+
+[node name="throw_button" parent="UI/HUD/button_container/Control" index="1"]
+offset_left = 60.606033
+offset_top = 10.101006
+offset_right = 140.60602
+offset_bottom = 84.101006
+
+[node name="throw_cancel_button" parent="UI/HUD/button_container/Control" index="2"]
+offset_left = 145.45451
+offset_top = 10.101034
+offset_right = 225.45451
+offset_bottom = 84.101036
+
+[node name="Control2" type="Control" parent="UI/HUD/button_container" index="1"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI/HUD/button_container/Control2"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Reroll shop"
+
+[node name="charm_label" type="Label" parent="UI/HUD/button_container/Control2"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="powerLabel" parent="UI/HUD" index="8"]
+offset_left = 920.0
+offset_top = 624.0
+offset_right = 960.0
+offset_bottom = 647.0
+
+[node name="zoneLabel" type="Label" parent="UI/HUD" index="10"]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 576.0
+offset_right = 896.0
+offset_bottom = 599.0
+
+[node name="exit_shop" type="Button" parent="UI/HUD" index="12"]
+layout_mode = 0
+offset_left = 1051.258
+offset_top = 288.0
+offset_right = 1146.0
+offset_bottom = 321.0
+text = "EXIT SHOP"
+
+[node name="post_quota" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="round_won" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+offset_right = -1.0
+offset_bottom = 74.2
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 52
+text = "ROUND WON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="final_score_label" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = 2.0
+offset_top = -0.8400116
+offset_right = -649.0
+offset_bottom = -1.1600037
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "Final score_"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="final_score_value" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = 137.0
+offset_top = 1.1599884
+offset_right = -514.0
+offset_bottom = 0.83999634
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "numba"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="remaining_throws_label" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = -33.0
+offset_top = 54.15999
+offset_right = -684.0
+offset_bottom = 53.839996
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "Remaining throws_"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="remaining_throws_value" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = 140.0
+offset_top = 56.15999
+offset_right = -511.0
+offset_bottom = 55.839996
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "numba"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="reward_label" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.20500001
+anchor_right = 1.0
+anchor_bottom = 0.42000002
+offset_left = 29.0
+offset_top = 111.15999
+offset_right = -622.0
+offset_bottom = 110.84
+theme_override_colors/font_color = Color(1, 1, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+theme_override_font_sizes/font_size = 36
+text = "reward_"
+label_settings = SubResource("LabelSettings_0ld40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="reward_label_description" type="Label" parent="UI/post_quota"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 337.0
+offset_right = 330.0
+offset_bottom = 363.0
+text = "( prize + remaining throws ) "
+label_settings = SubResource("LabelSettings_dp3eg")
+
+[node name="money" type="Label" parent="UI/post_quota"]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 298.0
+offset_right = 417.0
+offset_bottom = 326.0
+text = "$$$$$"
+label_settings = SubResource("LabelSettings_gqmmt")
+
+[node name="Button" type="Button" parent="UI/post_quota"]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 546.0
+offset_right = 1106.0
+offset_bottom = 626.0
+focus_mode = 0
+theme = SubResource("Theme_0ld40")
+theme_override_colors/font_color = Color(0.65358776, 0.6670481, 0.66885614, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+text = "ENTER SHOP"
+
+[node name="glitch_transition" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="UI/glitch_transition"]
+material = SubResource("ShaderMaterial_dp3eg")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
+
+[node name="gameState" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983, -0.8627979, 0.0018677711, -0.7994882)
+
+[node name="shop" parent="." instance=ExtResource("15_jkv2x")]
+transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e-08, 8, -0.36601704, -1.162977)
+
+[connection signal="show_post_quota_text" from="." to="UI/HUD" method="_on_run_manager_show_post_quota_text"]
+[connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
+[connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="shop" method="_on_reroll_pressed"]
+[connection signal="pressed" from="UI/HUD/reroll" to="shop" method="_on_button_4_pressed"]
+[connection signal="pressed" from="UI/HUD/button_container/Control/throw_button" to="." method="_on_throw_button_pressed"]
+[connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
+[connection signal="pressed" from="UI/HUD/exit_shop" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="UI/HUD/exit_shop" to="." method="_on_exit_shop_pressed"]
+
+[editable path="world/dartArea/board"]
+[editable path="world/dartArea/board/board/CollisionShape3D/DartZones"]
+[editable path="world/dartArea/lectern"]
+[editable path="world/Player"]
+[editable path="UI"]
+[editable path="UI/HUD/button_container/Control"]

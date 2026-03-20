@@ -51,6 +51,9 @@ var dart_home_rotations: Array = []
 @onready var glitch_transition: Control = $UI/glitch_transition
 
 @onready var post_quota: Control = $UI/post_quota
+
+signal show_post_quota_text
+
 var charmDelay = 0.5
 var throws_left = 5
 var quota = randi() % 10
@@ -256,12 +259,20 @@ func start_boss():
 	tween.tween_property(boss_monitor, "rotation_degrees", Vector3(7, 0, 4), 0.5)
 
 func enter_shop():
-	
 	move_dart_area(-5,1,1)
 	move_shop(0,1,0)
 	run_state=Runstate.SHOP
+
+func enter_shop_instant():
+	move_dart_area(-5,0,0)
+	move_shop(0,0,0)
+	run_state=Runstate.SHOP
+	var all_darts = get_tree().get_nodes_in_group("darts")
+	for dart in all_darts:
+		if is_instance_valid(dart):
+			dart.queue_free()
 func exit_shop():
-	if run_state==Runstate.ENTER_SHOP:
+	if run_state==Runstate.SHOP:
 		move_shop(-5,1,1)
 		move_dart_area(0,1,0)
 		run_state=Runstate.THROWING
@@ -303,8 +314,20 @@ func on_round_won():
 	await get_tree().create_timer(0.1).timeout
 	hud.hide()
 	post_quota.show()
+	emit_signal("show_post_quota_text")
 	await get_tree().create_timer(0.1).timeout
 	glitch_transition.hide()
 
 func _on_exit_shop_pressed() -> void:
 	exit_shop()
+
+
+func _on_enter_shop_pressed() -> void:
+	glitch_transition.show()
+	await get_tree().create_timer(0.1).timeout
+	enter_shop_instant()
+	hud.show()
+	post_quota.hide()
+	await get_tree().create_timer(0.1).timeout
+	glitch_transition.hide()
+	

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://5xqc6hjwvpb0"]
+
+[ext_resource type="PackedScene" uid="uid://b5hclif5820c" path="res://models/charm_shelf/old_kitchen_shelf.glb" id="1_6ryhu"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_6ryhu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047078848, 0, -0.011506319)

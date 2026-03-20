@@ -77,6 +77,7 @@ func aim_dart_at_mouse(dart: Node3D, camera: Camera3D, aim_plane: Node3D):
 	crosshair.show()
 	
 func lineup_darts():
+	cleanup_invalid_darts()
 	var center := (darts.size() - 1) * 0.5
 	for i in range(darts.size()):
 		var dart = darts[i]
@@ -177,4 +178,7 @@ func _process(delta: float) -> void:
 	if main_node.game_state==main_node.GameState.DART_CHARGE:
 		charge_selected_dart(delta)
 		
-	
+func cleanup_invalid_darts():
+	for i in range(darts.size() - 1, -1, -1):
+		if !is_instance_valid(darts[i]):
+			darts.remove_at(i)

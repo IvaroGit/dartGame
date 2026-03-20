@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=30 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://328r55wmh212" path="res://scenes/shop.tscn" id="15_jkv2x"]
 [ext_resource type="FontFile" uid="uid://dd4ccaox2ul2t" path="res://fonts/Digital7Italic-BW658.ttf" id="16_dp3eg"]
 [ext_resource type="Shader" uid="uid://ctk6rr8ycsntq" path="res://scenes/glitch.gdshader" id="16_muem4"]
+[ext_resource type="PackedScene" uid="uid://b5hclif5820c" path="res://models/charm_shelf/old_kitchen_shelf.glb" id="19_0ld40"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
 
@@ -26,8 +27,6 @@ background_mode = 2
 background_color = Color(0.4071524, 0.49325198, 0.5770381, 1)
 sky = SubResource("Sky_85g3d")
 sdfgi_enabled = true
-
-[sub_resource type="GDScript" id="GDScript_85g3d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ld40"]
 font = ExtResource("16_dp3eg")
@@ -42,6 +41,38 @@ font_color = Color(0.4410137, 0.99999994, 0.41299108, 1)
 font = ExtResource("16_dp3eg")
 font_size = 27
 font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ld40"]
+bg_color = Color(0.3217281, 0.32172796, 0.32172787, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dp3eg"]
+bg_color = Color(0.22430411, 0.22430411, 0.22430399, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqmmt"]
+bg_color = Color(0.36659443, 0.36659467, 0.36659458, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_0ld40"]
+Button/styles/hover = SubResource("StyleBoxFlat_0ld40")
+Button/styles/normal = SubResource("StyleBoxFlat_dp3eg")
+Button/styles/pressed = SubResource("StyleBoxFlat_gqmmt")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dp3eg"]
 shader = ExtResource("16_muem4")
@@ -126,7 +157,6 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2438748)
 
 [node name="UI" parent="." instance=ExtResource("7_o6xl0")]
-script = SubResource("GDScript_85g3d")
 
 [node name="HUD" parent="UI" index="0"]
 offset_left = 1.0
@@ -358,23 +388,41 @@ label_settings = SubResource("LabelSettings_0ld40")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="reward_label_description" type="Label" parent="UI/post_quota"]
+[node name="reward_label_description" type="Label" parent="UI/post_quota/reward_label"]
 layout_mode = 0
-offset_left = 65.0
-offset_top = 337.0
-offset_right = 330.0
-offset_bottom = 363.0
+offset_left = 36.0
+offset_top = 93.0
+offset_right = 315.0
+offset_bottom = 119.0
 text = "( prize + remaining throws ) "
 label_settings = SubResource("LabelSettings_dp3eg")
 
-[node name="Label" type="Label" parent="UI/post_quota"]
-layout_mode = 0
-offset_left = 353.0
-offset_top = 298.0
-offset_right = 417.0
-offset_bottom = 326.0
-text = "$$$$$"
+[node name="money" type="Label" parent="UI/post_quota"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30600002
+anchor_top = 0.46
+anchor_right = 0.748
+anchor_bottom = 0.83800006
+offset_left = -1.5120239
+offset_top = 3.919983
+offset_right = -127.696045
+offset_bottom = 519.97595
+text = "$ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ "
 label_settings = SubResource("LabelSettings_gqmmt")
+autowrap_mode = 1
+
+[node name="enter shop" type="Button" parent="UI/post_quota"]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 546.0
+offset_right = 1106.0
+offset_bottom = 626.0
+focus_mode = 0
+theme = SubResource("Theme_0ld40")
+theme_override_colors/font_color = Color(0.65358776, 0.6670481, 0.66885614, 1)
+theme_override_fonts/font = ExtResource("15_jbj1t")
+text = "ENTER SHOP"
 
 [node name="glitch_transition" type="Control" parent="UI"]
 visible = false
@@ -398,6 +446,10 @@ transform = Transform3D(0.8015983, 0, -0.597863, 0, 1, 0, 0.597863, 0, 0.8015983
 [node name="shop" parent="." instance=ExtResource("15_jkv2x")]
 transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e-08, 8, -0.36601704, -1.162977)
 
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("19_0ld40")]
+transform = Transform3D(0.99978465, 0, 0.020750502, 0, 1, 0, -0.020750502, 0, 0.99978465, -0.9668208, -0.7280298, -1.2798662)
+
+[connection signal="show_post_quota_text" from="." to="UI/HUD" method="_on_run_manager_show_post_quota_text"]
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="UI/HUD/next" to="." method="_on_button_3_pressed"]
@@ -411,6 +463,7 @@ transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e
 [connection signal="pressed" from="UI/HUD/button_container/Control/throw_cancel_button" to="." method="_on_throw_cancel_button_pressed"]
 [connection signal="pressed" from="UI/HUD/exit_shop" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="UI/HUD/exit_shop" to="." method="_on_exit_shop_pressed"]
+[connection signal="pressed" from="UI/post_quota/enter shop" to="." method="_on_enter_shop_pressed"]
 
 [editable path="world/dartArea/board"]
 [editable path="world/dartArea/board/board/CollisionShape3D/DartZones"]
