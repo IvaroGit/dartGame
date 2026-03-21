@@ -48,35 +48,35 @@ offset_top = 105.000015
 offset_right = 239.0
 offset_bottom = 196.00002
 scale = Vector2(0.98929876, 0.99266034)
-text = "Set:"
+text = "Round:"
 label_settings = SubResource("LabelSettings_pvloh")
 
 [node name="Label16" type="Label" parent="stat_screen"]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 26.000002
-offset_right = 240.0
-offset_bottom = 117.0
+offset_left = 8.000001
+offset_top = 25.000002
+offset_right = 236.0
+offset_bottom = 116.0
 scale = Vector2(0.98929876, 0.99266034)
-text = "Leg:"
+text = "Set:"
 label_settings = SubResource("LabelSettings_pvloh")
 
-[node name="Label14" type="Label" parent="stat_screen"]
+[node name="round_value" type="Label" parent="stat_screen"]
 layout_mode = 0
-offset_left = 151.99998
-offset_top = 105.0
-offset_right = 401.0
+offset_left = 256.0
+offset_top = 105.00001
+offset_right = 505.0
 offset_bottom = 196.0
 scale = Vector2(0.98929876, 0.99266034)
 text = "numba"
 label_settings = SubResource("LabelSettings_pvloh")
 
-[node name="Label17" type="Label" parent="stat_screen"]
+[node name="set_value" type="Label" parent="stat_screen"]
 layout_mode = 0
 offset_left = 152.00002
-offset_top = 36.000008
+offset_top = 25.0
 offset_right = 401.00003
-offset_bottom = 127.00001
+offset_bottom = 116.0
 scale = Vector2(0.98929876, 0.99266034)
 text = "numba"
 label_settings = SubResource("LabelSettings_pvloh")

@@ -6,6 +6,9 @@ extends Control
 @onready var scoreboard: Node3D = $"../../../../../../dartArea/scoreboard"
 @onready var stat_screen: Control = $stat_screen
 @onready var win_screen: Control = $win_screen
+@onready var round_value: Label = $stat_screen/round_value
+@onready var set_value: Label = $stat_screen/set_value
+
 signal round_won
 var score=0
 var target_score=0
@@ -28,7 +31,8 @@ func _process(delta: float) -> void:
 	score_label.set_text(str(int(score)))
 	throws_label.set_text(str(main_node.throws_left))
 	quota_label.set_text(str(main_node.quota))
-
+	round_value.text=str(main_node.round)
+	set_value.text=str(main_node.set)
 	if score == target_score and score>=main_node.quota and main_node.run_state==main_node.Runstate.THROWING:
 		await get_tree().create_timer(0.3).timeout
 		show_win()
@@ -38,7 +42,7 @@ func _process(delta: float) -> void:
 		show_stat()
 		print("signal time")
 		emit_signal("round_won")
-
+		
 func show_stat():
 	stat_screen.show()
 	win_screen.hide()

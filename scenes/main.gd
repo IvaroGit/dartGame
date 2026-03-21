@@ -35,7 +35,7 @@ var dart_home_rotations: Array = []
 @onready var board1: Node3D = $world/dartArea/board
 @onready var scoreboard: Node3D = $world/dartArea/scoreboard
 @onready var monitor: Node3D = $world/room/monitor
-@onready var boss_monitor: Node3D = $world/room/monitor/boss_monitor
+@onready var boss_monitor: Node3D = $world/dartArea/monitor/boss_monitor
 @onready var dart_area: Node3D = $world/dartArea
 @onready var board_light: SpotLight3D = $world/dartArea/board/board/SpotLight3D
 @onready var lectern_light: SpotLight3D = $world/dartArea/lectern/SpotLight3D
@@ -49,14 +49,21 @@ var dart_home_rotations: Array = []
 @onready var exit_shop_button: Button = $UI/HUD/exit_shop
 @onready var monitor_ui: Control = $world/dartArea/monitor/Sketchfab_Scene/Sprite3D/SubViewport/Control
 @onready var glitch_transition: Control = $UI/glitch_transition
-
 @onready var post_quota: Control = $UI/post_quota
+
+#round managing
+var round=0
+var set=0
+var coins=0
+var quota = 1
+
+var base_dart_amount = 5
+var throws_left = base_dart_amount
 
 signal show_post_quota_text
 
 var charmDelay = 0.5
-var throws_left = 5
-var quota = randi() % 10
+
 var currentScore
 class ThrowContext:
 	var zone_id: String
@@ -73,8 +80,8 @@ class ThrowContext:
 
 
 func _ready() -> void:
+	start_set()
 	update_camera()
-	
 	dart_zones.zone_hit.connect(update_zone_label)
 	dart_zones.zone_scored.connect(_on_zone_scored)
 	charm_button.charm_button.connect(add_random_charm)
@@ -244,18 +251,10 @@ func add_random_charm():
 	var chosen_scene = candidates.pick_random()
 	add_charm(chosen_scene)
 func start_boss():
+	print("start boss")
 	var tween = create_tween()
-	# If a tween already exists, kill it first
-	if tween:
-		tween.kill()
-	
-	# Create a new tween
 	tween = create_tween()
-	
-	# Move $Monitor to a new position in 1 second
 	tween.tween_property(boss_monitor, "position", Vector3(-0.3, 0.7, 0), 1)
-	
-	# Rotate $Monitor to a new rotation in degrees in 1 second
 	tween.tween_property(boss_monitor, "rotation_degrees", Vector3(7, 0, 4), 0.5)
 
 func enter_shop():
@@ -264,13 +263,29 @@ func enter_shop():
 	run_state=Runstate.SHOP
 
 func enter_shop_instant():
-	move_dart_area(-5,0,0)
+	move_dart_area(30,0,0)
 	move_shop(0,0,0)
 	run_state=Runstate.SHOP
 	var all_darts = get_tree().get_nodes_in_group("darts")
 	for dart in all_darts:
 		if is_instance_valid(dart):
 			dart.queue_free()
+func exit_shop_instant():
+	glitch_transition.show()
+	await get_tree().create_timer(0.1).timeout
+	move_dart_area(0,0,0)
+	move_shop(30,0,0)
+	run_state=Runstate.THROWING
+	var all_darts = get_tree().get_nodes_in_group("darts")
+	for dart in all_darts:
+		if is_instance_valid(dart):
+			dart.queue_free()
+	await get_tree().create_timer(0.1).timeout
+	glitch_transition.hide()
+	if round<3:
+		start_round()
+	else:
+		start_set()
 func exit_shop():
 	if run_state==Runstate.SHOP:
 		move_shop(-5,1,1)
@@ -301,8 +316,6 @@ func move_dart_area(target,time,option):
 	if option==1:
 		tween.tween_property(dart_area, "global_position", Vector3(5,0,0), 0)
 
-
-
 func _on_next_pressed() -> void:
 	if(run_state==Runstate.THROWING):
 		enter_shop()
@@ -319,7 +332,7 @@ func on_round_won():
 	glitch_transition.hide()
 
 func _on_exit_shop_pressed() -> void:
-	exit_shop()
+	exit_shop_instant()
 
 
 func _on_enter_shop_pressed() -> void:
@@ -331,3 +344,14 @@ func _on_enter_shop_pressed() -> void:
 	await get_tree().create_timer(0.1).timeout
 	glitch_transition.hide()
 	
+func start_round():
+	round+=1
+	player.selected_index=-1
+	for i in range(base_dart_amount+1):
+		player.add_dart()
+	if round==3:
+		start_boss()
+func start_set():
+	set+=1
+	round=0
+	start_round()

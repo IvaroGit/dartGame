@@ -1,7 +1,10 @@
 extends Control
 
 var already_revealed := false
-
+@onready var main_node: main = get_tree().get_root().get_child(0) as main
+@onready var remaining_throws: Label = $"../post_quota/remaining_throws_value"
+@onready var money: Label = $"../post_quota/money"
+@onready var final_score: Label = $"../post_quota/final_score_value"
 @onready var rows := [
 	{
 		"label": $"../post_quota/final_score_label",

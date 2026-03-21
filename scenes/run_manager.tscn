@@ -21,6 +21,15 @@ texture = SubResource("ViewportTexture_0fupr")
 [node name="Sprite3D" parent="Main/world/dartArea/monitor/boss_monitor" index="2"]
 texture = SubResource("ViewportTexture_js6kl")
 
+[node name="HUD" parent="Main/UI" index="0"]
+offset_left = -39.0
+offset_top = -93.0
+offset_right = -39.0
+offset_bottom = -93.0
+
+[node name="shop" parent="Main" index="4"]
+transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e-08, 27.555397, -0.36601704, -1.162977)
+
 [connection signal="round_won" from="Main/world/dartArea/monitor/Sketchfab_Scene/Sprite3D/SubViewport/Control" to="Main" method="_on_control_round_won"]
 
 [editable path="Main"]
