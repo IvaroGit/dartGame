@@ -55,8 +55,8 @@ var dart_home_rotations: Array = []
 var round=0
 var set=0
 var coins=0
-var quota = 1
-
+var quota: float
+var quota_mult = 1
 var base_dart_amount = 5
 var throws_left = base_dart_amount
 
@@ -93,8 +93,10 @@ func update_camera():
 		cameras[i].current=(i==current_camera_index)
 func _input(event):
 	if event.is_action_pressed("1"):
-		current_camera_index=(current_camera_index+1)%cameras.size()
-		update_camera()
+		if round<3:
+			start_round()
+		else:
+			start_set()
 	if event is InputEventMouseMotion:
 		mouse = event.position
 		get_selection()
@@ -347,6 +349,8 @@ func _on_enter_shop_pressed() -> void:
 func start_round():
 	round+=1
 	player.selected_index=-1
+	throws_left=base_dart_amount
+	quota = 10 * set * round * pow(3.0,set) + 100
 	for i in range(base_dart_amount+1):
 		player.add_dart()
 	if round==3:
@@ -355,3 +359,20 @@ func start_set():
 	set+=1
 	round=0
 	start_round()
+
+func sci_not(value: float) -> String:
+	var abs_val = abs(value)
+
+	# Normal numbers
+	if abs_val < 10000.0:
+		return "%.0f" % value
+
+	# Scientific notation
+	var exponent = int(floor(log(abs_val) / log(10)))
+	var mantissa = value / pow(10, exponent)
+
+	# Format like 2.12e120
+	var m_str = "%.2f" % mantissa
+	m_str = m_str.rstrip("0").rstrip(".") # remove trailing zeros
+
+	return "%se%d" % [m_str, exponent]

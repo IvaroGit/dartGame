@@ -10,7 +10,7 @@ extends Control
 @onready var set_value: Label = $stat_screen/set_value
 
 signal round_won
-var score=0
+var score: float
 var target_score=0
 var score_counting = false
 var win_screen_timer = 0.5
@@ -28,21 +28,19 @@ func _process(delta: float) -> void:
 	if score >= target_score:
 		score = target_score
 		score_counting=false
-	score_label.set_text(str(int(score)))
+	score_label.set_text((main_node.sci_not(score)))
 	throws_label.set_text(str(main_node.throws_left))
-	quota_label.set_text(str(main_node.quota))
+	quota_label.set_text((main_node.sci_not(main_node.quota)))
 	round_value.text=str(main_node.round)
 	set_value.text=str(main_node.set)
 	if score == target_score and score>=main_node.quota and main_node.run_state==main_node.Runstate.THROWING:
 		await get_tree().create_timer(0.3).timeout
 		show_win()
 		await get_tree().create_timer(win_screen_timer).timeout
-		main_node.quota = randi()%200+100
-		score=0
 		show_stat()
 		print("signal time")
 		emit_signal("round_won")
-		
+		score=0
 func show_stat():
 	stat_screen.show()
 	win_screen.hide()
