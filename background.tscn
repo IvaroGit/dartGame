@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://dvkor7y883k3w"]
+
+[ext_resource type="PackedScene" uid="uid://djm1uogg1uu8l" path="res://scenes/brickWall.tscn" id="1_xehqc"]
+[ext_resource type="Shader" uid="uid://bbmvf6n4apws6" path="res://shaders/pixelate.gdshader" id="2_splo0"]
+[ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="3_eq6nc"]
+[ext_resource type="PackedScene" uid="uid://bnsrscu23a8id" path="res://models/monitor/psx_old_tv.glb" id="4_gjjrj"]
+[ext_resource type="PackedScene" uid="uid://duxfl1eldembv" path="res://scenes/monitor_ui (2).tscn" id="5_vvxqx"]
+[ext_resource type="PackedScene" uid="uid://dsf6sv0m6ynvg" path="res://models/chain/tv_titans_chain.glb" id="6_cdpnt"]
+[ext_resource type="PackedScene" uid="uid://ck8ack3dy55dr" path="res://scenes/boss_monitor_ui.tscn" id="7_8u6ia"]
+
+[sub_resource type="Environment" id="Environment_bpugw"]
+background_mode = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gjjrj"]
+render_priority = 0
+shader = ExtResource("2_splo0")
+shader_parameter/pixel_count = 400.0
+shader_parameter/opacity = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_vvxqx"]
+material = SubResource("ShaderMaterial_gjjrj")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6i7po"]
+viewport_path = NodePath("Sketchfab_Scene/Sprite3D/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_e8087"]
+viewport_path = NodePath("boss_monitor/Sprite3D/SubViewport")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" parent="." instance=ExtResource("1_xehqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02684021, 1.1920929e-07, -0.011872053)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.9999849, 0.005497818, 0, -0.005497818, -0.9999849, 0, 0, -0.87847555)
+light_color = Color(1, 1, 0.9647059, 1)
+light_energy = 0.226
+light_size = 1.335
+spot_range = 2.367
+spot_angle = 145.52
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bpugw")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027912796, 0.011462271, -1.1885276)
+
+[node name="board1" parent="." instance=ExtResource("3_eq6nc")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.21349403, 0.038092196, -0.013369679)
+script = null
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.99961543, 0, -0.027729684, 0, 1, 0, 0.027729684, 0, -0.99961543, 0, 0, -0.982564)
+visible = false
+mesh = SubResource("QuadMesh_vvxqx")
+
+[node name="show_monitoer" type="Node3D" parent="."]
+transform = Transform3D(-1.1089358, 0, -0.40331274, 0, 1.1799998, 0, 0.40331274, 0, -1.1089358, 0.8442599, -0.19268072, 0.0794971)
+
+[node name="Sketchfab_Scene" parent="show_monitoer" instance=ExtResource("4_gjjrj")]
+
+[node name="Sprite3D" type="Sprite3D" parent="show_monitoer/Sketchfab_Scene"]
+transform = Transform3D(0.10554547, 0, 0, 0, 0.0976122, 0, 0, 0, 1, 0, 0.29472953, 0.2267126)
+texture = SubResource("ViewportTexture_6i7po")
+
+[node name="SubViewport" type="SubViewport" parent="show_monitoer/Sketchfab_Scene/Sprite3D"]
+transparent_bg = true
+
+[node name="Control" parent="show_monitoer/Sketchfab_Scene/Sprite3D/SubViewport" instance=ExtResource("5_vvxqx")]
+visible = false
+script = null
+
+[node name="OmniLight3D" type="OmniLight3D" parent="show_monitoer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29387492, 0.9986313)
+visible = false
+light_color = Color(1, 1, 0.54509807, 1)
+light_energy = 0.091
+omni_range = 1.296
+omni_shadow_mode = 0
+
+[node name="Sketchfab_Scene2" parent="show_monitoer" instance=ExtResource("6_cdpnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006091833, 1.6789874, 0.024188071)
+
+[node name="Sketchfab_Scene3" parent="show_monitoer" instance=ExtResource("6_cdpnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006091833, 4.1787767, 0.024188071)
+
+[node name="boss_monitor" parent="show_monitoer" instance=ExtResource("4_gjjrj")]
+transform = Transform3D(0.55194056, 0.15295506, 0.050906107, -0.15068685, 0.5540425, -0.030908821, -0.05727272, 0.016328609, 0.5719075, -0.027920365, 0.20784266, -0.06196621)
+
+[node name="Sketchfab_Scene4" parent="show_monitoer/boss_monitor" instance=ExtResource("4_gjjrj")]
+transform = Transform3D(-0.23075488, 0.24454984, 0.1261315, 0.60992146, 0.10211095, -0.06411313, -0.12813075, 0.045645032, -0.5323424, 0.16447042, -0.0749314, -0.12080258)
+
+[node name="Sprite3D" type="Sprite3D" parent="show_monitoer/boss_monitor"]
+transform = Transform3D(0.104120255, 0, 0, 0, 0.09217206, 0, 0, 0, 1, 1.5515127e-09, 0.2901687, 0.2284188)
+texture = SubResource("ViewportTexture_e8087")
+
+[node name="SubViewport" type="SubViewport" parent="show_monitoer/boss_monitor/Sprite3D"]
+transparent_bg = true
+
+[node name="Control" parent="show_monitoer/boss_monitor/Sprite3D/SubViewport" instance=ExtResource("7_8u6ia")]
