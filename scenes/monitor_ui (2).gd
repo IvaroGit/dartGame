@@ -8,12 +8,13 @@ extends Control
 @onready var win_screen: Control = $win_screen
 @onready var round_value: Label = $stat_screen/round_value
 @onready var set_value: Label = $stat_screen/set_value
-
-signal round_won
+signal round_won()
 var score: float
 var target_score=0
 var score_counting = false
 var win_screen_timer = 0.5
+var money_gained
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	scoreboard.send_score.connect(start_counting)
@@ -34,6 +35,7 @@ func _process(delta: float) -> void:
 	round_value.text=str(main_node.round)
 	set_value.text=str(main_node.set)
 	if score == target_score and score>=main_node.quota and main_node.run_state==main_node.Runstate.THROWING:
+		main_node.final_score = score
 		await get_tree().create_timer(0.3).timeout
 		show_win()
 		await get_tree().create_timer(win_screen_timer).timeout

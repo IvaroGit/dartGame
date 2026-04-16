@@ -2,9 +2,11 @@ extends Control
 
 var already_revealed := false
 @onready var main_node: main = get_tree().get_root().get_child(0) as main
+
 @onready var remaining_throws: Label = $"../post_quota/remaining_throws_value"
 @onready var money: Label = $"../post_quota/money"
 @onready var final_score: Label = $"../post_quota/final_score_value"
+var money_gained = 900
 @onready var rows := [
 	{
 		"label": $"../post_quota/final_score_label",
@@ -33,6 +35,10 @@ func _on_run_manager_show_post_quota_text() -> void:
 	reset_ui()
 
 func reveal_sequence():
+	remaining_throws.set_text(str(main_node.throws_left))
+	final_score.set_text(str(int(main_node.final_score)))
+	money.text = "$".repeat(money_gained)
+	
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)

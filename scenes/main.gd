@@ -50,7 +50,7 @@ var dart_home_rotations: Array = []
 @onready var monitor_ui: Control = $world/dartArea/monitor/Sketchfab_Scene/Sprite3D/SubViewport/Control
 @onready var glitch_transition: Control = $UI/glitch_transition
 @onready var post_quota: Control = $UI/post_quota
-
+var final_score=0
 #round managing
 var round=0
 var set=0
@@ -172,6 +172,7 @@ func _on_button_pressed() -> void:
 	start_boss()
 
 func _process(delta: float) -> void:
+	print(final_score)
 	if(game_state==GameState.DART_CHARGE):
 		power_label.show()
 		var text = str("Throw power: ",round(player.current_throw_force))
@@ -339,6 +340,7 @@ func _on_exit_shop_pressed() -> void:
 
 func _on_enter_shop_pressed() -> void:
 	glitch_transition.show()
+	final_score=0
 	await get_tree().create_timer(0.1).timeout
 	enter_shop_instant()
 	hud.show()
