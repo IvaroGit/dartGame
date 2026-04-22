@@ -32,7 +32,7 @@ func _on_run_manager_show_post_quota_text() -> void:
 	
 	already_revealed = true
 	reveal_sequence()
-	reset_ui()
+
 
 func reveal_sequence():
 	remaining_throws.set_text(str(main_node.throws_left))
@@ -56,3 +56,8 @@ func reset_ui():
 	for row in rows:
 		row["label"].visible_ratio = 0.0
 		row["value"].visible_ratio = 0.0
+		
+
+func _on_run_manager_reset_post_quota_ui() -> void:
+	reset_ui()
+	already_revealed=false

@@ -61,7 +61,7 @@ var base_dart_amount = 5
 var throws_left = base_dart_amount
 
 signal show_post_quota_text
-
+signal reset_post_quota_ui
 var charmDelay = 0.5
 
 var currentScore
@@ -347,7 +347,7 @@ func _on_enter_shop_pressed() -> void:
 	post_quota.hide()
 	await get_tree().create_timer(0.1).timeout
 	glitch_transition.hide()
-	
+	reset_post_quota_ui.emit()
 func start_round():
 	round+=1
 	player.selected_index=-1

@@ -266,6 +266,11 @@ offset_right = 1146.0
 offset_bottom = 321.0
 text = "EXIT SHOP"
 
+[node name="Polygon2D" type="Polygon2D" parent="UI/HUD" index="13"]
+scale = Vector2(0.83999604, 1.1999978)
+color = Color(0.24356923, 0.24356923, 0.24356923, 1)
+polygon = PackedVector2Array(0.14591843, -0.33738136, 232.2237, 0.28910792, 199.30984, 47.82494, 0.25520343, 48.35344)
+
 [node name="post_quota" type="Control" parent="UI"]
 visible = false
 layout_mode = 3
@@ -449,6 +454,7 @@ transform = Transform3D(-2.6084162e-08, 0, -1, 0, 1, 0, 0.5967361, 0, -4.371139e
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("19_0ld40")]
 transform = Transform3D(0.99978465, 0, 0.020750502, 0, 1, 0, -0.020750502, 0, 0.99978465, -0.9668208, -0.7280298, -1.2798662)
 
+[connection signal="reset_post_quota_ui" from="." to="UI/HUD" method="_on_run_manager_reset_post_quota_ui"]
 [connection signal="show_post_quota_text" from="." to="UI/HUD" method="_on_run_manager_show_post_quota_text"]
 [connection signal="mouse_aimed" from="world/Player" to="UI/HUD" method="_on_player_mouse_aimed"]
 [connection signal="pressed" from="UI/HUD/Button" to="." method="_on_button_pressed"]
