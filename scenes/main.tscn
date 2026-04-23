@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://3hwq61ji0uqy"]
+[gd_scene load_steps=37 format=3 uid="uid://3hwq61ji0uqy"]
 
 [ext_resource type="PackedScene" uid="uid://csx38lntfghur" path="res://scenes/board.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bcc6iqs7c4reg" path="res://scenes/main.gd" id="1_tipki"]
@@ -14,10 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://bsp0h4gn5q773" path="res://scenes/bag.tscn" id="9_85g3d"]
 [ext_resource type="Script" uid="uid://ctah8k6r8auhg" path="res://scenes/hud.gd" id="9_choun"]
 [ext_resource type="Texture2D" uid="uid://c2rujxenmy3x2" path="res://images/Button (8).png" id="14_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://doecypkqt2ryy" path="res://images/pngkey.com-gold-coin-png-1064366.png" id="15_gqmmt"]
 [ext_resource type="FontFile" uid="uid://prvyljm4mamt" path="res://fonts/LOTSOFDOTZ.TTF" id="15_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://328r55wmh212" path="res://scenes/shop.tscn" id="15_jkv2x"]
 [ext_resource type="FontFile" uid="uid://dd4ccaox2ul2t" path="res://fonts/Digital7Italic-BW658.ttf" id="16_dp3eg"]
 [ext_resource type="Shader" uid="uid://ctk6rr8ycsntq" path="res://scenes/glitch.gdshader" id="16_muem4"]
+[ext_resource type="FontFile" uid="uid://bofs88q77wiay" path="res://fonts/Minercraftory.ttf" id="16_yc10j"]
 [ext_resource type="PackedScene" uid="uid://b5hclif5820c" path="res://models/charm_shelf/old_kitchen_shelf.glb" id="19_0ld40"]
 
 [sub_resource type="Sky" id="Sky_85g3d"]
@@ -27,6 +29,25 @@ background_mode = 2
 background_color = Color(0.4071524, 0.49325198, 0.5770381, 1)
 sky = SubResource("Sky_85g3d")
 sdfgi_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_yc10j"]
+font = ExtResource("16_dp3eg")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_pm3ni"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_y6deb"]
+font = ExtResource("16_dp3eg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_og1vs"]
+font = ExtResource("16_dp3eg")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jscy8"]
+font = ExtResource("16_yc10j")
+font_size = 25
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ld40"]
 font = ExtResource("16_dp3eg")
@@ -227,20 +248,129 @@ offset_top = 10.101034
 offset_right = 225.45451
 offset_bottom = 84.101036
 
-[node name="Control2" type="Control" parent="UI/HUD/button_container" index="1"]
+[node name="charm_hover" type="Control" parent="UI/HUD/button_container" index="1"]
+visible = false
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 60.0
+offset_top = 98.0
+offset_right = 100.0
+offset_bottom = 138.0
 
-[node name="Label" type="Label" parent="UI/HUD/button_container/Control2"]
+[node name="reroll_label" type="Label" parent="UI/HUD/button_container/charm_hover"]
 visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Reroll shop"
 
-[node name="charm_label" type="Label" parent="UI/HUD/button_container/Control2"]
+[node name="charm_label" type="Label" parent="UI/HUD/button_container/charm_hover"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 99.0
+offset_bottom = 25.0
+text = "green apple"
+label_settings = SubResource("LabelSettings_yc10j")
+
+[node name="ColorRect" type="ColorRect" parent="UI/HUD/button_container/charm_hover"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.765214, 2.146071)
+color = Color(0.4825759, 0.5119518, 0.5454153, 0.52156866)
+
+[node name="charm_description" type="Label" parent="UI/HUD/button_container/charm_hover"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.675
+anchor_right = 2.525
+anchor_bottom = 1.9000001
+rotation = 0.0007872153
+label_settings = SubResource("LabelSettings_pm3ni")
+autowrap_mode = 2
+clip_text = true
+
+[node name="charm_hover_shop" type="Control" parent="UI/HUD/button_container" index="2"]
+anchors_preset = 0
+offset_left = 216.0
+offset_top = 98.0
+offset_right = 256.0
+offset_bottom = 138.0
+
+[node name="reroll_label" type="Label" parent="UI/HUD/button_container/charm_hover_shop"]
 visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Reroll shop"
+
+[node name="ColorRect" type="ColorRect" parent="UI/HUD/button_container/charm_hover_shop"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.765214, 2.146071)
+color = Color(0.4825759, 0.5119518, 0.5454153, 0.52156866)
+
+[node name="charm_description" type="Label" parent="UI/HUD/button_container/charm_hover_shop"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.675
+anchor_right = 2.525
+anchor_bottom = 1.9000001
+offset_top = -1.0000019
+offset_bottom = -22.764702
+rotation = 0.0007872153
+label_settings = SubResource("LabelSettings_pm3ni")
+autowrap_mode = 2
+clip_text = true
+
+[node name="Label" type="Label" parent="UI/HUD/button_container/charm_hover_shop"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="price" type="Label" parent="UI/HUD/button_container/charm_hover_shop"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 63.0
+offset_right = 60.0
+offset_bottom = 86.0
+text = "2"
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HUD/button_container/charm_hover_shop"]
+position = Vector2(10.999991, 74)
+scale = Vector2(0.034756143, 0.034756143)
+texture = ExtResource("15_gqmmt")
+
+[node name="Label2" type="Label" parent="UI/HUD/button_container/charm_hover_shop"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 47.0
+offset_right = 104.0
+offset_bottom = 70.0
+text = "buy "
+label_settings = SubResource("LabelSettings_y6deb")
+
+[node name="ColorRect2" type="ColorRect" parent="UI/HUD/button_container/charm_hover_shop"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 64.0
+offset_right = 83.0
+offset_bottom = 79.0
+color = Color(0.17402825, 0.17402825, 0.17402825, 0.21960784)
+
+[node name="Label3" type="Label" parent="UI/HUD/button_container/charm_hover_shop"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 63.0
+offset_right = 112.0
+offset_bottom = 86.0
+text = "e"
+label_settings = SubResource("LabelSettings_og1vs")
+
+[node name="charm_name_shop" type="Label" parent="UI/HUD/button_container/charm_hover_shop"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
@@ -267,9 +397,23 @@ offset_bottom = 321.0
 text = "EXIT SHOP"
 
 [node name="Polygon2D" type="Polygon2D" parent="UI/HUD" index="13"]
+position = Vector2(-1, 0)
 scale = Vector2(0.83999604, 1.1999978)
 color = Color(0.24356923, 0.24356923, 0.24356923, 1)
-polygon = PackedVector2Array(0.14591843, -0.33738136, 232.2237, 0.28910792, 199.30984, 47.82494, 0.25520343, 48.35344)
+polygon = PackedVector2Array(0, 0, 232.01991, 0.006724775, 199.93675, 48.025955, 0, 48.333424)
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HUD/Polygon2D"]
+position = Vector2(33.33348, 22.50004)
+scale = Vector2(0.087397695, 0.06715679)
+texture = ExtResource("15_gqmmt")
+
+[node name="coins_label" type="Label" parent="UI/HUD/Polygon2D"]
+offset_left = 91.6671
+offset_top = 2.500004
+offset_right = 123.810104
+offset_bottom = 42.500004
+scale = Vector2(1.3809556, 1)
+label_settings = SubResource("LabelSettings_jscy8")
 
 [node name="post_quota" type="Control" parent="UI"]
 visible = false

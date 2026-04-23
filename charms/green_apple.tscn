@@ -31,6 +31,7 @@ size = Vector3(0.11987305, 0.10571289, 0.13720703)
 [node name="Green Apple" type="Node3D"]
 script = ExtResource("1_sgyqt")
 charm_name = "Green apple"
+description = "its green"
 num_instance = ExtResource("2_c4mod")
 rarity = 2
 

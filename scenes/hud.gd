@@ -2,11 +2,11 @@ extends Control
 
 var already_revealed := false
 @onready var main_node: main = get_tree().get_root().get_child(0) as main
-
+@onready var coins_label: Label = $Polygon2D/coins_label
 @onready var remaining_throws: Label = $"../post_quota/remaining_throws_value"
 @onready var money: Label = $"../post_quota/money"
 @onready var final_score: Label = $"../post_quota/final_score_value"
-var money_gained = 900
+
 @onready var rows := [
 	{
 		"label": $"../post_quota/final_score_label",
@@ -37,8 +37,8 @@ func _on_run_manager_show_post_quota_text() -> void:
 func reveal_sequence():
 	remaining_throws.set_text(str(main_node.throws_left))
 	final_score.set_text(str(int(main_node.final_score)))
-	money.text = "$".repeat(money_gained)
-	
+	money.text = "$".repeat(main_node.current_quota_prize)
+	main_node.coins+=main_node.current_quota_prize
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)
@@ -61,3 +61,6 @@ func reset_ui():
 func _on_run_manager_reset_post_quota_ui() -> void:
 	reset_ui()
 	already_revealed=false
+
+func _process(delta: float) -> void:
+	coins_label.set_text(str(main_node.coins))

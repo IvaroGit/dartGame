@@ -43,15 +43,24 @@ var dart_home_rotations: Array = []
 @onready var shop: Node3D = $shop
 @onready var reroll_button: Node3D = $shop/reroll_button
 @onready var reroll_anim: AnimationPlayer = $shop/reroll_button/AnimationPlayer
-@onready var reroll_label: Label = $UI/HUD/button_container/Control2/Label
-@onready var charm_label: Label = $UI/HUD/button_container/Control2/charm_label
+@onready var reroll_label: Label = $UI/HUD/button_container/charm_hover/reroll_label
+@onready var charm_label: Label = $UI/HUD/button_container/charm_hover/charm_label
+
 @onready var runstate_label: Label = $UI/HUD/runstate_label
 @onready var exit_shop_button: Button = $UI/HUD/exit_shop
 @onready var monitor_ui: Control = $world/dartArea/monitor/Sketchfab_Scene/Sprite3D/SubViewport/Control
 @onready var glitch_transition: Control = $UI/glitch_transition
 @onready var post_quota: Control = $UI/post_quota
+@onready var charm_hover: Control = $UI/HUD/button_container/charm_hover
+@onready var charm_description: Label = $UI/HUD/button_container/charm_hover/charm_description
+@onready var charm_hover_shop: Control = $UI/HUD/button_container/charm_hover_shop
+@onready var charm_name_shop: Label = $UI/HUD/button_container/charm_hover_shop/charm_name_shop
+
+@onready var charm_price: Label = $UI/HUD/button_container/charm_hover_shop/price
+
 var final_score=0
 #round managing
+
 var round=0
 var set=0
 var coins=0
@@ -59,7 +68,8 @@ var quota: float
 var quota_mult = 1
 var base_dart_amount = 5
 var throws_left = base_dart_amount
-
+var quota_prize = quota/100
+var current_quota_prize = 5 + throws_left + int(quota/100)
 signal show_post_quota_text
 signal reset_post_quota_ui
 var charmDelay = 0.5
@@ -140,17 +150,26 @@ func get_selection():
 		if check_node is CharmBase:
 			charm_found = true
 			charm_label.text = check_node.charm_name
+			charm_description.text = check_node.description
 			var pos = Vector3(hit_node.get_child(0).global_position)
 			var screen_pos = camera.unproject_position(pos)
 			var offset = Vector2(-30,-80)
-			charm_label.position = screen_pos+offset
-			charm_label.show()
+			if run_state==Runstate.SHOP:
+				charm_name_shop.text = check_node.charm_name
+				charm_hover_shop.position = screen_pos+offset
+				charm_hover_shop.show()
+				if Input.is_action_pressed("e"):
+					pass
+			else:
+				charm_hover.position = screen_pos+offset
+				charm_hover.show()
+			
 
 		check_node = check_node.get_parent()
 
 	if not charm_found:
-		charm_label.hide()
-		reroll_label.hide()		
+		charm_hover.hide()
+		reroll_label.hide()
 	if hit_node == null:
 		player.hovered_index = -1
 		return
@@ -172,7 +191,7 @@ func _on_button_pressed() -> void:
 	start_boss()
 
 func _process(delta: float) -> void:
-	print(final_score)
+
 	if(game_state==GameState.DART_CHARGE):
 		power_label.show()
 		var text = str("Throw power: ",round(player.current_throw_force))
@@ -273,6 +292,10 @@ func enter_shop_instant():
 	for dart in all_darts:
 		if is_instance_valid(dart):
 			dart.queue_free()
+	quota_prize = int(quota/100)
+	if quota_prize >= 5:
+		quota_prize=5
+	current_quota_prize = 5 + throws_left+ quota_prize
 func exit_shop_instant():
 	glitch_transition.show()
 	await get_tree().create_timer(0.1).timeout
