@@ -159,6 +159,7 @@ func get_selection():
 				charm_hover_shop.position = screen_pos+offset
 				charm_hover_shop.show()
 				if Input.is_action_pressed("e"):
+					#available_charm_scenes.erase(check_node)
 					pass
 			else:
 				charm_hover.position = screen_pos+offset
