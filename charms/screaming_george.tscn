@@ -33,6 +33,7 @@ script = ExtResource("1_aqntw")
 charm_name = "Screaming George"
 num_instance = ExtResource("2_ieja6")
 rarity = 3
+price = 5
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054190546, 0)

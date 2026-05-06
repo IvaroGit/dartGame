@@ -6,6 +6,7 @@ enum rarities {common,uncommon,rare,legendary,secret}
 @export var description: String = ""
 @export var num_instance: PackedScene
 @export var rarity := rarities.common
+@export var price: int
 var triggered=false
 # Score logic
 func apply(ctx) -> void:

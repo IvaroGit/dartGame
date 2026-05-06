@@ -35,6 +35,7 @@ charm_name = "Frog"
 description = "frog soot the 1"
 num_instance = ExtResource("2_2k13b")
 rarity = 4
+price = 2
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("2_bqsyv")]
 

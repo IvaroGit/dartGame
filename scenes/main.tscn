@@ -292,6 +292,7 @@ autowrap_mode = 2
 clip_text = true
 
 [node name="charm_hover_shop" type="Control" parent="UI/HUD/button_container" index="2"]
+visible = false
 anchors_preset = 0
 offset_left = 216.0
 offset_top = 98.0

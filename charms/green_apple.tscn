@@ -34,6 +34,7 @@ charm_name = "Green apple"
 description = "its green"
 num_instance = ExtResource("2_c4mod")
 rarity = 2
+price = 3
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054190546, 0)

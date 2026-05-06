@@ -58,6 +58,7 @@ var dart_home_rotations: Array = []
 
 @onready var charm_price: Label = $UI/HUD/button_container/charm_hover_shop/price
 
+var hovered_charm: CharmBase = null
 var final_score=0
 #round managing
 
@@ -149,6 +150,7 @@ func get_selection():
 
 		if check_node is CharmBase:
 			charm_found = true
+			hovered_charm = check_node
 			charm_label.text = check_node.charm_name
 			charm_description.text = check_node.description
 			var pos = Vector3(hit_node.get_child(0).global_position)
@@ -158,13 +160,12 @@ func get_selection():
 				charm_name_shop.text = check_node.charm_name
 				charm_hover_shop.position = screen_pos+offset
 				charm_hover_shop.show()
-				if Input.is_action_pressed("e"):
-					#available_charm_scenes.erase(check_node)
-					pass
+				
+				
 			else:
 				charm_hover.position = screen_pos+offset
 				charm_hover.show()
-			
+				hovered_charm=null
 
 		check_node = check_node.get_parent()
 
@@ -192,7 +193,22 @@ func _on_button_pressed() -> void:
 	start_boss()
 
 func _process(delta: float) -> void:
-
+	if run_state == Runstate.SHOP and hovered_charm:
+		if Input.is_action_just_pressed("e"):
+			
+			# get scene that created this charm
+			var scene: PackedScene = hovered_charm.get_meta("scene")
+			if scene == null:
+				print("ERROR: charm has no scene meta")
+				return
+			if coins < hovered_charm.price:
+				print("not enough coins")
+				return
+			coins -= hovered_charm.price
+			add_charm(scene)
+			shop.buy_charm(hovered_charm)
+			print("bought ", hovered_charm.name)
+			hovered_charm = null
 	if(game_state==GameState.DART_CHARGE):
 		power_label.show()
 		var text = str("Throw power: ",round(player.current_throw_force))
@@ -309,6 +325,7 @@ func exit_shop_instant():
 			dart.queue_free()
 	await get_tree().create_timer(0.1).timeout
 	glitch_transition.hide()
+	charm_hover_shop.show()
 	if round<3:
 		start_round()
 	else:
